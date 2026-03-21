@@ -40,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-white text-brand-charcoal antialiased">
+    <html lang="en" className={`${jakarta.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col antialiased">
         <Nav />
         <main id="main-content" className="flex-1 pt-16">
           {children}

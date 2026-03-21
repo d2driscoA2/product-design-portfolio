@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <div className="min-h-screen bg-brand-offwhite">
+    <div className="min-h-screen" style={{ background: "var(--color-bg)", color: "var(--color-text-primary)" }}>
       <div className="mx-auto max-w-6xl px-6 lg:px-8 py-16 lg:py-24">
 
         {/* ── Page header ──────────────────────────────────────────── */}

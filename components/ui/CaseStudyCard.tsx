@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { CaseStudy } from '@/lib/case-studies'
 
 interface CaseStudyCardProps {
@@ -10,59 +11,62 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
     <Link
       href={`/work/${study.slug}`}
       aria-label={`${study.title}. ${study.impactLabel}. View case study.`}
+      style={{ '--accent': study.accentHex } as React.CSSProperties}
       className={[
-        'group block rounded-xl overflow-hidden bg-white',
-        'border border-brand-charcoal/10',
-        /* Lift on hover */
-        'hover:-translate-y-1 hover:shadow-[0_12px_32px_0_rgb(0_0_0_/_0.10)]',
-        'transition-[transform,box-shadow] duration-200 motion-reduce:transition-none',
-        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue-royal',
+        'group block rounded-xl overflow-hidden bg-[var(--color-bg-card)]',
+        'border border-[var(--color-border)] hover:[border-color:var(--accent)]',
+        'hover:-translate-y-1 hover:shadow-[0_12px_32px_0_rgb(0_0_0_/_0.30)]',
+        'transition-[transform,box-shadow,border-color] duration-200 motion-reduce:transition-none',
+        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
       ].join(' ')}
     >
-      {/* 4px accent top border */}
-      <div
-        className="h-1 w-full"
-        style={{ backgroundColor: study.accentHex }}
-        aria-hidden="true"
-      />
+      {/* Thumbnail — only rendered when thumbnailImage is set */}
+      {study.thumbnailImage && (
+        <div className="relative w-full h-[180px] overflow-hidden rounded-t-xl" style={{ backgroundColor: 'var(--color-bg-secondary)', borderBottom: '1px solid var(--color-border)' }}>
+          <Image
+            src={study.thumbnailImage}
+            alt={`${study.title} preview`}
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+      )}
 
-      <div className="p-8">
+      <div className="p-10">
 
         {/* Client eyebrow */}
-        <p
-          className="text-label font-bold tracking-widest uppercase mb-4"
-          style={{ color: '#606060' }}
-        >
+        <p className="text-[0.65rem] font-bold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>
           {study.client}
         </p>
 
-        {/* Title with accent underline that grows on hover */}
+        {/* Title with accent underline on hover */}
         <h3
-          className="text-h3 font-bold leading-snug text-brand-charcoal mb-1"
+          className="text-h3 font-bold leading-snug text-[var(--color-text-primary)] mb-1"
           style={{ fontFamily: 'var(--font-display)' }}
         >
           {study.title}
         </h3>
-        {/* Underline bar — grows from 0 to full width on card hover */}
         <div
-          className="h-0.5 w-0 group-hover:w-full transition-[width] duration-300 ease-out motion-reduce:transition-none mb-5"
+          className="h-0.5 w-0 group-hover:w-full transition-[width] duration-300 ease-out motion-reduce:transition-none mb-6"
           style={{ backgroundColor: study.accentHex }}
           aria-hidden="true"
         />
 
         {/* Impact label */}
-        <p className="text-small font-semibold text-brand-charcoal/50 mb-8">
+        <p className="text-small font-semibold mb-8" style={{ color: 'var(--color-text-primary)' }}>
           {study.impactLabel}
         </p>
 
         {/* Outcome summary */}
-        <p className="text-sm text-brand-charcoal/60 leading-relaxed mb-8">
+        <p className="text-sm leading-relaxed mb-10" style={{ color: 'var(--color-text-muted)' }}>
           {study.outcomeSummary}
         </p>
 
-        {/* CTA row */}
+        {/* CTA — accent color only here */}
         <div
-          className="flex items-center gap-1.5 text-small font-semibold text-brand-charcoal/40 group-hover:text-brand-charcoal/70 transition-colors duration-150 motion-reduce:transition-none"
+          className="flex items-center gap-1.5 text-small font-semibold"
+          style={{ color: study.accentHex }}
           aria-hidden="true"
         >
           <span>View case study</span>

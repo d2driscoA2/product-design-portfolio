@@ -2,114 +2,72 @@ import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
 
 const NAV_LINKS = [
-  { href: '/work',    label: 'Work'    },
-  { href: '/about',   label: 'About'   },
-  { href: '/contact', label: 'Contact' },
+  { href: '/work',        label: 'Work'        },
+  { href: '/about',       label: 'About'       },
+  { href: '/photography', label: 'Photography' },
+  { href: '/contact',     label: 'Contact'     },
 ]
 
 export function Footer() {
-  const year = new Date().getFullYear()
-
   return (
     <footer
       role="contentinfo"
-      className="bg-brand-charcoal border-t-2 border-brand-tan/40"
+      className="bg-[#3B5CE8]"
+      style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}
     >
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 py-12 lg:py-16">
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+      <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
 
-          {/* Brand column */}
-          <div className="flex flex-col gap-4 max-w-xs">
-            {/* Logo mark only — wordmark re-rendered in footer colors */}
-            <div className="flex items-center gap-3">
-              <Logo variant="mark" size={36} />
-              <div className="flex flex-col leading-none">
-                <span
-                  className="text-[1.05rem] font-bold tracking-tight text-brand-offwhite"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  Displayed<span className="text-brand-blue-light">UX</span>
-                </span>
-                <span
-                  className="text-[0.6rem] font-semibold tracking-[0.12em] uppercase text-brand-offwhite/50 mt-0.5"
-                  style={{ fontFamily: 'var(--font-sans)' }}
-                >
-                  Strategic Product Design
-                </span>
-              </div>
-            </div>
-            <p className="text-small text-brand-offwhite/70 leading-relaxed">
+          {/* Column 1 — Brand */}
+          <div className="flex flex-col gap-3">
+            <Logo variant="footer" size={36} />
+            <p className="text-sm mt-2" style={{ color: 'rgba(255,255,255,0.8)' }}>
               18+ years designing products where mistakes have consequences.
             </p>
-            <p className="text-label text-brand-offwhite/40 tracking-wide uppercase">
-              © {year} Danny Driscoll
+            <p className="text-xs mt-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              © 2026 Danny Driscoll
             </p>
           </div>
 
-          {/* Links column */}
-          <nav aria-label="Footer navigation" className="flex flex-col gap-3">
-            <p
-              className="text-label font-semibold tracking-widest uppercase text-brand-offwhite/40 mb-1"
-            >
+          {/* Column 2 — Navigation */}
+          <div className="flex flex-col gap-2">
+            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Navigation
             </p>
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className={[
-                  'text-small font-medium text-brand-offwhite/80 w-fit',
-                  'hover:text-brand-blue-light transition-colors duration-150',
-                  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue-light',
-                  'underline-offset-4 hover:underline',
-                ].join(' ')}
+                className="text-sm w-fit transition-colors duration-150 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                style={{ color: 'rgba(255,255,255,0.8)' }}
               >
                 {label}
               </Link>
             ))}
-          </nav>
+          </div>
 
-          {/* Contact column */}
-          <div className="flex flex-col gap-3">
-            <p
-              className="text-label font-semibold tracking-widest uppercase text-brand-offwhite/40 mb-1"
-            >
+          {/* Column 3 — Contact */}
+          <div className="flex flex-col gap-2">
+            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Contact
             </p>
             <a
               href="mailto:d2drisco@icloud.com"
-              className={[
-                'text-small font-medium text-brand-offwhite/80 w-fit',
-                'hover:text-brand-blue-light transition-colors duration-150',
-                'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue-light',
-                'underline-offset-4 hover:underline',
-              ].join(' ')}
+              className="inline-flex items-center gap-1 text-sm w-fit transition-colors duration-150 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'underline', textUnderlineOffset: '3px', textDecorationThickness: '1px' }}
             >
               d2drisco@icloud.com
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
             <a
               href="https://linkedin.com/in/dandriscoll"
               target="_blank"
               rel="noopener noreferrer"
-              className={[
-                'inline-flex items-center gap-1.5 text-small font-medium text-brand-offwhite/80 w-fit',
-                'hover:text-brand-blue-light transition-colors duration-150',
-                'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue-light',
-                'underline-offset-4 hover:underline',
-              ].join(' ')}
+              className="inline-flex items-center gap-1 text-sm w-fit transition-colors duration-150 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'underline', textUnderlineOffset: '3px', textDecorationThickness: '1px' }}
             >
               LinkedIn
-              <svg
-                width="11" height="11" viewBox="0 0 12 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false"
-              >
-                <path
-                  d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"
-                  stroke="currentColor" strokeWidth="1.5"
-                  strokeLinecap="round" strokeLinejoin="round"
-                />
-              </svg>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               <span className="sr-only">(opens in new tab)</span>
             </a>
           </div>

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { caseStudies } from '@/lib/case-studies'
 import { CaseStudyCard } from '@/components/ui/CaseStudyCard'
 import { HeroSection } from '@/components/ui/HeroSection'
-import { MetricsStrip } from '@/components/ui/MetricsStrip'
 
 export const metadata: Metadata = {
   title: 'Danny Driscoll | DisplayedUX',
@@ -11,51 +10,32 @@ export const metadata: Metadata = {
     'Principal Product Designer with 18+ years designing products at TeleSign, Netflix, and Cappex. Shipping the wrong thing was never an option.',
 }
 
-/* ── Shared: eyebrow with coral rule ────────────────────────────────
-   1px coral line + label. Used above every section heading.
-──────────────────────────────────────────────────────────────────── */
+/* ── Shared: eyebrow with coral rule ──────────────────────────────── */
 function Eyebrow({ text }: { text: string }) {
   return (
     <div className="flex flex-col gap-3 mb-4">
       <div className="w-8 h-px bg-brand-coral" aria-hidden="true" />
-      <p className="text-label font-bold tracking-widest uppercase text-brand-charcoal/50">
+      <p className="text-[0.65rem] font-bold tracking-widest uppercase" style={{ color: 'var(--color-text-muted)' }}>
         {text}
       </p>
     </div>
   )
 }
 
-/* ── Section 1: Hero ────────────────────────────────────────────────
-   White bg. Client component — headline visible on paint,
-   subheadline + CTAs fade up on mount.
-──────────────────────────────────────────────────────────────────── */
-// (see components/ui/HeroSection.tsx)
-
-/* ── Section 2: Metrics Strip ───────────────────────────────────────
-   Charcoal bg. Client component — count-up on IntersectionObserver.
-──────────────────────────────────────────────────────────────────── */
-// (see components/ui/MetricsStrip.tsx)
-
-/* ── Section 3: Client Logos ────────────────────────────────────────
-   Off-white bg.
-──────────────────────────────────────────────────────────────────── */
-
-/* ── Section 4: Case Studies ────────────────────────────────────────
-   White bg. Cards have 4px accent top borders + hover lift.
-──────────────────────────────────────────────────────────────────── */
+/* ── Case Studies ─────────────────────────────────────────────────── */
 function CaseStudyGrid() {
   return (
     <section
       aria-labelledby="work-heading"
-      className="bg-white py-20 lg:py-28 px-6"
+      className="bg-[var(--color-bg)] py-20 lg:py-28 px-6"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 lg:mb-16">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16 lg:mb-20">
           <div>
             <Eyebrow text="Selected Work" />
             <h2
               id="work-heading"
-              className="text-h1 font-bold tracking-tight text-brand-charcoal"
+              className="text-h1 font-bold tracking-tight text-[var(--color-text-primary)]"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Four case studies.
@@ -64,10 +44,10 @@ function CaseStudyGrid() {
           <Link
             href="/work"
             className={[
-              'text-small font-semibold text-brand-blue-royal shrink-0',
+              'text-small font-semibold text-[#F47060] shrink-0',
               'inline-flex items-center gap-1.5 group',
               'underline-offset-4 hover:underline',
-              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue-royal',
+              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
             ].join(' ')}
           >
             View all
@@ -97,21 +77,19 @@ function CaseStudyGrid() {
   )
 }
 
-/* ── Section 5: Origin Story ────────────────────────────────────────
-   Off-white bg. Pull quote left, narrative right.
-──────────────────────────────────────────────────────────────────── */
+/* ── Origin Story ─────────────────────────────────────────────────── */
 function OriginStory() {
   return (
     <section
       aria-labelledby="origin-heading"
-      className="bg-brand-offwhite py-20 lg:py-28 px-6"
+      className="bg-[var(--color-bg-secondary)] py-20 lg:py-28 px-6"
     >
       <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
 
         {/* Pull quote */}
         <blockquote
           className={[
-            'text-h2 font-bold italic leading-snug text-brand-charcoal',
+            'text-h2 font-bold italic leading-snug text-[var(--color-text-primary)]',
             'border-l-4 border-brand-coral pl-7 py-1',
           ].join(' ')}
           style={{ fontFamily: 'var(--font-display)' }}
@@ -124,13 +102,13 @@ function OriginStory() {
           <Eyebrow text="Origin" />
           <h2
             id="origin-heading"
-            className="text-h2 font-bold tracking-tight text-brand-charcoal"
+            className="text-h2 font-bold tracking-tight text-[var(--color-text-primary)]"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Why design?
           </h2>
 
-          <div className="text-body text-brand-charcoal/70 leading-relaxed space-y-4">
+          <div className="text-body leading-relaxed space-y-4" style={{ color: 'var(--color-text-muted)' }}>
             <p>
               I was at the front desk of the Waldo Library computer lab at Western
               Michigan University. Somewhere behind me, a student let out a loud,
@@ -143,7 +121,7 @@ function OriginStory() {
               screen: a pop-up ad. &ldquo;YOU&rsquo;RE A WINNER&rdquo; in gold text,
               Vegas-style lights flashing. Then I looked at their wrist. An epilepsy bracelet.
             </p>
-            <p className="font-semibold text-brand-charcoal border-t border-brand-charcoal/10 pt-4">
+            <p className="font-semibold text-[var(--color-text-primary)] border-t border-[var(--color-border)] pt-4">
               That is the only thought I have carried into every project since.
             </p>
           </div>
@@ -152,9 +130,9 @@ function OriginStory() {
             href="/about"
             className={[
               'inline-flex items-center gap-1.5 group w-fit',
-              'text-small font-semibold text-brand-coral',
+              'text-small font-semibold text-[#F47060]',
               'underline-offset-4 hover:underline',
-              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral',
+              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
             ].join(' ')}
           >
             Read full story
@@ -173,9 +151,7 @@ function OriginStory() {
   )
 }
 
-/* ── Section 6: Design Philosophy ──────────────────────────────────
-   White bg. 3 belief cards.
-──────────────────────────────────────────────────────────────────── */
+/* ── Design Philosophy ────────────────────────────────────────────── */
 const BELIEFS = [
   {
     statement: 'The communication comes first.',
@@ -195,15 +171,23 @@ function DesignPhilosophy() {
   return (
     <section
       aria-labelledby="philosophy-heading"
-      className="bg-white py-20 lg:py-28 px-6"
+      className="relative overflow-hidden bg-[var(--color-bg)] py-20 lg:py-28 px-6"
     >
+      {/* Decorative floating bull's-eyes — scattered behind cards */}
+      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '8%', left: '-3%', zIndex: 0, animation: 'float-a 9s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="110" height="110" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '60%', left: '8%', zIndex: 0, animation: 'float-b 11s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="160" height="160" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '-10%', right: '2%', zIndex: 0, animation: 'float-c 8s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="100" height="100" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '75%', right: '5%', zIndex: 0, animation: 'float-d 13s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '40%', right: '-2%', zIndex: 0, animation: 'float-e 10s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="180" height="180" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '85%', left: '45%', zIndex: 0, animation: 'float-f 12s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+
       <div className="mx-auto max-w-6xl">
 
-        <div className="mb-12 lg:mb-16">
+        <div className="mb-16 lg:mb-20">
           <Eyebrow text="Philosophy" />
           <h2
             id="philosophy-heading"
-            className="text-h1 font-bold tracking-tight text-brand-charcoal"
+            className="text-h1 font-bold tracking-tight text-[var(--color-text-primary)]"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Three things I actually believe.
@@ -211,29 +195,29 @@ function DesignPhilosophy() {
         </div>
 
         <ul
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12"
           role="list"
         >
           {BELIEFS.map(({ statement, body }, i) => (
             <li
               key={statement}
               role="listitem"
-              className="flex flex-col gap-4 p-8 rounded-xl border border-brand-charcoal/10 bg-brand-offwhite"
+              className="philosophy-card relative z-10 flex flex-col gap-4 rounded-xl p-8"
             >
               <span
-                className="text-label font-bold tracking-widest"
-              style={{ color: '#D1D5DB' }}
+                className="text-sm font-semibold mb-2"
+                style={{ color: 'var(--color-card-number)' }}
                 aria-hidden="true"
               >
                 0{i + 1}
               </span>
               <h3
-                className="text-h3 font-bold leading-snug text-brand-charcoal"
+                className="text-h3 font-bold leading-snug text-[var(--color-text-primary)]"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 {statement}
               </h3>
-              <p className="text-small text-brand-charcoal/60 leading-relaxed mt-auto">
+              <p className="text-small leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                 {body}
               </p>
             </li>
@@ -245,12 +229,11 @@ function DesignPhilosophy() {
   )
 }
 
-/* ── Page assembly ──────────────────────────────────────────────── */
+/* ── Page assembly ────────────────────────────────────────────────── */
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <MetricsStrip />
       <CaseStudyGrid />
       <OriginStory />
       <DesignPhilosophy />

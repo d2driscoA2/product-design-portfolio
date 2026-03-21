@@ -23,6 +23,8 @@ export interface CaseStudy {
   impactLabel: string
   /** Accent hex used for card top border and hover underline */
   accentHex: string
+  /** Optional thumbnail shown at the top of the case study card */
+  thumbnailImage?: string
   bento: BentoStats
 }
 
@@ -41,6 +43,7 @@ export const caseStudies: CaseStudy[] = [
       'Designed a self-service portal that cut enterprise onboarding from 67 to 35 days, enabled 85% of customers to go live without CS intervention, and opened TeleSign to the SMB market.',
     impactLabel: '48% faster onboarding',
     accentHex: '#F47060', /* coral */
+    thumbnailImage: '/images/1-self-service-customer-portal/hero/portal-hero-home.png',
 
     bento: [
       /* S1 — Hero, full-width top row */
@@ -101,6 +104,7 @@ export const caseStudies: CaseStudy[] = [
       'Designed the UI for an ML-powered fraud prevention suite protecting 21B+ annual transactions, giving non-technical fraud analysts intuitive control over 1,000+ configurable risk parameters.',
     impactLabel: '21B+ transactions protected',
     accentHex: '#3B5CE8', /* royal blue */
+    thumbnailImage: '/images/2-fraud-prevention-suite/hero/fraud-hero-dashboard.png',
 
     bento: [
       /* S1 — Hero */
@@ -161,6 +165,7 @@ export const caseStudies: CaseStudy[] = [
       'Unified SMS, RCS, WhatsApp, Viber, MMS, and Email into a single interface, reducing customer implementation time 50% and achieving 22.2% CTR on RCS versus 3% for traditional SMS.',
     impactLabel: '22.2% higher CTR',
     accentHex: '#F5C200', /* amber */
+    thumbnailImage: '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-template-builder.png',
 
     bento: [
       /* S1 — Hero */
@@ -223,6 +228,7 @@ export const caseStudies: CaseStudy[] = [
       'Designed the world\'s only user-friendly multi-college application platform, achieving 47% completion against a 20–35% industry standard and scaling from 250K to 1.5M users.',
     impactLabel: '47% completion rate',
     accentHex: '#FF00AA', /* magenta */
+    thumbnailImage: '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Applications-Complete.png',
 
     bento: [
       /* S1 — Hero */
