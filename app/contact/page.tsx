@@ -310,8 +310,8 @@ function ContactFormInner() {
 
 export default function ContactPage() {
   return (
-    {/* Hidden form for Netlify build-time detection */}
-    <form name="contact" data-netlify="true" style={{ display: 'none' }}>
+
+    <form name="contact" data-netlify="true" hidden>
       <input type="text" name="firstName" />
       <input type="text" name="lastName" />
       <input type="email" name="email" />
@@ -319,7 +319,7 @@ export default function ContactPage() {
       <input type="tel" name="phone" />
       <input type="text" name="role" />
       <input type="url" name="jdLink" />
-      <textarea name="message" />
+      <textarea name="message"></textarea>
       <input type="text" name="phoneScore" />
       <input type="text" name="phoneType" />
       <input type="text" name="phoneCarrier" />
