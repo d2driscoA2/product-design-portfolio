@@ -310,7 +310,7 @@ function ContactFormInner() {
 
 export default function ContactPage() {
   return (
-
+    <>
     <form name="contact" data-netlify="true" hidden>
       <input type="text" name="firstName" />
       <input type="text" name="lastName" />
@@ -450,6 +450,7 @@ export default function ContactPage() {
         </div>
       </div>
     </main>
+    </>
   )
 }
 
