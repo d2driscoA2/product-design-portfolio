@@ -25,7 +25,7 @@ export interface CaseStudy {
   accentHex: string
   /** Optional thumbnail shown at the top of the case study card */
   thumbnailImage?: string
-  bento: BentoStat
+  bento: BentoStat[]
 }
 
 /* ─── Data ───────────────────────────────────────────────────────── */
@@ -48,7 +48,7 @@ export const caseStudies: CaseStudy[] = [
     bento: [
       /* S1 — Hero, full-width top row */
       {
-        stat:            '67 → 35 DAYS',
+        value:            '67 → 35 DAYS',
         label:           'Customer onboarding time — 48% reduction',
         variant:         'charcoal',
         accent:          'coral',
@@ -56,7 +56,7 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S2 */
       {
-        stat:    '$500K → $2M+',
+        value:    '$500K → $2M+',
         label:   'Daily transaction revenue — 300% growth',
         variant: 'default',
         accent:  'coral',
@@ -64,20 +64,20 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S3 */
       {
-        stat:    '120+ COUNTRIES',
+        value:    '120+ COUNTRIES',
         label:   'Regulatory frameworks navigated — zero compliance violations',
         variant: 'royal-blue',
       },
       /* S4 */
       {
-        stat:    '7 MONTHS',
+        value:    '7 MONTHS',
         label:   'Pandemic MVP — distributed global team across US and Europe',
         variant: 'default',
         accent:  'none',
       },
       /* S5 — col-span-2 on desktop */
       {
-        stat:    '85% SELF-SERVICE',
+        value:    '85% SELF-SERVICE',
         label:   'Customers onboarded without CS intervention',
         variant: 'default',
         accent:  'coral',
@@ -85,7 +85,7 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S6 */
       {
-        stat:    '0 → SELF-SERVICE',
+        value:    '0 → SELF-SERVICE',
         label:   'API keys, billing, phone numbers — fully automated',
         variant: 'default',
         accent:  'none',
@@ -109,14 +109,14 @@ export const caseStudies: CaseStudy[] = [
     bento: [
       /* S1 — Hero */
       {
-        stat:    '21 BILLION+',
+        value:    '21 BILLION+',
         label:   'Annual transactions protected from fraud globally',
         variant: 'royal-blue',
         accent:  'none',
       },
       /* S2 */
       {
-        stat:    '1,000+ PARAMETERS',
+        value:    '1,000+ PARAMETERS',
         label:   'Configurable risk data points in the ML-powered interface',
         variant: 'default',
         accent:  'blue-light',
@@ -124,7 +124,7 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S3 */
       {
-        stat:    '5+ BILLION',
+        value:    '5+ BILLION',
         label:   'Unique phone numbers analyzed — monthly fraud risk assessment',
         variant: 'default',
         accent:  'blue-light',
@@ -132,21 +132,21 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S4 */
       {
-        stat:    '0–1000 RISK SCALE',
+        value:    '0–1000 RISK SCALE',
         label:   'Real-time scoring system — sub-second response times',
         variant: 'charcoal',
         accent:  'none',
       },
       /* S5 — col-span-2 on desktop */
       {
-        stat:    '6 RISK CATEGORIES',
+        value:    '6 RISK CATEGORIES',
         label:   'SIM swap, breached data, porting, active calls, number type, IP',
         variant: 'default',
         accent:  'none',
       },
       /* S6 */
       {
-        stat:    'FORTUNE 500',
+        value:    'FORTUNE 500',
         label:   'Bank-grade fraud prevention — finance, gaming, healthcare',
         variant: 'default',
         accent:  'none',
@@ -170,7 +170,7 @@ export const caseStudies: CaseStudy[] = [
     bento: [
       /* S1 — Hero */
       {
-        stat:           '22.2% CTR',
+        value:           '22.2% CTR',
         label:          'RCS message engagement vs. 3% traditional SMS',
         variant:        'charcoal',
         accent:         'amber',
@@ -178,14 +178,14 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S2 */
       {
-        stat:    '6 CHANNELS, 1 API',
+        value:    '6 CHANNELS, 1 API',
         label:   'SMS, RCS, WhatsApp, Viber, MMS, Email — one unified interface',
         variant: 'royal-blue',
         accent:  'none',
       },
       /* S3 */
       {
-        stat:    '700+ CARRIER ROUTES',
+        value:    '700+ CARRIER ROUTES',
         label:   'Direct global integrations — 120+ countries supported',
         variant: 'default',
         accent:  'amber',
@@ -193,14 +193,14 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S4 */
       {
-        stat:    '50% FASTER',
+        value:    '50% FASTER',
         label:   'Customer implementation time reduction',
         variant: 'default',
         accent:  'none',
       },
       /* S5 — col-span-2 on desktop · feature callout, not a metric */
       {
-        stat:      'Intelligent Cascade',
+        value:      'Intelligent Cascade',
         label:     'Automatic channel fallback — configurable timing per route',
         variant:   'default',
         accent:    'amber',
@@ -209,7 +209,7 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S6 */
       {
-        stat:    '2B+ REACHABLE',
+        value:    '2B+ REACHABLE',
         label:   'WhatsApp Business users within the unified platform',
         variant: 'default',
         accent:  'none',
@@ -233,21 +233,21 @@ export const caseStudies: CaseStudy[] = [
     bento: [
       /* S1 — Hero */
       {
-        stat:    '47% COMPLETION',
+        value:    '47% COMPLETION',
         label:   'vs. 20–35% industry standard — more than doubled typical rate',
         variant: 'royal-blue',
         accent:  'none',
       },
       /* S2 */
       {
-        stat:    '600% GROWTH',
+        value:    '600% GROWTH',
         label:   '250K → 1.5M users during tenure — now 4M+ as Appily',
         variant: 'charcoal',
         accent:  'none',
       },
       /* S3 */
       {
-        stat:    '200+ COLLEGES',
+        value:    '200+ COLLEGES',
         label:   'Partner institutions including University of Michigan and Michigan State',
         variant: 'default',
         accent:  'magenta',
@@ -255,14 +255,14 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S4 */
       {
-        stat:    '25% LONGER',
+        value:    '25% LONGER',
         label:   'Average session time — 4.8 → 6 minutes',
         variant: 'default',
         accent:  'none',
       },
       /* S5 — col-span-2 on desktop */
       {
-        stat:    '6 HRS vs. 30+',
+        value:    '6 HRS vs. 30+',
         label:   'Time to apply to 10 colleges — 80% reduction in student effort',
         variant: 'default',
         accent:  'magenta',
@@ -270,7 +270,7 @@ export const caseStudies: CaseStudy[] = [
       },
       /* S6 */
       {
-        stat:    '40% MORE RETURN VISITS',
+        value:    '40% MORE RETURN VISITS',
         label:   'Students came back — higher retention than any prior version',
         variant: 'default',
         accent:  'none',

@@ -4,6 +4,9 @@ export interface BentoStat {
   value: string;
   label: string;
   sublabel?: string;
+  variant?: string;
+  accent?: string;
+  accentPosition?: string;
 }
 
 interface BentoGridProps {
