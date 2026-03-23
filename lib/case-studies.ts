@@ -1,4 +1,4 @@
-import type { BentoStats } from '@/components/ui/BentoGrid'
+import type { BentoStat } from '@/components/ui/BentoGrid'
 
 /* ─── Types ──────────────────────────────────────────────────────── */
 
