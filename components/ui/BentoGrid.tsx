@@ -7,6 +7,7 @@ export interface BentoStat {
   variant?: string;
   accent?: string;
   accentPosition?: string;
+  isFeature?: boolean;
 }
 
 interface BentoGridProps {
