@@ -81,7 +81,7 @@ function ContactFormInner() {
         formData.append('phoneType', phoneResult.phone_type ?? '')
         formData.append('phoneCarrier', phoneResult.carrier ?? '')
       }
-      const res = await fetch('/', {
+      const res = await fetch('/netlify-forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData.toString(),
