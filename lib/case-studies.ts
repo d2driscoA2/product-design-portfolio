@@ -25,7 +25,7 @@ export interface CaseStudy {
   accentHex: string
   /** Optional thumbnail shown at the top of the case study card */
   thumbnailImage?: string
-  bento: BentoStats
+  bento: BentoStat
 }
 
 /* ─── Data ───────────────────────────────────────────────────────── */
