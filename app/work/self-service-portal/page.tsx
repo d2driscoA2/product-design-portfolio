@@ -52,7 +52,7 @@ With a constrained story-point budget and a pandemic-distributed team across US 
 
 The hardest design problem was not the interface. It was the regulatory variation. Each of the 120-plus countries had different documentation requirements. The portal had to handle this complexity without exposing it. Dynamic flows surfaced only the requirements relevant to each customer's location and product, at the moment they were needed.`,
       images: [
-        '/images/1-self-service-customer-portal/images-for-case-study/prototypes/self-service-low-fidelity.png',
+        '/images/1-self-service-customer-portal/self-service-low-fidelity.png',
         '/images/1-self-service-customer-portal/images-for-case-study/prototypes/frames/proto-country-blocking-modal.jpg',
       ],
       imageCaption: 'Left: early low-fidelity wireframes mapping the path from signup to first API call. Right: the self-service country blocking configuration — the hardest regulatory UX problem on the project.',
@@ -68,8 +68,8 @@ Round 3 tested new trial users with no prior TeleSign experience. Task: complete
 
 Across all three rounds, one pattern held. When users knew exactly what came next, they completed the task. When the next step was ambiguous, they stopped and emailed support.`,
       images: [
-        '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/portal-messaging-api.png',
-        '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/portal-products-voice.png',
+        '/images/1-self-service-customer-portal/portal-messaging-api.png',
+        '/images/1-self-service-customer-portal/portal-products-voice.png',
         '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/fs-087.png',
       ],
     },
