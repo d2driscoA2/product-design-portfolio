@@ -10,8 +10,10 @@ export interface ProcessSection {
   body: string;
   image?: string;
   imageAlt?: string;
+  imageCaption?: string;
   images?: string[];
   quote?: string;
+  outcomeTiers?: { label: string; value: string; context: string; isPrimary?: boolean }[];
 }
 
 export interface CaseStudyData {
@@ -178,6 +180,17 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
                 {section.quote}
               </blockquote>
             )}
+            {section.outcomeTiers && (
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2.5rem' }}>
+                {section.outcomeTiers.map((tier, ti) => (
+                  <div key={ti} style={{ padding: '1.5rem', border: tier.isPrimary ? '1.5px solid ' + accentColor : '1px solid var(--color-border, #E5E7EB)', borderRadius: 8 }}>
+                    <div style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: tier.isPrimary ? accentColor : 'var(--color-text-secondary, #606060)', marginBottom: '0.75rem' }}>{tier.label}</div>
+                    <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: tier.isPrimary ? accentColor : 'var(--color-text-primary, #1A1A1A)', lineHeight: 1, marginBottom: '0.75rem' }}>{tier.value}</div>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary, #606060)', lineHeight: 1.6, margin: 0 }}>{tier.context}</p>
+                  </div>
+                ))}
+              </div>
+            )}
             <div>
               {section.body.split('\n\n').map((para, j) => (
                 <p key={j} style={{ fontSize: '1rem', lineHeight: 1.75, marginBottom: '1.25rem' }}>{para}</p>
@@ -187,6 +200,9 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
               <figure style={{ margin: '2.5rem 0 0', borderRadius: 10, overflow: 'hidden', background: 'var(--color-bg-secondary, #F2F2F2)' }}>
                 <Image src={section.image} alt={section.imageAlt || section.heading} width={1200} height={700} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
               </figure>
+            )}
+            {section.image && section.imageCaption && (
+              <p style={{ fontSize: '0.82rem', color: 'var(--color-text-secondary, #606060)', marginTop: '0.75rem', lineHeight: 1.5, fontStyle: 'italic' }}>{section.imageCaption}</p>
             )}
             {section.images && section.images.length > 0 && (
               <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(section.images.length, 3)}, 1fr)`, gap: '1rem', marginTop: '2.5rem' }}>
