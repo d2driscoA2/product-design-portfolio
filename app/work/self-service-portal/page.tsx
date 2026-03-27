@@ -12,19 +12,19 @@ const data: CaseStudyData = {
   title: 'Self-Service Customer Portal',
   headline: 'How Cutting Onboarding From 67 Days to Same-Day Access Freed TeleSign to Serve an Entirely New Market',
   role: 'Principal Product Designer',
-  timeline: '7 months · 2020–2021',
+  timeline: '7 months \u00b7 2020\u20132021',
   accentColor: '#F47060',
   heroImage: '/images/1-self-service-customer-portal/hero/Full-service-Example-Image-2048x1925.png',
   heroImageAlt: 'TeleSign self-service portal dashboard',
   heroImagePosition: 'top center',
   overview:
-    "TeleSign's enterprise onboarding took 67 days on average. Every new customer required manual CS intervention — products provisioned by hand, API keys requiring CS involvement, government approval documentation handled email by email across 120-plus countries. I was brought in as Principal Product Designer to redesign this from the ground up, during a global pandemic, with a distributed international team and a constrained development budget.",
+    "TeleSign's enterprise onboarding took 67 days on average. Every new customer required manual CS intervention \u2014 products provisioned by hand, API keys requiring CS involvement, government approval documentation handled email by email across 120-plus countries. I was brought in as Principal Product Designer to redesign this from the ground up, during a global pandemic, with a distributed international team and a constrained development budget.",
   bentoStats: [
     { value: 'Same-day', label: 'Access for simpler products', sublabel: 'First time in TeleSign history' },
-    { value: '67 → 35', label: 'Days to onboard (complex configs)', sublabel: '48% reduction in CS-controlled time' },
+    { value: '67 \u2192 35', label: 'Days to onboard (complex configs)', sublabel: '48% reduction in CS-controlled time' },
     { value: '85%', label: 'Customers live without CS', sublabel: 'Down from 100% CS dependency' },
     { value: '40%', label: 'CS workload reduction', sublabel: 'Team redirected to retention work' },
-    { value: '$500K → $2M+', label: 'Daily transaction revenue', sublabel: '300% growth during this period' },
+    { value: '$500K \u2192 $2M+', label: 'Daily transaction revenue', sublabel: '300% growth during this period' },
     { value: '2019', label: 'Innovation of the Year', sublabel: 'Phone number purchasing UI' },
   ],
   sections: [
@@ -37,14 +37,16 @@ const data: CaseStudyData = {
 I then interviewed twelve enterprise customers who had recently completed onboarding. Their frustration was consistent. They never knew what step came next. They waited days for responses. They had no visibility into their own progress.
 
 The design question shifted. Not "How do we make the portal easier?" but "How do we design an onboarding experience that needs no handholding at all?"`,
-      image: '/images/1-self-service-customer-portal/images-for-case-study/before-redesign/screencapture-portal-telesign-login-2018-10-15-12_13_16.png',
-      imageAlt: 'The original TeleSign portal login screen from 2018, the starting point of the 67-day onboarding journey',
-      imageCaption: 'The original portal login screen, October 2018. Every step beyond this required a CS email chain.',
+      images: [
+        '/images/1-self-service-customer-portal/images-for-case-study/before-redesign/screencapture-portal-telesign-login-2018-10-15-12_13_16.png',
+        '/images/1-self-service-customer-portal/images-for-case-study/before-redesign/screencapture-portal-telesign-portal-dashboard-2018-10-11-10_43_49.png',
+      ],
+      imageCaption: 'Two separate portals, October 2018. Neither was built for the customer. Every step beyond the login screen required a CS email chain.',
     },
     {
       type: 'decision',
       heading: 'What was built, what was not, and why the hardest problem was not the interface.',
-      body: `I designed a self-service portal giving enterprise customers direct control over every step: account creation, business verification, product purchasing, phone number acquisition across 120-plus countries, API key generation, and billing — all without CS involvement.
+      body: `I designed a self-service portal giving enterprise customers direct control over every step: account creation, business verification, product purchasing, phone number acquisition across 120-plus countries, API key generation, and billing \u2014 all without CS involvement.
 
 The first direction I prototyped was a guidance layer on top of TelePortal, the existing internal tool. Four customer tests killed it. TelePortal's information architecture was built for CS workflows, not customer workflows. Guidance on top of expert assumptions does not make a product accessible. The recommendation: build from scratch.
 
@@ -55,7 +57,7 @@ The hardest design problem was not the interface. It was the regulatory variatio
         '/images/1-self-service-customer-portal/self-service-low-fidelity.png',
         '/images/1-self-service-customer-portal/images-for-case-study/prototypes/frames/proto-country-blocking-modal.jpg',
       ],
-      imageCaption: 'Left: early low-fidelity wireframes mapping the path from signup to first API call. Right: the self-service country blocking configuration — the hardest regulatory UX problem on the project.',
+      imageCaption: 'Left: early low-fidelity wireframes mapping the path from signup to first API call. Right: the self-service country blocking configuration \u2014 the hardest regulatory UX problem on the project.',
     },
     {
       type: 'iteration',
@@ -68,10 +70,11 @@ Round 3 tested new trial users with no prior TeleSign experience. Task: complete
 
 Across all three rounds, one pattern held. When users knew exactly what came next, they completed the task. When the next step was ambiguous, they stopped and emailed support.`,
       images: [
-        '/images/1-self-service-customer-portal/portal-messaging-api.png',
-        '/images/1-self-service-customer-portal/portal-products-voice.png',
-        '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/fs-087.png',
+        '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/fs-089.png',
+        '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/fs-091.png',
+        '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/fs-094.png',
       ],
+      imageCaption: 'Left to right: Solutions discovery \u2014 use-case-first navigation so customers find the right product. Number and sender ID request flow \u2014 3-step wizard replacing a CS email. SMS Verify product page \u2014 clear entry point with documentation access. Each screen eliminates a step that previously required CS involvement.',
     },
     {
       type: 'outcome',
@@ -80,23 +83,23 @@ Across all three rounds, one pattern held. When users knew exactly what came nex
         {
           label: 'Simpler products',
           value: 'Same-day access',
-          context: 'First time in TeleSign history. Account creation, product purchase, API key generation, and first call — no CS involvement required.',
+          context: 'First time in TeleSign history. Account creation, product purchase, API key generation, and first call \u2014 no CS involvement required.',
           isPrimary: true,
         },
         {
           label: 'Complex regulatory configurations',
-          value: '67 days → 35 days',
+          value: '67 days \u2192 35 days',
           context: `Government approval timelines sit outside TeleSign's control. What changed: TeleSign's portion became self-directed, transparent, and fast.`,
         },
       ],
-      image: '/images/1-self-service-customer-portal/images-for-case-study/prototypes/frames/proto-api-verification.jpg',
-      imageAlt: 'Self-service portal prototype showing the API verification step — the end of the onboarding flow',
-      imageCaption: 'The final step of the self-service sign-up prototype: API verification. From account creation to first call, no CS involvement.',
+      image: '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/fs-087.png',
+      imageAlt: 'Redesigned TeleSign portal homepage: Hi Tom, welcome back to TeleSign, with Customer ID, API Key, and use-case cards visible immediately',
+      imageCaption: 'The redesigned portal homepage. Customer ID and API Key accessible on arrival. No CS required. What previously took 67 days for complex configurations now begins immediately.',
       body: `85% of customers completed onboarding without CS intervention. CS workload on onboarding tasks fell 40 percent, freeing the team for retention work that required actual expertise. Daily transaction revenue grew from $500K to over $2M during this period.
 
 The SMB market became economically viable for the first time. The CS overhead that made small accounts unprofitable was gone.
 
-The phone number purchasing UI won TeleSign's 2019 Innovation of the Year award. The design system built for this project became the company standard — colors, navigation patterns, and typography adopted across all TeleSign products.`,
+The phone number purchasing UI won TeleSign's 2019 Innovation of the Year award. The design system built for this project became the company standard \u2014 colors, navigation patterns, and typography adopted across all TeleSign products.`,
     },
     {
       type: 'reflection',

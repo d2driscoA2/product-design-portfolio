@@ -11,15 +11,15 @@ const data: CaseStudyData = {
   client: 'CAPPEX',
   title: 'Universal College Application',
   headline: 'One Essay, Every College. A 47% Completion Rate in an Industry That Averages 35%.',
-  role: 'Product Designer',
-  timeline: '4 years · 2015-2018',
+  role: 'Lead Product Designer',
+  timeline: '4 years \u00b7 2015\u20132018',
   accentColor: '#FF00AA',
   heroImage: '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Applications-Complete.png',
-  heroImageAlt: 'Universal College Application interface',
+  heroImageAlt: 'Cappex Universal College Application dashboard showing all applications submitted',
   overview:
-    "The college application process overwhelmed students applying to multiple schools. Each required a separate application, separate essays, and separate submission processes. At Cappex, I designed the Universal College Application: one essay, one profile, submitted to 200+ partner colleges simultaneously. The platform scaled from 250,000 to 1.5 million users during my four years and now serves 4 million+ as Appily.",
+    "The college application process overwhelmed students applying to multiple schools. Each required a separate application, separate essays, and separate submission processes. At Cappex, I designed the Universal College Application: one essay, one profile, submitted to 200+ partner colleges simultaneously. The platform scaled from 250,000 to 1.5 million users during my four years, and now serves 4 million+ as Appily.",
   bentoStats: [
-    { value: '47%', label: 'Application completion rate', sublabel: 'vs 20-35% industry standard' },
+    { value: '47%', label: 'Application completion rate', sublabel: 'vs 20\u201335% industry standard' },
     { value: '600%', label: 'User growth', sublabel: '250K to 1.5M during tenure (now 4M+ as Appily)' },
     { value: '200+', label: 'Partner colleges', sublabel: 'Including U of Michigan and Michigan State' },
     { value: '6 hrs', label: 'vs 30+ hours traditionally', sublabel: '80% reduction in student effort' },
@@ -33,11 +33,14 @@ const data: CaseStudyData = {
       quote: '"I am applying to 8 colleges. I have written 12 different essays. I am exhausted."',
       body: `I ran surveys, interviews, and focus groups with high school students and observed them attempting to complete multiple college applications. The behavior was consistent: students opened dozens of browser tabs, copied and pasted content between applications, made mistakes, and gave up.
 
-Industry data confirmed the pattern. The average college application completion rate was 20-35%. Students started applications and abandoned them before submission at rates that admissions officers described as deeply frustrating.
+Industry data confirmed the pattern. The average college application completion rate was 20\u201335%. Students started applications and abandoned them before submission at rates that admissions officers described as deeply frustrating.
 
-The first-generation student problem was sharper. First-generation students graduated at a 24% rate compared to 59% for continuing-generation students. The application process was a primary barrier.`,
-      image: '/images/4-universal-college-application/Wires/User%20Onboarding.png',
+The first-generation student problem was sharper. First-generation students graduated at a 24% rate compared to 59% for continuing-generation students. The application process was a primary barrier. The system assumed a familiarity and a financial cushion they had not been given.
+
+I also met directly with admissions offices at partner universities. What they told me reframed everything. They wanted more applicants. They were losing qualified students not to competing schools but to the friction of applying. Universities and students were failing each other because the system connecting them was broken.`,
+      image: '/images/4-universal-college-application/Wires/User Onboarding.png',
       imageAlt: 'Early wireframe mapping the user onboarding flow for the Universal College Application',
+      imageCaption: 'Early onboarding wireframe: the flow from empty dashboard to first school added. The core design challenge was making the first step feel achievable, not overwhelming.',
     },
     {
       type: 'decision',
@@ -46,47 +49,59 @@ The first-generation student problem was sharper. First-generation students grad
 
 I mapped every step of the traditional application process and asked one question at each: does this step require unique information, or is it repeated from another form? Most steps were repetitions. I eliminated or pre-filled them.
 
+For a significant portion of partner universities at launch, the application was free. Removing the per-application fee directly addressed the financial barrier that stopped first-generation students from applying broadly in the first place.
+
 The dashboard design went through three major iterations. The empty state needed to feel inviting, not overwhelming. The populated state needed to surface exactly what was still needed without making the completed work feel precarious.`,
       images: [
         '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Empty.png',
         '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Populated.png',
+        '/images/4-universal-college-application/Designs/Essays/PNGs/Cappex-Application-Sections-Short-Answer-and-Essay-Questions-Desktop.png',
       ],
+      imageCaption: 'Left to right: empty dashboard state \u2014 inviting, not intimidating. Populated dashboard with four schools in different completion states, college search active. Essay section \u2014 one prompt, visible to the student once, going to every college simultaneously. Each screen reflects the same principle: less to manage, not more control.',
     },
     {
       type: 'iteration',
-      heading: 'Continuous testing with real high school students, not assumptions about them.',
+      heading: 'Continuous testing with real high school students. Not assumptions about them.',
       body: `I tested throughout the design process with students at local high schools. Early testing revealed confusion about the college selection interface. Students did not understand how to add schools to their list. I redesigned the flow with clearer calls-to-action and visual confirmation feedback.
 
-The essay section required the most iteration. Students needed to understand that one essay would go to every college they selected. The first version buried this context. The final version made it the first thing students saw when they reached that section — framed as the feature it was, not a constraint.
+The essay section required the most iteration. Students needed to understand that one essay would go to every college they selected. The first version buried this context. The final version made it the first thing students saw when they reached that section \u2014 framed as the feature it was, not a constraint.
+
+The single most impactful change after launch: making the essay word count visible in real time with a confidence indicator rather than a hard limit. Students who hit a hard word limit stopped. Students who saw a confidence indicator kept writing and then edited.
 
 Error states were a key focus. When students made mistakes, the interface needed to explain exactly what went wrong and how to fix it, without making them feel they had lost their work.`,
       images: [
-        '/images/4-universal-college-application/Designs/Create%20Account/PNGs/Cappex-Application-Desktop-Create-Account.png',
-        '/images/4-universal-college-application/Designs/Essays/PNGs/Cappex-Application-Sections-Short-Answer-and-Essay-Questions-Desktop.png',
+        '/images/4-universal-college-application/Designs/Create Account/PNGs/Cappex-Application-Desktop-Create-Account.png',
+        '/images/4-universal-college-application/Designs/Form Field Error/PNGs/Cappex-Application-Desktop-Form-Field-Error-01.png',
       ],
+      imageCaption: 'Left: account creation \u2014 the entry point for first-generation students with no prior application experience. Right: form field error state \u2014 specific guidance, no lost work, immediate path forward. Error design received the same rigor as success path design.',
     },
     {
       type: 'outcome',
       heading: '47% completion. 600% user growth. The standard completion rate was 35%.',
-      body: `The Universal College Application achieved a 47% completion rate against a 20-35% industry standard. Students applying to 10 colleges spent 6 hours on the Cappex application compared to 30+ hours on traditional applications.
+      body: `The Universal College Application achieved a 47% completion rate against a 20\u201335% industry standard. Students applying to 10 colleges spent 6 hours on the Cappex platform compared to 30+ hours on traditional applications.
 
-The platform scaled from 250,000 users in 2015 to 1,500,000 users by the end of my tenure. It now serves 4,000,000+ users as Appily following EAB’s 2020 acquisition. Partner colleges grew to 200+ institutions including the University of Michigan and Michigan State.
+The platform scaled from 250,000 users in 2015 to 1,500,000 users by the end of my tenure. It now serves 4,000,000+ users as Appily following EAB's 2020 acquisition. Partner colleges grew to 200+ institutions including the University of Michigan and Michigan State.
 
-Session time increased 25%. Bounce rate decreased 10 percentage points. The application complete state — the moment a student submits to every college at once — was the culmination of every friction-reduction decision made across four years.`,
-      image: '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Applications-Complete.png',
-      imageAlt: 'Cappex dashboard showing completed applications submitted to all selected colleges',
+Session time increased 25%. Bounce rate decreased 10 percentage points. The application complete state \u2014 the moment a student submits to every college at once \u2014 was the culmination of every friction-reduction decision made across four years.`,
+      images: [
+        '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Applications-Complete.png',
+        '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Mobile-Dashboard_Applications-Complete.png',
+      ],
+      imageCaption: 'Desktop and mobile complete states: every application submitted simultaneously. The moment the research pointed toward from the start \u2014 a student who applied to colleges they would not have applied to otherwise because the process was no longer exhausting enough to stop them.',
     },
     {
       type: 'reflection',
       heading: 'Simplicity is the hardest design problem. Adding is easy. Removing is not.',
       body: `Every iteration cycle produced the same finding: students wanted less complexity, not more features. The temptation was always to add guidance, add tooltips, add helper text. Every addition increased the cognitive load on students who were already overwhelmed.
 
-The design principle I kept returning to: a student applying to 10 colleges under deadline pressure has no patience for a feature. They have tolerance only for the next step forward. The interface needed to make the next step obvious at every moment, and then get out of the way.
+The metric I am most proud of is not the completion rate. It is the students who applied to schools they would not have applied to otherwise because the process was no longer exhausting enough to stop them.
 
-The thing I would investigate next: the gap between completion rate and enrollment. A 47% completion rate meant 53% of students who started still did not finish. Understanding that specific group with more precision, and designing specifically for them, would be the next meaningful iteration.`,
+If I were doing this today, I would push harder on measuring first-generation completion rates from day one. We optimized for overall completion. We should have measured, from launch, whether first-generation students were completing at the same rate as their peers. That data would have changed some of our prioritization decisions.
+
+Institutional buy-in is a design problem. Getting 200 universities to accept a universal essay prompt required understanding their constraints as deeply as I understood students'. The best product decisions in that project came from those admissions office conversations, not the wireframes.`,
     },
   ],
-    prevCase: {
+  prevCase: {
     slug: 'messaging-api',
     client: 'TELESIGN',
     title: 'Messaging API Platform',
