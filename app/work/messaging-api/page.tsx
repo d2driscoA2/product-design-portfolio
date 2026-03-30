@@ -74,6 +74,7 @@ Three user groups tested separately. The consistent finding across all three: wh
         '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-view-templates.png',
       ],
       imageCaption: 'Empty state to populated state: the template management interface before and after a team has built their first template. The status column \u2014 sample-status-pending \u2014 shows WhatsApp approval in progress, making the external dependency visible.',
+      video: { videoId: '_watQ5R82Ws', startSeconds: 10, title: 'WhatsApp Message Template Creation Demo' },
     },
     {
       type: 'outcome',

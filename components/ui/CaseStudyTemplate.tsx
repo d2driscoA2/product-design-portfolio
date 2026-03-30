@@ -3,6 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import BentoGrid, { BentoStat } from './BentoGrid';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
+
+export interface VideoEmbed {
+  videoId: string;
+  startSeconds?: number;
+  title?: string;
+}
 
 export interface ProcessSection {
   type: 'insight' | 'decision' | 'iteration' | 'outcome' | 'reflection';
@@ -14,6 +21,8 @@ export interface ProcessSection {
   images?: string[];
   quote?: string;
   outcomeTiers?: { label: string; value: string; context: string; isPrimary?: boolean }[];
+  video?: VideoEmbed;
+  videos?: VideoEmbed[];
 }
 
 export interface CaseStudyData {
@@ -30,6 +39,7 @@ export interface CaseStudyData {
   overview: string;
   bentoStats: BentoStat[];
   sections: ProcessSection[];
+  heroVideo?: VideoEmbed;
   nextCase: { slug: string; client: string; title: string; accentColor: string };
   prevCase?: { slug: string; client: string; title: string; accentColor: string };
 }
@@ -166,6 +176,19 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
         </div>
       </section>
 
+      {/* Hero video */}
+      {data.heroVideo && (
+        <section style={{ padding: '0 0 4rem' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 2rem' }}>
+            <YouTubeEmbed
+              videoId={data.heroVideo.videoId}
+              startSeconds={data.heroVideo.startSeconds}
+              title={data.heroVideo.title}
+            />
+          </div>
+        </section>
+      )}
+
       {/* Case study sections */}
       {data.sections.map((section, i) => (
         <section key={i} style={{ padding: '4rem 0', borderTop: '1px solid var(--color-border, #E5E7EB)' }}>
@@ -210,6 +233,27 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
                   <figure key={idx} style={{ margin: 0, borderRadius: 10, overflow: 'hidden', background: 'var(--color-bg-secondary, #F2F2F2)' }}>
                     <Image src={img} alt={`${section.heading} ${idx + 1}`} width={800} height={500} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
                   </figure>
+                ))}
+              </div>
+            )}
+            {section.video && (
+              <div style={{ marginTop: '2.5rem' }}>
+                <YouTubeEmbed
+                  videoId={section.video.videoId}
+                  startSeconds={section.video.startSeconds}
+                  title={section.video.title}
+                />
+              </div>
+            )}
+            {section.videos && section.videos.length > 0 && (
+              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(section.videos.length, 2)}, 1fr)`, gap: '1rem', marginTop: '2.5rem' }}>
+                {section.videos.map((v, idx) => (
+                  <YouTubeEmbed
+                    key={idx}
+                    videoId={v.videoId}
+                    startSeconds={v.startSeconds}
+                    title={v.title}
+                  />
                 ))}
               </div>
             )}

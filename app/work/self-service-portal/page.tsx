@@ -17,6 +17,7 @@ const data: CaseStudyData = {
   heroImage: '/images/1-self-service-customer-portal/hero/Full-service-Example-Image-2048x1925.png',
   heroImageAlt: 'TeleSign self-service portal dashboard',
   heroImagePosition: 'top center',
+  heroVideo: { videoId: 'J2WvMidm5hI', startSeconds: 0, title: 'TeleSign Portal Screen Recording' },
   overview:
     "TeleSign's enterprise onboarding took 67 days on average. Every new customer required manual CS intervention \u2014 products provisioned by hand, API keys requiring CS involvement, government approval documentation handled email by email across 120-plus countries. I was brought in as Principal Product Designer to redesign this from the ground up, during a global pandemic, with a distributed international team and a constrained development budget.",
   bentoStats: [
@@ -58,6 +59,10 @@ The hardest design problem was not the interface. It was the regulatory variatio
         '/images/1-self-service-customer-portal/images-for-case-study/prototypes/frames/proto-country-blocking-modal.jpg',
       ],
       imageCaption: 'Left: early low-fidelity wireframes mapping the path from signup to first API call. Right: the self-service country blocking configuration \u2014 the hardest regulatory UX problem on the project.',
+      videos: [
+        { videoId: 'adqvYS_POEQ', startSeconds: 2, title: 'Lo-Fi Prototype: Self-Service Sign Up MVP' },
+        { videoId: 'Q_S6WbPtH1s', startSeconds: 1, title: 'Lo-Fi Prototype: Welcome and Product Page' },
+      ],
     },
     {
       type: 'iteration',
@@ -75,6 +80,7 @@ Across all three rounds, one pattern held. When users knew exactly what came nex
         '/images/1-self-service-customer-portal/images-for-case-study/after-redesign/fs-094.png',
       ],
       imageCaption: 'Left to right: Solutions discovery \u2014 use-case-first navigation so customers find the right product. Number and sender ID request flow \u2014 3-step wizard replacing a CS email. SMS Verify product page \u2014 clear entry point with documentation access. Each screen eliminates a step that previously required CS involvement.',
+      video: { videoId: 'H8bjDwi40cc', startSeconds: 1, title: 'All Products Figma Prototype' },
     },
     {
       type: 'outcome',
@@ -109,6 +115,10 @@ The phone number purchasing UI won TeleSign's 2019 Innovation of the Year award.
 What I would do differently. I would invest more time in error state design from day one. When a customer hit a regulatory requirement they were not expecting, the experience dropped sharply. We fixed those cases iteratively. Designing for failure paths with the same rigor as the success path from the start would have shortened that cycle.
 
 Constraint as design tool. A limited story-point budget forced every feature decision to be explicit. That discipline produced a better product than a fully-resourced effort would have, because it required the team to decide what success actually meant before writing a line of code.`,
+      videos: [
+        { videoId: 'BA8iaSzQLMg', startSeconds: 1, title: 'Design Guide: Colors, Typography & Nav' },
+        { videoId: '7TWvcvsMAro', startSeconds: 0, title: 'Design Guide: Typography' },
+      ],
     },
   ],
   nextCase: {

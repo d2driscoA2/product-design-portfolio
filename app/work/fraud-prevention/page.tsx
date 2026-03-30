@@ -74,6 +74,7 @@ Across all rounds, one pattern held: when analysts could see exactly which signa
       body: `The combined Intelligence and PhoneID suite protected over 21 billion annual transactions. The SMS Country Blocking feature delivered an 85% reduction in spam complaints for one financial services client within the first month of deployment, and mitigated $900K in negative margin exposure from SMS pumping attacks.
 
 The Ticketmaster concert promotion delivered millions of secure redemptions while blocking bot-driven abuse, VPN masking, and location spoofing at scale. The design system built for this project became the foundation for all TeleSign product interfaces.`,
+      video: { videoId: 'QhyfFRU2Ovo', startSeconds: 5, title: 'PhoneID Transaction Summary Dashboard' },
     },
     {
       type: 'reflection',
