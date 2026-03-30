@@ -72,6 +72,45 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
   return (
     <main style={{ background: 'var(--color-bg, #fff)', color: 'var(--color-text-primary, #1A1A1A)', minHeight: '100vh' }}>
 
+      <style>{`
+        .hero-image-container {
+          line-height: 0;
+          background: #f8f8f8;
+          height: 380px;
+          overflow: hidden;
+        }
+        .hero-image-img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+        .outcome-tiers-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-bottom: 2.5rem;
+        }
+        .outcome-tier-value {
+          hyphens: none;
+          overflow-wrap: normal;
+          word-break: normal;
+        }
+        @media (max-width: 479px) {
+          .hero-image-container {
+            height: auto;
+            min-height: 200px;
+          }
+          .hero-image-img {
+            object-fit: contain;
+            height: auto !important;
+          }
+          .outcome-tiers-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
+
       {/* Breadcrumb */}
       <nav style={{ maxWidth: 900, margin: '0 auto', padding: '1.25rem 2rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--color-text-secondary, #606060)' }}>
         <Link href="/" style={{ color: 'var(--color-text-secondary, #606060)', textDecoration: 'none' }}>Home</Link>
@@ -141,7 +180,7 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
                 <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#28C840', flexShrink: 0 }} />
                 <div style={{ flex: 1, height: 20, background: '#E8E8E8', borderRadius: 4, margin: '0 8px' }} />
               </div>
-              <div style={{ lineHeight: 0, background: '#f8f8f8', height: 380, overflow: 'hidden' }}>
+              <div className="hero-image-container">
                 <Image
                   src={data.heroImage}
                   alt={data.heroImageAlt}
@@ -149,7 +188,8 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
                   height={750}
                   priority
                   unoptimized
-                  style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover', objectPosition: data.heroImagePosition ?? 'center center' }}
+                  className="hero-image-img"
+                  style={{ objectPosition: data.heroImagePosition ?? 'top center' }}
                 />
               </div>
             </div>
@@ -204,11 +244,11 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
               </blockquote>
             )}
             {section.outcomeTiers && (
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2.5rem' }}>
+              <div className="outcome-tiers-grid">
                 {section.outcomeTiers.map((tier, ti) => (
                   <div key={ti} style={{ padding: '1.5rem', border: tier.isPrimary ? '1.5px solid ' + accentColor : '1px solid var(--color-border, #E5E7EB)', borderRadius: 8 }}>
                     <div style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: tier.isPrimary ? accentColor : 'var(--color-text-secondary, #606060)', marginBottom: '0.75rem' }}>{tier.label}</div>
-                    <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: tier.isPrimary ? accentColor : 'var(--color-text-primary, #1A1A1A)', lineHeight: 1, marginBottom: '0.75rem' }}>{tier.value}</div>
+                    <div className="outcome-tier-value" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: tier.isPrimary ? accentColor : 'var(--color-text-primary, #1A1A1A)', lineHeight: 1, marginBottom: '0.75rem' }}>{tier.value}</div>
                     <p style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary, #606060)', lineHeight: 1.6, margin: 0 }}>{tier.context}</p>
                   </div>
                 ))}
