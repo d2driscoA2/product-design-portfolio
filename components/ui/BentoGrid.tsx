@@ -17,9 +17,8 @@ interface BentoGridProps {
 
 export default function BentoGrid({ stats, accentColor }: BentoGridProps) {
   return (
-    <div style={{
+    <div className="grid-cols-2 sm:grid-cols-3" style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
       gap: '1px',
       backgroundColor: 'var(--color-border, #E5E7EB)',
       border: '1px solid var(--color-border, #E5E7EB)',
