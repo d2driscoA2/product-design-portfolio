@@ -88,9 +88,9 @@ Error states were a key focus. When students made mistakes, the interface needed
         '/images/4-universal-college-application/Designs/Form Field Error/PNGs/Cappex-Application-Desktop-Form-Field-Error-01.png',
         '/images/4-universal-college-application/images-for-case-study/Screens/Section@2x.png',
         '/images/4-universal-college-application/images-for-case-study/Screens/Section-Expanded@2x.png',
-        '/images/4-universal-college-application/images-for-case-study/Screens/Dash-School-%5Bmissing%5D@2x.png',
-        '/images/4-universal-college-application/images-for-case-study/Screens/Dash-School-%5Bcomplete%5D@2x.png',
-        '/images/4-universal-college-application/images-for-case-study/Screens/WAMC-Missin%5Bscores%5D@2x.png',
+        '/images/4-universal-college-application/images-for-case-study/Screens/Dash-School-Info-Missing@2x.png',
+        '/images/4-universal-college-application/images-for-case-study/Screens/Dash-School-Complete@2x.png',
+        '/images/4-universal-college-application/images-for-case-study/Screens/WAMC-Missing-Scores@2x.png',
       ],
       imageCaption: 'Account creation and error state design (desktop). All application sections collapsed with status indicators, then expanded to show sub-section completion. School cards in missing-info and complete states — the intelligent completion tracking system. "What Are My Chances?" prompting for test scores and GPA. Screens shown display the original Appily.com interface (formerly Cappex).',
     },
@@ -121,7 +121,7 @@ The metric I am most proud of is not the completion rate. It is the students who
 If I were doing this today, I would push harder on measuring first-generation completion rates from day one. We optimized for overall completion. We should have measured, from launch, whether first-generation students were completing at the same rate as their peers. That data would have changed some of our prioritization decisions.
 
 Institutional buy-in is a design problem. Getting 200 universities to accept a universal essay prompt required understanding their constraints as deeply as I understood students'. The best product decisions in that project came from those admissions office conversations, not the wireframes.`,
-      image: '/images/4-universal-college-application/images-for-case-study/Screens/Artboard%204@2x.png',
+      image: '/images/4-universal-college-application/images-for-case-study/Screens/Artboard-4@2x.png',
       imageAlt: 'Multi-screen overview of all Appily.com Universal College Application screens (formerly Cappex)',
       imageCaption: 'Full product overview: all application screens in context — from search through submission. Screens shown display the original Appily.com interface (formerly Cappex).',
     },
