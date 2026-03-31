@@ -7,7 +7,7 @@ import { HeroSection } from '@/components/ui/HeroSection'
 export const metadata: Metadata = {
   title: 'Danny Driscoll | DisplayedUX',
   description:
-    'Principal Product Designer with 18+ years designing products at TeleSign, Netflix, and Cappex. Shipping the wrong thing was never an option.',
+    'Principal Product Designer with 18+ years designing products at TeleSign, Netflix, and Appily.com. Shipping the wrong thing was never an option.',
 }
 
 /* ── Shared: eyebrow with coral rule ──────────────────────────────── */
@@ -94,7 +94,7 @@ function OriginStory() {
           ].join(' ')}
           style={{ fontFamily: 'var(--font-display)' }}
         >
-          &ldquo;Someone pushed this design to production without thinking it could kill.&rdquo;
+          &ldquo;Someone pushed this design to production. Nobody asked who else was in the room.&rdquo;
         </blockquote>
 
         {/* Story */}
@@ -110,19 +110,22 @@ function OriginStory() {
 
           <div className="text-body leading-relaxed space-y-4" style={{ color: 'var(--color-text-muted)' }}>
             <p>
-              I was at the front desk of the Waldo Library computer lab at Western
-              Michigan University. Somewhere behind me, a student let out a loud,
-              strange yawn. Seconds later, screaming erupted. I turned and saw a
-              student convulsing across the room. My lifeguard training kicked in.
+              I was working the front desk at the Waldo Library computer lab at Western Michigan University. Behind me, a student let out a loud yawn. Seconds later, screaming erupted.
             </p>
             <p>
-              I stabilized their head, rolled them into the recovery position. They
-              cleared their airway and started breathing. Then I looked up at the
-              screen: a pop-up ad. &ldquo;YOU&rsquo;RE A WINNER&rdquo; in gold text,
-              Vegas-style lights flashing. Then I looked at their wrist. An epilepsy bracelet.
+              I turned. A student was convulsing across the room. My lifeguard training kicked in.
+            </p>
+            <p>
+              I stabilized their head, rolled them into the recovery position. They cleared their airway and started breathing.
+            </p>
+            <p>
+              I looked up at the screen. A pop-up ad. &ldquo;YOU&rsquo;RE A WINNER&rdquo; in gold text, Vegas-style lights flashing.
+            </p>
+            <p>
+              I looked at their wrist. An epilepsy bracelet.
             </p>
             <p className="font-semibold text-[var(--color-text-primary)] border-t border-[var(--color-border)] pt-4">
-              That is the only thought I have carried into every project since.
+              Design decisions reach real people. Every one of them.
             </p>
           </div>
 
