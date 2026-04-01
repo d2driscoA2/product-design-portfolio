@@ -14,8 +14,8 @@ const data: CaseStudyData = {
   role: 'Lead Product Designer',
   timeline: '4 years · 2015–2018',
   accentColor: '#FF00AA',
-  heroImage: '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Applications-Complete.png',
-  heroImageAlt: 'Appily.com Universal College Application dashboard showing all applications submitted (formerly Cappex)',
+  heroImage: '/images/4-universal-college-application/hero/Prototype-Sample.png',
+  heroImageAlt: 'Appily.com Universal College Application — design prototype flow showing the complete user journey across mobile screens',
   heroVideo: {
     videoId: '0LJopyMAoIo',
     title: 'Appily.com Universal College Application — Product Demo',
