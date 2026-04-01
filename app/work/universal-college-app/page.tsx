@@ -16,6 +16,7 @@ const data: CaseStudyData = {
   accentColor: '#FF00AA',
   heroImage: '/images/4-universal-college-application/hero/Prototype-Sample.png',
   heroImageAlt: 'Appily.com Universal College Application — design prototype flow showing the complete user journey across mobile screens',
+  heroImagePosition: 'center center',
   heroVideo: {
     videoId: '0LJopyMAoIo',
     title: 'Appily.com Universal College Application — Product Demo',
