@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import BentoGrid, { BentoStat } from './BentoGrid';
@@ -63,6 +64,41 @@ function isLightColor(hex: string): boolean {
 export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
   const { accentColor } = data;
   const light = isLightColor(accentColor);
+
+  // Build flat image list for lightbox navigation (memoised for stable reference)
+  const allImages = useMemo(() => {
+    const imgs: { src: string; alt: string }[] = [];
+    data.sections.forEach((section) => {
+      if (section.image) {
+        imgs.push({ src: section.image, alt: section.imageAlt || section.heading });
+      }
+      if (section.images) {
+        section.images.forEach((img, idx) => {
+          imgs.push({ src: img, alt: `${section.heading} image ${idx + 1}` });
+        });
+      }
+    });
+    return imgs;
+  }, [data.sections]);
+
+  const srcToIndex = useMemo(() => new Map(allImages.map((img, i) => [img.src, i])), [allImages]);
+
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxIndex(null);
+      if (e.key === 'ArrowRight') setLightboxIndex(i => i !== null ? Math.min(i + 1, allImages.length - 1) : null);
+      if (e.key === 'ArrowLeft') setLightboxIndex(i => i !== null ? Math.max(i - 1, 0) : null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [lightboxIndex, allImages]);
   const heroText = light ? '#1A1A1A' : '#fff';
   const heroSubtext = light ? 'rgba(0,0,0,0.58)' : 'rgba(255,255,255,0.72)';
   const ringColor = light ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.07)';
@@ -260,7 +296,11 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
               ))}
             </div>
             {section.image && (
-              <figure style={{ margin: '2.5rem 0 0', borderRadius: 10, overflow: 'hidden', background: 'var(--color-bg-secondary, #F2F2F2)' }}>
+              <figure
+                style={{ margin: '2.5rem 0 0', borderRadius: 10, overflow: 'hidden', background: 'var(--color-bg-secondary, #F2F2F2)', cursor: 'zoom-in', transition: 'opacity 0.15s' }}
+                onClick={() => { const idx = srcToIndex.get(section.image!); if (idx !== undefined) setLightboxIndex(idx); }}
+                title="Click to enlarge"
+              >
                 <Image src={section.image} alt={section.imageAlt || section.heading} width={1200} height={700} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
               </figure>
             )}
@@ -270,8 +310,13 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
             {section.images && section.images.length > 0 && (
               <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(section.images.length, 3)}, 1fr)`, gap: '1rem', marginTop: '2.5rem' }}>
                 {section.images.map((img, idx) => (
-                  <figure key={idx} style={{ margin: 0, borderRadius: 10, overflow: 'hidden', background: 'var(--color-bg-secondary, #F2F2F2)' }}>
-                    <Image src={img} alt={`${section.heading} ${idx + 1}`} width={800} height={500} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
+                  <figure
+                    key={idx}
+                    style={{ margin: 0, borderRadius: 10, overflow: 'hidden', background: 'var(--color-bg-secondary, #F2F2F2)', cursor: 'zoom-in', transition: 'opacity 0.15s' }}
+                    onClick={() => { const i = srcToIndex.get(img); if (i !== undefined) setLightboxIndex(i); }}
+                    title="Click to enlarge"
+                  >
+                    <Image src={img} alt={`${section.heading} image ${idx + 1}`} width={800} height={500} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
                   </figure>
                 ))}
               </div>
@@ -300,6 +345,61 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
           </div>
         </section>
       ))}
+
+      {/* Lightbox overlay */}
+      {lightboxIndex !== null && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image lightbox"
+          style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.92)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          onClick={() => setLightboxIndex(null)}
+        >
+          {/* Close */}
+          <button
+            aria-label="Close lightbox"
+            onClick={() => setLightboxIndex(null)}
+            style={{ position: 'absolute', top: 16, right: 16, width: 44, height: 44, borderRadius: '50%', background: 'rgba(255,255,255,0.12)', border: 'none', color: '#fff', fontSize: '1.5rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1001 }}
+          >✕</button>
+
+          {/* Counter */}
+          <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', letterSpacing: '0.05em' }}>
+            {lightboxIndex + 1} / {allImages.length}
+          </div>
+
+          {/* Prev */}
+          {lightboxIndex > 0 && (
+            <button
+              aria-label="Previous image"
+              onClick={(e) => { e.stopPropagation(); setLightboxIndex(lightboxIndex - 1); }}
+              style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', width: 48, height: 48, borderRadius: '50%', background: 'rgba(255,255,255,0.12)', border: 'none', color: '#fff', fontSize: '1.4rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1001 }}
+            >‹</button>
+          )}
+
+          {/* Next */}
+          {lightboxIndex < allImages.length - 1 && (
+            <button
+              aria-label="Next image"
+              onClick={(e) => { e.stopPropagation(); setLightboxIndex(lightboxIndex + 1); }}
+              style={{ position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)', width: 48, height: 48, borderRadius: '50%', background: 'rgba(255,255,255,0.12)', border: 'none', color: '#fff', fontSize: '1.4rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1001 }}
+            >›</button>
+          )}
+
+          {/* Image */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ position: 'relative', width: '90vw', height: '85vh', maxWidth: 1200 }}
+          >
+            <Image
+              src={allImages[lightboxIndex].src}
+              alt={allImages[lightboxIndex].alt}
+              fill
+              unoptimized
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Case navigation */}
       <nav style={{ borderTop: '1px solid var(--color-border, #E5E7EB)', padding: '3rem 0' }}>

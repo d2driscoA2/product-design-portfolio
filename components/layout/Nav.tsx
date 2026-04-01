@@ -143,7 +143,7 @@ export function Nav() {
         className={[
           'md:hidden overflow-hidden bg-[var(--color-bg)] border-t border-[var(--color-border)]',
           'transition-[max-height,opacity] duration-300 ease-in-out motion-reduce:transition-none',
-          menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0',
+          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0',
         ].join(' ')}
       >
         <nav
@@ -167,6 +167,12 @@ export function Nav() {
               {label}
             </Link>
           ))}
+          {/* Theme toggle */}
+          <div className="flex items-center justify-between py-3 px-2 border-b border-[var(--color-border)]">
+            <span className="text-body font-semibold text-[var(--color-text-muted)]">Appearance</span>
+            <ThemeToggle />
+          </div>
+
           <a
             href="/contact?resume=true"
             className={[
