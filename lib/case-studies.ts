@@ -228,7 +228,7 @@ export const caseStudies: CaseStudy[] = [
       'Designed the world\'s only user-friendly multi-college application platform at Appily.com (formerly Cappex), achieving 47% completion against a 20–35% industry standard and scaling from 250K to 1.5M users.',
     impactLabel: '47% completion rate',
     accentHex: '#FF00AA', /* magenta */
-    thumbnailImage: '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Applications-Complete.png',
+    thumbnailImage: '/images/4-universal-college-application/hero/Prototype-Sample.png',
 
     bento: [
       /* S1 — Hero */
