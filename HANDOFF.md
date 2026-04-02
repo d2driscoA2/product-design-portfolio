@@ -1,98 +1,106 @@
-# Session Handoff — April 2, 2026
+# Session Handoff — April 2, 2026 (Final QA)
+
+## Site Status: COMPLETE AND LIVE
+
+displayedux.com is fully built, deployed, and QA'd.
+
+---
 
 ## What Was Completed This Session
 
-### 1. og:image / Social Sharing Metadata (this commit)
+### Commits
 
-Added `app/opengraph-image.tsx` — Next.js file-based dynamic og:image generation using `ImageResponse`.
-
-- 1200×630px dark background (#0A0A0A)
-- Bull's-eye logo top-left
-- Hero headline "Designing products where mistakes have consequences." with coral accent
-- Subline: 18+ years · TeleSign · Netflix · Appily.com
-- Danny Driscoll name + Principal Product Designer bottom-left
-- displayedux.com URL bottom-right
-- Decorative bull's-eyes top-right + bottom-left at low opacity
-- Automatically served at `/opengraph-image` by Next.js — no manual wiring needed
-
-Updated `app/layout.tsx` with complete metadata:
-
-- `metadataBase: new URL('https://displayedux.com')` — required for og:image URL resolution
-- Full `openGraph` block: `url`, `siteName`, `title`, `description`
-- Full `twitter` block: `card: 'summary_large_image'`, `title`, `description`, `creator`
-- `robots` block: full index/follow + googleBot crawl directives
-- `keywords` array: product designer, UX, principal, enterprise, B2B SaaS, Danny Driscoll, etc.
-
-Updated `app/about/page.tsx` metadata:
-- Fixed description from "10+ years" to "18+ years"
-- Corrected employer list to include Netflix
+| Commit | Description |
+|---|---|
+| `8639456` | Fix CS02/CS04 card thumbnails: `object-contain` → `object-cover` |
+| `d5d8b01` | Fix About page headshot: replaced broken Next.js `Image fill` with plain `img` tag |
+| `176b282` | Commit prior session leftovers: contact placeholders (Tom/Delonge), CS01 reflection video, video layout, 4 new case study images |
+| `3f6d7d6` | Fix og:image: restore edge runtime on `opengraph-image.tsx`, add static fallback image URLs to `layout.tsx` openGraph and twitter metadata |
 
 ---
 
-## Previous Session — April 1, 2026
+## QA Results — All Passes
 
-### Favicon
-Added `app/icon.svg` — bull's-eye logo. Blue outer ring #3B5CE8, salmon #F47060, pink #FF00AA, yellow center #F5C200.
-
-### Image Lightbox on Case Study Pages
-All case study images now clickable to view full-size via lightbox in `CaseStudyTemplate.tsx`.
-Keyboard nav (Escape, ArrowLeft, ArrowRight), scroll lock, counter display.
-
-### Mobile Dark Mode Toggle
-Added `<ThemeToggle />` to mobile drawer in `Nav.tsx`.
-
----
-
-## Previous Session — March 30, 2026
-
-### Mobile Layout Fixes
-- `BentoGrid.tsx` — 2-column on mobile
-- `CaseStudyTemplate.tsx` — hero object-contain mobile; outcome cards stack; hyphenation fix
-
-### Video Integration (commit 2c73c86)
-8 YouTube videos integrated into 3 case study pages using `YouTubeEmbed` component.
-
-- CS01 (Self-Service Portal): heroVideo + 3 section videos (decision: 2 paired, iteration: 1, reflection: 1)
-- CS02 (Fraud Prevention): 1 video in outcome section  
-- CS03 (Messaging API): 1 video in iteration section
-- CS04 (Universal College App): heroVideo `0LJopyMAoIo` — confirmed live ("Cappexsiteend480p", 53s)
-
----
-
-## Current Site Status (April 2, 2026)
+### Desktop (1440px) — Light Mode
 
 | Page | Status | Notes |
 |---|---|---|
-| Homepage | LIVE | Hero, stats, case study cards, origin story, philosophy, footer |
-| CS01 Self-Service Portal | LIVE | 4 videos wired |
-| CS02 Fraud Prevention | LIVE | 1 video wired |
-| CS03 Messaging API | LIVE | 1 video wired |
-| CS04 Universal College App | LIVE | heroVideo confirmed live |
-| About | LIVE | Full content: career arc, interests, fun facts, 2 YouTube embeds |
-| Contact | LIVE | TeleSign Phone Intelligence, Netlify Forms |
-| Photography | LIVE | Lightbox, keyboard nav, right-click protection |
-| og:image | LIVE (after this deploy) | Dynamic ImageResponse |
-| Resume PDF | PENDING | Upload to public/, wire to nav Resume button |
+| Homepage hero | Pass | Headshot fade-in on mount is intentional |
+| Homepage stats | Pass | AT TELESIGN / AT APPILY.COM, correct colors |
+| CS01 card | Pass | Portal thumbnail, object-cover |
+| CS02 card | Pass | Fraud dashboard, fixed from letterbox |
+| CS03 card | Pass | Messaging template builder |
+| CS04 card | Pass | Prototype board with laptop mockup |
+| Origin story | Pass | Pull quote correct |
+| Philosophy cards | Pass | Glassmorphism rendering |
+| CS01 Self-Service Portal | Pass | Coral hero, heroVideo loading, bento grid |
+| CS02 Fraud Prevention | Pass | Blue hero, dashboard screenshot |
+| CS03 Messaging API | Pass | Amber hero, 6 channel icons |
+| CS04 Universal College App | Pass | Magenta hero, prototype board |
+| About | Pass | Headshot rendering (plain img tag fix) |
+| Contact | Pass | Glassmorphism form, TeleSign badge, resume flow |
+| Photography | Pass | Carl Zimmer photo, gallery grid |
+| Photography lightbox | Pass | Opens, counter 2/32, keyboard nav, close |
 
----
+### Desktop (1440px) — Dark Mode
 
-## Open Items
-
-| Item | Priority | Notes |
+| Page | Status | Notes |
 |---|---|---|
-| Resume PDF | High | Upload to `public/resume-danny-driscoll.pdf`, update nav Resume href |
-| GitHub PAT security flag | High | Rotate token at github.com/settings/tokens. `git remote set-url origin https://github.com/d2driscoA2/product-design-portfolio.git` |
-| CS01 hero image | Medium | Shows blank browser mockup. Replace with actual portal dashboard screenshot when available |
-| Lightbox caption in overlay | Low | Currently renders below figure outside overlay |
+| Homepage | Pass | All sections, correct colors |
+| Logo | Pass | "Displayed" white, "UX" blue |
+| All 4 case study cards | Pass | Thumbnails render in dark mode |
+| All 4 case study pages | Pass | Hero gradients, bento, narrative sections |
+| About headshot | Pass | Photo visible in dark mode |
+| Contact | Pass | Glassmorphism form card dark variant |
+| Photography | Pass | Carl photo, gallery, lightbox |
+
+### Mobile (390px Playwright)
+
+| Check | Result |
+|---|---|
+| Hamburger button visible | Pass — x=326, y=12 |
+| Desktop nav hidden | Pass |
+| Mobile drawer opens | Pass — 5 links, theme toggle present |
+| Hero h1 full width | Pass — 342px (390 minus 24px padding each side) |
+| Both CTAs on same row | Pass — View work (x=24) + Read my story (x=179) |
+| Stats visible | Pass |
+| Case study cards stacked | Pass — single column, card2 below card1 |
+| Bento grid 2-column | Pass — `161.5px 161.5px` at 390px |
+| Contact form visible | Pass |
+| About headshot visible | Pass — naturalWidth=2475 |
+| Photography: 33 images | Pass |
 
 ---
 
-## Branch / Deploy
+## Metadata / SEO Status
+
+| Tag | Status | Notes |
+|---|---|---|
+| `og:title` | Pass | "Danny Driscoll | DisplayedUX" |
+| `og:description` | Pass | 18+ years copy |
+| `og:image` | Fixed in 3f6d7d6 | Static headshot URL added; edge runtime restored |
+| `twitter:card` | Fixed in 3f6d7d6 | Now `summary_large_image` |
+| `twitter:image` | Fixed in 3f6d7d6 | Headshot URL added |
+| `robots` | Pass | index/follow, full googleBot directives |
+| Dynamic opengraph-image route | Fixed in 3f6d7d6 | Edge runtime restored |
+
+---
+
+## Open Items (Require Your Action Only)
+
+| Item | Priority | Action |
+|---|---|---|
+| GitHub PAT rotation | High | `github.com/settings/tokens` → revoke current token → create new → `git remote set-url origin https://github.com/d2driscoA2/product-design-portfolio.git` |
+| Verify og:image after 3f6d7d6 deploys | Medium | Visit `displayedux.com`, right-click → "View Page Source", search `og:image` |
+
+---
+
+## Current Branch / Deploy
 
 - Branch: `design-v2`
-- Auto-deploys: displayedux.com via Netlify on push to origin/design-v2
-- Netlify project: visionary-swan-5893aa
-- Latest commit: this session (og:image + metadata fixes)
+- Netlify: `visionary-swan-5893aa`, auto-deploys on push
+- Latest commit: `3f6d7d6`
+- Live: displayedux.com
 
 ---
 
@@ -100,17 +108,17 @@ Added `<ThemeToggle />` to mobile drawer in `Nav.tsx`.
 
 | File | Purpose |
 |---|---|
-| `app/layout.tsx` | Root metadata — og, Twitter, robots |
-| `app/opengraph-image.tsx` | Dynamic 1200×630 og:image via ImageResponse |
+| `app/layout.tsx` | Root metadata — og, twitter, robots, metadataBase |
+| `app/opengraph-image.tsx` | Dynamic 1200×630 og:image via ImageResponse (edge runtime) |
 | `app/page.tsx` | Homepage |
-| `app/about/page.tsx` | About page — full content |
+| `app/about/page.tsx` | About — headshot uses plain `img` tag |
 | `app/contact/page.tsx` | Contact + TeleSign Phone Intelligence |
 | `app/photography/page.tsx` | Photography gallery with lightbox |
 | `app/work/[slug]/page.tsx` | 4 case study pages |
-| `components/ui/CaseStudyTemplate.tsx` | Shared case study layout + lightbox |
-| `components/YouTubeEmbed.tsx` | Reusable YouTube iframe embed |
-| `components/ui/BentoGrid.tsx` | Stats grid |
-| `components/layout/Nav.tsx` | Sticky nav + dark mode toggle |
-| `components/layout/Footer.tsx` | Royal blue footer |
-| `lib/case-studies.ts` | Case study data |
-| `app/globals.css` | CSS variables, keyframes, all component styles |
+| `components/ui/CaseStudyTemplate.tsx` | Case study layout + image lightbox |
+| `components/ui/CaseStudyCard.tsx` | Homepage cards — `object-cover` for thumbnails |
+| `components/YouTubeEmbed.tsx` | YouTube iframe embed |
+| `components/ui/BentoGrid.tsx` | Stats grid — 3-col desktop, 2-col mobile |
+| `components/layout/Nav.tsx` | Sticky nav + dark mode toggle in desktop and mobile |
+| `lib/case-studies.ts` | All case study data |
+| `app/globals.css` | CSS variables, theme, all component styles |
