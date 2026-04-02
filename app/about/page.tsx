@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About | Danny Driscoll',
-  description: 'Principal Product Designer based in Ann Arbor. 10+ years designing enterprise products at TeleSign and Cappex.',
+  description: 'Principal Product Designer based in Ann Arbor. 10+ years designing enterprise products at TeleSign and Appily.com.',
 };
 
 const interests = [
@@ -12,7 +12,7 @@ const interests = [
   { label: 'Woodworking', transfer: 'Constraints-first thinking', detail: "Wood tells you what it will and won't do. You design around the material, not against it. My grandfathers were builders. Working with constraints produces better outcomes than ignoring them." },
   { label: '3D Printing', transfer: 'Prototyping mindset', detail: 'The fastest way to understand a technology is to make something with it. Ship a rough version, learn what breaks, fix it. Iteration over speculation.' },
   { label: 'Long-form writing', transfer: 'Structured argumentation', detail: 'Making an argument hold together on the page is the same skill as making a design decision legible to a skeptical stakeholder. Both require anticipating objections before they are raised.' },
-  { label: 'Photography', transfer: 'Empathic observation', detail: 'My grandfather Carl photographed during WWII. I shot every campus in the Cappex network rather than use stock. The world looks different when you decide to actually see it.' },
+  { label: 'Photography', transfer: 'Empathic observation', detail: 'My grandfather Carl photographed during WWII. I shot every campus in the Appily.com (formerly Cappex) network rather than use stock. The world looks different when you decide to actually see it.' },
 ];
 
 interface FunFact {
@@ -31,9 +31,9 @@ const funFacts: FunFact[] = [
 ];
 
 const stats = [
-  { value: '10+',   label: 'Years in product design',       employer: 'TeleSign + Cappex' },
+  { value: '10+',   label: 'Years in product design',       employer: 'TeleSign + Appily.com' },
   { value: '21B+',  label: 'Annual transactions protected', employer: 'AT TeleSign' },
-  { value: '47%',   label: 'Application completion rate',   employer: 'AT Cappex' },
+  { value: '47%',   label: 'Application completion rate',   employer: 'AT APPILY.COM' },
   { value: '67→35', label: 'Days to onboard, enterprise', employer: 'AT TeleSign' },
 ];
 
@@ -71,7 +71,7 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-2 space-y-6 text-lg leading-relaxed">
             <p className="about-body">I grew up in Ann Arbor surrounded by engineers. My father has taught aerospace engineering at the University of Michigan for over 40 years. My grandfathers were engineers. The technical world was never abstract to me. But I watched non-technical family members struggle with the same interfaces those engineers built. That gap is where I work.</p>
-            <p className="about-body">I came to design through Human-Computer Interaction at Western Michigan University after witnessing a student have an epileptic seizure triggered by a flashing pop-up ad. That moment made clear that design has consequences. It is not decoration. From there: four years at Cappex building the college application platform that reached 47% completion against a 35% industry standard, then five years at TeleSign as Principal Product Designer protecting 21 billion annual transactions and cutting enterprise onboarding from 67 days to 35.</p>
+            <p className="about-body">I came to design through Human-Computer Interaction at Western Michigan University after witnessing a student have an epileptic seizure triggered by a flashing pop-up ad. That moment made clear that design has consequences. It is not decoration. From there: four years at Appily.com (formerly Cappex) building the college application platform that reached 47% completion against a 35% industry standard, then five years at TeleSign as Principal Product Designer protecting 21 billion annual transactions and cutting enterprise onboarding from 67 days to 35.</p>
             <p className="about-body">My philosophy is communication before aesthetics. I run A/B tests by statistical significance, not gut feel. I design for the user who is confused, not the user who already knows what to do. I have presented directly to C-suite at Fortune 500 companies and filed bugs on my own shipped work. I am looking for Senior, Principal, or Director roles in enterprise B2B SaaS: security products, developer tools, authentication platforms, or communication systems.</p>
             <p className="about-muted text-base">Spouse and two kids in Ann Arbor. Grew up on computers from age 4. Still plays guitar.</p>
           </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
         <div className="about-border border-t pt-16">
           <p className="text-sm font-semibold tracking-widest uppercase mb-4" style={{color:"var(--color-text-secondary)"}}>Photography</p>
           <h2 className="about-heading text-2xl font-bold mb-4">Empathique</h2>
-          <p className="about-body leading-relaxed mb-6 max-w-2xl">Photography connects me to the world, my family, and my ancestors. My grandfather Carl photographed during WWII. I shot every campus in the Cappex network rather than use stock imagery.</p>
+          <p className="about-body leading-relaxed mb-6 max-w-2xl">Photography connects me to the world, my family, and my ancestors. My grandfather Carl photographed during WWII. I shot every campus in the Appily.com (formerly Cappex) network rather than use stock imagery.</p>
           <a href="/photography" className="inline-flex items-center gap-1 text-sm font-semibold text-[#3B5CE8] hover:opacity-70 transition-opacity" style={{textDecoration:'underline',textUnderlineOffset:'3px',textDecorationThickness:'1px'}}>View photography<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{display:'inline',marginLeft:'4px',verticalAlign:'middle'}}><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="#3B5CE8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
         </div>
 

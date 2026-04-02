@@ -7,8 +7,8 @@ import Link from 'next/link'
 const HERO_STATS = [
   { company: 'At TeleSign', value: '85%',  label: 'Customers live without CS support', color: '#F47060' },
   { company: 'At TeleSign', value: '48%',  label: 'Faster enterprise onboarding',      color: '#3B5CE8' },
-  { company: 'At Cappex',   value: '47%',  label: 'Completion vs 20–35% standard',     color: '#F5C200' },
-  { company: 'At Cappex',   value: '600%', label: 'User growth in two years',           color: '#FF00AA' },
+  { company: 'At Appily.com', value: '47%',  label: 'Completion vs 20–35% standard',     color: '#F5C200' },
+  { company: 'At Appily.com', value: '600%', label: 'User growth in two years',           color: '#FF00AA' },
 ] as const
 
 export function HeroSection() {
@@ -79,7 +79,7 @@ export function HeroSection() {
               ].join(' ')}
             >
               <p className="text-lead font-medium mb-12 max-w-xl" style={{ color: 'var(--color-text-muted)' }}>
-                18+ years. TeleSign&nbsp;·&nbsp;Netflix&nbsp;·&nbsp;Cappex
+                18+ years. TeleSign&nbsp;·&nbsp;Netflix&nbsp;·&nbsp;Appily.com
               </p>
 
               <div className="flex flex-wrap gap-4 mb-20">
