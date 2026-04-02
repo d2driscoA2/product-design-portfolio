@@ -50,6 +50,14 @@ export const metadata: Metadata = {
     title: 'Danny Driscoll | DisplayedUX',
     description:
       'Principal Product Designer with 18+ years designing products where mistakes have consequences. TeleSign · Netflix · Appily.com.',
+    images: [
+      {
+        url: 'https://displayedux.com/images/headshots/headshot-dark.png',
+        width: 2475,
+        height: 2475,
+        alt: 'Danny Driscoll | DisplayedUX',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -57,6 +65,7 @@ export const metadata: Metadata = {
     description:
       'Principal Product Designer. 18+ years. TeleSign · Netflix · Appily.com.',
     creator: '@dannydriscoll',
+    images: ['https://displayedux.com/images/headshots/headshot-dark.png'],
   },
   robots: {
     index: true,
