@@ -1,73 +1,98 @@
-# Session Handoff — April 1, 2026
+# Session Handoff — April 2, 2026
 
 ## What Was Completed This Session
 
-### 1. Favicon (commit `94344ef`)
+### 1. og:image / Social Sharing Metadata (this commit)
 
-Added `app/icon.svg` — the bullseye/target logo using the same SVG as `Logo.tsx`.
+Added `app/opengraph-image.tsx` — Next.js file-based dynamic og:image generation using `ImageResponse`.
 
-- Blue outer ring `#3B5CE8`, salmon `#F47060`, pink `#FF00AA`, yellow center `#F5C200`
-- Next.js automatically serves `app/icon.svg` as the site favicon — no `metadata.icons` config needed
-- Confirmed live: HTTP 200 on `displayedux.com/icon.svg`
+- 1200×630px dark background (#0A0A0A)
+- Bull's-eye logo top-left
+- Hero headline "Designing products where mistakes have consequences." with coral accent
+- Subline: 18+ years · TeleSign · Netflix · Appily.com
+- Danny Driscoll name + Principal Product Designer bottom-left
+- displayedux.com URL bottom-right
+- Decorative bull's-eyes top-right + bottom-left at low opacity
+- Automatically served at `/opengraph-image` by Next.js — no manual wiring needed
 
-### 2. Image Lightbox on Case Study Pages (commit `94344ef`)
+Updated `app/layout.tsx` with complete metadata:
 
-All case study images are now clickable to view full-size.
+- `metadataBase: new URL('https://displayedux.com')` — required for og:image URL resolution
+- Full `openGraph` block: `url`, `siteName`, `title`, `description`
+- Full `twitter` block: `card: 'summary_large_image'`, `title`, `description`, `creator`
+- `robots` block: full index/follow + googleBot crawl directives
+- `keywords` array: product designer, UX, principal, enterprise, B2B SaaS, Danny Driscoll, etc.
 
-**File changed:** `components/ui/CaseStudyTemplate.tsx`
-
-- Added `useState`, `useEffect`, `useMemo` imports
-- `allImages` memoized flat array built from all `section.image` and `section.images` across all sections
-- `srcToIndex` Map for O(1) lookup: image src → allImages index
-- Click any image (single or grid) → opens full-screen lightbox overlay
-- Lightbox: dark overlay (`rgba(0,0,0,0.92)`), centered image at `90vw × 85vh`, counter (`1 / N`), prev/next arrows, close button
-- Keyboard: Escape closes, ArrowLeft/ArrowRight navigates across all images in the case study
-- Body scroll locked while lightbox is open
-
-### 3. Mobile Dark Mode Toggle (commit `94344ef`)
-
-**File changed:** `components/layout/Nav.tsx`
-
-- Added `<ThemeToggle />` to mobile drawer between nav links and Resume button
-- Added "Appearance" label row to match the row pattern of nav links
-- Bumped mobile drawer `max-h-80` → `max-h-96` to accommodate the new row
-- Confirmed live: accessibility tree shows `Appearance` label + `Switch to dark mode` button in mobile nav
+Updated `app/about/page.tsx` metadata:
+- Fixed description from "10+ years" to "18+ years"
+- Corrected employer list to include Netflix
 
 ---
 
-# Session Handoff — March 30, 2026
+## Previous Session — April 1, 2026
 
-## What Was Completed This Session
+### Favicon
+Added `app/icon.svg` — bull's-eye logo. Blue outer ring #3B5CE8, salmon #F47060, pink #FF00AA, yellow center #F5C200.
 
-### 1. Mobile Layout Fixes (commit `81f4003`)
+### Image Lightbox on Case Study Pages
+All case study images now clickable to view full-size via lightbox in `CaseStudyTemplate.tsx`.
+Keyboard nav (Escape, ArrowLeft, ArrowRight), scroll lock, counter display.
 
-Three mobile rendering issues reported by client were fixed, committed, and deployed to production at displayedux.com.
-
-**Files changed:**
-- `components/ui/BentoGrid.tsx` — 2-column grid on mobile (was fixed 3-column overflow)
-- `components/ui/CaseStudyTemplate.tsx` — hero image object-contain on mobile; outcome cards stack vertically; hyphenation fix on stat values
-
-**Breakpoints:**
-- `max-width: 479px` — hero image switches to object-contain, outcome cards stack to 1 column
-- `min-width: 640px` — bento stats switch to 3-column grid (mobile default is 2-column)
-
-### 2. Video Integration (prior commit `2c73c86`)
-
-8 YouTube videos integrated into 3 case study pages using reusable `YouTubeEmbed` component. See `Video_Integration_Handoff.docx` for full reference.
-
-### 3. Mobile QA Screenshots
-
-Full-page Playwright screenshots taken at 390px viewport for light and dark modes. Saved to outputs folder.
+### Mobile Dark Mode Toggle
+Added `<ThemeToggle />` to mobile drawer in `Nav.tsx`.
 
 ---
 
-## Open Items for Next Session
+## Previous Session — March 30, 2026
 
-| Item | Notes |
-|---|---|
-| Universal College App video | User to supply YouTube URL. Add as `heroVideo` in `app/work/universal-college-app/page.tsx` following pattern in other pages. |
-| GitHub PAT security flag | Personal access token embedded in git remote URL. Rotate at github.com/settings/tokens. Update remote: `git remote set-url origin https://github.com/[user]/[repo].git` |
-| Lightbox: single-image caption | Currently `section.imageCaption` renders below the figure but outside the lightbox. Could add caption display inside the overlay if desired. |
+### Mobile Layout Fixes
+- `BentoGrid.tsx` — 2-column on mobile
+- `CaseStudyTemplate.tsx` — hero object-contain mobile; outcome cards stack; hyphenation fix
+
+### Video Integration (commit 2c73c86)
+8 YouTube videos integrated into 3 case study pages using `YouTubeEmbed` component.
+
+- CS01 (Self-Service Portal): heroVideo + 3 section videos (decision: 2 paired, iteration: 1, reflection: 1)
+- CS02 (Fraud Prevention): 1 video in outcome section  
+- CS03 (Messaging API): 1 video in iteration section
+- CS04 (Universal College App): heroVideo `0LJopyMAoIo` — confirmed live ("Cappexsiteend480p", 53s)
+
+---
+
+## Current Site Status (April 2, 2026)
+
+| Page | Status | Notes |
+|---|---|---|
+| Homepage | LIVE | Hero, stats, case study cards, origin story, philosophy, footer |
+| CS01 Self-Service Portal | LIVE | 4 videos wired |
+| CS02 Fraud Prevention | LIVE | 1 video wired |
+| CS03 Messaging API | LIVE | 1 video wired |
+| CS04 Universal College App | LIVE | heroVideo confirmed live |
+| About | LIVE | Full content: career arc, interests, fun facts, 2 YouTube embeds |
+| Contact | LIVE | TeleSign Phone Intelligence, Netlify Forms |
+| Photography | LIVE | Lightbox, keyboard nav, right-click protection |
+| og:image | LIVE (after this deploy) | Dynamic ImageResponse |
+| Resume PDF | PENDING | Upload to public/, wire to nav Resume button |
+
+---
+
+## Open Items
+
+| Item | Priority | Notes |
+|---|---|---|
+| Resume PDF | High | Upload to `public/resume-danny-driscoll.pdf`, update nav Resume href |
+| GitHub PAT security flag | High | Rotate token at github.com/settings/tokens. `git remote set-url origin https://github.com/d2driscoA2/product-design-portfolio.git` |
+| CS01 hero image | Medium | Shows blank browser mockup. Replace with actual portal dashboard screenshot when available |
+| Lightbox caption in overlay | Low | Currently renders below figure outside overlay |
+
+---
+
+## Branch / Deploy
+
+- Branch: `design-v2`
+- Auto-deploys: displayedux.com via Netlify on push to origin/design-v2
+- Netlify project: visionary-swan-5893aa
+- Latest commit: this session (og:image + metadata fixes)
 
 ---
 
@@ -75,17 +100,17 @@ Full-page Playwright screenshots taken at 390px viewport for light and dark mode
 
 | File | Purpose |
 |---|---|
-| `components/ui/BentoGrid.tsx` | Stats grid — responsive 2→3 column |
-| `components/ui/CaseStudyTemplate.tsx` | Case study layout — hero image, sections, videos |
+| `app/layout.tsx` | Root metadata — og, Twitter, robots |
+| `app/opengraph-image.tsx` | Dynamic 1200×630 og:image via ImageResponse |
+| `app/page.tsx` | Homepage |
+| `app/about/page.tsx` | About page — full content |
+| `app/contact/page.tsx` | Contact + TeleSign Phone Intelligence |
+| `app/photography/page.tsx` | Photography gallery with lightbox |
+| `app/work/[slug]/page.tsx` | 4 case study pages |
+| `components/ui/CaseStudyTemplate.tsx` | Shared case study layout + lightbox |
 | `components/YouTubeEmbed.tsx` | Reusable YouTube iframe embed |
-| `app/work/self-service-portal/page.tsx` | 6 videos (1 hero, 2 paired, 1 single, 2 paired) |
-| `app/work/messaging-api/page.tsx` | 1 video in process section |
-| `app/work/fraud-prevention/page.tsx` | 1 video in outcome section |
-
----
-
-## Branch / Deploy
-
-- Branch: `design-v2`
-- Auto-deploys to: displayedux.com via Netlify on push to origin/design-v2
-- Latest commit: `81f4003` (merge of fervent-clarke mobile fixes)
+| `components/ui/BentoGrid.tsx` | Stats grid |
+| `components/layout/Nav.tsx` | Sticky nav + dark mode toggle |
+| `components/layout/Footer.tsx` | Royal blue footer |
+| `lib/case-studies.ts` | Case study data |
+| `app/globals.css` | CSS variables, keyframes, all component styles |

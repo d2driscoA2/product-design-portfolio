@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About | Danny Driscoll',
-  description: 'Principal Product Designer based in Ann Arbor. 10+ years designing enterprise products at TeleSign and Appily.com.',
+  description: 'Principal Product Designer based in Ann Arbor. 18+ years designing enterprise products at TeleSign, Netflix, and Appily.com. Designing products where mistakes have consequences.',
 };
 
 const interests = [

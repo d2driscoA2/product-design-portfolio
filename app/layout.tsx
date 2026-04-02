@@ -21,16 +21,53 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://displayedux.com'),
   title: {
     default: 'Danny Driscoll | DisplayedUX',
     template: '%s | DisplayedUX',
   },
   description:
-    'Senior Product Designer with 18+ years designing products where mistakes have consequences. TeleSign, Netflix, Cappex.',
+    'Principal Product Designer with 18+ years designing products where mistakes have consequences. TeleSign · Netflix · Appily.com.',
+  keywords: [
+    'product designer',
+    'UX designer',
+    'principal product designer',
+    'enterprise design',
+    'B2B SaaS design',
+    'Danny Driscoll',
+    'DisplayedUX',
+    'TeleSign',
+    'fraud prevention UX',
+    'onboarding design',
+  ],
+  authors: [{ name: 'Danny Driscoll', url: 'https://displayedux.com' }],
+  creator: 'Danny Driscoll',
   openGraph: {
     type: 'website',
     locale: 'en_US',
+    url: 'https://displayedux.com',
     siteName: 'DisplayedUX',
+    title: 'Danny Driscoll | DisplayedUX',
+    description:
+      'Principal Product Designer with 18+ years designing products where mistakes have consequences. TeleSign · Netflix · Appily.com.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Danny Driscoll | DisplayedUX',
+    description:
+      'Principal Product Designer. 18+ years. TeleSign · Netflix · Appily.com.',
+    creator: '@dannydriscoll',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
