@@ -165,11 +165,11 @@ function ContactFormInner() {
         <div className="form-row-2">
           <div>
             <label className="form-label">First name <span style={{ color: '#F47060' }}>*</span></label>
-            <input className="form-input" type="text" name="firstName" value={fields.firstName} onChange={set} placeholder="Alex" required />
+            <input className="form-input" type="text" name="firstName" value={fields.firstName} onChange={set} placeholder="Tom" required />
           </div>
           <div>
             <label className="form-label">Last name <span style={{ color: '#F47060' }}>*</span></label>
-            <input className="form-input" type="text" name="lastName" value={fields.lastName} onChange={set} placeholder="Chen" required />
+            <input className="form-input" type="text" name="lastName" value={fields.lastName} onChange={set} placeholder="Delonge" required />
           </div>
         </div>
 
@@ -177,7 +177,7 @@ function ContactFormInner() {
         <div className="form-row-2">
           <div>
             <label className="form-label">Email <span style={{ color: '#F47060' }}>*</span></label>
-            <input className="form-input" type="email" name="email" value={fields.email} onChange={set} placeholder="alex@company.com" required />
+            <input className="form-input" type="email" name="email" value={fields.email} onChange={set} placeholder="tom@tothestars.com" required />
           </div>
           <div>
             <label className="form-label">Company</label>

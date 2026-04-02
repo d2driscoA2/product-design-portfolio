@@ -322,7 +322,7 @@ export default function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
               </div>
             )}
             {section.video && (
-              <div style={{ marginTop: '2.5rem' }}>
+              <div style={{ maxWidth: 600, margin: '2.5rem auto 0' }}>
                 <YouTubeEmbed
                   videoId={section.video.videoId}
                   startSeconds={section.video.startSeconds}

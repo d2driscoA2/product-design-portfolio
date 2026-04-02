@@ -115,10 +115,7 @@ The phone number purchasing UI won TeleSign's 2019 Innovation of the Year award.
 What I would do differently. I would invest more time in error state design from day one. When a customer hit a regulatory requirement they were not expecting, the experience dropped sharply. We fixed those cases iteratively. Designing for failure paths with the same rigor as the success path from the start would have shortened that cycle.
 
 Constraint as design tool. A limited story-point budget forced every feature decision to be explicit. That discipline produced a better product than a fully-resourced effort would have, because it required the team to decide what success actually meant before writing a line of code.`,
-      videos: [
-        { videoId: 'BA8iaSzQLMg', startSeconds: 1, title: 'Design Guide: Colors, Typography & Nav' },
-        { videoId: '7TWvcvsMAro', startSeconds: 0, title: 'Design Guide: Typography' },
-      ],
+      video: { videoId: 'J2WvMidm5hI', startSeconds: 0, title: 'Design Guide' },
     },
   ],
   nextCase: {
