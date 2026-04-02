@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About | Danny Driscoll',
@@ -61,8 +60,9 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           <div className="md:col-span-1">
-            <div className="about-photo-bg relative w-full aspect-square rounded-2xl overflow-hidden">
-              <Image src="/images/headshots/headshot-dark.png" alt="Danny Driscoll" fill className="object-cover object-top" unoptimized />
+            <div className="about-photo-bg rounded-2xl overflow-hidden" style={{ width: '100%', aspectRatio: '1 / 1' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/headshots/headshot-dark.png" alt="Danny Driscoll" width={480} height={480} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
             </div>
             <div className="mt-6 space-y-2">
               <a href="https://linkedin.com/in/dandriscoll" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-medium text-[#3B5CE8] hover:opacity-70 transition-opacity" style={{textDecoration:'underline',textUnderlineOffset:'3px',textDecorationThickness:'1px'}}>LinkedIn<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{display:'inline',marginLeft:'4px',verticalAlign:'middle'}}><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="#3B5CE8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
