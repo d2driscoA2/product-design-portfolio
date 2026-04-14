@@ -1,7 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+const requestCounts: Record<string, number[]> = {}
+const RATE_LIMIT = 10
+
+const ALLOWED_ORIGINS = [
+  'https://displayedux.com',
+  'https://www.displayedux.com',
+  'http://localhost:3000',
+]
+
 export async function POST(request: NextRequest) {
   try {
+    // Origin check
+    const origin = request.headers.get('origin') || request.headers.get('referer') || ''
+    if (!ALLOWED_ORIGINS.some(allowed => origin.startsWith(allowed))) {
+      return NextResponse.json({ error: 'forbidden' }, { status: 403 })
+    }
+
+    // Rate limiting
+    const ip = request.headers.get('x-forwarded-for') ?? 'unknown'
+    const now = Date.now()
+    requestCounts[ip] = (requestCounts[ip] ?? []).filter(t => now - t < 60000)
+    requestCounts[ip].push(now)
+    if (requestCounts[ip].length > RATE_LIMIT) {
+      return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
+    }
+
     const { phone } = await request.json()
     if (!phone) return NextResponse.json({ error: 'no_phone' })
 
