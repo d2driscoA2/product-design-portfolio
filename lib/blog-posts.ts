@@ -56,6 +56,82 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 
+  {
+    slug:       'case-study-writing',
+    title:      'How I Write Case Studies That Get Callbacks at the Principal Level',
+    shortTitle: 'Writing case studies for Principal-level roles',
+    date:       'May 2026',
+    dateISO:    '2026-05-01',
+    readTime:   8,
+    tag:        'Process',
+    tagColor:   'coral',
+    excerpt:
+      'Four case studies. 18 years of work. Here is what I cut, what I kept, and the framework that shaped every word.',
+    stats: [
+      { value: '4',         label: 'Case studies',           accentHex: '#F47060' },
+      { value: '18 yrs',    label: 'Work to distill' },
+      { value: '3',         label: 'Evaluation lenses',      accentHex: '#3B5CE8' },
+      { value: '10 sec',    label: 'Initial scan window' },
+    ],
+  },
+
+  {
+    slug:       'onboarding-pattern',
+    title:      'The Onboarding Problem I Keep Solving at Every Company I Have Worked At',
+    shortTitle: 'The recurring onboarding pattern',
+    date:       'May 2026',
+    dateISO:    '2026-05-15',
+    readTime:   9,
+    tag:        'Process',
+    tagColor:   'amber',
+    excerpt:
+      'Netflix. Appily.com. TeleSign. Three different products, three different user groups, the same root cause every time.',
+    stats: [
+      { value: '3',      label: 'Companies, same problem',  accentHex: '#F5C200' },
+      { value: '67→35',  label: 'Days — TeleSign onboarding' },
+      { value: '47%',    label: 'Completion — Appily.com',   accentHex: '#F47060' },
+      { value: '7',      label: 'Markets — Netflix XP' },
+    ],
+  },
+
+  {
+    slug:       'designing-for-experts',
+    title:      'Designing for Experts Who Cannot Afford to Be Wrong',
+    shortTitle: 'Designing for expert fraud analysts',
+    date:       'June 2026',
+    dateISO:    '2026-06-01',
+    readTime:   10,
+    tag:        'Case Study',
+    tagColor:   'coral',
+    excerpt:
+      'Fraud analysts make hundreds of high-stakes decisions per day. Here is what designing for that user taught me about complexity, trust, and speed.',
+    stats: [
+      { value: '21B+',    label: 'Annual transactions',       accentHex: '#3B5CE8' },
+      { value: '1,000+',  label: 'ML parameters surfaced' },
+      { value: '30 sec',  label: 'Decision time target',      accentHex: '#F47060' },
+      { value: '73%',     label: 'Fraud reduction — fin. client' },
+    ],
+  },
+
+  {
+    slug:       'output-vs-outcome',
+    title:      '18 Years In, I Still Think Most Designers Confuse Output with Outcome',
+    shortTitle: 'Output vs. outcome in product design',
+    date:       'June 2026',
+    dateISO:    '2026-06-15',
+    readTime:   10,
+    tag:        'Process',
+    tagColor:   'blue',
+    excerpt:
+      'Early in my career I measured my effectiveness by what I shipped. It took years to understand why that was the wrong metric.',
+    stats: [
+      { value: '18 yrs', label: 'Calibrating this',           accentHex: '#3B5CE8' },
+      { value: '4',      label: 'Companies, same lesson' },
+      { value: '21B+',   label: 'Transactions — invisible UX', accentHex: '#F47060' },
+      { value: '$1.3B',  label: 'Valuation — TeleSign exit' },
+    ],
+  },
+
 ]
 
 /* ─── Helpers ────────────────────────────────────────────────────── */

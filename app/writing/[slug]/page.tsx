@@ -5,9 +5,17 @@ import { getBlogPost, blogPosts, TAG_COLORS } from '@/lib/blog-posts'
 
 /* ── Content component registry ────────────────────────────────── */
 import { ClaudeCodePortfolioPost } from '@/components/blog/posts/claude-code-portfolio'
+import { CaseStudyWritingPost }    from '@/components/blog/posts/case-study-writing'
+import { OnboardingPatternPost }   from '@/components/blog/posts/onboarding-pattern'
+import { DesigningForExpertsPost } from '@/components/blog/posts/designing-for-experts'
+import { OutputVsOutcomePost }     from '@/components/blog/posts/output-vs-outcome'
 
 const POST_CONTENT: Record<string, React.ComponentType> = {
   'claude-code-portfolio': ClaudeCodePortfolioPost,
+  'case-study-writing':    CaseStudyWritingPost,
+  'onboarding-pattern':    OnboardingPatternPost,
+  'designing-for-experts': DesigningForExpertsPost,
+  'output-vs-outcome':     OutputVsOutcomePost,
 }
 
 /* ── Static params ──────────────────────────────────────────────── */
