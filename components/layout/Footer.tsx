@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { href: '/about',       label: 'About'       },
   { href: '/photography', label: 'Photography' },
   { href: '/contact',     label: 'Contact'     },
+  { href: '/privacy',     label: 'Privacy Policy' },
 ]
 
 export function Footer() {
