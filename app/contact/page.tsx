@@ -159,8 +159,9 @@ function ContactFormInner() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} noValidate data-netlify="true" name="contact">
+      <form onSubmit={handleSubmit} noValidate data-netlify="true" netlify-honeypot="bot-field" name="contact">
         <input type="hidden" name="form-name" value="contact" />
+        <p style={{ display: 'none' }}><label>Do not fill: <input name="bot-field" /></label></p>
         {/* Name */}
         <div className="form-row-2">
           <div>
@@ -311,7 +312,7 @@ function ContactFormInner() {
 export default function ContactPage() {
   return (
     <>
-    <form name="contact" data-netlify="true" hidden>
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="firstName" />
       <input type="text" name="lastName" />
       <input type="email" name="email" />
@@ -320,6 +321,7 @@ export default function ContactPage() {
       <input type="text" name="role" />
       <input type="url" name="jdLink" />
       <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
       <input type="text" name="phoneScore" />
       <input type="text" name="phoneType" />
       <input type="text" name="phoneCarrier" />
