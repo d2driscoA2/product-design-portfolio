@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug:       'claude-code-portfolio',
-    title:      'I Used Claude Code to Build My Entire UX Portfolio — Here Are the Actual Numbers',
+    title:      'I Used Claude Code to Build My Entire UX Portfolio — Here Are the Actual Numbers (and How They Stack Up)',
     shortTitle: 'Building displayedux.com with Claude Code',
     date:       'April 2026',
     dateISO:    '2026-04-01',
