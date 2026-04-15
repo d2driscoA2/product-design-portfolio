@@ -108,9 +108,9 @@ export function CaseStudyWritingPost() {
       </p>
 
       <BlogImage
-        src="/blog/images/post2-design-system-doc.png"
-        alt="TeleSign portal design system documentation showing color variables and typography scale"
-        caption="The design system documentation for the TeleSign portal MVP. Process images like this earn their place only when they reveal a decision, not merely prove work happened."
+        src="/blog/portal-design-guide-colors.png"
+        alt="TeleSign Unified Portal design system documentation: color palette with hex codes, semantic usage notes, and system message states (info, success, warning, error)"
+        caption="The Unified Portal color system — one of three design guide deliverables inside the Self-Service Portal case study. Color, typography, and component specs defined before a single line of code shipped."
         variant="bordered"
       />
 

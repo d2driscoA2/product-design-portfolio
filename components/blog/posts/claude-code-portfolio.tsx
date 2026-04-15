@@ -60,9 +60,9 @@ export function ClaudeCodePortfolioPost() {
       </p>
 
       <BlogHeroImage
-        src="/blog/images/post1-hero-portal.jpg"
-        alt="TeleSign self-service portal — the first live product built and shipped using the workflow described in this post"
-        caption="TeleSign self-service portal — one of four case studies on displayedux.com, built in a single Claude Code session"
+        src="/blog/blog-hero-homepage-live.png"
+        alt="displayedux.com homepage — the finished product: hero section with headshot, stat strip, and all four case study cards"
+        caption="displayedux.com — live at the time of writing. This is what 47 git commits, 10 sessions, and ~100,000 lines of code produced."
       />
 
       <hr className="blog-divider" />
@@ -324,6 +324,13 @@ export function ClaudeCodePortfolioPost() {
         <li>YouTube embed aspect ratio collapse on narrow viewports</li>
       </ul>
 
+      <BlogImage
+        src="/blog/site-build-session-march19.png"
+        alt="displayedux.com Fraud Prevention case study page captured by Playwright MCP during a QA session in March 2026"
+        caption="This screenshot was taken by Playwright MCP during a QA session — Claude navigated to the page, resized the viewport, captured this, and returned a visual assessment. No browser interaction by hand."
+        variant="bordered"
+      />
+
       <h3>Filesystem MCP</h3>
       <p>
         Direct read/write access to all project files. Every component, every
@@ -344,6 +351,13 @@ export function ClaudeCodePortfolioPost() {
         8 minutes. Manually, with careful review, that is a 3 to 4 hour task
         with real risk of missing something buried in a meta tag.
       </p>
+
+      <BlogImage
+        src="/blog/messaging-api-workflow.png"
+        alt="TeleSign Messaging API intelligent cascade diagram: message from carrier to Messaging API, falling back through Viber, WhatsApp, RCS, MMS, SMS, to Email"
+        caption="The Messaging API intelligent cascade diagram — one of eight assets Claude embedded and captioned across the four case studies. The entire codebase was searchable via Context Mode MCP."
+        variant="bordered"
+      />
 
       <h3>Magic (21st.dev) MCP</h3>
       <p>
@@ -742,9 +756,29 @@ export function ClaudeCodePortfolioPost() {
         </a>.
       </p>
 
+      <BlogImage
+        src="/blog/contact-page-finished.png"
+        alt="displayedux.com contact page showing the glassmorphism form card, TeleSign phone verification, and royal blue footer"
+        caption="displayedux.com/contact — where the brief ends and the conversation starts."
+        variant="bordered"
+      />
+
       <hr className="blog-divider" />
 
       <div className="blog-author-bio">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1rem' }}>
+          <div style={{ position: 'relative', width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: '2px solid var(--color-border)' }}>
+            <img
+              src="/blog/headshot-blue-background.png"
+              alt="Danny Driscoll"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          </div>
+          <div>
+            <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-text-primary)', margin: 0 }}>Danny Driscoll</p>
+            <p style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', margin: '2px 0 0' }}>Principal Product Designer &nbsp;&middot;&nbsp; displayedux.com</p>
+          </div>
+        </div>
         <p>
           <em>
             Danny Driscoll is a product designer with 18+ years of experience
