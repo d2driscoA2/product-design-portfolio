@@ -1,3 +1,5 @@
+import { BlogImage, BlogHeroImage } from '@/components/blog/BlogImage'
+
 /* ─────────────────────────────────────────────────────────────────
    Blog post: "I Used Claude Code to Build My Entire UX Portfolio —
    Here Are the Actual Numbers (and How They Stack Up)"
@@ -56,6 +58,12 @@ export function ClaudeCodePortfolioPost() {
         them next to the people who use this tool professionally, full-time,
         at the highest level.
       </p>
+
+      <BlogHeroImage
+        src="/blog/images/post1-hero-portal.jpg"
+        alt="TeleSign self-service portal — the first live product built and shipped using the workflow described in this post"
+        caption="TeleSign self-service portal — one of four case studies on displayedux.com, built in a single Claude Code session"
+      />
 
       <hr className="blog-divider" />
 
@@ -265,6 +273,13 @@ export function ClaudeCodePortfolioPost() {
         CSS v4, deployed to Netlify with auto-deploy on push. Production-grade,
         statically-generated, sub-second load times.
       </p>
+
+      <BlogImage
+        src="/blog/images/post4-template-builder.png"
+        alt="TeleSign Messaging API template builder with live phone preview — one of 12 custom components built during the portfolio project"
+        caption="One of 12 custom React components built during the portfolio project: the Messaging API WYSIWYG template builder with live phone preview"
+        variant="bordered"
+      />
 
       <hr className="blog-divider" />
 

@@ -1,3 +1,5 @@
+import { BlogImage, BlogHeroImage } from '@/components/blog/BlogImage'
+
 /* ─────────────────────────────────────────────────────────────────
    Blog post: "Designing for Experts Who Can't Afford to Be Wrong"
    Danny Driscoll · June 2026
@@ -32,6 +34,12 @@ export function DesigningForExpertsPost() {
         This is a fundamentally different design problem, and I think it is one
         of the least-discussed categories in UX writing.
       </p>
+
+      <BlogHeroImage
+        src="/blog/images/post4-hero-phoneid.png"
+        alt="TeleSign PhoneID transaction summary dashboard showing stacked bar charts across a two-week date range, with the full product navigation visible in the left sidebar"
+        caption="The TeleSign PhoneID dashboard. A fraud analyst landing here is making risk decisions about individual phone numbers, reading stacked transaction data, and cross-referencing signals across multiple product categories — all in real time."
+      />
 
       <hr className="blog-divider" />
 
@@ -137,6 +145,13 @@ export function DesigningForExpertsPost() {
         for someone who knows exactly what they are looking for.
       </p>
 
+      <BlogImage
+        src="/blog/images/post4-messaging-channels.png"
+        alt="TeleSign Messaging API six-channel grid: SMS, WhatsApp, MMS, Viber, RCS, Email — each with description"
+        caption="The six channels unified under one API: SMS, WhatsApp, MMS, Viber, RCS, Email. The design challenge was not adding channels. It was making the right channel visible at the right moment so analysts were not choosing between six options on every decision."
+        variant="bordered"
+      />
+
       <hr className="blog-divider" />
 
       <h2>Designing for the False Positive Problem</h2>
@@ -194,6 +209,13 @@ export function DesigningForExpertsPost() {
         annual transactions, that velocity difference is the difference between
         a team that keeps up and a team that falls behind fraud.
       </p>
+
+      <BlogImage
+        src="/blog/images/post4-template-builder.png"
+        alt="TeleSign Messaging API WYSIWYG template builder with a live phone preview on the right showing the message as it will appear on a mobile device"
+        caption="The WYSIWYG message template builder with live phone preview. The analyst sees the exact rendered output as they type. Accuracy at speed — no test-and-check loop, no deploy-and-verify cycle."
+        variant="bordered"
+      />
 
       <hr className="blog-divider" />
 

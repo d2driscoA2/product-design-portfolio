@@ -1,3 +1,5 @@
+import { BlogImage, BlogHeroImage } from '@/components/blog/BlogImage'
+
 /* ─────────────────────────────────────────────────────────────────
    Blog post: "The Onboarding Problem I Keep Solving at Every
    Company I've Worked At"
@@ -26,6 +28,12 @@ export function OnboardingPatternPost() {
         Here is how it played out three times across my career, what was
         different each time, and what stayed exactly the same.
       </p>
+
+      <BlogHeroImage
+        src="/blog/images/post3-hero-cappex-empty.png"
+        alt="Cappex Universal College Application empty dashboard — a new user who hasn&rsquo;t yet added any schools"
+        caption="The Cappex application dashboard on first login: no schools added, no progress made. This empty state was the starting line for a user facing 30+ hours of application work across 10 colleges."
+      />
 
       <div className="blog-callout">
         <div className="blog-callout-label">The three instances</div>
@@ -67,6 +75,13 @@ export function OnboardingPatternPost() {
         research can replicate. It is the only way to know.
       </p>
 
+      <BlogImage
+        src="/blog/images/post3-netflix-xp-pipeline.png"
+        alt="Netflix XP experimentation platform architecture: S3 fact logs and AB test logs feeding ETL, causal models, XP Viz, and the ABlaze analysis dashboard"
+        caption="The Netflix XP experimentation pipeline: fact logs and A/B test data flowing from S3 through SparkSQL, causal models, and Plotly visualizations into the ABlaze analysis dashboard. This is the infrastructure the testing methodology ran on."
+        variant="bordered"
+      />
+
       <hr className="blog-divider" />
 
       <h2>Appily.com: The Form That Was Eating Students Alive</h2>
@@ -106,6 +121,13 @@ export function OnboardingPatternPost() {
         work from the user&rsquo;s life.
       </div>
 
+      <BlogImage
+        src="/blog/images/post3-cappex-wireframe.png"
+        alt="Early Cappex application wireframe showing desktop and mobile simultaneously: three steps — Select Schools, Fill Out Your Custom Cappex Application, Send it to Schools"
+        caption="The earliest wireframe for the Universal College Application onboarding flow. Desktop and mobile shown simultaneously. Three steps, one essay, one click to every college. The structural solution to a cognitive overload problem."
+        variant="bordered"
+      />
+
       <hr className="blog-divider" />
 
       <h2>TeleSign: When Onboarding Is a Revenue Problem</h2>
@@ -128,6 +150,13 @@ export function OnboardingPatternPost() {
         No single customer was asking an unreasonable question. The system just
         had no memory. Every new customer started from zero.
       </p>
+
+      <BlogImage
+        src="/blog/images/post3-messaging-api-page.png"
+        alt="TeleSign Messaging API product page inside the self-service portal showing navigation, WhatsApp Business Account integration, and transaction summary chart"
+        caption="The Messaging API product page inside the TeleSign self-service portal. A customer who arrived at this screen had already completed onboarding without CS intervention. That was the goal."
+        variant="bordered"
+      />
 
       <div className="blog-callout blog-callout--blue">
         <div className="blog-callout-label">TeleSign research findings</div>

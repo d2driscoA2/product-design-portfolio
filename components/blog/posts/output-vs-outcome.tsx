@@ -1,3 +1,5 @@
+import { BlogImage, BlogHeroImage } from '@/components/blog/BlogImage'
+
 /* ─────────────────────────────────────────────────────────────────
    Blog post: "18 Years In, I Still Think Most Designers Confuse
    Output with Outcome"
@@ -24,6 +26,12 @@ export function OutputVsOutcomePost() {
         Here is what I mean, and why I think this confusion is more common
         than the design industry acknowledges.
       </p>
+
+      <BlogHeroImage
+        src="/blog/images/post5-hero-cappex-submitted.png"
+        alt="Cappex Universal College Application dashboard showing all four schools with Application Submitted status"
+        caption="The Cappex application dashboard at full completion. Every school submitted. This screen is an outcome. The wireframes, iterations, and usability tests that produced it are output. Most portfolios show the latter. The number that mattered was the 47% completion rate that this state represents."
+      />
 
       <hr className="blog-divider" />
 
@@ -114,6 +122,13 @@ export function OutputVsOutcomePost() {
         where students dropped off and why. We iterated against specific
         failures, not general impressions.
       </p>
+
+      <BlogImage
+        src="/blog/images/post5-cappex-in-progress.png"
+        alt="Cappex application dashboard in progress: University of Michigan missing info, Michigan State in progress, Illinois Wesleyan ready to send, Kalamazoo College submitted"
+        caption="The dashboard mid-process: one school submitted, one ready, two with missing information. Each state measured. Each drop-off point tracked. The 47% completion rate was built by iterating against specific failures like these, not general impressions."
+        variant="inset"
+      />
       <p>
         When you design without measurement, you are navigating without a map.
         You can build something that looks right and works reasonably well.
@@ -151,6 +166,13 @@ export function OutputVsOutcomePost() {
         The measure of success is not how often users notice the design. It is
         how rarely they need to.
       </p>
+
+      <BlogImage
+        src="/blog/images/post5-telesign-product.png"
+        alt="TeleSign Messaging API product page inside the self-service portal showing transaction data and WhatsApp integration"
+        caption="The TeleSign Messaging API product page. Ninety percent of six-digit verification codes sent globally route through TeleSign. The users who received those codes never saw this screen. That is what invisible infrastructure looks like."
+        variant="bordered"
+      />
 
       <hr className="blog-divider" />
 

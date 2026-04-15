@@ -1,3 +1,5 @@
+import { BlogImage, BlogHeroImage } from '@/components/blog/BlogImage'
+
 /* ─────────────────────────────────────────────────────────────────
    Blog post: "How I Write Case Studies That Get Callbacks at the
    Principal Level"
@@ -32,6 +34,12 @@ export function CaseStudyWritingPost() {
         This post is about how I structured my four case studies, what I cut,
         what I kept, and what I learned from writing them.
       </p>
+
+      <BlogHeroImage
+        src="/blog/images/post2-hero-portal-home.png"
+        alt="TeleSign self-service portal homepage — the product behind the 67 to 35 day onboarding case study"
+        caption="The TeleSign portal. Case study headline: Enterprise Onboarding Redesign: 67 Days to 35. The outcome leads. The story follows."
+      />
 
       <hr className="blog-divider" />
 
@@ -99,6 +107,13 @@ export function CaseStudyWritingPost() {
         in a stats grid, before the reader hit a single word of narrative.
       </p>
 
+      <BlogImage
+        src="/blog/images/post2-design-system-doc.png"
+        alt="TeleSign portal design system documentation showing color variables and typography scale"
+        caption="The design system documentation for the TeleSign portal MVP. Process images like this earn their place only when they reveal a decision, not merely prove work happened."
+        variant="bordered"
+      />
+
       <h3>Fraud Prevention Suite: 21 billion transactions protected</h3>
       <p>
         The scale of this one is the hook. Most designers have never worked on
@@ -116,6 +131,13 @@ export function CaseStudyWritingPost() {
         who understands conversion. I did not need to explain why completion rate
         matters. The reader already knows.
       </p>
+
+      <BlogImage
+        src="/blog/images/post2-cappex-complete.png"
+        alt="Cappex Universal College Application dashboard showing all four colleges with Application Submitted status"
+        caption="The Cappex application dashboard at the outcome state: all four colleges submitted. University of Michigan, Michigan State, Illinois Wesleyan, Kalamazoo College. This is what 47% completion looks like."
+        variant="inset"
+      />
 
       <hr className="blog-divider" />
 
