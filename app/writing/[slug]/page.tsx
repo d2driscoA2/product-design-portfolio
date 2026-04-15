@@ -146,7 +146,6 @@ export default async function WritingPostPage(
           <BlogHeroImage
             src={post.heroImage}
             alt={post.heroImageAlt ?? post.title}
-            priority
           />
         ) : (
           <div

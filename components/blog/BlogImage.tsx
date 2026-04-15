@@ -1,28 +1,20 @@
-import Image from 'next/image'
+/* ─────────────────────────────────────────────────────────────────
+   BlogImage — plain <img> approach, no Next.js fill mode.
+   fill mode requires explicit parent dimensions and has caused
+   production rendering failures on this site (see About headshot).
+───────────────────────────────────────────────────────────────── */
 
 interface BlogImageProps {
-  /** Path relative to /public — e.g. /blog/images/post2-hero.png */
   src: string
-  /** Alt text — required for accessibility */
   alt: string
-  /** Optional caption displayed below the image */
   caption?: string
-  /**
-   * Visual treatment
-   * - 'full'    : edge-to-edge within the article column (default)
-   * - 'inset'   : slightly narrower, padded — good for UI screenshots on white bg
-   * - 'bordered' : full-width with a subtle border and rounded corners
-   */
   variant?: 'full' | 'inset' | 'bordered'
-  /** Override natural aspect ratio with a fixed height in px */
+  /** Fixed height in px — defaults to 400 */
   height?: number
-  /** Extra class names on the outer wrapper */
   className?: string
-  /** Priority load — set true for hero images */
-  priority?: boolean
-  /** object-fit strategy — 'contain' for diagrams, 'cover' for hero screenshots */
+  /** object-fit — 'cover' for hero screenshots, 'contain' for diagrams */
   objectFit?: 'contain' | 'cover'
-  /** object-position — e.g. 'top' to crop from the top of a tall screenshot */
+  /** object-position — 'top' to anchor tall screenshots to the top edge */
   objectPosition?: string
 }
 
@@ -31,9 +23,8 @@ export function BlogImage({
   alt,
   caption,
   variant = 'full',
-  height,
+  height = 400,
   className = '',
-  priority = false,
   objectFit = 'contain',
   objectPosition = 'center',
 }: BlogImageProps) {
@@ -45,18 +36,19 @@ export function BlogImage({
 
   return (
     <figure className={wrapperClass}>
-      <div
-        className="blog-image-inner"
-        style={height ? { height } : undefined}
-      >
-        <Image
+      <div className="blog-image-inner" style={{ height }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={src}
           alt={alt}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 720px, 900px"
-          style={{ objectFit, objectPosition }}
-          priority={priority}
-          unoptimized
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit,
+            objectPosition,
+            display: 'block',
+          }}
+          loading="lazy"
         />
       </div>
       {caption && (
@@ -67,26 +59,58 @@ export function BlogImage({
 }
 
 /**
- * Convenience wrapper for hero images.
- * Crops to top of tall screenshots using object-fit: cover.
+ * Hero variant — taller, crops from top, eager-loaded.
  */
 export function BlogHeroImage({
   src,
   alt,
   caption,
-  priority = true,
-}: Pick<BlogImageProps, 'src' | 'alt' | 'caption' | 'priority'>) {
+}: Pick<BlogImageProps, 'src' | 'alt' | 'caption'>) {
   return (
-    <BlogImage
+    <figure className="blog-image-wrap blog-image-wrap--bordered blog-hero-image">
+      <div className="blog-image-inner" style={{ height: 480 }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={alt}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'top',
+            display: 'block',
+          }}
+          loading="eager"
+        />
+      </div>
+      {caption && (
+        <figcaption className="blog-image-caption">{caption}</figcaption>
+      )}
+    </figure>
+  )
+}
+
+/**
+ * Card thumbnail — fixed square crop, used in the writing index.
+ */
+export function BlogCardImage({
+  src,
+  alt,
+  height = 200,
+}: Pick<BlogImageProps, 'src' | 'alt' | 'height'>) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
       src={src}
       alt={alt}
-      caption={caption}
-      variant="bordered"
-      height={480}
-      priority={priority}
-      objectFit="cover"
-      objectPosition="top"
-      className="blog-hero-image"
+      style={{
+        width: '100%',
+        height,
+        objectFit: 'cover',
+        objectPosition: 'top',
+        display: 'block',
+      }}
+      loading="lazy"
     />
   )
 }

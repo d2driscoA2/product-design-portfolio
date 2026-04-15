@@ -27,6 +27,13 @@ export interface BlogPost {
   /** One-paragraph excerpt for index cards */
   excerpt: string
   /**
+   * Thumbnail shown on the writing index cards.
+   * Path relative to /public — e.g. /blog/images/post1-thumb.png
+   */
+  thumbnailImage?: string
+  /** Alt text for the thumbnail */
+  thumbnailAlt?: string
+  /**
    * Hero image path — relative to /public (e.g. /blog/hero.png).
    * When present, replaces the bullseye placeholder on the article page.
    */
@@ -45,16 +52,18 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
 
   {
-    slug:         'claude-code-portfolio',
-    title:        'I Used Claude Code to Build My Entire UX Portfolio — Here Are the Actual Numbers (and How They Stack Up)',
-    shortTitle:   'Building displayedux.com with Claude Code',
-    date:         'April 2026',
-    dateISO:      '2026-04-01',
-    readTime:     12,
-    tag:          'Process',
-    tagColor:     'blue',
-    heroImage:    '/blog/blog-hero-homepage-live.png',
-    heroImageAlt: 'displayedux.com homepage — the finished portfolio site built entirely with Claude Code',
+    slug:           'claude-code-portfolio',
+    title:          'I Used Claude Code to Build My Entire UX Portfolio — Here Are the Actual Numbers (and How They Stack Up)',
+    shortTitle:     'Building displayedux.com with Claude Code',
+    date:           'April 2026',
+    dateISO:        '2026-04-01',
+    readTime:       12,
+    tag:            'Process',
+    tagColor:       'blue',
+    thumbnailImage: '/blog/fraud-prevention-case-study.png',
+    thumbnailAlt:   'The Fraud Prevention Suite case study page on displayedux.com, showing the site nav, case study hero, and bento stats grid',
+    heroImage:      '/blog/blog-hero-homepage-live.png',
+    heroImageAlt:   'displayedux.com homepage — the finished portfolio site built entirely with Claude Code',
     excerpt:
       '47 git commits. 10 build sessions. ~100K lines of code. One designer, no developer. Here is every number, every failure, and the exact workflow behind displayedux.com.',
     stats: [
@@ -66,16 +75,18 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:         'case-study-writing',
-    title:        'How I Write Case Studies That Get Callbacks at the Principal Level',
-    shortTitle:   'Writing case studies for Principal-level roles',
-    date:         'May 2026',
-    dateISO:      '2026-05-01',
-    readTime:     8,
-    tag:          'Process',
-    tagColor:     'coral',
-    heroImage:    '/blog/case-study-page-screenshot.png',
-    heroImageAlt: 'The TeleSign Self-Service Portal case study page on displayedux.com — structure, metrics, and narrative in one view',
+    slug:           'case-study-writing',
+    title:          'How I Write Case Studies That Get Callbacks at the Principal Level',
+    shortTitle:     'Writing case studies for Principal-level roles',
+    date:           'May 2026',
+    dateISO:        '2026-05-01',
+    readTime:       8,
+    tag:            'Process',
+    tagColor:       'coral',
+    thumbnailImage: '/blog/portal-design-guide-colors.png',
+    thumbnailAlt:   'TeleSign Unified Portal design system documentation showing color palette and system message states',
+    heroImage:      '/blog/case-study-page-screenshot.png',
+    heroImageAlt:   'The TeleSign Self-Service Portal case study page on displayedux.com',
     excerpt:
       'Four case studies. 18 years of work. Here is what I cut, what I kept, and the framework that shaped every word.',
     stats: [
@@ -87,16 +98,18 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:         'onboarding-pattern',
-    title:        'The Onboarding Problem I Keep Solving at Every Company I Have Worked At',
-    shortTitle:   'The recurring onboarding pattern',
-    date:         'May 2026',
-    dateISO:      '2026-05-15',
-    readTime:     9,
-    tag:          'Process',
-    tagColor:     'amber',
-    heroImage:    '/blog/legacy-portal-before.png',
-    heroImageAlt: 'The legacy TeleSign customer portal in 2018 — the before state that drove the onboarding redesign',
+    slug:           'onboarding-pattern',
+    title:          'The Onboarding Problem I Keep Solving at Every Company I Have Worked At',
+    shortTitle:     'The recurring onboarding pattern',
+    date:           'May 2026',
+    dateISO:        '2026-05-15',
+    readTime:       9,
+    tag:            'Process',
+    tagColor:       'amber',
+    thumbnailImage: '/blog/legacy-portal-before.png',
+    thumbnailAlt:   'The legacy TeleSign customer portal in 2018 — the before state that drove the self-service portal redesign',
+    heroImage:      '/blog/legacy-portal-before.png',
+    heroImageAlt:   'The legacy TeleSign customer portal in 2018 — the before state that drove the self-service portal redesign',
     excerpt:
       'Netflix. Appily.com. TeleSign. Three different products, three different user groups, the same root cause every time.',
     stats: [
@@ -108,16 +121,18 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:         'designing-for-experts',
-    title:        'Designing for Experts Who Cannot Afford to Be Wrong',
-    shortTitle:   'Designing for expert fraud analysts',
-    date:         'June 2026',
-    dateISO:      '2026-06-01',
-    readTime:     10,
-    tag:          'Case Study',
-    tagColor:     'coral',
-    heroImage:    '/blog/fraud-prevention-case-study.png',
-    heroImageAlt: 'TeleSign Fraud Prevention Suite case study — designing dashboards for analysts protecting 21 billion annual transactions',
+    slug:           'designing-for-experts',
+    title:          'Designing for Experts Who Cannot Afford to Be Wrong',
+    shortTitle:     'Designing for expert fraud analysts',
+    date:           'June 2026',
+    dateISO:        '2026-06-01',
+    readTime:       10,
+    tag:            'Case Study',
+    tagColor:       'coral',
+    thumbnailImage: '/blog/images/post4-hero-phoneid.png',
+    thumbnailAlt:   'TeleSign PhoneID transaction dashboard showing stacked bar charts and product navigation',
+    heroImage:      '/blog/fraud-prevention-case-study.png',
+    heroImageAlt:   'TeleSign Fraud Prevention Suite case study page on displayedux.com',
     excerpt:
       'Fraud analysts make hundreds of high-stakes decisions per day. Here is what designing for that user taught me about complexity, trust, and speed.',
     stats: [
@@ -129,16 +144,18 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:         'output-vs-outcome',
-    title:        '18 Years In, I Still Think Most Designers Confuse Output with Outcome',
-    shortTitle:   'Output vs. outcome in product design',
-    date:         'June 2026',
-    dateISO:      '2026-06-15',
-    readTime:     10,
-    tag:          'Process',
-    tagColor:     'blue',
-    heroImage:    '/blog/headshot-blue-background.png',
-    heroImageAlt: 'Danny Driscoll — product designer with 18 years of experience across enterprise SaaS, consumer mobile, and developer tools',
+    slug:           'output-vs-outcome',
+    title:          '18 Years In, I Still Think Most Designers Confuse Output with Outcome',
+    shortTitle:     'Output vs. outcome in product design',
+    date:           'June 2026',
+    dateISO:        '2026-06-15',
+    readTime:       10,
+    tag:            'Process',
+    tagColor:       'blue',
+    thumbnailImage: '/blog/images/post5-cappex-in-progress.png',
+    thumbnailAlt:   'Cappex application dashboard showing mixed completion states across four colleges',
+    heroImage:      '/blog/headshot-blue-background.png',
+    heroImageAlt:   'Danny Driscoll — principal product designer with 18 years of experience',
     excerpt:
       'Early in my career I measured my effectiveness by what I shipped. It took years to understand why that was the wrong metric.',
     stats: [
