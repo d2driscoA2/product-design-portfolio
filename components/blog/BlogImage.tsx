@@ -20,6 +20,10 @@ interface BlogImageProps {
   className?: string
   /** Priority load — set true for hero images */
   priority?: boolean
+  /** object-fit strategy — 'contain' for diagrams, 'cover' for hero screenshots */
+  objectFit?: 'contain' | 'cover'
+  /** object-position — e.g. 'top' to crop from the top of a tall screenshot */
+  objectPosition?: string
 }
 
 export function BlogImage({
@@ -30,6 +34,8 @@ export function BlogImage({
   height,
   className = '',
   priority = false,
+  objectFit = 'contain',
+  objectPosition = 'center',
 }: BlogImageProps) {
   const wrapperClass = [
     'blog-image-wrap',
@@ -48,7 +54,7 @@ export function BlogImage({
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 720px, 900px"
-          style={{ objectFit: 'contain' }}
+          style={{ objectFit, objectPosition }}
           priority={priority}
           unoptimized
         />
@@ -62,7 +68,7 @@ export function BlogImage({
 
 /**
  * Convenience wrapper for hero images.
- * Fills the full column width at a taller fixed height.
+ * Crops to top of tall screenshots using object-fit: cover.
  */
 export function BlogHeroImage({
   src,
@@ -78,6 +84,8 @@ export function BlogHeroImage({
       variant="bordered"
       height={480}
       priority={priority}
+      objectFit="cover"
+      objectPosition="top"
       className="blog-hero-image"
     />
   )
