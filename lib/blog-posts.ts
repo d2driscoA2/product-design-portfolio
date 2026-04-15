@@ -27,6 +27,13 @@ export interface BlogPost {
   /** One-paragraph excerpt for index cards */
   excerpt: string
   /**
+   * Hero image path — relative to /public (e.g. /blog/hero.png).
+   * When present, replaces the bullseye placeholder on the article page.
+   */
+  heroImage?: string
+  /** Alt text for the hero image */
+  heroImageAlt?: string
+  /**
    * 3–4 key stats shown on the featured card and article header.
    * First stat is the hero number.
    */
@@ -38,14 +45,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
 
   {
-    slug:       'claude-code-portfolio',
-    title:      'I Used Claude Code to Build My Entire UX Portfolio — Here Are the Actual Numbers (and How They Stack Up)',
-    shortTitle: 'Building displayedux.com with Claude Code',
-    date:       'April 2026',
-    dateISO:    '2026-04-01',
-    readTime:   12,
-    tag:        'Process',
-    tagColor:   'blue',
+    slug:         'claude-code-portfolio',
+    title:        'I Used Claude Code to Build My Entire UX Portfolio — Here Are the Actual Numbers (and How They Stack Up)',
+    shortTitle:   'Building displayedux.com with Claude Code',
+    date:         'April 2026',
+    dateISO:      '2026-04-01',
+    readTime:     12,
+    tag:          'Process',
+    tagColor:     'blue',
+    heroImage:    '/blog/blog-hero-homepage-live.png',
+    heroImageAlt: 'displayedux.com homepage — the finished portfolio site built entirely with Claude Code',
     excerpt:
       '47 git commits. 10 build sessions. ~100K lines of code. One designer, no developer. Here is every number, every failure, and the exact workflow behind displayedux.com.',
     stats: [
@@ -57,14 +66,16 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:       'case-study-writing',
-    title:      'How I Write Case Studies That Get Callbacks at the Principal Level',
-    shortTitle: 'Writing case studies for Principal-level roles',
-    date:       'May 2026',
-    dateISO:    '2026-05-01',
-    readTime:   8,
-    tag:        'Process',
-    tagColor:   'coral',
+    slug:         'case-study-writing',
+    title:        'How I Write Case Studies That Get Callbacks at the Principal Level',
+    shortTitle:   'Writing case studies for Principal-level roles',
+    date:         'May 2026',
+    dateISO:      '2026-05-01',
+    readTime:     8,
+    tag:          'Process',
+    tagColor:     'coral',
+    heroImage:    '/blog/case-study-page-screenshot.png',
+    heroImageAlt: 'The TeleSign Self-Service Portal case study page on displayedux.com — structure, metrics, and narrative in one view',
     excerpt:
       'Four case studies. 18 years of work. Here is what I cut, what I kept, and the framework that shaped every word.',
     stats: [
@@ -76,14 +87,16 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:       'onboarding-pattern',
-    title:      'The Onboarding Problem I Keep Solving at Every Company I Have Worked At',
-    shortTitle: 'The recurring onboarding pattern',
-    date:       'May 2026',
-    dateISO:    '2026-05-15',
-    readTime:   9,
-    tag:        'Process',
-    tagColor:   'amber',
+    slug:         'onboarding-pattern',
+    title:        'The Onboarding Problem I Keep Solving at Every Company I Have Worked At',
+    shortTitle:   'The recurring onboarding pattern',
+    date:         'May 2026',
+    dateISO:      '2026-05-15',
+    readTime:     9,
+    tag:          'Process',
+    tagColor:     'amber',
+    heroImage:    '/blog/legacy-portal-before.png',
+    heroImageAlt: 'The legacy TeleSign customer portal in 2018 — the before state that drove the onboarding redesign',
     excerpt:
       'Netflix. Appily.com. TeleSign. Three different products, three different user groups, the same root cause every time.',
     stats: [
@@ -95,14 +108,16 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:       'designing-for-experts',
-    title:      'Designing for Experts Who Cannot Afford to Be Wrong',
-    shortTitle: 'Designing for expert fraud analysts',
-    date:       'June 2026',
-    dateISO:    '2026-06-01',
-    readTime:   10,
-    tag:        'Case Study',
-    tagColor:   'coral',
+    slug:         'designing-for-experts',
+    title:        'Designing for Experts Who Cannot Afford to Be Wrong',
+    shortTitle:   'Designing for expert fraud analysts',
+    date:         'June 2026',
+    dateISO:      '2026-06-01',
+    readTime:     10,
+    tag:          'Case Study',
+    tagColor:     'coral',
+    heroImage:    '/blog/fraud-prevention-case-study.png',
+    heroImageAlt: 'TeleSign Fraud Prevention Suite case study — designing dashboards for analysts protecting 21 billion annual transactions',
     excerpt:
       'Fraud analysts make hundreds of high-stakes decisions per day. Here is what designing for that user taught me about complexity, trust, and speed.',
     stats: [
@@ -114,14 +129,16 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    slug:       'output-vs-outcome',
-    title:      '18 Years In, I Still Think Most Designers Confuse Output with Outcome',
-    shortTitle: 'Output vs. outcome in product design',
-    date:       'June 2026',
-    dateISO:    '2026-06-15',
-    readTime:   10,
-    tag:        'Process',
-    tagColor:   'blue',
+    slug:         'output-vs-outcome',
+    title:        '18 Years In, I Still Think Most Designers Confuse Output with Outcome',
+    shortTitle:   'Output vs. outcome in product design',
+    date:         'June 2026',
+    dateISO:      '2026-06-15',
+    readTime:     10,
+    tag:          'Process',
+    tagColor:     'blue',
+    heroImage:    '/blog/headshot-blue-background.png',
+    heroImageAlt: 'Danny Driscoll — product designer with 18 years of experience across enterprise SaaS, consumer mobile, and developer tools',
     excerpt:
       'Early in my career I measured my effectiveness by what I shipped. It took years to understand why that was the wrong metric.',
     stats: [
