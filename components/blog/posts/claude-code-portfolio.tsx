@@ -60,9 +60,9 @@ export function ClaudeCodePortfolioPost() {
       </p>
 
       <BlogHeroImage
-        src="/blog/blog-hero-homepage-live.png"
-        alt="displayedux.com homepage — the finished product: hero section with headshot, stat strip, and all four case study cards"
-        caption="displayedux.com — live at the time of writing. This is what 47 git commits, 10 sessions, and ~100,000 lines of code produced."
+        src="/blog/fraud-prevention-case-study.png"
+        alt="The Fraud Prevention Suite case study on displayedux.com — showing the site navigation, breadcrumb trail, case study hero, and bento stats grid"
+        caption="The Fraud Prevention Suite case study — one of four built for the portfolio. The hero overlay, bento stats grid, case navigation, and responsive layout were all components written from scratch in these sessions."
       />
 
       <hr className="blog-divider" />
@@ -273,13 +273,6 @@ export function ClaudeCodePortfolioPost() {
         CSS v4, deployed to Netlify with auto-deploy on push. Production-grade,
         statically-generated, sub-second load times.
       </p>
-
-      <BlogImage
-        src="/blog/images/post4-template-builder.png"
-        alt="TeleSign Messaging API template builder with live phone preview — one of 12 custom components built during the portfolio project"
-        caption="One of 12 custom React components built during the portfolio project: the Messaging API WYSIWYG template builder with live phone preview"
-        variant="bordered"
-      />
 
       <hr className="blog-divider" />
 
