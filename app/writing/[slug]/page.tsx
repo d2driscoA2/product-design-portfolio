@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getBlogPost, blogPosts, TAG_COLORS } from '@/lib/blog-posts'
-import { BlogHeroImage } from '@/components/blog/BlogImage'
+import { WritingHero } from '@/components/blog/WritingHero'
 
 /* ── Content component registry ────────────────────────────────── */
 import { ClaudeCodePortfolioPost } from '@/components/blog/posts/claude-code-portfolio'
@@ -140,31 +140,9 @@ export default async function WritingPostPage(
         </div>
       </header>
 
-      {/* ── Hero image ──────────────────────────────────────────── */}
+      {/* ── Writing hero ─────────────────────────────────────────── */}
       <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-8">
-        {post.heroImage ? (
-          <BlogHeroImage
-            src={post.heroImage}
-            alt={post.heroImageAlt ?? post.title}
-          />
-        ) : (
-          <div
-            className="relative w-full rounded-2xl overflow-hidden flex items-center justify-center"
-            style={{
-              height: 'clamp(240px, 40vw, 420px)',
-              background: 'var(--color-bg-secondary)',
-              border: '1px solid var(--color-border)',
-            }}
-            aria-hidden="true"
-          >
-            <div className="absolute w-80 h-80 rounded-full border"
-                 style={{ borderColor: 'rgba(59,92,232,0.15)', right: '8%', top: '50%', transform: 'translateY(-50%)' }} />
-            <div className="absolute w-52 h-52 rounded-full border"
-                 style={{ borderColor: 'rgba(59,92,232,0.22)', right: '8%', top: '50%', transform: 'translateY(-50%)' }} />
-            <div className="absolute w-20 h-20 rounded-full"
-                 style={{ background: 'rgba(59,92,232,0.08)', border: '1px solid rgba(59,92,232,0.28)', right: 'calc(8% + 66px)', top: '50%', transform: 'translateY(-50%)' }} />
-          </div>
-        )}
+        <WritingHero post={post} />
       </div>
 
       {/* ── Key stats bento ─────────────────────────────────────── */}
