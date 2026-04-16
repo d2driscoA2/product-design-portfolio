@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { blogPosts, TAG_COLORS } from '@/lib/blog-posts'
-import { BlogCardImage } from '@/components/blog/BlogImage'
+import { WritingCardThumb } from '@/components/blog/WritingCardThumb'
 
 export const metadata: Metadata = {
   title: 'Writing',
@@ -42,68 +42,9 @@ export default function WritingPage() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
 
-              {/* Left — thumbnail image */}
+              {/* Left — on-brand thumbnail */}
               <div className="relative overflow-hidden" style={{ minHeight: '280px' }}>
-                {featuredPost.thumbnailImage ? (
-                  <>
-                    {/* Category tag */}
-                    <div className="absolute top-5 left-5 z-10">
-                      <span
-                        className="inline-block text-label font-bold tracking-wider uppercase px-2.5 py-1 rounded"
-                        style={{
-                          background: TAG_COLORS[featuredPost.tagColor].bg,
-                          color: TAG_COLORS[featuredPost.tagColor].text,
-                          border: `1px solid ${TAG_COLORS[featuredPost.tagColor].border}`,
-                        }}
-                      >
-                        {featuredPost.tag}
-                      </span>
-                    </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={featuredPost.thumbnailImage}
-                      alt={featuredPost.thumbnailAlt ?? featuredPost.title}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        minHeight: 280,
-                        objectFit: 'cover',
-                        objectPosition: 'top',
-                        display: 'block',
-                      }}
-                      loading="eager"
-                    />
-                  </>
-                ) : (
-                  /* Fallback placeholder */
-                  <div
-                    className="w-full h-full flex items-center justify-center"
-                    style={{ background: 'var(--color-bg-secondary)', minHeight: 280 }}
-                    aria-hidden="true"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="absolute w-56 h-56 rounded-full border"
-                           style={{ borderColor: 'rgba(59,92,232,0.18)' }} />
-                      <div className="absolute w-36 h-36 rounded-full border"
-                           style={{ borderColor: 'rgba(59,92,232,0.28)' }} />
-                      <div className="absolute w-14 h-14 rounded-full"
-                           style={{ background: 'rgba(59,92,232,0.10)', border: '1px solid rgba(59,92,232,0.30)' }} />
-                    </div>
-                    {/* Category tag */}
-                    <div className="absolute top-5 left-5">
-                      <span
-                        className="inline-block text-label font-bold tracking-wider uppercase px-2.5 py-1 rounded"
-                        style={{
-                          background: TAG_COLORS[featuredPost.tagColor].bg,
-                          color: TAG_COLORS[featuredPost.tagColor].text,
-                          border: `1px solid ${TAG_COLORS[featuredPost.tagColor].border}`,
-                        }}
-                      >
-                        {featuredPost.tag}
-                      </span>
-                    </div>
-                  </div>
-                )}
+                <WritingCardThumb post={featuredPost} variant="featured" />
               </div>
 
               {/* Right — post body */}
@@ -151,7 +92,7 @@ export default function WritingPage() {
                   </div>
                 </div>
 
-                {/* Read link — three signals: color + underline + chevron */}
+                {/* Read link */}
                 <span
                   className="inline-flex items-center gap-1.5 text-small font-bold"
                   style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
@@ -185,61 +126,9 @@ export default function WritingPage() {
                     style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-card)' }}
                     aria-label={`Read: ${post.title}`}
                   >
-                    {/* Card image */}
+                    {/* Card thumbnail */}
                     <div className="relative overflow-hidden" style={{ height: 160 }}>
-                      {post.thumbnailImage ? (
-                        <>
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={post.thumbnailImage}
-                            alt={post.thumbnailAlt ?? post.title}
-                            style={{
-                              width: '100%',
-                              height: '100%',
-                              objectFit: 'cover',
-                              objectPosition: 'top',
-                              display: 'block',
-                            }}
-                            loading="lazy"
-                          />
-                          <div className="absolute bottom-2.5 left-3">
-                            <span
-                              className="inline-block text-label font-bold tracking-wider uppercase px-2 py-1 rounded"
-                              style={{
-                                background: TAG_COLORS[post.tagColor].bg,
-                                color: TAG_COLORS[post.tagColor].text,
-                                border: `1px solid ${TAG_COLORS[post.tagColor].border}`,
-                              }}
-                            >
-                              {post.tag}
-                            </span>
-                          </div>
-                        </>
-                      ) : (
-                        /* Fallback placeholder */
-                        <div
-                          className="w-full h-full flex items-center justify-center"
-                          style={{ background: 'var(--color-bg-secondary)' }}
-                          aria-hidden="true"
-                        >
-                          <div className="w-20 h-20 rounded-full border"
-                               style={{ borderColor: 'rgba(59,92,232,0.2)' }} />
-                          <div className="absolute w-10 h-10 rounded-full"
-                               style={{ background: 'rgba(59,92,232,0.06)' }} />
-                          <div className="absolute bottom-2.5 left-3">
-                            <span
-                              className="inline-block text-label font-bold tracking-wider uppercase px-2 py-1 rounded"
-                              style={{
-                                background: TAG_COLORS[post.tagColor].bg,
-                                color: TAG_COLORS[post.tagColor].text,
-                                border: `1px solid ${TAG_COLORS[post.tagColor].border}`,
-                              }}
-                            >
-                              {post.tag}
-                            </span>
-                          </div>
-                        </div>
-                      )}
+                      <WritingCardThumb post={post} variant="card" />
                     </div>
 
                     {/* Card body */}
@@ -283,7 +172,7 @@ export default function WritingPage() {
           </section>
         )}
 
-        {/* ── Empty state: only one post ────────────────────────── */}
+        {/* ── Empty state ────────────────────────────────────────── */}
         {blogPosts.length === 1 && (
           <p className="text-small mt-2" style={{ color: 'var(--color-text-secondary)' }}>
             More posts coming soon.
