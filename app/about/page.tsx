@@ -30,7 +30,7 @@ const funFacts: FunFact[] = [
 ];
 
 const stats = [
-  { value: '10+',   label: 'Years in product design',       employer: 'TeleSign + Appily.com' },
+  { value: '18+',   label: 'Years in product design',       employer: 'TeleSign + Appily.com' },
   { value: '21B+',  label: 'Annual transactions protected', employer: 'AT TeleSign' },
   { value: '47%',   label: 'Application completion rate',   employer: 'AT APPILY.COM' },
   { value: '67→35', label: 'Days to onboard, enterprise', employer: 'AT TeleSign' },

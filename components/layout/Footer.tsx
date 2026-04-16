@@ -3,6 +3,7 @@ import { Logo } from '@/components/ui/Logo'
 
 const NAV_LINKS = [
   { href: '/work',        label: 'Work'        },
+  { href: '/writing',     label: 'Writing'     },
   { href: '/about',       label: 'About'       },
   { href: '/photography', label: 'Photography' },
   { href: '/contact',     label: 'Contact'     },
