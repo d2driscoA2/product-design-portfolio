@@ -1,4 +1,5 @@
 import { BlogImage, BlogHeroImage } from '@/components/blog/BlogImage'
+import { Avatar } from '@/components/blog/Avatar'
 
 /* ─────────────────────────────────────────────────────────────────
    Blog post: "I Used Claude Code to Build My Entire UX Portfolio —
@@ -760,13 +761,7 @@ export function ClaudeCodePortfolioPost() {
 
       <div className="blog-author-bio">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1rem' }}>
-          <div style={{ position: 'relative', width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: '2px solid var(--color-border)' }}>
-            <img
-              src="/blog/headshot-blue-background.png"
-              alt="Danny Driscoll"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-          </div>
+          <Avatar size={72} />
           <div>
             <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-text-primary)', margin: 0 }}>Danny Driscoll</p>
             <p style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', margin: '2px 0 0' }}>Principal Product Designer &nbsp;&middot;&nbsp; displayedux.com</p>

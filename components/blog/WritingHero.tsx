@@ -18,24 +18,25 @@ interface WritingHeroProps {
 
 /** Tag pill background on the royal-blue field */
 const TAG_BG: Record<BlogPost['tagColor'], string> = {
-  blue:    'rgba(255,255,255,0.12)',
-  coral:   'rgba(244,112,96,0.28)',
-  amber:   'rgba(245,194,0,0.22)',
-  magenta: 'rgba(255,0,170,0.22)',
+  blue:      'rgba(255,255,255,0.12)',
+  coral:     'rgba(244,112,96,0.28)',
+  amber:     'rgba(245,194,0,0.22)',
+  magenta:   'rgba(255,0,170,0.22)',
+  lightBlue: 'rgba(109,163,248,0.22)',
 }
 
 /** Tag pill border on the royal-blue field */
 const TAG_BORDER: Record<BlogPost['tagColor'], string> = {
-  blue:    'rgba(255,255,255,0.22)',
-  coral:   'rgba(244,112,96,0.50)',
-  amber:   'rgba(245,194,0,0.40)',
-  magenta: 'rgba(255,0,170,0.40)',
+  blue:      'rgba(255,255,255,0.22)',
+  coral:     'rgba(244,112,96,0.50)',
+  amber:     'rgba(245,194,0,0.40)',
+  magenta:   'rgba(255,0,170,0.40)',
+  lightBlue: 'rgba(109,163,248,0.40)',
 }
 
 export function WritingHero({ post }: WritingHeroProps) {
   return (
     <div
-      role="img"
       aria-label={`Hero for: ${post.title}`}
       style={{
         position:       'relative',
@@ -128,7 +129,7 @@ export function WritingHero({ post }: WritingHeroProps) {
         </div>
 
         {/* Title */}
-        <p style={{
+        <h1 style={{
           fontFamily:    'var(--font-display), "Plus Jakarta Sans", sans-serif',
           fontSize:      'clamp(1.25rem, 3.2vw, 2.125rem)',
           fontWeight:    800,
@@ -139,7 +140,7 @@ export function WritingHero({ post }: WritingHeroProps) {
           maxWidth:      '680px',
         }}>
           {post.title}
-        </p>
+        </h1>
       </div>
 
       {/* ── Bottom: metadata ─────────────────────────────────── */}

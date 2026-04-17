@@ -1,0 +1,222 @@
+/* ─── Claude Code terminal hero ───────────────────────────────────────
+   Scoped styles for the animated terminal hero used on the
+   claude-code-portfolio post. Matches Claude Code's real UI chrome,
+   including the RuFlo V3.5 status bar and the MCP server table output.
+───────────────────────────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  width: 100%;
+  background: #1E2329;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* ─── Claude Code header chrome ───────────────────────────────── */
+.chead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #1E2329;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+}
+.mascot {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  position: relative;
+  image-rendering: pixelated;
+}
+.mascotPixel {
+  position: absolute;
+}
+.cheadInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.cheadTitle {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.cheadTitle b {
+  color: #F0F0F0;
+  font-weight: 600;
+  font-size: 14px;
+}
+.cheadVer {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 12px;
+}
+.cheadSub {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+.cheadPath {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Terminal body ───────────────────────────────────────────── */
+.body {
+  padding: 18px 20px 14px;
+  min-height: 340px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+}
+.line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.prompt {
+  color: #E573C0;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+.cmd {
+  color: rgba(255, 255, 255, 0.92);
+  white-space: pre;
+}
+.cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.75);
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  animation: ccpBlink 1s steps(2) infinite;
+}
+.outBlock {
+  opacity: 0;
+  transition: opacity 160ms ease;
+  margin-top: 8px;
+}
+.outBlockShow {
+  opacity: 1;
+}
+
+/* ─── Bash execution block ────────────────────────────────────── */
+.bashHead {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.bashDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6DC28B;
+  transform: translateY(-2px);
+}
+.bashTitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+.bashTitle b {
+  font-weight: 600;
+}
+.bashSub {
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.55);
+  display: flex;
+  gap: 6px;
+}
+.corner {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ─── MCP announcement + table ────────────────────────────────── */
+.announce {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 14px;
+}
+.announceDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E573C0;
+  transform: translateY(-2px);
+}
+.table {
+  margin: 10px 0 8px;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: pre;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+.tHead {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+.tOk {
+  color: #6DC28B;
+}
+.tFail {
+  color: #E77979;
+}
+.tRowFail {
+  background: rgba(231, 121, 121, 0.06);
+}
+.issues {
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.70);
+}
+.issues b {
+  color: rgba(255, 255, 255, 0.90);
+  font-weight: 600;
+}
+.issueLine {
+  padding-left: 4px;
+  margin-top: 3px;
+}
+.dash {
+  color: rgba(255, 255, 255, 0.40);
+  margin-right: 6px;
+}
+.num {
+  color: #FF6F6E;
+  font-weight: 500;
+}
+
+/* ─── RuFlo status line ───────────────────────────────────────── */
+.ruflo {
+  padding: 10px 20px;
+  background: #171B20;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11.5px;
+  flex-wrap: wrap;
+}
+.rfLabel  { color: rgba(255, 255, 255, 0.95); font-weight: 500; }
+.rfUser   { color: #E573C0; }
+.rfBranch { color: #FFC857; }
+.rfDirty  { color: rgba(255, 255, 255, 0.55); }
+.rfModel  { color: #7FD3DC; }
+.rfTime   { color: rgba(255, 255, 255, 0.55); }
+.rfCtx    { color: #6DC28B; }
+.rfCost   { color: #A2D46B; }
+.rfSep    { color: rgba(255, 255, 255, 0.18); }
+
+/* ─── Animations + reduced motion ─────────────────────────────── */
+@keyframes ccpBlink {
+  to { background: transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; opacity: 0; }
+}

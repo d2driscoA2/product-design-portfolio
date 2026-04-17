@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getBlogPost, blogPosts, TAG_COLORS } from '@/lib/blog-posts'
 import { WritingHero } from '@/components/blog/WritingHero'
+import { PostHero } from '@/components/blog/PostHero'
+import { TerminalHero } from '@/components/blog/TerminalHero'
+import { Avatar } from '@/components/blog/Avatar'
 
 /* ── Content component registry ────────────────────────────────── */
 import { ClaudeCodePortfolioPost } from '@/components/blog/posts/claude-code-portfolio'
@@ -65,112 +68,84 @@ export default async function WritingPostPage(
   return (
     <div style={{ background: 'var(--color-bg)', color: 'var(--color-text-primary)', minHeight: '100vh' }}>
 
-      {/* ── Breadcrumb ──────────────────────────────────────────── */}
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 pt-8 pb-0">
-        <nav aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2 flex-wrap" role="list">
-            <li role="listitem">
-              <Link
-                href="/writing"
-                className="text-small font-medium transition-colors duration-150 hover:text-[var(--color-text-primary)]"
-                style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '2px' }}
+      {/* ── Breadcrumb + article header (non-PostHero posts only) ── */}
+      {post.slug !== 'claude-code-portfolio' && (
+        <>
+          <div className="mx-auto max-w-6xl px-6 lg:px-8 pt-8 pb-0">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-2 flex-wrap" role="list">
+                <li role="listitem">
+                  <Link
+                    href="/writing"
+                    className="text-small font-medium transition-colors duration-150 hover:text-[var(--color-text-primary)]"
+                    style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '2px' }}
+                  >
+                    Writing
+                  </Link>
+                </li>
+                <li role="listitem" aria-hidden="true"
+                    className="text-small" style={{ color: 'var(--color-border)' }}>/</li>
+                <li role="listitem"
+                    className="text-small truncate max-w-xs"
+                    style={{ color: 'var(--color-text-secondary)' }}>
+                  {post.shortTitle}
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+          <header className="mx-auto max-w-6xl px-6 lg:px-8 pt-8 pb-0">
+            {/* Eyebrow: tag + date */}
+            <div className="flex items-center gap-3 mb-5">
+              <span
+                className="inline-block text-label font-bold tracking-wider uppercase px-2.5 py-1 rounded"
+                style={{ background: tagColors.bg, color: tagColors.text, border: `1px solid ${tagColors.border}` }}
               >
-                Writing
-              </Link>
-            </li>
-            <li role="listitem" aria-hidden="true"
-                className="text-small" style={{ color: 'var(--color-border)' }}>/</li>
-            <li role="listitem"
-                className="text-small truncate max-w-xs"
-                style={{ color: 'var(--color-text-secondary)' }}>
-              {post.shortTitle}
-            </li>
-          </ol>
-        </nav>
-      </div>
-
-      {/* ── Article header ──────────────────────────────────────── */}
-      <header className="mx-auto max-w-6xl px-6 lg:px-8 pt-8 pb-0">
-
-        {/* Eyebrow: tag + date */}
-        <div className="flex items-center gap-3 mb-5">
-          <span
-            className="inline-block text-label font-bold tracking-wider uppercase px-2.5 py-1 rounded"
-            style={{ background: tagColors.bg, color: tagColors.text, border: `1px solid ${tagColors.border}` }}
-          >
-            {post.tag}
-          </span>
-          <span className="text-small" style={{ color: 'var(--color-text-secondary)' }}>
-            <time dateTime={post.dateISO}>{post.date}</time>
-          </span>
-        </div>
-
-        {/* Title */}
-        <h1
-          className="font-bold tracking-tight leading-tight mb-6 max-w-4xl"
-          style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', letterSpacing: '-0.03em' }}
-        >
-          {post.title}
-        </h1>
-
-        {/* Byline */}
-        <div
-          className="flex items-center gap-4 flex-wrap pb-8 mb-0"
-          style={{ borderBottom: '1px solid var(--color-border)' }}
-        >
-          {/* Avatar */}
-          <div
-            className="w-10 h-10 rounded-full flex items-center justify-center text-small font-bold text-white flex-shrink-0"
-            style={{ background: 'linear-gradient(135deg, #3B5CE8, #5B9FE8)' }}
-            aria-hidden="true"
-          >
-            DD
-          </div>
-          <div>
-            <div className="text-small font-semibold">Danny Driscoll</div>
-            <div className="text-label" style={{ color: 'var(--color-text-secondary)' }}>
-              Product Designer&nbsp;·&nbsp;displayedux.com
+                {post.tag}
+              </span>
+              <span className="text-small" style={{ color: 'var(--color-text-secondary)' }}>
+                <time dateTime={post.dateISO}>{post.date}</time>
+              </span>
             </div>
-          </div>
-          <div className="ml-auto">
-            <span className="text-small" style={{ color: 'var(--color-text-secondary)' }}>
-              {post.readTime} min read
-            </span>
-          </div>
-        </div>
-      </header>
+
+            {/* Byline */}
+            <div
+              className="flex items-center gap-4 flex-wrap pb-8 mb-0"
+              style={{ borderBottom: '1px solid var(--color-border)' }}
+            >
+              <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/headshots/headshot-dark.png"
+                  alt="Danny Driscoll"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', transform: 'scale(1.32)', transformOrigin: 'center 15%' }}
+                />
+              </div>
+              <div>
+                <div className="text-small font-semibold">Danny Driscoll</div>
+                <div className="text-label" style={{ color: 'var(--color-text-secondary)' }}>
+                  Product Designer&nbsp;·&nbsp;displayedux.com
+                </div>
+              </div>
+              <div className="ml-auto">
+                <span className="text-small" style={{ color: 'var(--color-text-secondary)' }}>
+                  {post.readTime} min read
+                </span>
+              </div>
+            </div>
+          </header>
+        </>
+      )}
 
       {/* ── Writing hero ─────────────────────────────────────────── */}
       <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-8">
-        <WritingHero post={post} />
-      </div>
-
-      {/* ── Key stats bento ─────────────────────────────────────── */}
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {post.stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-xl px-4 py-4"
-              style={{ background: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}
-            >
-              <div
-                className="font-bold tracking-tight leading-none mb-1.5"
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(1.25rem, 2.5vw, 1.625rem)',
-                  color: stat.accentHex ?? 'var(--color-text-primary)',
-                }}
-              >
-                {stat.value}
-              </div>
-              <div className="text-label leading-tight"
-                   style={{ color: 'var(--color-text-secondary)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
+        {post.slug === 'claude-code-portfolio' ? (
+          <PostHero post={post}>
+            <TerminalHero />
+          </PostHero>
+        ) : (
+          <WritingHero post={post} />
+        )}
       </div>
 
       {/* ── Article body + sidebar ───────────────────────────────── */}
@@ -280,13 +255,7 @@ export default async function WritingPostPage(
                 About the author
               </div>
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                  style={{ background: 'linear-gradient(135deg, #3B5CE8, #5B9FE8)' }}
-                  aria-hidden="true"
-                >
-                  DD
-                </div>
+                <Avatar size={40} />
                 <div>
                   <div className="text-small font-bold">Danny Driscoll</div>
                   <div className="text-label" style={{ color: 'var(--color-text-secondary)' }}>

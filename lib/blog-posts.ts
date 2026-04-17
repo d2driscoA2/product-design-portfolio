@@ -23,7 +23,7 @@ export interface BlogPost {
   /** Category tag */
   tag: string
   /** Accent color for the tag pill */
-  tagColor: 'blue' | 'coral' | 'amber' | 'magenta'
+  tagColor: 'blue' | 'coral' | 'amber' | 'magenta' | 'lightBlue'
   /** One-paragraph excerpt for index cards */
   excerpt: string
   /**
@@ -58,8 +58,8 @@ export const blogPosts: BlogPost[] = [
     date:           'April 2026',
     dateISO:        '2026-04-01',
     readTime:       12,
-    tag:            'Process',
-    tagColor:       'blue',
+    tag:            'Technical',
+    tagColor:       'lightBlue',
     thumbnailImage: '/blog/fraud-prevention-case-study.png',
     thumbnailAlt:   'The Fraud Prevention Suite case study page on displayedux.com, showing the site nav, case study hero, and bento stats grid',
     heroImage:      '/blog/blog-hero-homepage-live.png',
@@ -82,7 +82,7 @@ export const blogPosts: BlogPost[] = [
     dateISO:        '2026-05-01',
     readTime:       8,
     tag:            'Process',
-    tagColor:       'coral',
+    tagColor:       'blue',
     thumbnailImage: '/blog/portal-design-guide-colors.png',
     thumbnailAlt:   'TeleSign Unified Portal design system documentation showing color palette and system message states',
     heroImage:      '/blog/case-study-page-screenshot.png',
@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
     date:           'May 2026',
     dateISO:        '2026-05-15',
     readTime:       9,
-    tag:            'Process',
+    tag:            'Pattern',
     tagColor:       'amber',
     thumbnailImage: '/blog/legacy-portal-before.png',
     thumbnailAlt:   'The legacy TeleSign customer portal in 2018 — the before state that drove the self-service portal redesign',
@@ -150,8 +150,8 @@ export const blogPosts: BlogPost[] = [
     date:           'June 2026',
     dateISO:        '2026-06-15',
     readTime:       10,
-    tag:            'Process',
-    tagColor:       'blue',
+    tag:            'Reflection',
+    tagColor:       'magenta',
     thumbnailImage: '/blog/images/post5-cappex-in-progress.png',
     thumbnailAlt:   'Cappex application dashboard showing mixed completion states across four colleges',
     heroImage:      '/blog/headshot-blue-background.png',
@@ -185,7 +185,8 @@ export const TAG_COLORS: Record<BlogPost['tagColor'], { bg: string; text: string
   blue:    { bg: 'rgba(59,92,232,0.10)',  text: '#3B5CE8', border: 'rgba(59,92,232,0.25)' },
   coral:   { bg: 'rgba(244,112,96,0.10)', text: '#C8402E', border: 'rgba(244,112,96,0.28)' },
   amber:   { bg: 'rgba(245,194,0,0.12)',  text: '#8A6A00', border: 'rgba(245,194,0,0.28)' },
-  magenta: { bg: 'rgba(255,0,170,0.10)',  text: '#CC0088', border: 'rgba(255,0,170,0.25)' },
+  magenta:   { bg: 'rgba(255,0,170,0.10)',  text: '#CC0088', border: 'rgba(255,0,170,0.25)' },
+  lightBlue: { bg: 'rgba(109,163,248,0.10)', text: '#2D6AC6', border: 'rgba(109,163,248,0.25)' },
 }
 
 /** Dark-mode tag accent colors */
@@ -193,5 +194,6 @@ export const TAG_COLORS_DARK: Record<BlogPost['tagColor'], { bg: string; text: s
   blue:    { bg: 'rgba(59,92,232,0.22)',  text: '#7B9BFF', border: 'rgba(59,92,232,0.40)' },
   coral:   { bg: 'rgba(244,112,96,0.18)', text: '#F47060', border: 'rgba(244,112,96,0.35)' },
   amber:   { bg: 'rgba(245,194,0,0.15)',  text: '#F5C200', border: 'rgba(245,194,0,0.30)' },
-  magenta: { bg: 'rgba(255,0,170,0.18)',  text: '#FF44CC', border: 'rgba(255,0,170,0.35)' },
+  magenta:   { bg: 'rgba(255,0,170,0.18)',  text: '#FF44CC', border: 'rgba(255,0,170,0.35)' },
+  lightBlue: { bg: 'rgba(109,163,248,0.20)', text: '#8EB6F0', border: 'rgba(109,163,248,0.38)' },
 }

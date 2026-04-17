@@ -20,17 +20,19 @@ interface WritingCardThumbProps {
 }
 
 const TAG_BG: Record<BlogPost['tagColor'], string> = {
-  blue:    'rgba(255,255,255,0.12)',
-  coral:   'rgba(244,112,96,0.28)',
-  amber:   'rgba(245,194,0,0.22)',
-  magenta: 'rgba(255,0,170,0.22)',
+  blue:      'rgba(255,255,255,0.12)',
+  coral:     'rgba(244,112,96,0.28)',
+  amber:     'rgba(245,194,0,0.22)',
+  magenta:   'rgba(255,0,170,0.22)',
+  lightBlue: 'rgba(109,163,248,0.22)',
 }
 
 const TAG_BORDER: Record<BlogPost['tagColor'], string> = {
-  blue:    'rgba(255,255,255,0.22)',
-  coral:   'rgba(244,112,96,0.50)',
-  amber:   'rgba(245,194,0,0.40)',
-  magenta: 'rgba(255,0,170,0.40)',
+  blue:      'rgba(255,255,255,0.22)',
+  coral:     'rgba(244,112,96,0.50)',
+  amber:     'rgba(245,194,0,0.40)',
+  magenta:   'rgba(255,0,170,0.40)',
+  lightBlue: 'rgba(109,163,248,0.40)',
 }
 
 export function WritingCardThumb({ post, variant = 'card' }: WritingCardThumbProps) {
