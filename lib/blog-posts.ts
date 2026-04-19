@@ -60,8 +60,8 @@ export const blogPosts: BlogPost[] = [
     readTime:       12,
     tag:            'Technical',
     tagColor:       'lightBlue',
-    thumbnailImage: '/blog/fraud-prevention-case-study.png',
-    thumbnailAlt:   'The Fraud Prevention Suite case study page on displayedux.com, showing the site nav, case study hero, and bento stats grid',
+    thumbnailImage: '/blog/terminal-hero-thumb.png',
+    thumbnailAlt:   'Claude Code terminal showing MCP server connections and live word count — the actual build environment used to create displayedux.com',
     heroImage:      '/blog/blog-hero-homepage-live.png',
     heroImageAlt:   'displayedux.com homepage — the finished portfolio site built entirely with Claude Code',
     excerpt:
@@ -83,8 +83,8 @@ export const blogPosts: BlogPost[] = [
     readTime:       8,
     tag:            'Process',
     tagColor:       'blue',
-    thumbnailImage: '/blog/portal-design-guide-colors.png',
-    thumbnailAlt:   'TeleSign Unified Portal design system documentation showing color palette and system message states',
+    thumbnailImage: '/blog/case-study-page-screenshot.png',
+    thumbnailAlt:   'The TeleSign Self-Service Customer Portal case study on displayedux.com — showing case study structure, key stats, and narrative sections',
     heroImage:      '/blog/case-study-page-screenshot.png',
     heroImageAlt:   'The TeleSign Self-Service Portal case study page on displayedux.com',
     excerpt:
@@ -129,8 +129,8 @@ export const blogPosts: BlogPost[] = [
     readTime:       10,
     tag:            'Case Study',
     tagColor:       'coral',
-    thumbnailImage: '/blog/images/post4-hero-phoneid.png',
-    thumbnailAlt:   'TeleSign PhoneID transaction dashboard showing stacked bar charts and product navigation',
+    thumbnailImage: '/blog/fraud-prevention-case-study.png',
+    thumbnailAlt:   'TeleSign Fraud Prevention Suite case study page on displayedux.com',
     heroImage:      '/blog/fraud-prevention-case-study.png',
     heroImageAlt:   'TeleSign Fraud Prevention Suite case study page on displayedux.com',
     excerpt:
@@ -153,9 +153,9 @@ export const blogPosts: BlogPost[] = [
     tag:            'Reflection',
     tagColor:       'magenta',
     thumbnailImage: '/blog/images/post5-cappex-in-progress.png',
-    thumbnailAlt:   'Cappex application dashboard showing mixed completion states across four colleges',
-    heroImage:      '/blog/headshot-blue-background.png',
-    heroImageAlt:   'Danny Driscoll — principal product designer with 18 years of experience',
+    thumbnailAlt:   'Cappex college application dashboard showing mixed completion states — warnings, missing info, ready to submit, and already submitted',
+    heroImage:      '/blog/images/post5-cappex-in-progress.png',
+    heroImageAlt:   'Cappex college application dashboard showing mixed completion states — warnings, missing info, ready to submit, and already submitted',
     excerpt:
       'Early in my career I measured my effectiveness by what I shipped. It took years to understand why that was the wrong metric.',
     stats: [

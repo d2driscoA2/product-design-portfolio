@@ -1,4 +1,4 @@
-import { BlogImage, BlogHeroImage } from '@/components/blog/BlogImage'
+import { BlogImage } from '@/components/blog/BlogImage'
 import { Avatar } from '@/components/blog/Avatar'
 
 /* ─────────────────────────────────────────────────────────────────
@@ -59,12 +59,6 @@ export function ClaudeCodePortfolioPost() {
         them next to the people who use this tool professionally, full-time,
         at the highest level.
       </p>
-
-      <BlogHeroImage
-        src="/blog/fraud-prevention-case-study.png"
-        alt="The Fraud Prevention Suite case study on displayedux.com — showing the site navigation, breadcrumb trail, case study hero, and bento stats grid"
-        caption="The Fraud Prevention Suite case study — one of four built for the portfolio. The hero overlay, bento stats grid, case navigation, and responsive layout were all components written from scratch in these sessions."
-      />
 
       <hr className="blog-divider" />
 

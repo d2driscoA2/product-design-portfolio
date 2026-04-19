@@ -1,22 +1,23 @@
 /* ─────────────────────────────────────────────────────────────────
-   WritingHero — on-brand hero for /writing/[slug] pages.
+   WritingHero — article page hero for /writing/[slug] pages.
 
-   Design: Color Field
-   - Royal Blue #3B5CE8 background
-   - Concentric bull's-eye rings at top-right, ultra-low opacity
-   - Eyebrow: horizontal rule + category label in small caps
-   - Title: Plus Jakarta Sans 800, white
-   - Bottom metadata: author · date · read time, 0.5px rule above
-   - No image files required — renders as a live CSS component
+   Matches the WritingCardThumb composition exactly so clicking
+   through from the index feels like a continuation:
+   - Royal blue #3B5CE8 background
+   - Brand logo mark (filled concentric circles) bottom-left, low opacity
+   - heroImage fades in from the right with a gradient bridge
+   - Eyebrow: horizontal rule + category pill, top-left
+   - Title: Plus Jakarta Sans 800, white, constrained to left zone
+   - Bottom metadata: author · date · read time
 ───────────────────────────────────────────────────────────────── */
 
+import Image from 'next/image'
 import type { BlogPost } from '@/lib/blog-posts'
 
 interface WritingHeroProps {
   post: BlogPost
 }
 
-/** Tag pill background on the royal-blue field */
 const TAG_BG: Record<BlogPost['tagColor'], string> = {
   blue:      'rgba(255,255,255,0.12)',
   coral:     'rgba(244,112,96,0.28)',
@@ -25,7 +26,6 @@ const TAG_BG: Record<BlogPost['tagColor'], string> = {
   lightBlue: 'rgba(109,163,248,0.22)',
 }
 
-/** Tag pill border on the royal-blue field */
 const TAG_BORDER: Record<BlogPost['tagColor'], string> = {
   blue:      'rgba(255,255,255,0.22)',
   coral:     'rgba(244,112,96,0.50)',
@@ -52,48 +52,68 @@ export function WritingHero({ post }: WritingHeroProps) {
       }}
     >
 
-      {/* ── Decorative bull's-eye rings — top-right ─────────── */}
-      <span
+      {/* ── Brand logo mark — bottom-left, same as WritingCardThumb ── */}
+      <svg
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
+        focusable="false"
         style={{
           position:      'absolute',
-          top:           '-90px',
-          right:         '-90px',
-          width:         '380px',
-          height:        '380px',
-          borderRadius:  '50%',
-          border:        '52px solid rgba(255,255,255,0.045)',
+          bottom:        '-80px',
+          left:          '-80px',
+          width:         '340px',
+          height:        '340px',
+          opacity:       0.14,
           pointerEvents: 'none',
         }}
-      />
-      <span
-        aria-hidden="true"
-        style={{
-          position:      'absolute',
-          top:           '-20px',
-          right:         '80px',
-          width:         '200px',
-          height:        '200px',
-          borderRadius:  '50%',
-          border:        '30px solid rgba(255,255,255,0.030)',
-          pointerEvents: 'none',
-        }}
-      />
-      <span
-        aria-hidden="true"
-        style={{
-          position:      'absolute',
-          top:           '50px',
-          right:         '155px',
-          width:         '72px',
-          height:        '72px',
-          borderRadius:  '50%',
-          border:        '16px solid rgba(255,255,255,0.038)',
-          pointerEvents: 'none',
-        }}
-      />
+      >
+        <circle cx="26" cy="26" r="24" fill="#3B5CE8" />
+        <circle cx="26" cy="26" r="17" fill="#F47060" />
+        <circle cx="26" cy="26" r="11" fill="#FF00AA" />
+        <circle cx="26" cy="26" r="5.5" fill="#F5C200" />
+      </svg>
 
-      {/* ── Top: eyebrow + title ─────────────────────────────── */}
+      {/* ── heroImage — right portion, same gradient composition ── */}
+      {post.heroImage && (
+        <div style={{
+          position: 'absolute',
+          top: 0, right: 0, bottom: 0,
+          width: '58%',
+          overflow: 'hidden',
+          borderRadius: '0 12px 12px 0',
+        }}>
+          <Image
+            src={post.heroImage}
+            alt={post.heroImageAlt ?? ''}
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'top left' }}
+            sizes="(max-width: 768px) 100vw, 60vw"
+            priority
+          />
+          {/* Left fade — image dissolves into brand blue */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to right, #3B5CE8 0%, rgba(59,92,232,0.85) 8%, rgba(59,92,232,0.20) 38%, rgba(59,92,232,0) 65%)',
+            pointerEvents: 'none',
+          }} />
+          {/* Bottom fade */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to top, rgba(59,92,232,0.55) 0%, rgba(59,92,232,0) 40%)',
+            pointerEvents: 'none',
+          }} />
+          {/* Subtle dark overlay */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'rgba(0,0,0,0.10)',
+            pointerEvents: 'none',
+          }} />
+        </div>
+      )}
+
+      {/* ── Top: eyebrow + title ─────────────────────────────────── */}
       <div style={{ position: 'relative', zIndex: 1 }}>
 
         {/* Eyebrow */}
@@ -128,7 +148,7 @@ export function WritingHero({ post }: WritingHeroProps) {
           </span>
         </div>
 
-        {/* Title */}
+        {/* Title — constrained to left zone so it doesn't bleed into the image */}
         <h1 style={{
           fontFamily:    'var(--font-display), "Plus Jakarta Sans", sans-serif',
           fontSize:      'clamp(1.25rem, 3.2vw, 2.125rem)',
@@ -137,13 +157,13 @@ export function WritingHero({ post }: WritingHeroProps) {
           letterSpacing: '-0.025em',
           color:         '#FFFFFF',
           margin:        0,
-          maxWidth:      '680px',
+          maxWidth:      '56%',
         }}>
           {post.title}
         </h1>
       </div>
 
-      {/* ── Bottom: metadata ─────────────────────────────────── */}
+      {/* ── Bottom: metadata ─────────────────────────────────────── */}
       <div style={{
         position:   'relative',
         zIndex:     1,
