@@ -46,11 +46,11 @@ const TYPE_JITTER_MS = 20
 /* ─── Component ─────────────────────────────────────────────────── */
 
 export function TerminalHero() {
-  const heroRef = useRef<HTMLDivElement>(null)
-  const bodyRef = useRef<HTMLDivElement>(null)
-  const mascotRef = useRef<HTMLDivElement>(null)
-  const pausedRef = useRef(false)
-  const cancelRef = useRef(false)
+  const heroRef    = useRef<HTMLDivElement>(null)
+  const bodyRef    = useRef<HTMLDivElement>(null)
+  const mascotRef  = useRef<HTMLDivElement>(null)
+  const pausedRef  = useRef(false)
+  const mountedRef = useRef(false)
 
   /* Build mascot pixels once on mount */
   useEffect(() => {
@@ -78,12 +78,24 @@ export function TerminalHero() {
 
   /* Run the animation loop */
   useEffect(() => {
+    // mountedRef guard: React Strict Mode double-invokes effects in dev.
+    // The ref persists across the simulated unmount/remount cycle, so the
+    // second invocation sees mountedRef.current === true and exits immediately,
+    // preventing two parallel animation loops on the same DOM node.
+    if (mountedRef.current) return
+    mountedRef.current = true
+
     const body = bodyRef.current
     const hero = heroRef.current
     if (!body || !hero) return
 
     const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false
-    cancelRef.current = false
+
+    // Local cancel token — owned per-invocation.
+    let cancelled = false
+    // Tracked timeout ID so we can clearTimeout on cleanup (fixes Safari stale-tick freeze).
+    let tickId: ReturnType<typeof setTimeout> | null = null
+    body.innerHTML = ''
 
     const onEnter = () => { pausedRef.current = true }
     const onLeave = () => { pausedRef.current = false }
@@ -93,13 +105,13 @@ export function TerminalHero() {
     const wait = (ms: number): Promise<void> => new Promise(resolve => {
       let remaining = ms
       const tick = () => {
-        if (cancelRef.current) return resolve()
-        if (pausedRef.current) { setTimeout(tick, 60); return }
+        if (cancelled) return resolve()
+        if (pausedRef.current) { tickId = setTimeout(tick, 60); return }
         remaining -= 60
-        if (remaining <= 0) resolve()
-        else setTimeout(tick, 60)
+        if (remaining <= 0) { resolve(); return }
+        tickId = setTimeout(tick, 60)
       }
-      setTimeout(tick, 60)
+      tickId = setTimeout(tick, 60)
     })
 
     const typeLine = async (cmd: string): Promise<void> => {
@@ -115,7 +127,7 @@ export function TerminalHero() {
         return
       }
       for (let i = 0; i < cmd.length; i++) {
-        if (cancelRef.current) return
+        if (cancelled) return
         while (pausedRef.current) await wait(60)
         cmdEl.textContent = cmd.substring(0, i + 1)
         await wait(TYPE_BASE_MS + Math.random() * TYPE_JITTER_MS)
@@ -186,7 +198,7 @@ export function TerminalHero() {
         el.style.opacity = '0'
       }
       await wait(220)
-      if (!cancelRef.current) body.innerHTML = ''
+      if (!cancelled) body.innerHTML = ''
     }
 
     const playScene = async (s: Scene) => {
@@ -198,13 +210,13 @@ export function TerminalHero() {
     }
 
     const loop = async () => {
-      while (!cancelRef.current) {
+      while (!cancelled) {
         for (const s of SCENES) {
-          if (cancelRef.current) return
+          if (cancelled) return
           await playScene(s)
         }
         await wait(400)
-        if (!cancelRef.current) await clearBody()
+        if (!cancelled) await clearBody()
         await wait(200)
       }
     }
@@ -219,7 +231,9 @@ export function TerminalHero() {
     }
 
     return () => {
-      cancelRef.current = true
+      cancelled = true
+      mountedRef.current = false          // Allow a real navigation-back to restart
+      if (tickId !== null) clearTimeout(tickId)
       hero.removeEventListener('mouseenter', onEnter)
       hero.removeEventListener('mouseleave', onLeave)
     }

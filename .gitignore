@@ -15,7 +15,11 @@
 
 # next.js
 /.next/
+/.next */
 /out/
+
+# claude worktrees
+.claude/worktrees/
 
 # production
 /build
