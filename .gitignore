@@ -46,3 +46,11 @@ next-env.d.ts
 .playwright-mcp/
 contact-*.png
 contact-page.png
+
+# playwright QA screenshots — root level and qa folders
+/*.png
+/writing-qa/
+
+# editorial drafts in public/blog — not site content, shouldn't be public URLs
+public/blog/*.md
+public/blog/*.pdf

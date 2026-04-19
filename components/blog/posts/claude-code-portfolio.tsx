@@ -2,8 +2,7 @@ import { BlogImage } from '@/components/blog/BlogImage'
 import { Avatar } from '@/components/blog/Avatar'
 
 /* ─────────────────────────────────────────────────────────────────
-   Blog post: "I Used Claude Code to Build My Entire UX Portfolio —
-   Here Are the Actual Numbers (and How They Stack Up)"
+   Blog post: "I Used Claude Code to Build My Entire UX Portfolio. Here Are the Actual Numbers."
    Danny Driscoll · April 2026
 ───────────────────────────────────────────────────────────────── */
 
