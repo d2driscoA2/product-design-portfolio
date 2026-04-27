@@ -123,14 +123,6 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{color:"var(--color-text-secondary)"}}>Live performance</p>
-              <p className="about-heading text-sm font-bold mb-1">Danny Driscoll — guitar, on stage</p>
-              <p className="about-muted text-xs mb-3">Performing to a live audience.</p>
-              <div className="relative w-full rounded-xl overflow-hidden" style={{ paddingBottom: '56.25%' }}>
-                <iframe src="https://www.youtube.com/embed/I6Dq18vr1vM" title="Danny Driscoll live performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="absolute inset-0 w-full h-full" style={{ border: 'none' }} />
-              </div>
-            </div>
-            <div>
               <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{color:"var(--color-text-secondary)"}}>Commercial appearance</p>
               <p className="about-heading text-sm font-bold mb-1">Fortnite</p>
               <p className="about-muted text-xs mb-3">Extra role alongside a friend who acts in Hollywood.</p>
