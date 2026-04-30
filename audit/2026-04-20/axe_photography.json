@@ -1,0 +1,107 @@
+{
+  "url": "https://displayedux.com/photography",
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axeAPI",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "count": 25,
+      "samples": [
+        {
+          "target": [
+            ".h-16 > .focus-visible\\:outline-offset-4.focus-visible\\:outline-\\[\\#3B5CE8\\].rounded-sm > .leading-none.flex-col.flex > .text-\\[1\\.05rem\\].tracking-tight.font-bold > span"
+          ],
+          "html": "<span style=\"color:#F47060\">UX</span>",
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.86 (foreground color: #f47060, background color: #ffffff, font size: 12.6pt (16.8px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".h-16 > .focus-visible\\:outline-offset-4.focus-visible\\:outline-\\[\\#3B5CE8\\].rounded-sm > .leading-none.flex-col.flex > .text-\\[0\\.6rem\\].tracking-\\[0\\.12em\\].mt-0\\.5"
+          ],
+          "html": "<span class=\"text-[0.6rem] font-semibold tracking-[0.12em] uppercase mt-0.5\" style=\"font-family:var(--font-sans);color:var(--color-text-muted)\">Strategic Product Design</span>",
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.53 (foreground color: #9ca3af, background color: #ffffff, font size: 7.2pt (9.6px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".tracking-wide.py-2[href$=\"work\"]"
+          ],
+          "html": "<a class=\"relative px-4 py-2 text-small font-semibold tracking-wide rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060] hover:text-[var(--color-text-primary)] text",
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.53 (foreground color: #9ca3af, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "landmark-main-is-top-level",
+      "impact": "moderate",
+      "help": "Main landmark should not be contained in another landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/landmark-main-is-top-level?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "count": 1,
+      "samples": [
+        {
+          "target": [
+            ".about-main"
+          ],
+          "html": "<main class=\"about-main min-h-screen transition-colors duration-300\">",
+          "summary": "Fix any of the following:\n  The main landmark is contained in another landmark."
+        }
+      ]
+    },
+    {
+      "id": "landmark-no-duplicate-main",
+      "impact": "moderate",
+      "help": "Document should not have more than one main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/landmark-no-duplicate-main?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "count": 1,
+      "samples": [
+        {
+          "target": [
+            "#main-content"
+          ],
+          "html": "<main id=\"main-content\" class=\"flex-1 pt-16\">",
+          "summary": "Fix any of the following:\n  Document has more than one main landmark"
+        }
+      ]
+    },
+    {
+      "id": "landmark-unique",
+      "impact": "moderate",
+      "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/landmark-unique?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "count": 1,
+      "samples": [
+        {
+          "target": [
+            "#main-content"
+          ],
+          "html": "<main id=\"main-content\" class=\"flex-1 pt-16\">",
+          "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+        }
+      ]
+    }
+  ]
+}

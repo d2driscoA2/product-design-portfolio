@@ -1,0 +1,20 @@
+#F47060 on #FFFFFF  2.86:1  body=FAIL  large=FAIL  — Logo UX on light bg
+#F47060 on #0A0A0A  6.91:1  body=AA  large=AAA  — Logo UX on dark bg
+#9CA3AF on #FFFFFF  2.54:1  body=FAIL  large=FAIL  — Muted text / nav links on light bg
+#9CA3AF on #0A0A0A  7.80:1  body=AAA  large=AAA  — Muted text / nav links on dark bg
+#606060 on #FFFFFF  6.29:1  body=AA  large=AAA  — Secondary text on light bg
+#9CA3AF on #0A0A0A  7.80:1  body=AAA  large=AAA  — Secondary text on dark bg
+#1A1A1A on #FFFFFF  17.40:1  body=AAA  large=AAA  — Primary text on light bg
+#F5F5F5 on #0A0A0A  18.16:1  body=AAA  large=AAA  — Primary text on dark bg
+#3B5CE8 on #FFFFFF  5.41:1  body=AA  large=AAA  — Brand blue on white
+#3B5CE8 on #0A0A0A  3.66:1  body=AA-large-only  large=AA  — Brand blue on dark
+#FFFFFF on #3B5CE8  5.41:1  body=AA  large=AAA  — White on brand blue footer
+#FFFFFF on #F47060  2.86:1  body=FAIL  large=FAIL  — White on coral hero
+#FFFFFF on #F5C200  1.67:1  body=FAIL  large=FAIL  — White on amber hero (msg)
+#FFFFFF on #FF00AA  3.60:1  body=AA-large-only  large=AA  — White on magenta hero (uca)
+#1A1A1A on #F5C200  10.44:1  body=AAA  large=AAA  — Dark on amber hero
+#F47060 on #0A0A0A  6.91:1  body=AA  large=AAA  — Coral CTA text on dark
+#FFFFFF on #F47060  2.86:1  body=FAIL  large=FAIL  — White on coral button
+#E0006E on #FFFFFF  4.78:1  body=AA  large=AAA  — Pink on white
+#606060 on #F5F5F5  5.77:1  body=AA  large=AAA  — Secondary on near-white (cards)
+#000000 on #3B5CE8  3.88:1  body=AA-large-only  large=AA  — Black on blue footer (unlikely, but test)

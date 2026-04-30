@@ -1,0 +1,157 @@
+[
+  {
+    "name": "home",
+    "url": "https://displayedux.com/",
+    "total": 63,
+    "byImpact": {
+      "serious": 63
+    },
+    "rules": [
+      "color-contrast"
+    ]
+  },
+  {
+    "name": "work",
+    "url": "https://displayedux.com/work",
+    "total": 33,
+    "byImpact": {
+      "serious": 32,
+      "moderate": 1
+    },
+    "rules": [
+      "color-contrast",
+      "heading-order"
+    ]
+  },
+  {
+    "name": "self-service-portal",
+    "url": "https://displayedux.com/work/self-service-portal",
+    "total": 41,
+    "byImpact": {
+      "serious": 37,
+      "moderate": 4
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "fraud-prevention",
+    "url": "https://displayedux.com/work/fraud-prevention",
+    "total": 40,
+    "byImpact": {
+      "serious": 36,
+      "moderate": 4
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "messaging-api",
+    "url": "https://displayedux.com/work/messaging-api",
+    "total": 32,
+    "byImpact": {
+      "serious": 28,
+      "moderate": 4
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "universal-college-app",
+    "url": "https://displayedux.com/work/universal-college-app",
+    "total": 31,
+    "byImpact": {
+      "serious": 27,
+      "moderate": 4
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "about",
+    "url": "https://displayedux.com/about",
+    "total": 23,
+    "byImpact": {
+      "serious": 20,
+      "moderate": 3
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "contact",
+    "url": "https://displayedux.com/contact",
+    "total": 29,
+    "byImpact": {
+      "serious": 26,
+      "moderate": 3
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "contact-resume",
+    "url": "https://displayedux.com/contact?resume=true",
+    "total": 29,
+    "byImpact": {
+      "serious": 26,
+      "moderate": 3
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "photography",
+    "url": "https://displayedux.com/photography",
+    "total": 28,
+    "byImpact": {
+      "serious": 25,
+      "moderate": 3
+    },
+    "rules": [
+      "color-contrast",
+      "landmark-main-is-top-level",
+      "landmark-no-duplicate-main",
+      "landmark-unique"
+    ]
+  },
+  {
+    "name": "writing",
+    "url": "https://displayedux.com/writing",
+    "total": 25,
+    "byImpact": {
+      "serious": 25
+    },
+    "rules": [
+      "color-contrast"
+    ]
+  }
+]
