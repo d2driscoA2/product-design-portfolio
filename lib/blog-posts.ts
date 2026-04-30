@@ -45,6 +45,11 @@ export interface BlogPost {
    * First stat is the hero number.
    */
   stats: BlogStat[]
+  /**
+   * Sidebar TOC entries — must match the actual H2 headings in the post body.
+   * Rendered in the "On this page" sidebar at lg+ viewports.
+   */
+  tocEntries: string[]
 }
 
 /* ─── Registry ───────────────────────────────────────────────────── */
@@ -72,8 +77,54 @@ export const blogPosts: BlogPost[] = [
       { value: '9',    label: 'Pages built',          accentHex: '#F47060' },
       { value: '$40K', label: 'Dev cost saved',        accentHex: '#3B5CE8' },
     ],
+    tocEntries: [
+      'The Numbers First',
+      'How These Numbers Compare',
+      'Where My Numbers Actually Land',
+      'Two Things I Did That Were Actually Advanced',
+      'What I Actually Built',
+      'The Tools: What Claude Code Is and How It Actually Works',
+      'Claude Code vs. Claude Desktop',
+      'Session Log',
+      'What Broke (The Full Honest List)',
+      'The Security Layer',
+      'Raw Stats Summary',
+      "What This Means If You're a Designer",
+      'The Playbook',
+      "What's Next",
+    ],
   },
 
+  {
+    slug:           'mental-models-cognitive-load',
+    title:          'Mental Models, User Data, and the Quiet Goal of Less Cognitive Load',
+    shortTitle:     'Mental models & cognitive load',
+    date:           'April 2026',
+    dateISO:        '2026-04-15',
+    readTime:       8,
+    tag:            'Process',
+    tagColor:       'blue',
+    thumbnailImage: '/images/writing/mental-models-cognitive-load/hero-mental-models.svg',
+    thumbnailAlt:   'Three-stage diagram: mental model, A/B test confirmation, simplified UI.',
+    heroImage:      '/images/writing/mental-models-cognitive-load/hero-mental-models.svg',
+    heroImageAlt:   'Three-stage diagram: mental model, A/B test confirmation, simplified UI.',
+    excerpt:
+      "The mental model is the hypothesis. The data is the proof. Eighteen years of A/B and multivariate testing have taught me what to do when the two agree, and what to do when they don't.",
+    stats: [
+      { value: '23%',    label: 'Discovery rise — Netflix XP', accentHex: '#3B5CE8' },
+      { value: '67→0',   label: 'Days — Self-Service onboarding' },
+      { value: '4',      label: 'Variants tested',             accentHex: '#F47060' },
+      { value: '18 yrs', label: 'A/B testing' },
+    ],
+    tocEntries: [
+      'The Netflix household',
+      'The method',
+      'The Self-Service Portal',
+      'What eighteen years of testing has taught me',
+    ],
+  },
+
+  /* ── ARCHIVED 2026-04-30: replaced by 'mental-models-cognitive-load'; old URL redirects in next.config.ts ──
   {
     slug:           'case-study-writing',
     title:          'How I Write Case Studies That Get Callbacks at the Principal Level',
@@ -96,6 +147,7 @@ export const blogPosts: BlogPost[] = [
       { value: '10 sec',    label: 'Initial scan window' },
     ],
   },
+  ─────────────────────────────────────────────────────────────────────────────────────────────── */
 
   {
     slug:           'onboarding-pattern',
@@ -117,6 +169,14 @@ export const blogPosts: BlogPost[] = [
       { value: '67→35',  label: 'Days — TeleSign onboarding' },
       { value: '47%',    label: 'Completion — Appily.com',   accentHex: '#F47060' },
       { value: '7',      label: 'Markets — Netflix XP' },
+    ],
+    tocEntries: [
+      'Three Companies. Three Onboarding Problems. One Pattern.',
+      'Netflix: Testing Your Way to the Right First Step',
+      'Appily.com: The Form That Was Eating Students Alive',
+      'TeleSign: When Onboarding Is a Revenue Problem',
+      'The Pattern, Stated Plainly',
+      'What I Look For Now',
     ],
   },
 
@@ -141,6 +201,15 @@ export const blogPosts: BlogPost[] = [
       { value: '30 sec',  label: 'Decision time target',      accentHex: '#F47060' },
       { value: '73%',     label: 'Fraud reduction — fin. client' },
     ],
+    tocEntries: [
+      'The User Who Knows More Than You',
+      'What the Machine Was Doing',
+      'The Design Problem, Stated Precisely',
+      'Making Machine Learning Transparent',
+      'Designing for the False Positive Problem',
+      'Speed as a Design Requirement',
+      'What Designing for Experts Taught Me',
+    ],
   },
 
   {
@@ -163,6 +232,15 @@ export const blogPosts: BlogPost[] = [
       { value: '4',      label: 'Companies, same lesson' },
       { value: '21B+',   label: 'Transactions — invisible UX', accentHex: '#F47060' },
       { value: '$1.3B',  label: 'Valuation — TeleSign exit' },
+    ],
+    tocEntries: [
+      'The Confession',
+      'Output: What You Made. Outcome: What Changed.',
+      'The Netflix Lesson: Trust Nothing, Including Instinct',
+      "The Appily.com Lesson: The Number Tells You When You're Right",
+      'The TeleSign Lesson: Design Is Infrastructure',
+      'What Changes When You Measure Outcome',
+      'The Honest Caveat',
     ],
   },
 

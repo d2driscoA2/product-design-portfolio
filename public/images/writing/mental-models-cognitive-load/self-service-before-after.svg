@@ -1,0 +1,76 @@
+<svg width="1200" height="628" viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ba-title ba-desc">
+  <title id="ba-title">Self-Service Portal: legacy CS-driven onboarding versus shipped self-service portal</title>
+  <desc id="ba-desc">Side by side comparison. Cluttered legacy portal on the left taking 67 days. Simplified self-service portal on the right, same-day onboarding.</desc>
+
+  <rect x="0" y="0" width="1200" height="628" fill="#F5F5F5"/>
+
+  <text x="72" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B" letter-spacing="2" font-weight="500">SELF-SERVICE PORTAL · BEFORE / AFTER</text>
+
+  <text x="72" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="13" fill="#6B6B6B" letter-spacing="1.5" font-weight="500">BEFORE</text>
+  <text x="72" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="22" font-weight="500" fill="#1a1a1a">CS-driven onboarding</text>
+  <text x="72" y="168" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">67 days · manual handoff · CS team handles every step</text>
+
+  <text x="624" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="13" fill="#4063FB" letter-spacing="1.5" font-weight="500">AFTER</text>
+  <text x="624" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="22" font-weight="500" fill="#1a1a1a">Self-service portal</text>
+  <text x="624" y="168" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">Same-day · 85% live without CS · 35 days for regulated configs</text>
+
+  <rect x="72" y="200" width="480" height="356" rx="8" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="1"/>
+  <rect x="72" y="200" width="480" height="36" rx="8" fill="#3A3A3A"/>
+  <circle cx="92" cy="218" r="4" fill="#FF6F6E"/>
+  <circle cx="106" cy="218" r="4" fill="#FFCB05"/>
+  <circle cx="120" cy="218" r="4" fill="#6DA3F8"/>
+  <text x="138" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="12" fill="#999">Legacy admin · Internal CS Tool v3.2</text>
+
+  <rect x="92" y="252" width="80" height="14" rx="1" fill="#888"/>
+  <rect x="184" y="252" width="74" height="14" rx="1" fill="#888"/>
+  <rect x="270" y="252" width="80" height="14" rx="1" fill="#888"/>
+  <rect x="362" y="252" width="60" height="14" rx="1" fill="#888"/>
+  <rect x="434" y="252" width="100" height="14" rx="1" fill="#888"/>
+  <line x1="92" y1="278" x2="532" y2="278" stroke="#D0D0D0" stroke-width="0.5"/>
+
+  <rect x="92" y="290" width="120" height="8" rx="1" fill="#999"/>
+  <rect x="92" y="306" width="200" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+  <rect x="302" y="306" width="200" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+  <rect x="92" y="338" width="100" height="8" rx="1" fill="#999"/>
+  <rect x="92" y="354" width="200" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+  <rect x="302" y="354" width="200" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+  <rect x="92" y="386" width="80" height="8" rx="1" fill="#999"/>
+  <rect x="92" y="402" width="410" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+  <rect x="92" y="434" width="120" height="8" rx="1" fill="#999"/>
+  <rect x="92" y="450" width="200" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+  <rect x="302" y="450" width="200" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+  <rect x="92" y="482" width="90" height="8" rx="1" fill="#999"/>
+  <rect x="92" y="498" width="410" height="22" rx="1" fill="#F0F0F0" stroke="#C0C0C0" stroke-width="0.5"/>
+
+  <rect x="92" y="528" width="100" height="16" rx="3" fill="#888"/>
+  <rect x="200" y="528" width="100" height="16" rx="3" fill="#888"/>
+
+  <rect x="624" y="200" width="480" height="356" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="624" y="200" width="480" height="56" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  <circle cx="650" cy="228" r="10" fill="#4063FB"/>
+  <text x="668" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="#1a1a1a">TeleSign Portal</text>
+  <rect x="1024" y="222" width="60" height="14" rx="7" fill="#4063FB"/>
+  <text x="1054" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Active</text>
+
+  <text x="652" y="296" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="20" font-weight="500" fill="#1a1a1a">Welcome back, Sarah</text>
+  <text x="652" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">Your account is provisioned. Start sending today.</text>
+
+  <rect x="652" y="346" width="200" height="100" rx="8" fill="#F5F5F5"/>
+  <text x="668" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="12" fill="#6B6B6B">API Keys</text>
+  <text x="668" y="406" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="36" font-weight="500" fill="#4063FB">3</text>
+  <text x="668" y="428" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="12" fill="#6B6B6B">Active and ready</text>
+
+  <rect x="876" y="346" width="200" height="100" rx="8" fill="#F5F5F5"/>
+  <text x="892" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="12" fill="#6B6B6B">Status</text>
+  <text x="892" y="406" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="36" font-weight="500" fill="#4063FB">Live</text>
+  <text x="892" y="428" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="12" fill="#6B6B6B">All systems operational</text>
+
+  <rect x="652" y="466" width="424" height="68" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="672" y="492" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="#1a1a1a">Phone numbers</text>
+  <text x="672" y="512" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="12" fill="#6B6B6B">120+ countries available · Provision in seconds</text>
+  <rect x="996" y="488" width="60" height="22" rx="4" fill="#4063FB"/>
+  <text x="1026" y="503" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Buy →</text>
+
+  <line x1="72" y1="582" x2="1128" y2="582" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="72" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">Mental model: enterprise customers want to provision themselves. Test confirmed: 67-day onboarding became same-day for standard products.</text>
+</svg>

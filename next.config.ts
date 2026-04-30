@@ -2,6 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  async redirects() {
+    return [
+      {
+        source: "/writing/case-study-writing",
+        destination: "/writing/mental-models-cognitive-load",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

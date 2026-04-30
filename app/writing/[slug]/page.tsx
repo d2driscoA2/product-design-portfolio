@@ -9,14 +9,16 @@ import { Avatar } from '@/components/blog/Avatar'
 
 /* ── Content component registry ────────────────────────────────── */
 import { ClaudeCodePortfolioPost } from '@/components/blog/posts/claude-code-portfolio'
-import { CaseStudyWritingPost }    from '@/components/blog/posts/case-study-writing'
+// ARCHIVED 2026-04-30: import { CaseStudyWritingPost }    from '@/components/blog/posts/case-study-writing'
+import { MentalModelsCognitiveLoadPost } from '@/components/blog/posts/mental-models-cognitive-load'
 import { OnboardingPatternPost }   from '@/components/blog/posts/onboarding-pattern'
 import { DesigningForExpertsPost } from '@/components/blog/posts/designing-for-experts'
 import { OutputVsOutcomePost }     from '@/components/blog/posts/output-vs-outcome'
 
 const POST_CONTENT: Record<string, React.ComponentType> = {
   'claude-code-portfolio': ClaudeCodePortfolioPost,
-  'case-study-writing':    CaseStudyWritingPost,
+  // ARCHIVED 2026-04-30: 'case-study-writing':    CaseStudyWritingPost,
+  'mental-models-cognitive-load': MentalModelsCognitiveLoadPost,
   'onboarding-pattern':    OnboardingPatternPost,
   'designing-for-experts': DesigningForExpertsPost,
   'output-vs-outcome':     OutputVsOutcomePost,
@@ -214,19 +216,7 @@ export default async function WritingPostPage(
               </div>
               <nav aria-label="Table of contents">
                 <ol className="flex flex-col gap-0.5" role="list">
-                  {[
-                    'The numbers first',
-                    'What I actually built',
-                    'The tools',
-                    'Claude Code vs. Desktop',
-                    'Git worktree pattern',
-                    'Session log',
-                    'What broke',
-                    'Security layer',
-                    'Stats summary',
-                    'What this means for designers',
-                    'The playbook',
-                  ].map((item, i) => (
+                  {post.tocEntries.map((item, i) => (
                     <li key={i} role="listitem">
                       <span
                         className="flex items-center gap-2 py-1.5 text-small cursor-default"

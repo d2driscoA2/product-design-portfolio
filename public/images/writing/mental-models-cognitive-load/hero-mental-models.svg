@@ -1,0 +1,87 @@
+<svg width="1200" height="628" viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Mental models, user data, and the quiet goal of less cognitive load</title>
+  <desc id="hero-desc">Three-stage diagram showing mental model on the left, A/B test confirmation in the middle, and simplified UI on the right.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#4063FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="628" fill="#F5F5F5"/>
+
+  <text x="72" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B" letter-spacing="2" font-weight="500">PROCESS</text>
+
+  <text x="72" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="32" font-weight="500" fill="#1a1a1a">Mental models, user data, and the</text>
+  <text x="72" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="32" font-weight="500" fill="#1a1a1a">quiet goal of less cognitive load</text>
+
+  <line x1="72" y1="190" x2="1128" y2="190" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="72" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="13" fill="#4063FB" letter-spacing="1.5" font-weight="500">01 · MENTAL MODEL</text>
+  <text x="438" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="13" fill="#4063FB" letter-spacing="1.5" font-weight="500">02 · TEST</text>
+  <text x="794" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="13" fill="#4063FB" letter-spacing="1.5" font-weight="500">03 · LOWER LOAD</text>
+
+  <rect x="72" y="252" width="320" height="296" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  <path d="M104 296 Q116 286 138 290 T184 296" stroke="#4063FB" stroke-width="1.6" fill="none"/>
+  <circle cx="104" cy="300" r="5" fill="#4063FB"/>
+  <text x="120" y="306" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">household</text>
+  <line x1="104" y1="320" x2="104" y2="350" stroke="#4063FB" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <circle cx="104" cy="356" r="5" fill="#FF6F6E"/>
+  <text x="120" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">dad → action</text>
+  <line x1="104" y1="370" x2="104" y2="390" stroke="#4063FB" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <circle cx="104" cy="396" r="5" fill="#FFCB05"/>
+  <text x="120" y="402" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">mom → drama</text>
+  <line x1="104" y1="410" x2="104" y2="430" stroke="#4063FB" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <circle cx="104" cy="436" r="5" fill="#6DA3F8"/>
+  <text x="120" y="442" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">kids → animation</text>
+  <line x1="92" y1="466" x2="372" y2="466" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="92" y="494" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="#1a1a1a">Hypothesis:</text>
+  <text x="92" y="514" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">segment, do not aggregate</text>
+  <text x="92" y="532" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">to reduce search space.</text>
+
+  <line x1="402" y1="400" x2="430" y2="400" stroke="#4063FB" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="440" y="252" width="320" height="296" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="464" y="290" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">Variant A · control</text>
+  <rect x="464" y="302" width="120" height="60" rx="4" fill="#F5F5F5" stroke="#D0D0D0" stroke-width="1"/>
+  <rect x="472" y="310" width="34" height="22" rx="2" fill="#C0C0C0"/>
+  <rect x="510" y="310" width="34" height="22" rx="2" fill="#C0C0C0"/>
+  <rect x="548" y="310" width="28" height="22" rx="2" fill="#C0C0C0"/>
+  <rect x="472" y="338" width="100" height="4" rx="1" fill="#C0C0C0"/>
+  <rect x="472" y="348" width="70" height="4" rx="1" fill="#C0C0C0"/>
+  <text x="608" y="324" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="20" font-weight="500" fill="#6B6B6B">12%</text>
+  <text x="608" y="346" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="13" fill="#6B6B6B">CTR</text>
+  <text x="464" y="396" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="#4063FB">Variant B · shuffled</text>
+  <rect x="464" y="408" width="120" height="60" rx="4" fill="#FFFFFF" stroke="#4063FB" stroke-width="1.5"/>
+  <rect x="472" y="416" width="34" height="22" rx="2" fill="#FF6F6E"/>
+  <rect x="510" y="416" width="34" height="22" rx="2" fill="#FFCB05"/>
+  <rect x="548" y="416" width="28" height="22" rx="2" fill="#6DA3F8"/>
+  <rect x="472" y="444" width="100" height="4" rx="1" fill="#4063FB"/>
+  <rect x="472" y="454" width="70" height="4" rx="1" fill="#4063FB"/>
+  <text x="608" y="430" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="20" font-weight="500" fill="#4063FB">23%↑</text>
+  <text x="608" y="452" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="13" fill="#6B6B6B">CTR</text>
+  <line x1="464" y1="490" x2="736" y2="490" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="464" y="514" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" font-weight="500" fill="#1a1a1a">n = 250,000 / variant</text>
+  <text x="464" y="532" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#4063FB">Model confirmed.</text>
+
+  <line x1="770" y1="400" x2="798" y2="400" stroke="#4063FB" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="808" y="252" width="320" height="296" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="808" y="252" width="320" height="40" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="828" y="270" width="60" height="8" rx="1" fill="#1a1a1a"/>
+  <rect x="828" y="312" width="240" height="14" rx="1" fill="#1a1a1a"/>
+  <rect x="828" y="334" width="180" height="6" rx="1" fill="#999"/>
+  <rect x="828" y="358" width="280" height="60" rx="6" fill="#F5F5F5"/>
+  <rect x="844" y="372" width="56" height="6" rx="1" fill="#FF6F6E"/>
+  <rect x="844" y="386" width="100" height="4" rx="1" fill="#999"/>
+  <rect x="844" y="394" width="80" height="4" rx="1" fill="#999"/>
+  <rect x="828" y="426" width="280" height="60" rx="6" fill="#F5F5F5"/>
+  <rect x="844" y="440" width="56" height="6" rx="1" fill="#FFCB05"/>
+  <rect x="844" y="454" width="100" height="4" rx="1" fill="#999"/>
+  <rect x="844" y="462" width="80" height="4" rx="1" fill="#999"/>
+  <rect x="828" y="494" width="280" height="48" rx="6" fill="#F5F5F5"/>
+  <rect x="844" y="508" width="56" height="6" rx="1" fill="#6DA3F8"/>
+  <rect x="844" y="522" width="100" height="4" rx="1" fill="#999"/>
+
+  <line x1="72" y1="582" x2="1128" y2="582" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="72" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="14" fill="#6B6B6B">The mental model leads. The data confirms it. Cognitive load drops because the search space shrinks.</text>
+</svg>
