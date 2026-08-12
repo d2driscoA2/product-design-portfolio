@@ -96,6 +96,38 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
+    slug:           'claude-design-four-channels',
+    title:          'Claude Design Has Four Input Channels. Most Designers Are Using the Slowest One.',
+    shortTitle:     "Claude Design's four input channels",
+    date:           'August 2026',
+    dateISO:        '2026-08-10',
+    readTime:       8,
+    tag:            'Process',
+    tagColor:       'blue',
+    thumbnailImage: '/blog/images/hero-claude-design-channels.png',
+    thumbnailAlt:   'Four mixing board faders labeled talk, point, type, and turn, representing the four Claude Design input channels',
+    heroImage:      '/blog/images/hero-claude-design-channels.png',
+    heroImageAlt:   'Four mixing board faders labeled talk, point, type, and turn, representing the four Claude Design input channels',
+    excerpt:
+      'Chat, inline comments, direct editing, and sliders. Claude Design ships four ways to change a design, and the one the cursor starts in is the slowest. Here is the channel rule I use.',
+    stats: [
+      { value: '4',   label: 'Input channels',            accentHex: '#3B5CE8' },
+      { value: '1',   label: 'Channel doing all the work' },
+      { value: '3',   label: 'Channels most designers skip', accentHex: '#F47060' },
+      { value: 'Apr', label: '2026 research preview launch' },
+    ],
+    tocEntries: [
+      'The Slot Machine Problem',
+      'The Four Channels',
+      'Talk, Point, Type, Turn',
+      'The Slider Is a Design Token You Tune by Hand',
+      'Where the Chat-Only Session Breaks Down',
+      'The Channel Rule',
+      'Where the Output Goes Next',
+    ],
+  },
+
+  {
     slug:           'mental-models-cognitive-load',
     title:          'Mental Models, User Data, and the Quiet Goal of Less Cognitive Load',
     shortTitle:     'Mental models & cognitive load',
