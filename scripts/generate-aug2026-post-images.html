@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aug 2026 post image generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+  .card { display: none; position: relative; overflow: hidden; }
+  .card.active { display: block; }
+  .hero  { width: 1200px; height: 628px; }
+  .inner { width: 1200px; height: 675px; }
+
+  /* Bull's-eye rings */
+  .rings { position: absolute; border-radius: 50%; border-style: solid; }
+
+  /* Card 1: hero-claude-design-channels */
+  #hero-a { background: #0E1633; color: #fff; }
+  #hero-a .copy { position: absolute; left: 72px; top: 118px; width: 560px; }
+  #hero-a .eyebrow { font-size: 17px; font-weight: 700; letter-spacing: 3px; color: #7B9BFF; margin-bottom: 24px; }
+  #hero-a h1 { font-size: 74px; font-weight: 800; line-height: 1.06; }
+  #hero-a .sub { font-size: 24px; color: #A9B6E8; margin-top: 26px; line-height: 1.45; }
+  .board { position: absolute; right: 84px; top: 104px; width: 420px; height: 420px; background: #16204A; border: 1px solid #2A3768; border-radius: 24px; display: flex; justify-content: space-around; align-items: flex-end; padding: 48px 24px 64px; }
+  .fader { width: 64px; display: flex; flex-direction: column; align-items: center; height: 100%; position: relative; }
+  .track { width: 10px; flex: 1; background: #2A3768; border-radius: 5px; position: relative; }
+  .cap { position: absolute; left: 50%; transform: translateX(-50%); width: 52px; height: 26px; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,.45); }
+  .fader .lbl { position: absolute; bottom: -40px; font-size: 15px; font-weight: 700; letter-spacing: 2px; color: #A9B6E8; }
+
+  /* Card 2: postA-channel-map */
+  #a-map { background: #fff; padding: 64px 72px; }
+  .map-title { font-size: 30px; font-weight: 800; color: #101728; margin-bottom: 10px; }
+  .map-sub { font-size: 19px; color: #5A6480; margin-bottom: 44px; }
+  .cols { display: flex; gap: 24px; }
+  .col { flex: 1; border: 1.5px solid #E3E7F2; border-radius: 18px; padding: 30px 26px; }
+  .col .verb { font-size: 34px; font-weight: 800; color: #3B5CE8; }
+  .col .chan { font-size: 18px; font-weight: 600; color: #101728; margin-top: 6px; }
+  .scope { display: inline-block; margin-top: 18px; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; padding: 7px 14px; border-radius: 999px; background: rgba(59,92,232,.10); color: #3B5CE8; border: 1px solid rgba(59,92,232,.25); }
+  .col .ex { font-size: 16.5px; color: #5A6480; margin-top: 18px; line-height: 1.5; }
+
+  /* Card 3: postA-sliders */
+  #a-sliders { background: #EEF1F8; padding: 48px 64px; }
+  .recreate { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #8A93AC; margin-bottom: 28px; }
+  .stage { display: flex; gap: 40px; align-items: flex-start; }
+  .pcard { width: 460px; background: #fff; border-radius: 16px; padding: 44px 40px; box-shadow: 0 10px 34px rgba(16,23,40,.10); }
+  .pcard .plan { font-size: 15px; font-weight: 700; letter-spacing: 2px; color: #3B5CE8; }
+  .pcard .price { font-size: 62px; font-weight: 800; color: #101728; margin: 14px 0 4px; }
+  .pcard .per { font-size: 17px; color: #5A6480; margin-bottom: 26px; }
+  .pcard ul { list-style: none; }
+  .pcard li { font-size: 17px; color: #303A56; padding: 11px 0; border-top: 1px solid #EEF0F6; }
+  .pcard .cta { margin-top: 28px; background: #3B5CE8; color: #fff; text-align: center; font-weight: 700; font-size: 18px; padding: 17px; border-radius: 12px; }
+  .panel { flex: 1; background: #fff; border-radius: 16px; padding: 36px 38px; box-shadow: 0 10px 34px rgba(16,23,40,.10); }
+  .panel h3 { font-size: 20px; font-weight: 800; color: #101728; margin-bottom: 6px; }
+  .panel .ph { font-size: 15px; color: #8A93AC; margin-bottom: 30px; }
+  .slider { margin-bottom: 30px; }
+  .slider .row { display: flex; justify-content: space-between; font-size: 16.5px; margin-bottom: 12px; }
+  .slider .name { font-weight: 600; color: #303A56; }
+  .slider .val { font-weight: 700; color: #3B5CE8; font-variant-numeric: tabular-nums; }
+  .rail { height: 8px; background: #E3E7F2; border-radius: 4px; position: relative; }
+  .fill { position: absolute; left: 0; top: 0; bottom: 0; background: #3B5CE8; border-radius: 4px; }
+  .knob { position: absolute; top: 50%; transform: translate(-50%,-50%); width: 24px; height: 24px; background: #fff; border: 3px solid #3B5CE8; border-radius: 50%; box-shadow: 0 2px 8px rgba(16,23,40,.25); }
+  .prop { margin-top: 4px; font-size: 15.5px; color: #5A6480; background: #F4F6FC; border: 1px dashed #C3CCE8; border-radius: 10px; padding: 14px 16px; line-height: 1.45; }
+
+  /* Card 4: postA-scope-mismatch */
+  #a-scope { background: #fff; padding: 56px 64px; }
+  .halves { display: flex; gap: 32px; margin-top: 36px; }
+  .half { flex: 1; border: 1.5px solid #E3E7F2; border-radius: 18px; padding: 30px; }
+  .half .tag { display: inline-block; font-size: 13.5px; font-weight: 700; letter-spacing: 1.5px; padding: 7px 14px; border-radius: 999px; margin-bottom: 22px; }
+  .tag.bad  { background: rgba(244,112,96,.12); color: #C8402E; border: 1px solid rgba(244,112,96,.30); }
+  .tag.good { background: rgba(59,92,232,.10); color: #3B5CE8; border: 1px solid rgba(59,92,232,.25); }
+  .bubble { font-size: 16px; color: #303A56; background: #F4F6FC; border-radius: 14px 14px 14px 4px; padding: 14px 18px; margin-bottom: 24px; line-height: 1.45; }
+  .mini { border: 1.5px solid #E3E7F2; border-radius: 12px; padding: 18px; }
+  .blk { height: 52px; border-radius: 8px; background: #EEF1F8; margin-bottom: 12px; position: relative; }
+  .blk:last-child { margin-bottom: 0; }
+  .blk.hit-bad  { background: rgba(244,112,96,.14); border: 2px solid #F47060; }
+  .blk.hit-good { background: rgba(59,92,232,.10); border: 2px solid #3B5CE8; }
+  .shift { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; font-weight: 700; color: #C8402E; }
+  .pin { position: absolute; left: -14px; top: -14px; width: 34px; height: 34px; background: #3B5CE8; border-radius: 50% 50% 50% 4px; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; box-shadow: 0 4px 12px rgba(59,92,232,.4); }
+  .verdict { margin-top: 20px; font-size: 15.5px; line-height: 1.5; color: #5A6480; }
+</style>
+</head>
+<body>
+
+<!-- 1: hero Claude Design channels -->
+<div class="card hero" id="hero-a">
+  <div class="rings" style="width:820px;height:820px;right:-260px;bottom:-380px;border-width:2px;border-color:rgba(123,155,255,.16)"></div>
+  <div class="rings" style="width:620px;height:620px;right:-160px;bottom:-280px;border-width:2px;border-color:rgba(123,155,255,.22)"></div>
+  <div class="rings" style="width:420px;height:420px;right:-60px;bottom:-180px;border-width:2px;border-color:rgba(123,155,255,.30)"></div>
+  <div class="copy">
+    <div class="eyebrow">CLAUDE DESIGN &middot; PROCESS</div>
+    <h1>Talk. Point.<br>Type. Turn.</h1>
+    <div class="sub">Four input channels. Most designers found one of them.</div>
+  </div>
+  <div class="board">
+    <div class="fader"><div class="track"><div class="cap" style="background:#F47060;top:6%"></div></div><div class="lbl">TALK</div></div>
+    <div class="fader"><div class="track"><div class="cap" style="background:#3B5CE8;top:78%"></div></div><div class="lbl">POINT</div></div>
+    <div class="fader"><div class="track"><div class="cap" style="background:#3B5CE8;top:84%"></div></div><div class="lbl">TYPE</div></div>
+    <div class="fader"><div class="track"><div class="cap" style="background:#3B5CE8;top:90%"></div></div><div class="lbl">TURN</div></div>
+  </div>
+</div>
+
+<!-- 2: channel map -->
+<div class="card inner" id="a-map">
+  <div class="map-title">Match the scope of the channel to the scope of the change</div>
+  <div class="map-sub">The channel you pick tells the model how much of the design it is allowed to reconsider.</div>
+  <div class="cols">
+    <div class="col">
+      <div class="verb">Talk</div>
+      <div class="chan">Chat</div>
+      <div class="scope">PAGE-SCOPED</div>
+      <div class="ex">Add a section. Change the hierarchy. Reflow the layout for mobile.</div>
+    </div>
+    <div class="col">
+      <div class="verb">Point</div>
+      <div class="chan">Inline comment</div>
+      <div class="scope">ELEMENT-SCOPED</div>
+      <div class="ex">This button. This card. More contrast here, and nowhere else.</div>
+    </div>
+    <div class="col">
+      <div class="verb">Type</div>
+      <div class="chan">Direct edit</div>
+      <div class="scope">TEXT-SCOPED</div>
+      <div class="ex">Headlines, labels, microcopy. Words you already know go in by hand.</div>
+    </div>
+    <div class="col">
+      <div class="verb">Turn</div>
+      <div class="chan">Slider</div>
+      <div class="scope">VALUE-SCOPED</div>
+      <div class="ex">Spacing, hue, radius, scale. Drag until it looks right, then propagate.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 3: sliders recreation -->
+<div class="card inner" id="a-sliders">
+  <div class="recreate">RECREATION &middot; CLAUDE DESIGN ADJUSTMENT SLIDERS &middot; DRAWN FOR THIS POST</div>
+  <div class="stage">
+    <div class="pcard">
+      <div class="plan">GROWTH</div>
+      <div class="price">$49</div>
+      <div class="per">per seat, per month</div>
+      <ul>
+        <li>Unlimited projects</li>
+        <li>Design system sync</li>
+        <li>Priority support</li>
+      </ul>
+      <div class="cta">Start free trial</div>
+    </div>
+    <div class="panel">
+      <h3>Adjustments</h3>
+      <div class="ph">Generated for: pricing card</div>
+      <div class="slider">
+        <div class="row"><span class="name">Card padding</span><span class="val">40px</span></div>
+        <div class="rail"><div class="fill" style="width:62%"></div><div class="knob" style="left:62%"></div></div>
+      </div>
+      <div class="slider">
+        <div class="row"><span class="name">Corner radius</span><span class="val">16px</span></div>
+        <div class="rail"><div class="fill" style="width:40%"></div><div class="knob" style="left:40%"></div></div>
+      </div>
+      <div class="slider">
+        <div class="row"><span class="name">Accent hue</span><span class="val">226&deg;</span></div>
+        <div class="rail"><div class="fill" style="width:70%"></div><div class="knob" style="left:70%"></div></div>
+      </div>
+      <div class="prop">Tuned by eye on one card. One chat message propagates the values to every card in the design.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 4: scope mismatch -->
+<div class="card inner" id="a-scope">
+  <div class="map-title">The same request, two channels</div>
+  <div class="halves">
+    <div class="half">
+      <span class="tag bad">PAGE-SCOPED &middot; CHAT</span>
+      <div class="bubble">&ldquo;Tighten the spacing on the stat block in the hero&rdquo;</div>
+      <div class="mini">
+        <div class="blk hit-bad"><span class="shift">changed</span></div>
+        <div class="blk hit-bad"><span class="shift">also changed</span></div>
+        <div class="blk hit-bad"><span class="shift">also changed</span></div>
+      </div>
+      <div class="verdict">The channel addresses the page, so the model treats the page as fair game. Three elements move. One was requested.</div>
+    </div>
+    <div class="half">
+      <span class="tag good">ELEMENT-SCOPED &middot; INLINE COMMENT</span>
+      <div class="bubble">&ldquo;Tighten this&rdquo; &middot; pinned to the stat block</div>
+      <div class="mini">
+        <div class="blk"></div>
+        <div class="blk hit-good"><div class="pin">1</div></div>
+        <div class="blk"></div>
+      </div>
+      <div class="verdict">The pin carries the location, so the words only carry the intent. One element moves. The rest of the mix stays put.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const id = new URLSearchParams(location.search).get('card') || 'hero-a';
+  const el = document.getElementById(id);
+  if (el) {
+    el.classList.add('active');
+    document.body.style.width = '1200px';
+    document.body.style.height = el.classList.contains('hero') ? '628px' : '675px';
+  }
+</script>
+</body>
+</html>
