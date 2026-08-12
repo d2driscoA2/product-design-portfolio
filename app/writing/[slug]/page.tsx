@@ -9,6 +9,7 @@ import { Avatar } from '@/components/blog/Avatar'
 
 /* ── Content component registry ────────────────────────────────── */
 import { ClaudeCodePortfolioPost } from '@/components/blog/posts/claude-code-portfolio'
+import { ClaudeDesignFourChannelsPost } from '@/components/blog/posts/claude-design-four-channels'
 // ARCHIVED 2026-04-30: import { CaseStudyWritingPost }    from '@/components/blog/posts/case-study-writing'
 import { MentalModelsCognitiveLoadPost } from '@/components/blog/posts/mental-models-cognitive-load'
 import { OnboardingPatternPost }   from '@/components/blog/posts/onboarding-pattern'
@@ -17,6 +18,7 @@ import { OutputVsOutcomePost }     from '@/components/blog/posts/output-vs-outco
 
 const POST_CONTENT: Record<string, React.ComponentType> = {
   'claude-code-portfolio': ClaudeCodePortfolioPost,
+  'claude-design-four-channels': ClaudeDesignFourChannelsPost,
   // ARCHIVED 2026-04-30: 'case-study-writing':    CaseStudyWritingPost,
   'mental-models-cognitive-load': MentalModelsCognitiveLoadPost,
   'onboarding-pattern':    OnboardingPatternPost,
