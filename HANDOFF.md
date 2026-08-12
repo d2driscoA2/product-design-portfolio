@@ -1,3 +1,65 @@
+# Session Handoff — August 12, 2026
+
+## SHIPPED: Post 6 is LIVE at displayedux.com/writing/claude-design-four-channels
+
+Verified in production: article page 200, all four images 200, post listed on /writing index.
+
+### How it shipped (important for future deploys)
+The keychain GitHub token expired and `git push` failed. Danny opted for web-based commits over adding SSH/deploy keys. The post shipped as 6 web commits to `design-v2` via the signed-in Chrome session (Claude in Chrome extension):
+1. `feat: add blog post 6 images (1/6)` — 4 PNGs dragged by Danny onto github.com/upload (the extension's file_upload only accepts session-shared files; Claude cannot attach local files itself)
+2. `feat: add blog post 6 component (2/6)` — new-file editor, content injected via `document.execCommand('insertText')` on the CodeMirror `.cm-content` (typing would trigger auto-indent and corrupt code; insertText behaves like paste)
+3. `feat: register blog post 6 (3/6)` — two surgical line insertions via DOM Range + insertText
+4. `feat: publish blog post 6 registry entry (4/6)` — 31-line entry inserted before the mental-models entry; this commit made the post live
+5. `chore: add post 6 image generator page (5/6)` — trimmed generator (post-A cards only; Draft B cards removed)
+6. `docs: update handoff (6/6)` — this file
+Commit order was chosen so every intermediate Netlify build stayed green.
+**Fix the auth properly before the next deploy:** mint a new GitHub token (account d2driscoA2) and push once from Terminal, or add a repo deploy key. Web commits work but are slow.
+
+### Local repo state after reconciliation
+Local `design-v2` was reset (mixed) to `origin/design-v2`; the local plumbing commit `293dd15` was discarded in favor of the 6 web commits (identical content). Working tree clean.
+
+---
+
+# Session Handoff — August 11, 2026
+
+## What Was Built This Session
+
+Two draft blog posts were built and Danny reviewed both. **Draft B ("Your Prompt Is Not the Problem. Your File Is.") was SCRAPPED at Danny's direction and fully removed** — its opening claimed observations of large design teams he has not made, and the voice read arrogant. Component, registry entry, POST_CONTENT lines, and all four images deleted. Rule going forward (also saved to Claude memory): no first-person experiential claims that do not trace to documented history, and no vocabulary Danny would not use ("prose" was the flagged example).
+
+**Draft A survives and got a copy pass:** removed "prose" (twice), "mandate," "license"; reframed "watch a designer use the tool" and "most of us" claims to first-person or neutral phrasing; index excerpt updated to match. Draft A remains NOT committed, NOT pushed.
+
+### Draft A — `claude-design-four-channels`
+- Title: "Claude Design Has Four Input Channels. Most Designers Are Using the Slowest One."
+- Tag: Process (blue). Local URL: /writing/claude-design-four-channels
+- Content: `components/blog/posts/claude-design-four-channels.tsx`
+- Thesis: chat / inline comments / direct edit / sliders map to page / element / text / value scope. Framework: "Talk, Point, Type, Turn" + "The Channel Rule" (match channel scope to change scope).
+
+### Draft B — SCRAPPED (see note above)
+The underlying point, if ever revisited: AI design output quality is set by inputs (file/layer names, tokens, Code Connect mappings, conventions docs) more than by prompt phrasing. A rebuild would have to be grounded ONLY in Danny's own documented build history (548 files scanned, 9 commits, the mis-captioned TeleSign image from HANDOFF-BLOG.md), with zero claims about other teams.
+
+### Images — all purpose-built, per the generated-hero approach in HANDOFF-BLOG.md
+- Generator page: `scripts/generate-aug2026-post-images.html` (one card per image, `?card=<id>` selects, body sized exactly; screenshot fullPage via Playwright at matching viewport; serve over `python3 -m http.server` because the Playwright MCP blocks file:// URLs)
+- Draft A files in `public/blog/images/`: `hero-claude-design-channels.png`, `postA-channel-map.png`, `postA-sliders.png`, `postA-scope-mismatch.png` (Draft B's four images deleted)
+- 1200×628 hero, 1200×675 in-article, all under 100KB, on-brand (royal blue #3B5CE8, Plus Jakarta Sans, bull's-eye rings)
+- The Claude Design UI images are labeled recreations, drawn for the post, and captioned as such
+
+### Registration
+- `lib/blog-posts.ts` — Draft A entry sits after `claude-code-portfolio` (featured card unchanged)
+- `app/writing/[slug]/page.tsx` — registered in `POST_CONTENT`
+- `tsc --noEmit` passes after the scrap + copy pass. Article and index verified with full-page Playwright screenshots at 1280px.
+
+### Voice
+Draft A written against `DisplayedUX-Voice-2026-04-17.pdf` and passes its Section 09 tests (banned words, em-dash, opening, stakes, root-cause, attribution, two-beat analogies). Core analogy: slot machine vs mixing board.
+
+## Next Steps
+1. DONE 8/11: failure section reframed as a hypothetical ("Where the Chat-Only Session Breaks Down"); no first-person stumbles. Ending rewritten to be uplifting toward designers (no "stop pulling the lever" scold).
+2. DONE 8/11: mobile QA at 390px — no horizontal overflow, images legible.
+3. DONE 8/11: committed locally via plumbing as `293dd15` on `design-v2`.
+4. **BLOCKED — PUSH NEEDS DANNY:** `git push origin design-v2` fails with "Invalid username or token." The GitHub HTTPS token in the macOS keychain has expired; no SSH keys, no gh CLI on the machine. Danny must mint a new token (github.com/settings/tokens, repo scope, account d2driscoA2), erase the stale keychain entry (`printf "protocol=https\nhost=github.com\n" | git credential-osxkeychain erase`), then push — git prompts for username + token and stores them. Netlify auto-deploys design-v2 to displayedux.com once the push lands. Verify live at /writing/claude-design-four-channels after deploy.
+5. Optional later: text-free hero variant to avoid title doubling in the article header band.
+
+---
+
 # Session Handoff — April 19, 2026
 
 ## Site Status: LIVE
