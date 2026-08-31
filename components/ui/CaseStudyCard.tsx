@@ -17,7 +17,7 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
         'border border-[var(--color-border)] hover:[border-color:var(--accent)]',
         'hover:-translate-y-1 hover:shadow-[0_12px_32px_0_rgb(0_0_0_/_0.30)]',
         'transition-[transform,box-shadow,border-color] duration-200 motion-reduce:transition-none',
-        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
       ].join(' ')}
     >
       {/* Thumbnail — only rendered when thumbnailImage is set */}

@@ -82,7 +82,7 @@ export default async function WritingPostPage(
                   <Link
                     href="/writing"
                     className="text-small font-medium transition-colors duration-150 hover:text-[var(--color-text-primary)]"
-                    style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '2px' }}
+                    style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '2px' }}
                   >
                     Writing
                   </Link>
@@ -170,14 +170,14 @@ export default async function WritingPostPage(
                 {prevPost && (
                   <Link
                     href={`/writing/${prevPost.slug}`}
-                    className="group flex-1 min-w-[200px] rounded-xl p-5 border transition-colors duration-150 hover:border-[#3B5CE8]"
+                    className="group flex-1 min-w-[200px] rounded-xl p-5 border transition-colors duration-150 hover:border-[#4063FB]"
                     style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-card)' }}
                   >
                     <div className="text-label font-bold tracking-widest uppercase mb-1.5"
                          style={{ color: 'var(--color-text-secondary)' }}>
                       ← Previous post
                     </div>
-                    <div className="text-small font-bold leading-snug group-hover:text-[#3B5CE8] transition-colors">
+                    <div className="text-small font-bold leading-snug group-hover:text-[#4063FB] transition-colors">
                       {prevPost.title}
                     </div>
                   </Link>
@@ -185,14 +185,14 @@ export default async function WritingPostPage(
                 {nextPost && (
                   <Link
                     href={`/writing/${nextPost.slug}`}
-                    className="group flex-1 min-w-[200px] rounded-xl p-5 border transition-colors duration-150 hover:border-[#3B5CE8] text-right ml-auto"
+                    className="group flex-1 min-w-[200px] rounded-xl p-5 border transition-colors duration-150 hover:border-[#4063FB] text-right ml-auto"
                     style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-card)' }}
                   >
                     <div className="text-label font-bold tracking-widest uppercase mb-1.5"
                          style={{ color: 'var(--color-text-secondary)' }}>
                       Next post →
                     </div>
-                    <div className="text-small font-bold leading-snug group-hover:text-[#3B5CE8] transition-colors">
+                    <div className="text-small font-bold leading-snug group-hover:text-[#4063FB] transition-colors">
                       {nextPost.title}
                     </div>
                   </Link>
@@ -264,7 +264,7 @@ export default async function WritingPostPage(
               <Link
                 href="/work"
                 className="block w-full text-center py-2.5 px-4 rounded-md text-small font-bold text-white transition-opacity duration-150 hover:opacity-90"
-                style={{ background: '#3B5CE8' }}
+                style={{ background: '#4063FB' }}
               >
                 View portfolio
                 <svg className="inline-block ml-1.5" width="12" height="12"

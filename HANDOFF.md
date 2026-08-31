@@ -40,7 +40,7 @@ The underlying point, if ever revisited: AI design output quality is set by inpu
 ### Images — all purpose-built, per the generated-hero approach in HANDOFF-BLOG.md
 - Generator page: `scripts/generate-aug2026-post-images.html` (one card per image, `?card=<id>` selects, body sized exactly; screenshot fullPage via Playwright at matching viewport; serve over `python3 -m http.server` because the Playwright MCP blocks file:// URLs)
 - Draft A files in `public/blog/images/`: `hero-claude-design-channels.png`, `postA-channel-map.png`, `postA-sliders.png`, `postA-scope-mismatch.png` (Draft B's four images deleted)
-- 1200×628 hero, 1200×675 in-article, all under 100KB, on-brand (royal blue #3B5CE8, Plus Jakarta Sans, bull's-eye rings)
+- 1200×628 hero, 1200×675 in-article, all under 100KB, on-brand (royal blue #4063FB, Plus Jakarta Sans, bull's-eye rings)
 - The Claude Design UI images are labeled recreations, drawn for the post, and captioned as such
 
 ### Registration

@@ -33,7 +33,7 @@ export function ThemeToggle() {
         'flex items-center justify-center w-9 h-9 rounded-md',
         'text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]',
         'hover:bg-white/5 transition-colors duration-150',
-        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
       ].join(' ')}
     >
       {theme === 'dark' ? (

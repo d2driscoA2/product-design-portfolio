@@ -13,7 +13,7 @@ export default function PhotographyPage() {
       <div className="max-w-4xl mx-auto px-6 py-24">
 
         <div className="mb-16">
-          <p className="text-sm font-semibold tracking-widest uppercase mb-4 text-[#3B5CE8]">Photography</p>
+          <p className="text-sm font-semibold tracking-widest uppercase mb-4 text-[#4063FB]">Photography</p>
           <h1 className="about-heading text-5xl font-bold leading-tight mb-4">
             Em&bull;pa&bull;thique{' '}
             <span className="text-lg font-normal text-gray-400">/ɛmˈpæθiˍk/</span>

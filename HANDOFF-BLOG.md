@@ -153,7 +153,7 @@ Each post needs a purpose-built hero image, not a repurposed screenshot. The con
 
 - **Aspect ratio:** 16:9 or 3:2 — both render cleanly at the 480px hero height
 - **Mobile-first composition:** The most important visual element must survive a 300px crop
-- **On-brand:** Royal blue `#3B5CE8`, Plus Jakarta Sans, the bull's-eye motif
+- **On-brand:** Royal blue `#4063FB`, Plus Jakarta Sans, the bull's-eye motif
 - **Topic-legible at a glance:** A reader scanning the /writing index should be able to infer the post's subject from the thumbnail in under two seconds
 
 ### Recommended approach: generated hero components
@@ -203,9 +203,9 @@ If you prefer to design the heroes manually, create a Figma template at 1200×62
   heroImageAlt:   'Description of hero image',
   excerpt:        'One paragraph shown on the index card.',
   stats: [
-    { value: 'X',   label: 'Label one',  accentHex: '#3B5CE8' },
+    { value: 'X',   label: 'Label one',  accentHex: '#4063FB' },
     { value: 'Y',   label: 'Label two' },
-    { value: 'Z',   label: 'Label three', accentHex: '#F47060' },
+    { value: 'Z',   label: 'Label three', accentHex: '#FF6F6E' },
     { value: 'W',   label: 'Label four' },
   ],
 },

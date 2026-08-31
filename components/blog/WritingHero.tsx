@@ -3,7 +3,7 @@
 
    Matches the WritingCardThumb composition exactly so clicking
    through from the index feels like a continuation:
-   - Royal blue #3B5CE8 background
+   - Royal blue #4063FB background
    - Brand logo mark (filled concentric circles) bottom-left, low opacity
    - heroImage fades in from the right with a gradient bridge
    - Eyebrow: horizontal rule + category pill, top-left
@@ -20,7 +20,7 @@ interface WritingHeroProps {
 
 const TAG_BG: Record<BlogPost['tagColor'], string> = {
   blue:      'rgba(255,255,255,0.12)',
-  coral:     'rgba(244,112,96,0.28)',
+  coral:     'rgba(255, 111, 110,0.28)',
   amber:     'rgba(245,194,0,0.22)',
   magenta:   'rgba(255,0,170,0.22)',
   lightBlue: 'rgba(109,163,248,0.22)',
@@ -28,7 +28,7 @@ const TAG_BG: Record<BlogPost['tagColor'], string> = {
 
 const TAG_BORDER: Record<BlogPost['tagColor'], string> = {
   blue:      'rgba(255,255,255,0.22)',
-  coral:     'rgba(244,112,96,0.50)',
+  coral:     'rgba(255, 111, 110,0.50)',
   amber:     'rgba(245,194,0,0.40)',
   magenta:   'rgba(255,0,170,0.40)',
   lightBlue: 'rgba(109,163,248,0.40)',
@@ -42,7 +42,7 @@ export function WritingHero({ post }: WritingHeroProps) {
         position:       'relative',
         width:          '100%',
         height:         'clamp(260px, 38vw, 420px)',
-        background:     '#3B5CE8',
+        background:     '#4063FB',
         borderRadius:   '12px',
         overflow:       'hidden',
         display:        'flex',
@@ -69,8 +69,8 @@ export function WritingHero({ post }: WritingHeroProps) {
           pointerEvents: 'none',
         }}
       >
-        <circle cx="26" cy="26" r="24" fill="#3B5CE8" />
-        <circle cx="26" cy="26" r="17" fill="#F47060" />
+        <circle cx="26" cy="26" r="24" fill="#4063FB" />
+        <circle cx="26" cy="26" r="17" fill="#FF6F6E" />
         <circle cx="26" cy="26" r="11" fill="#FF00AA" />
         <circle cx="26" cy="26" r="5.5" fill="#F5C200" />
       </svg>
@@ -95,13 +95,13 @@ export function WritingHero({ post }: WritingHeroProps) {
           {/* Left fade — image dissolves into brand blue */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(to right, #3B5CE8 0%, rgba(59,92,232,0.85) 8%, rgba(59,92,232,0.20) 38%, rgba(59,92,232,0) 65%)',
+            background: 'linear-gradient(to right, #4063FB 0%, rgba(64, 99, 251,0.85) 8%, rgba(64, 99, 251,0.20) 38%, rgba(64, 99, 251,0) 65%)',
             pointerEvents: 'none',
           }} />
           {/* Bottom fade */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(to top, rgba(59,92,232,0.55) 0%, rgba(59,92,232,0) 40%)',
+            background: 'linear-gradient(to top, rgba(64, 99, 251,0.55) 0%, rgba(64, 99, 251,0) 40%)',
             pointerEvents: 'none',
           }} />
           {/* Subtle dark overlay */}

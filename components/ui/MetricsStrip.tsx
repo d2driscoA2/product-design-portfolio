@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const STATS = [
-  { display: '21B+', numeric: 21,  suffix: 'B+', unit: 'transactions', label: 'Transactions protected annually', color: '#F47060' },
+  { display: '21B+', numeric: 21,  suffix: 'B+', unit: 'transactions', label: 'Transactions protected annually', color: '#FF6F6E' },
   { display: '120+', numeric: 120, suffix: '+',  unit: 'countries',    label: 'Countries navigated globally',   color: '#5B9FE8' },
   { display: '47%',  numeric: 47,  suffix: '%',  unit: 'completion',   label: 'Above industry standard',        color: '#F5C200' },
   { display: '85%',  numeric: 85,  suffix: '%',  unit: 'self-service', label: 'Customers live without CS',      color: '#FF00AA' },
@@ -101,7 +101,7 @@ export function MetricsStrip() {
       aria-label="Career metrics"
       className="relative overflow-hidden py-16 lg:py-20 px-6"
       style={{
-        background: 'linear-gradient(135deg, #1e3bcc, #3B5CE8, #4f6ef5, #3B5CE8, #2040d4)',
+        background: 'linear-gradient(135deg, #1e3bcc, #4063FB, #4f6ef5, #4063FB, #2040d4)',
         backgroundSize: '300% 300%',
         animation: 'gradient-drift 14s ease infinite',
       }}

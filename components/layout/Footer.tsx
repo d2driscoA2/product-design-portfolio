@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="bg-[#3B5CE8]"
+      className="bg-[#4063FB]"
       style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}
     >
       <div className="mx-auto max-w-6xl px-6 py-16">

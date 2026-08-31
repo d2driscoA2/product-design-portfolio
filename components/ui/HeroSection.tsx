@@ -5,8 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const HERO_STATS = [
-  { company: 'At TeleSign', value: '85%',  label: 'Customers live without CS support', color: '#F47060' },
-  { company: 'At TeleSign', value: '48%',  label: 'Faster enterprise onboarding',      color: '#3B5CE8' },
+  { company: 'At TeleSign', value: '85%',  label: 'Customers live without CS support', color: '#FF6F6E' },
+  { company: 'At TeleSign', value: '48%',  label: 'Faster enterprise onboarding',      color: '#4063FB' },
   { company: 'At Appily.com', value: '47%',  label: 'Completion vs 20–35% standard',     color: '#F5C200' },
   { company: 'At Appily.com', value: '600%', label: 'User growth in two years',           color: '#FF00AA' },
 ] as const
@@ -38,8 +38,8 @@ export function HeroSection() {
           className="w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[520px] lg:h-[520px]"
           style={{ opacity: 0.06, animation: 'spin-slow 60s linear infinite' }}
         >
-          <circle cx="24" cy="24" r="24" fill="#3B5CE8" />
-          <circle cx="24" cy="24" r="17" fill="#F47060" />
+          <circle cx="24" cy="24" r="24" fill="#4063FB" />
+          <circle cx="24" cy="24" r="17" fill="#FF6F6E" />
           <circle cx="24" cy="24" r="11" fill="#FF00AA" />
           <circle cx="24" cy="24" r="5.5" fill="#F5C200" />
         </svg>
@@ -66,7 +66,7 @@ export function HeroSection() {
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Designing products where{' '}
-              <span className="text-[#F47060]">
+              <span className="text-[#FF6F6E]">
                 mistakes have consequences
               </span>
             </h1>
@@ -87,10 +87,10 @@ export function HeroSection() {
                   href="/work"
                   className={[
                     'inline-flex items-center justify-center h-12 px-8 rounded-lg',
-                    'bg-[#F47060] text-white text-small font-bold tracking-wide',
+                    'bg-[#FF6F6E] text-white text-small font-bold tracking-wide',
                     'hover:bg-[#e05a4a] transition-colors duration-150 motion-reduce:transition-none',
                     'shadow-[0_4px_14px_0_rgb(244_112_96_/_0.30)]',
-                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
                   ].join(' ')}
                 >
                   View work
@@ -101,7 +101,7 @@ export function HeroSection() {
                     'inline-flex items-center justify-center h-12 px-8 rounded-lg',
                     'border border-[#333333] text-[#9CA3AF] text-small font-bold tracking-wide',
                     'hover:border-[#555555] hover:text-[#F5F5F5] transition-colors duration-150 motion-reduce:transition-none',
-                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
                   ].join(' ')}
                 >
                   Read my story

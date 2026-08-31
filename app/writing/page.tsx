@@ -36,7 +36,7 @@ export default function WritingPage() {
         {featuredPost && (
           <Link
             href={`/writing/${featuredPost.slug}`}
-            className="group block mb-16 lg:mb-20 rounded-2xl overflow-hidden border transition-all duration-200 hover:border-[#3B5CE8]"
+            className="group block mb-16 lg:mb-20 rounded-2xl overflow-hidden border transition-all duration-200 hover:border-[#4063FB]"
             style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-card)' }}
             aria-label={`Read: ${featuredPost.title}`}
           >
@@ -54,7 +54,7 @@ export default function WritingPage() {
                   {featuredPost.date}&nbsp;&nbsp;·&nbsp;&nbsp;{featuredPost.readTime} min read
                 </p>
                 <h2
-                  className="font-bold tracking-tight mb-5 leading-snug group-hover:text-[#3B5CE8] transition-colors duration-150"
+                  className="font-bold tracking-tight mb-5 leading-snug group-hover:text-[#4063FB] transition-colors duration-150"
                   style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem, 2vw, 1.625rem)' }}
                 >
                   {featuredPost.title}
@@ -66,7 +66,7 @@ export default function WritingPage() {
 
                 <span
                   className="inline-flex items-center gap-1.5 text-small font-bold"
-                  style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
+                  style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
                 >
                   Read the post
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -100,7 +100,7 @@ export default function WritingPage() {
                 <li key={post.slug} role="listitem">
                   <Link
                     href={`/writing/${post.slug}`}
-                    className="group flex flex-col h-full rounded-xl overflow-hidden border transition-all duration-200 hover:border-[#3B5CE8]"
+                    className="group flex flex-col h-full rounded-xl overflow-hidden border transition-all duration-200 hover:border-[#4063FB]"
                     style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-card)' }}
                     aria-label={`Read: ${post.title}`}
                   >
@@ -116,7 +116,7 @@ export default function WritingPage() {
                         {post.date}&nbsp;·&nbsp;{post.readTime} min
                       </p>
                       <h3
-                        className="font-bold leading-snug mb-3 group-hover:text-[#3B5CE8] transition-colors duration-150"
+                        className="font-bold leading-snug mb-3 group-hover:text-[#4063FB] transition-colors duration-150"
                         style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem' }}
                       >
                         {post.title}
@@ -129,7 +129,7 @@ export default function WritingPage() {
                            style={{ borderTop: '1px solid var(--color-border)' }}>
                         <span
                           className="text-small font-bold inline-flex items-center gap-1"
-                          style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
+                          style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
                         >
                           Read
                           <svg width="12" height="12" viewBox="0 0 14 14" fill="none"

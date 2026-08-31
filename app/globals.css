@@ -19,6 +19,8 @@
 
   --color-nav-bg:    rgba(255, 255, 255, 0.95);
   --color-footer-bg: #606060;
+
+  --color-accent-text: #4063FB;
 }
 
 /* ── Dark mode ────────────────────────────────────────────────── */
@@ -40,6 +42,8 @@
 
   --color-nav-bg:    rgba(10, 10, 10, 0.95);
   --color-footer-bg: #000000;
+
+  --color-accent-text: #6DA3F8;
 }
 
 /* Bull's-eye opacity — philosophy section decorative elements */
@@ -90,11 +94,11 @@
   /* Brand colors */
   --color-brand-charcoal:   #606060;
   --color-brand-blue-light: #5B9FE8;
-  --color-brand-blue-royal: #3B5CE8;
+  --color-brand-blue-royal: #4063FB;
   --color-brand-tan:        #D4BC8A;
   --color-brand-magenta:    #FF00AA;
   --color-brand-offwhite:   #F2F2F2;
-  --color-brand-coral:      #F47060;
+  --color-brand-coral:      #FF6F6E;
   --color-brand-pink:       #E0006E;
   --color-brand-amber:      #F5C200;
 
@@ -573,13 +577,15 @@ body {
 .beyond-section {
   background: var(--color-bg);
 }
+/* skill-badge: outlined pill with brand-blue border and primary text */
 .skill-badge {
   font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #3B5CE8;
-  background: rgba(59, 92, 232, 0.08);
+  color: var(--color-text-primary);
+  background: rgba(64, 99, 251, 0.08);
+  border: 1px solid #4063FB;
   padding: 2px 8px;
   border-radius: 20px;
   white-space: nowrap;
@@ -587,7 +593,7 @@ body {
 }
 .skill-divider {
   height: 1px;
-  background: rgba(59, 92, 232, 0.15);
+  background: rgba(64, 99, 251, 0.15);
   margin: 6px 0 8px;
 }
 .beyond-rings {
@@ -653,8 +659,8 @@ body {
   appearance: none;
 }
 .form-input:focus {
-  border-color: #3B5CE8;
-  box-shadow: 0 0 0 3px rgba(59, 92, 232, 0.12);
+  border-color: #4063FB;
+  box-shadow: 0 0 0 3px rgba(64, 99, 251, 0.12);
 }
 .form-input::placeholder {
   color: var(--color-text-muted);
@@ -730,7 +736,7 @@ textarea.form-input {
 /* ── Contact page dark mode overrides ──────────────────────────── */
 .contact-form-card {
   background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(59, 92, 232, 0.18);
+  border: 1px solid rgba(64, 99, 251, 0.18);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.80), inset 0 1px 0 rgba(255, 255, 255, 0.90);
   border-radius: 12px;
   padding: 40px;
@@ -772,9 +778,9 @@ textarea.form-input {
 }
 
 [data-theme="dark"] .form-input:focus {
-  border-color: #3B5CE8;
+  border-color: #4063FB;
   background: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 0 0 3px rgba(59, 92, 232, 0.22);
+  box-shadow: 0 0 0 3px rgba(64, 99, 251, 0.22);
 }
 
 [data-theme="dark"] .form-section-divider {
@@ -852,24 +858,24 @@ textarea.form-input {
 }
 
 .blog-callout {
-  border-left: 3px solid #3B5CE8;
-  background: rgba(59, 92, 232, 0.05);
+  border-left: 3px solid #4063FB;
+  background: rgba(64, 99, 251, 0.05);
   border-radius: 0 8px 8px 0;
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
 }
 
 [data-theme="dark"] .blog-callout {
-  background: rgba(59, 92, 232, 0.10);
+  background: rgba(64, 99, 251, 0.10);
 }
 
 .blog-callout--blue {
-  border-left-color: #3B5CE8;
-  background: rgba(59, 92, 232, 0.06);
+  border-left-color: #4063FB;
+  background: rgba(64, 99, 251, 0.06);
 }
 
 [data-theme="dark"] .blog-callout--blue {
-  background: rgba(59, 92, 232, 0.14);
+  background: rgba(64, 99, 251, 0.14);
 }
 
 .blog-callout-label {
@@ -877,7 +883,7 @@ textarea.form-input {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #3B5CE8;
+  color: var(--color-accent-text);
   margin-bottom: 0.75rem;
 }
 
@@ -906,7 +912,7 @@ textarea.form-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3B5CE8;
+  background: var(--color-accent-text);
 }
 
 .blog-unordered-list,
@@ -972,14 +978,14 @@ textarea.form-input {
   font-family: var(--font-display), 'Plus Jakarta Sans', sans-serif;
   font-size: 1.125rem;
   font-weight: 800;
-  color: #3B5CE8;
+  color: var(--color-accent-text);
   min-width: 1.5rem;
   line-height: 1.7;
   flex-shrink: 0;
 }
 
 .blog-pullquote {
-  border-left: 4px solid #3B5CE8;
+  border-left: 4px solid #4063FB;
   padding: 0.5rem 0 0.5rem 1.5rem;
   margin: 1.5rem 0 2rem;
   font-family: var(--font-display), 'Plus Jakarta Sans', sans-serif;

@@ -13,7 +13,7 @@ const data: CaseStudyData = {
   headline: 'How Cutting Onboarding From 67 Days to Same-Day Access Freed TeleSign to Serve an Entirely New Market',
   role: 'Principal Product Designer',
   timeline: '7 months \u00b7 2020\u20132021',
-  accentColor: '#F47060',
+  accentColor: '#FF6F6E',
   heroImage: '/images/1-self-service-customer-portal/hero/Full-service-Example-Image-2048x1925.png',
   heroImageAlt: 'TeleSign self-service portal dashboard',
   heroImagePosition: 'top center',

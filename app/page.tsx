@@ -44,10 +44,10 @@ function CaseStudyGrid() {
           <Link
             href="/work"
             className={[
-              'text-small font-semibold text-[#F47060] shrink-0',
+              'text-small font-semibold text-[#FF6F6E] shrink-0',
               'inline-flex items-center gap-1.5 group',
               'underline-offset-4 hover:underline',
-              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
             ].join(' ')}
           >
             View all
@@ -133,9 +133,9 @@ function OriginStory() {
             href="/about"
             className={[
               'inline-flex items-center gap-1.5 group w-fit',
-              'text-small font-semibold text-[#F47060]',
+              'text-small font-semibold text-[#FF6F6E]',
               'underline-offset-4 hover:underline',
-              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
             ].join(' ')}
           >
             Read full story
@@ -177,12 +177,12 @@ function DesignPhilosophy() {
       className="relative overflow-hidden bg-[var(--color-bg)] py-20 lg:py-28 px-6"
     >
       {/* Decorative floating bull's-eyes — scattered behind cards */}
-      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '8%', left: '-3%', zIndex: 0, animation: 'float-a 9s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="110" height="110" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '60%', left: '8%', zIndex: 0, animation: 'float-b 11s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="160" height="160" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '-10%', right: '2%', zIndex: 0, animation: 'float-c 8s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="100" height="100" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '75%', right: '5%', zIndex: 0, animation: 'float-d 13s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '40%', right: '-2%', zIndex: 0, animation: 'float-e 10s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="180" height="180" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '85%', left: '45%', zIndex: 0, animation: 'float-f 12s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '8%', left: '-3%', zIndex: 0, animation: 'float-a 9s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="110" height="110" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '60%', left: '8%', zIndex: 0, animation: 'float-b 11s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="160" height="160" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '-10%', right: '2%', zIndex: 0, animation: 'float-c 8s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="100" height="100" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '75%', right: '5%', zIndex: 0, animation: 'float-d 13s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none absolute" style={{ top: '40%', right: '-2%', zIndex: 0, animation: 'float-e 10s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="180" height="180" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none absolute" style={{ top: '85%', left: '45%', zIndex: 0, animation: 'float-f 12s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
 
       <div className="mx-auto max-w-6xl">
 

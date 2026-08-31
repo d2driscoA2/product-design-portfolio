@@ -42,7 +42,7 @@ export const caseStudies: CaseStudy[] = [
     outcomeSummary:
       'Designed a self-service portal that cut enterprise onboarding from 67 to 35 days, enabled 85% of customers to go live without CS intervention, and opened TeleSign to the SMB market.',
     impactLabel: '48% faster onboarding',
-    accentHex: '#F47060', /* coral */
+    accentHex: '#FF6F6E', /* coral */
     thumbnailImage: '/images/1-self-service-customer-portal/hero/portal-hero-home.png',
 
     bento: [
@@ -103,7 +103,7 @@ export const caseStudies: CaseStudy[] = [
     outcomeSummary:
       'Designed the UI for an ML-powered fraud prevention suite protecting 21B+ annual transactions, giving non-technical fraud analysts intuitive control over 1,000+ configurable risk parameters.',
     impactLabel: '21B+ transactions protected',
-    accentHex: '#3B5CE8', /* royal blue */
+    accentHex: '#4063FB', /* royal blue */
     thumbnailImage: '/images/2-fraud-prevention-suite/hero/fraud-hero-dashboard.png',
 
     bento: [

@@ -73,10 +73,10 @@ export function Nav() {
                 className={[
                   'relative px-4 py-2 text-small font-semibold tracking-wide',
                   'rounded-md transition-colors duration-150',
-                  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+                  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
                   'hover:text-[var(--color-text-primary)]',
                   isActive(href)
-                    ? 'text-[var(--color-text-primary)] after:absolute after:bottom-0 after:inset-x-4 after:h-0.5 after:bg-[#F47060] after:rounded-full'
+                    ? 'text-[var(--color-text-primary)] after:absolute after:bottom-0 after:inset-x-4 after:h-0.5 after:bg-[#FF6F6E] after:rounded-full'
                     : 'text-[var(--color-text-muted)]',
                 ].join(' ')}
               >
@@ -96,7 +96,7 @@ export function Nav() {
                 'border border-[var(--color-text-primary)] rounded-md',
                 'hover:bg-[var(--color-text-primary)] hover:text-[var(--color-bg)]',
                 'transition-colors duration-150',
-                'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+                'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
               ].join(' ')}
             >
               Resume
@@ -126,7 +126,7 @@ export function Nav() {
               'md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md',
               'text-[var(--color-text-muted)] transition-colors duration-150',
               'hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2',
-              'focus-visible:outline-[#F47060]',
+              'focus-visible:outline-[#FF6F6E]',
             ].join(' ')}
           >
             <span className={['block w-5 h-0.5 bg-current rounded-full origin-center', 'transition-transform duration-200 motion-reduce:transition-none', menuOpen ? 'translate-y-2 rotate-45' : ''].join(' ')} />
@@ -159,7 +159,7 @@ export function Nav() {
               className={[
                 'py-3 px-2 text-body font-semibold border-b border-[var(--color-border)]',
                 'transition-colors duration-150',
-                'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+                'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
                 isActive(href)
                   ? 'text-[var(--color-text-primary)]'
                   : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]',
@@ -182,7 +182,7 @@ export function Nav() {
               'border border-[var(--color-text-primary)]',
               'hover:bg-[var(--color-text-primary)] hover:text-[var(--color-bg)]',
               'transition-colors duration-150',
-              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F47060]',
+              'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
             ].join(' ')}
           >
             Resume

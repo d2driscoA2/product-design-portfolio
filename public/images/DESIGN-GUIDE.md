@@ -13,8 +13,8 @@ Version 1.0 · March 2026
 
 ### Logo Mark
 The logo mark is a bull's-eye of four concentric circles. Color order from outside in:
-- Outer ring: Royal Blue #3B5CE8
-- Second ring: Coral #F47060
+- Outer ring: Royal Blue #4063FB
+- Second ring: Coral #FF6F6E
 - Third ring: Magenta #FF00AA
 - Center: Amber #F5C200
 
@@ -40,8 +40,8 @@ The bull's-eye is used as a large decorative background element throughout the s
 
 | Name | Hex | Usage |
 |------|-----|-------|
-| Royal Blue | #3B5CE8 | Primary interactive, CTAs, footer bg, section accents |
-| Coral | #F47060 | Hero accent, pull quote borders, eyebrow rules |
+| Royal Blue | #4063FB | Primary interactive, CTAs, footer bg, section accents |
+| Coral | #FF6F6E | Hero accent, pull quote borders, eyebrow rules |
 | Magenta | #FF00AA | Accent, Universal College App case study |
 | Amber | #F5C200 | Accent, center bull's-eye, UX wordmark in footer |
 | Light Blue | #5B9FE8 | Stats, Fraud Prevention case study accent |
@@ -52,7 +52,7 @@ The bull's-eye is used as a large decorative background element throughout the s
 | Muted | #9CA3AF | Secondary text, labels, muted content |
 
 ### Case Study Accent Colors
-- Self-Service Portal: Coral #F47060
+- Self-Service Portal: Coral #FF6F6E
 - Fraud Prevention Suite: Light Blue #5B9FE8
 - Messaging API: Amber #F5C200
 - Universal College App: Magenta #FF00AA
@@ -101,7 +101,7 @@ The bull's-eye is used as a large decorative background element throughout the s
   --color-text-muted: #9CA3AF;
   --color-border: #E5E7EB;
   --color-nav-bg: #FFFFFF;
-  --color-footer-bg: #3B5CE8;
+  --color-footer-bg: #4063FB;
 }
 
 [data-theme="dark"] {
@@ -113,7 +113,7 @@ The bull's-eye is used as a large decorative background element throughout the s
   --color-text-muted: #9CA3AF;
   --color-border: #222222;
   --color-nav-bg: #0A0A0A;
-  --color-footer-bg: #3B5CE8;
+  --color-footer-bg: #4063FB;
 }
 ```
 
@@ -160,7 +160,7 @@ The bull's-eye is used as a large decorative background element throughout the s
 - "Read full story →" link in coral
 
 ### Footer
-- Background: Royal Blue #3B5CE8
+- Background: Royal Blue #4063FB
 - Three columns: brand, navigation, contact
 - Logo: footer variant (white wordmark, amber UX)
 - All text: white at varying opacity for hierarchy
@@ -241,7 +241,7 @@ public/images/
 
 ## 10. Case Study Stats Reference
 
-### Self-Service Portal (Coral #F47060)
+### Self-Service Portal (Coral #FF6F6E)
 - 48% faster enterprise onboarding (67→35 days)
 - 85% customers live without CS support
 - $500K→$2M+ daily transaction revenue

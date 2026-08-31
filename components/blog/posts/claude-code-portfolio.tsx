@@ -737,7 +737,7 @@ export function ClaudeCodePortfolioPost() {
         not show it, reach out:{' '}
         <a
           href="mailto:d2drisco@icloud.com"
-          style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
+          style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
         >
           d2drisco@icloud.com
         </a>.
@@ -768,7 +768,7 @@ export function ClaudeCodePortfolioPost() {
             in enterprise B2B. Based in Ann Arbor, Michigan.{' '}
             <a
               href="https://displayedux.com"
-              style={{ color: '#3B5CE8', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
+              style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
             >
               displayedux.com
             </a>

@@ -72,10 +72,10 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       '47 git commits. 10 build sessions. ~100K lines of code. One designer, no developer. Here is every number, every failure, and the exact workflow behind displayedux.com.',
     stats: [
-      { value: '47',   label: 'Git commits',         accentHex: '#3B5CE8' },
+      { value: '47',   label: 'Git commits',         accentHex: '#4063FB' },
       { value: '~40h', label: 'Active build time' },
-      { value: '9',    label: 'Pages built',          accentHex: '#F47060' },
-      { value: '$40K', label: 'Dev cost saved',        accentHex: '#3B5CE8' },
+      { value: '9',    label: 'Pages built',          accentHex: '#FF6F6E' },
+      { value: '$40K', label: 'Dev cost saved',        accentHex: '#4063FB' },
     ],
     tocEntries: [
       'The Numbers First',
@@ -111,9 +111,9 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Chat, inline comments, direct editing, and sliders. Claude Design ships four ways to change a design, and the one the cursor starts in is the slowest. Here is the channel rule I use.',
     stats: [
-      { value: '4',   label: 'Input channels',            accentHex: '#3B5CE8' },
+      { value: '4',   label: 'Input channels',            accentHex: '#4063FB' },
       { value: '1',   label: 'Channel doing all the work' },
-      { value: '3',   label: 'Channels most designers skip', accentHex: '#F47060' },
+      { value: '3',   label: 'Channels most designers skip', accentHex: '#FF6F6E' },
       { value: 'Apr', label: '2026 research preview launch' },
     ],
     tocEntries: [
@@ -143,9 +143,9 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "The mental model is the hypothesis. The data is the proof. Eighteen years of A/B and multivariate testing have taught me what to do when the two agree, and what to do when they don't.",
     stats: [
-      { value: '23%',    label: 'Discovery rise — Netflix XP', accentHex: '#3B5CE8' },
+      { value: '23%',    label: 'Discovery rise — Netflix XP', accentHex: '#4063FB' },
       { value: '67→0',   label: 'Days — Self-Service onboarding' },
-      { value: '4',      label: 'Variants tested',             accentHex: '#F47060' },
+      { value: '4',      label: 'Variants tested',             accentHex: '#FF6F6E' },
       { value: '18 yrs', label: 'A/B testing' },
     ],
     tocEntries: [
@@ -173,9 +173,9 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Four case studies. 18 years of work. Here is what I cut, what I kept, and the framework that shaped every word.',
     stats: [
-      { value: '4',         label: 'Case studies',           accentHex: '#F47060' },
+      { value: '4',         label: 'Case studies',           accentHex: '#FF6F6E' },
       { value: '18 yrs',    label: 'Work to distill' },
-      { value: '3',         label: 'Evaluation lenses',      accentHex: '#3B5CE8' },
+      { value: '3',         label: 'Evaluation lenses',      accentHex: '#4063FB' },
       { value: '10 sec',    label: 'Initial scan window' },
     ],
   },
@@ -199,7 +199,7 @@ export const blogPosts: BlogPost[] = [
     stats: [
       { value: '3',      label: 'Companies, same problem',  accentHex: '#F5C200' },
       { value: '67→35',  label: 'Days — TeleSign onboarding' },
-      { value: '47%',    label: 'Completion — Appily.com',   accentHex: '#F47060' },
+      { value: '47%',    label: 'Completion — Appily.com',   accentHex: '#FF6F6E' },
       { value: '7',      label: 'Markets — Netflix XP' },
     ],
     tocEntries: [
@@ -228,9 +228,9 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Fraud analysts make hundreds of high-stakes decisions per day. Here is what designing for that user taught me about complexity, trust, and speed.',
     stats: [
-      { value: '21B+',    label: 'Annual transactions',       accentHex: '#3B5CE8' },
+      { value: '21B+',    label: 'Annual transactions',       accentHex: '#4063FB' },
       { value: '1,000+',  label: 'ML parameters surfaced' },
-      { value: '30 sec',  label: 'Decision time target',      accentHex: '#F47060' },
+      { value: '30 sec',  label: 'Decision time target',      accentHex: '#FF6F6E' },
       { value: '73%',     label: 'Fraud reduction — fin. client' },
     ],
     tocEntries: [
@@ -260,9 +260,9 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Early in my career I measured my effectiveness by what I shipped. It took years to understand why that was the wrong metric.',
     stats: [
-      { value: '18 yrs', label: 'Calibrating this',           accentHex: '#3B5CE8' },
+      { value: '18 yrs', label: 'Calibrating this',           accentHex: '#4063FB' },
       { value: '4',      label: 'Companies, same lesson' },
-      { value: '21B+',   label: 'Transactions — invisible UX', accentHex: '#F47060' },
+      { value: '21B+',   label: 'Transactions — invisible UX', accentHex: '#FF6F6E' },
       { value: '$1.3B',  label: 'Valuation — TeleSign exit' },
     ],
     tocEntries: [
@@ -292,8 +292,8 @@ export function getBlogPostOrThrow(slug: string): BlogPost {
 
 /** Tag accent colors — used on index cards and article tags */
 export const TAG_COLORS: Record<BlogPost['tagColor'], { bg: string; text: string; border: string }> = {
-  blue:    { bg: 'rgba(59,92,232,0.10)',  text: '#3B5CE8', border: 'rgba(59,92,232,0.25)' },
-  coral:   { bg: 'rgba(244,112,96,0.10)', text: '#C8402E', border: 'rgba(244,112,96,0.28)' },
+  blue:    { bg: 'rgba(64, 99, 251,0.10)',  text: '#4063FB', border: 'rgba(64, 99, 251,0.25)' },
+  coral:   { bg: 'rgba(255, 111, 110,0.10)', text: '#C8402E', border: 'rgba(255, 111, 110,0.28)' },
   amber:   { bg: 'rgba(245,194,0,0.12)',  text: '#8A6A00', border: 'rgba(245,194,0,0.28)' },
   magenta:   { bg: 'rgba(255,0,170,0.10)',  text: '#CC0088', border: 'rgba(255,0,170,0.25)' },
   lightBlue: { bg: 'rgba(109,163,248,0.10)', text: '#2D6AC6', border: 'rgba(109,163,248,0.25)' },
@@ -301,8 +301,8 @@ export const TAG_COLORS: Record<BlogPost['tagColor'], { bg: string; text: string
 
 /** Dark-mode tag accent colors */
 export const TAG_COLORS_DARK: Record<BlogPost['tagColor'], { bg: string; text: string; border: string }> = {
-  blue:    { bg: 'rgba(59,92,232,0.22)',  text: '#7B9BFF', border: 'rgba(59,92,232,0.40)' },
-  coral:   { bg: 'rgba(244,112,96,0.18)', text: '#F47060', border: 'rgba(244,112,96,0.35)' },
+  blue:    { bg: 'rgba(64, 99, 251,0.22)',  text: '#7B9BFF', border: 'rgba(64, 99, 251,0.40)' },
+  coral:   { bg: 'rgba(255, 111, 110,0.18)', text: '#FF6F6E', border: 'rgba(255, 111, 110,0.35)' },
   amber:   { bg: 'rgba(245,194,0,0.15)',  text: '#F5C200', border: 'rgba(245,194,0,0.30)' },
   magenta:   { bg: 'rgba(255,0,170,0.18)',  text: '#FF44CC', border: 'rgba(255,0,170,0.35)' },
   lightBlue: { bg: 'rgba(109,163,248,0.20)', text: '#8EB6F0', border: 'rgba(109,163,248,0.38)' },

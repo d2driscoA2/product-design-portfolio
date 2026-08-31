@@ -90,7 +90,7 @@ If I were doing this again, I would instrument analyst override rates from day o
     slug: 'self-service-portal',
     client: 'TELESIGN',
     title: 'Self-Service Customer Portal',
-    accentColor: '#F47060',
+    accentColor: '#FF6F6E',
   },
   nextCase: {
     slug: 'messaging-api',

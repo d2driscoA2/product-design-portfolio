@@ -13,7 +13,7 @@ export function Logo({ variant = 'full', size = 40, className = '' }: LogoProps)
     <a
       href="/"
       aria-label="DisplayedUX, Strategic Product Design. Go to homepage."
-      className={`inline-flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3B5CE8] rounded-sm ${className}`}
+      className={`inline-flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4063FB] rounded-sm ${className}`}
     >
       {/* Concentric circles mark */}
       <svg
@@ -27,15 +27,15 @@ export function Logo({ variant = 'full', size = 40, className = '' }: LogoProps)
       >
         {isFooter ? (
           <>
-            <circle cx="26" cy="26" r="24" fill="#3B5CE8" stroke="white" strokeWidth="2" />
-            <circle cx="26" cy="26" r="17" fill="#F47060" />
+            <circle cx="26" cy="26" r="24" fill="#4063FB" stroke="white" strokeWidth="2" />
+            <circle cx="26" cy="26" r="17" fill="#FF6F6E" />
             <circle cx="26" cy="26" r="11" fill="#FF00AA" />
             <circle cx="26" cy="26" r="5.5" fill="#F5C200" />
           </>
         ) : (
           <>
-            <circle cx="26" cy="26" r="24" fill="#3B5CE8" stroke="white" strokeWidth="2" />
-            <circle cx="26" cy="26" r="17" fill="#F47060" />
+            <circle cx="26" cy="26" r="24" fill="#4063FB" stroke="white" strokeWidth="2" />
+            <circle cx="26" cy="26" r="17" fill="#FF6F6E" />
             <circle cx="26" cy="26" r="11" fill="#FF00AA" />
             <circle cx="26" cy="26" r="5.5" fill="#F5C200" />
           </>
@@ -48,7 +48,7 @@ export function Logo({ variant = 'full', size = 40, className = '' }: LogoProps)
             className="text-[1.05rem] font-bold tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: isFooter ? '#FFFFFF' : 'var(--color-text-primary)' }}
           >
-            Displayed<span style={{ color: isFooter ? '#F5C200' : '#F47060' }}>UX</span>
+            Displayed<span style={{ color: isFooter ? '#F5C200' : '#FF6F6E' }}>UX</span>
           </span>
           <span
             className="text-[0.6rem] font-semibold tracking-[0.12em] uppercase mt-0.5"

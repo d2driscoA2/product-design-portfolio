@@ -137,7 +137,7 @@ Institutional buy-in is a design problem. Getting 200 universities to accept a u
     slug: 'self-service-portal',
     client: 'TELESIGN',
     title: 'Self-Service Customer Portal',
-    accentColor: '#F47060',
+    accentColor: '#FF6F6E',
   },
 };
 

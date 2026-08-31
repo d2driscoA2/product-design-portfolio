@@ -110,13 +110,13 @@ function ContactFormInner() {
   if (status === 'error') {
     return (
       <div style={{ textAlign: 'center', padding: '40px 0' }}>
-        <div style={{ fontSize: '36px', marginBottom: '16px', color: '#F47060' }}>!</div>
+        <div style={{ fontSize: '36px', marginBottom: '16px', color: '#FF6F6E' }}>!</div>
         <h2 style={{ fontSize: '22px', fontWeight: 600, color: 'var(--color-text-primary)', marginBottom: '12px' }}>
           Something went wrong
         </h2>
         <p style={{ fontSize: '15px', color: 'var(--color-text-secondary)', lineHeight: '1.6' }}>
           Please email me directly at{' '}
-          <a href="mailto:d2drisco@icloud.com" style={{ color: '#3B5CE8', textDecoration: 'underline' }}>
+          <a href="mailto:d2drisco@icloud.com" style={{ color: '#4063FB', textDecoration: 'underline' }}>
             d2drisco@icloud.com
           </a>
         </p>
@@ -144,8 +144,8 @@ function ContactFormInner() {
     <div ref={formRef}>
       {/* Résumé flag */}
       <div style={{
-        background: resumeHighlight ? 'rgba(59, 92, 232, 0.08)' : 'var(--color-bg-secondary)',
-        borderLeft: '3px solid #3B5CE8',
+        background: resumeHighlight ? 'rgba(64, 99, 251, 0.08)' : 'var(--color-bg-secondary)',
+        borderLeft: '3px solid #4063FB',
         borderRadius: '0 8px 8px 0',
         padding: '16px 20px',
         marginBottom: '28px',
@@ -165,11 +165,11 @@ function ContactFormInner() {
         {/* Name */}
         <div className="form-row-2">
           <div>
-            <label className="form-label">First name <span style={{ color: '#F47060' }}>*</span></label>
+            <label className="form-label">First name <span style={{ color: '#FF6F6E' }}>*</span></label>
             <input className="form-input" type="text" name="firstName" value={fields.firstName} onChange={set} placeholder="Tom" required />
           </div>
           <div>
-            <label className="form-label">Last name <span style={{ color: '#F47060' }}>*</span></label>
+            <label className="form-label">Last name <span style={{ color: '#FF6F6E' }}>*</span></label>
             <input className="form-input" type="text" name="lastName" value={fields.lastName} onChange={set} placeholder="Delonge" required />
           </div>
         </div>
@@ -177,7 +177,7 @@ function ContactFormInner() {
         {/* Email + Company */}
         <div className="form-row-2">
           <div>
-            <label className="form-label">Email <span style={{ color: '#F47060' }}>*</span></label>
+            <label className="form-label">Email <span style={{ color: '#FF6F6E' }}>*</span></label>
             <input className="form-input" type="email" name="email" value={fields.email} onChange={set} placeholder="tom@tothestars.com" required />
           </div>
           <div>
@@ -214,7 +214,7 @@ function ContactFormInner() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: '#3B5CE8',
+                color: '#4063FB',
                 textDecoration: 'underline',
                 textDecorationThickness: '1px',
                 textUnderlineOffset: '3px',
@@ -263,7 +263,7 @@ function ContactFormInner() {
         </div>
 
         <div style={{ marginBottom: '32px' }}>
-          <label className="form-label">Message <span style={{ color: '#F47060' }}>*</span></label>
+          <label className="form-label">Message <span style={{ color: '#FF6F6E' }}>*</span></label>
           <textarea
             className="form-input"
             name="message"
@@ -287,7 +287,7 @@ function ContactFormInner() {
               alignItems: 'center',
               gap: '8px',
               padding: '13px 28px',
-              background: '#3B5CE8',
+              background: '#4063FB',
               color: '#ffffff',
               border: 'none',
               borderRadius: '8px',
@@ -328,17 +328,17 @@ export default function ContactPage() {
     </form>
     <main style={{ background: 'var(--color-bg)', minHeight: '100vh', paddingTop: '96px', paddingBottom: '96px', position: 'relative', overflow: 'hidden' }}>
       {/* Floating bull's-eyes — full page */}
-      <svg aria-hidden="true" width="320" height="320" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none" style={{ position: 'absolute', top: '-60px', right: '-60px', zIndex: 0, animation: 'float-a 9s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="200" height="200" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none" style={{ position: 'absolute', top: '30%', left: '-60px', zIndex: 0, animation: 'float-b 11s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="160" height="160" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none" style={{ position: 'absolute', top: '10%', left: '20%', zIndex: 0, animation: 'float-c 13s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="240" height="240" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none" style={{ position: 'absolute', bottom: '10%', right: '-40px', zIndex: 0, animation: 'float-d 10s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none" style={{ position: 'absolute', bottom: '5%', left: '30%', zIndex: 0, animation: 'float-e 12s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
-      <svg aria-hidden="true" width="180" height="180" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none" style={{ position: 'absolute', top: '55%', right: '15%', zIndex: 0, animation: 'float-f 8s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#3B5CE8" /><circle cx="24" cy="24" r="17" fill="#F47060" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="320" height="320" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none" style={{ position: 'absolute', top: '-60px', right: '-60px', zIndex: 0, animation: 'float-a 9s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="200" height="200" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none" style={{ position: 'absolute', top: '30%', left: '-60px', zIndex: 0, animation: 'float-b 11s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="160" height="160" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none" style={{ position: 'absolute', top: '10%', left: '20%', zIndex: 0, animation: 'float-c 13s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="240" height="240" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none" style={{ position: 'absolute', bottom: '10%', right: '-40px', zIndex: 0, animation: 'float-d 10s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="140" height="140" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none" style={{ position: 'absolute', bottom: '5%', left: '30%', zIndex: 0, animation: 'float-e 12s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
+      <svg aria-hidden="true" width="180" height="180" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none" style={{ position: 'absolute', top: '55%', right: '15%', zIndex: 0, animation: 'float-f 8s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#FF00AA" /><circle cx="24" cy="24" r="5.5" fill="#F5C200" /></svg>
       <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '0 32px' }}>
 
         {/* Eyebrow */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-          <span style={{ width: '32px', height: '1px', background: '#F47060', flexShrink: 0 }} />
+          <span style={{ width: '32px', height: '1px', background: '#FF6F6E', flexShrink: 0 }} />
           <span style={{ fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--color-text-secondary)' }}>
             Get in touch
           </span>
@@ -355,7 +355,7 @@ export default function ContactPage() {
           marginBottom: '16px',
         }}>
           Open to the<br />
-          <span style={{ color: '#3B5CE8' }}>right opportunity.</span>
+          <span style={{ color: '#4063FB' }}>right opportunity.</span>
         </h1>
 
         <p style={{ fontSize: '17px', color: 'var(--color-text-secondary)', lineHeight: '1.65', maxWidth: '500px', marginBottom: '64px' }}>
@@ -395,7 +395,7 @@ export default function ContactPage() {
                 <a
                   href="mailto:d2drisco@icloud.com"
                   style={{
-                    color: '#3B5CE8',
+                    color: '#4063FB',
                     fontSize: '14px',
                     textDecoration: 'underline',
                     textDecorationThickness: '1px',
@@ -415,7 +415,7 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    color: '#3B5CE8',
+                    color: '#4063FB',
                     fontSize: '13px',
                     textDecoration: 'underline',
                     textDecorationThickness: '1px',

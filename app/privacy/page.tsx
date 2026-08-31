@@ -13,7 +13,7 @@ export default function PrivacyPage() {
 
         {/* Eyebrow */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-          <span style={{ width: '32px', height: '1px', background: '#F47060', flexShrink: 0 }} />
+          <span style={{ width: '32px', height: '1px', background: '#FF6F6E', flexShrink: 0 }} />
           <span style={{ fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
             Legal
           </span>
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
           <Link
             href="/"
             style={{
-              color: '#3B5CE8',
+              color: '#4063FB',
               fontSize: '14px',
               textDecoration: 'underline',
               textDecorationThickness: '1px',
