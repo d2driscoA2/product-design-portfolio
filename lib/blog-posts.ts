@@ -307,3 +307,13 @@ export const TAG_COLORS_DARK: Record<BlogPost['tagColor'], { bg: string; text: s
   magenta:   { bg: 'rgba(229, 0, 162,0.18)',  text: '#FF44CC', border: 'rgba(229, 0, 162,0.35)' },
   lightBlue: { bg: 'rgba(109,163,248,0.20)', text: '#8EB6F0', border: 'rgba(109,163,248,0.38)' },
 }
+
+/** Slug for a heading, matched to the ids rendered on <h2> in post components. */
+export function slugifyHeading(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[\u2019']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+}

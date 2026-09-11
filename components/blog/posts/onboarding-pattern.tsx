@@ -10,7 +10,7 @@ export function OnboardingPatternPost() {
   return (
     <article className="blog-content">
 
-      <h2>Three Companies. Three Onboarding Problems. One Pattern.</h2>
+      <h2 id="three-companies-three-onboarding-problems-one-pattern">Three Companies. Three Onboarding Problems. One Pattern.</h2>
       <p>
         I have worked at four companies with meaningful product design
         responsibilities. Three of them handed me an onboarding problem as one
@@ -46,7 +46,7 @@ export function OnboardingPatternPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Netflix: Testing Your Way to the Right First Step</h2>
+      <h2 id="netflix-testing-your-way-to-the-right-first-step">Netflix: Testing Your Way to the Right First Step</h2>
       <p>
         At Netflix, the problem was not that the onboarding was bad. The problem
         was that it was built for a domestic user who had grown up with the
@@ -84,7 +84,7 @@ export function OnboardingPatternPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Appily.com: The Form That Was Eating Students Alive</h2>
+      <h2 id="appily-com-the-form-that-was-eating-students-alive">Appily.com: The Form That Was Eating Students Alive</h2>
       <p>
         At Cappex (now Appily.com), the onboarding problem had a specific
         shape. Students were starting the Universal College Application and
@@ -130,7 +130,7 @@ export function OnboardingPatternPost() {
 
       <hr className="blog-divider" />
 
-      <h2>TeleSign: When Onboarding Is a Revenue Problem</h2>
+      <h2 id="telesign-when-onboarding-is-a-revenue-problem">TeleSign: When Onboarding Is a Revenue Problem</h2>
       <p>
         The TeleSign version of this problem was the most complex and the most
         consequential in pure revenue terms.
@@ -185,7 +185,7 @@ export function OnboardingPatternPost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Pattern, Stated Plainly</h2>
+      <h2 id="the-pattern-stated-plainly">The Pattern, Stated Plainly</h2>
       <p>
         Three different companies. Three different products. Three different user
         groups. The same root cause every time:
@@ -221,7 +221,7 @@ export function OnboardingPatternPost() {
 
       <hr className="blog-divider" />
 
-      <h2>What I Look For Now</h2>
+      <h2 id="what-i-look-for-now">What I Look For Now</h2>
       <p>
         When I pick up a new onboarding problem, I ask three questions before I
         touch a wireframe:

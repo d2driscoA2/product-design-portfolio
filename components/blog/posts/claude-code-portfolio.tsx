@@ -11,7 +11,7 @@ export function ClaudeCodePortfolioPost() {
     <article className="blog-content">
 
       {/* ── Section: The Numbers First ──────────────────────────── */}
-      <h2>The Numbers First</h2>
+      <h2 id="the-numbers-first">The Numbers First</h2>
       <p>
         Before I explain what happened, here is the raw data from the git
         repository, the session logs, and the deployment history. Then I will
@@ -62,7 +62,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: The Benchmark ──────────────────────────────── */}
-      <h2>How These Numbers Compare</h2>
+      <h2 id="how-these-numbers-compare">How These Numbers Compare</h2>
       <p>
         I did not know how my output stacked up until I went looking. What I
         found was clarifying.
@@ -111,7 +111,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: Where I Sit ─────────────────────────────────── */}
-      <h2>Where My Numbers Actually Land</h2>
+      <h2 id="where-my-numbers-actually-land">Where My Numbers Actually Land</h2>
       <p>
         Against those benchmarks, here is an honest read of my output.
       </p>
@@ -181,7 +181,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: Two Things I Did That Were Actually Advanced ── */}
-      <h2>Two Things I Did That Were Actually Advanced</h2>
+      <h2 id="two-things-i-did-that-were-actually-advanced">Two Things I Did That Were Actually Advanced</h2>
       <p>
         Most analysis of my numbers focuses on what I did less of than power
         users. Two patterns in my workflow stand out as genuinely sophisticated,
@@ -231,7 +231,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: What I Actually Built ──────────────────────── */}
-      <h2>What I Actually Built</h2>
+      <h2 id="what-i-actually-built">What I Actually Built</h2>
       <p>
         displayedux.com is a production portfolio site for 18 years of UX
         design work across enterprise SaaS, consumer mobile, and developer
@@ -271,7 +271,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: The Tools ──────────────────────────────────── */}
-      <h2>The Tools: What Claude Code Is and How It Actually Works</h2>
+      <h2 id="the-tools-what-claude-code-is-and-how-it-actually-works">The Tools: What Claude Code Is and How It Actually Works</h2>
       <p>
         Most coverage of AI-built websites refers to chat-based tools where
         you describe what you want and paste code manually. That is not what
@@ -358,7 +358,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: Claude Code vs Claude Desktop ──────────────── */}
-      <h2>Claude Code vs. Claude Desktop</h2>
+      <h2 id="claude-code-vs-claude-desktop">Claude Code vs. Claude Desktop</h2>
       <p>
         <strong>Claude Desktop</strong> is the GUI chat interface. I used it
         for initial project brief development, design system decisions, content
@@ -381,7 +381,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: Session Log ───────────────────────────────── */}
-      <h2>Session Log</h2>
+      <h2 id="session-log">Session Log</h2>
       <p>
         What actually happened across 10 sessions, from first commit to
         production deployment.
@@ -481,7 +481,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: What Broke ─────────────────────────────────── */}
-      <h2>What Broke (The Full Honest List)</h2>
+      <h2 id="what-broke-the-full-honest-list">What Broke (The Full Honest List)</h2>
 
       <h3>Mobile hero image cropping</h3>
       <p>
@@ -551,7 +551,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: Security ───────────────────────────────────── */}
-      <h2>The Security Layer</h2>
+      <h2 id="the-security-layer">The Security Layer</h2>
       <p>
         Session 10 was dedicated entirely to production security hardening. Most
         portfolio build posts skip this. I did not.
@@ -584,7 +584,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: Raw Stats ──────────────────────────────────── */}
-      <h2>Raw Stats Summary</h2>
+      <h2 id="raw-stats-summary">Raw Stats Summary</h2>
       <div className="blog-table-wrap">
         <table className="blog-table">
           <thead>
@@ -652,7 +652,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: What This Means ─────────────────────────────── */}
-      <h2>What This Means If You&rsquo;re a Designer</h2>
+      <h2 id="what-this-means-if-youre-a-designer">What This Means If You&rsquo;re a Designer</h2>
       <p>
         There is a framing that treats AI coding tools as a threat to designers.
         The benchmarks do not support that framing.
@@ -685,7 +685,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: The Playbook ───────────────────────────────── */}
-      <h2>The Playbook</h2>
+      <h2 id="the-playbook">The Playbook</h2>
       <p>What made this work, in order of importance:</p>
       <ol className="blog-ordered-list blog-ordered-list--playbook">
         <li>
@@ -724,7 +724,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: What's Next ─────────────────────────────────── */}
-      <h2>What&rsquo;s Next</h2>
+      <h2 id="whats-next">What&rsquo;s Next</h2>
       <p>displayedux.com is version one. On the roadmap:</p>
       <ul className="blog-unordered-list">
         <li>Blog section on the site (this post is the first entry)</li>

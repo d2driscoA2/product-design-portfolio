@@ -9,7 +9,7 @@ export function DesigningForExpertsPost() {
   return (
     <article className="blog-content">
 
-      <h2>The User Who Knows More Than You</h2>
+      <h2 id="the-user-who-knows-more-than-you">The User Who Knows More Than You</h2>
       <p>
         Most UX work is premised on the idea that the designer understands the
         product better than the user. We simplify. We guide. We progressively
@@ -43,7 +43,7 @@ export function DesigningForExpertsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>What the Machine Was Doing</h2>
+      <h2 id="what-the-machine-was-doing">What the Machine Was Doing</h2>
       <p>
         TeleSign&rsquo;s phone number reputation scoring system analyzed 1,000+
         data points and 2,200+ digital identity signals to produce a risk score
@@ -74,7 +74,7 @@ export function DesigningForExpertsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Design Problem, Stated Precisely</h2>
+      <h2 id="the-design-problem-stated-precisely">The Design Problem, Stated Precisely</h2>
       <p>
         I needed to build an interface that let an expert fraud analyst process
         a case, understand the machine&rsquo;s reasoning, make a confident decision,
@@ -115,7 +115,7 @@ export function DesigningForExpertsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Making Machine Learning Transparent</h2>
+      <h2 id="making-machine-learning-transparent">Making Machine Learning Transparent</h2>
       <p>
         The hardest design challenge in this project was not information
         architecture or visual hierarchy. It was deciding how to present the
@@ -154,7 +154,7 @@ export function DesigningForExpertsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Designing for the False Positive Problem</h2>
+      <h2 id="designing-for-the-false-positive-problem">Designing for the False Positive Problem</h2>
       <p>
         Every fraud prevention system has two failure modes. False negatives
         let fraud through. False positives block legitimate users. Both cost
@@ -183,7 +183,7 @@ export function DesigningForExpertsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Speed as a Design Requirement</h2>
+      <h2 id="speed-as-a-design-requirement">Speed as a Design Requirement</h2>
       <p>
         The 30-second decision target was not aspirational. It was operational.
         A fraud analyst handling 400 cases per day at 30 seconds per case is
@@ -219,7 +219,7 @@ export function DesigningForExpertsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>What Designing for Experts Taught Me</h2>
+      <h2 id="what-designing-for-experts-taught-me">What Designing for Experts Taught Me</h2>
       <p>
         Working in this domain for five years changed how I think about
         complexity in product design.

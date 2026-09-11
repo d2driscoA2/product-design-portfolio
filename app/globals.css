@@ -1146,3 +1146,33 @@ textarea.form-input {
     padding: 0;
   }
 }
+
+/* ── Anchored article headings clear the sticky nav ──────────── */
+article h2[id],
+#main-article h2[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* ── Table of contents links ─────────────────────────────────── */
+.toc-link {
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+.toc-link:hover,
+.toc-link:focus-visible {
+  color: var(--color-accent-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.toc-link:hover .toc-dot,
+.toc-link:focus-visible .toc-dot {
+  background: var(--color-accent-text);
+}
+.toc-link:focus-visible {
+  outline: 2px solid var(--color-accent-text);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .toc-link { transition: none; }
+}

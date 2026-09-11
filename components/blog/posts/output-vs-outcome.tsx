@@ -10,7 +10,7 @@ export function OutputVsOutcomePost() {
   return (
     <article className="blog-content">
 
-      <h2>The Confession</h2>
+      <h2 id="the-confession">The Confession</h2>
       <p>
         Early in my career, I measured my own effectiveness by the quality
         of what I shipped. Did the screens look good? Was the interaction model
@@ -35,7 +35,7 @@ export function OutputVsOutcomePost() {
 
       <hr className="blog-divider" />
 
-      <h2>Output: What You Made. Outcome: What Changed.</h2>
+      <h2 id="output-what-you-made-outcome-what-changed">Output: What You Made. Outcome: What Changed.</h2>
       <p>
         Output is the design artifact. The wireframe. The component. The flow.
         The shipped feature. Output is what you can put in a portfolio and point to.
@@ -61,7 +61,7 @@ export function OutputVsOutcomePost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Netflix Lesson: Trust Nothing, Including Instinct</h2>
+      <h2 id="the-netflix-lesson-trust-nothing-including-instinct">The Netflix Lesson: Trust Nothing, Including Instinct</h2>
       <p>
         I was at Netflix during the international expansion, working within
         the Netflix XP experimentation platform. The thing that changed my
@@ -97,7 +97,7 @@ export function OutputVsOutcomePost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Appily.com Lesson: The Number Tells You When You&rsquo;re Right</h2>
+      <h2 id="the-appily-com-lesson-the-number-tells-you-when-youre-right">The Appily.com Lesson: The Number Tells You When You&rsquo;re Right</h2>
       <p>
         At Cappex (now Appily.com), I was working in an organization that
         used A/B testing and multivariate experiments as a routine tool, not
@@ -139,7 +139,7 @@ export function OutputVsOutcomePost() {
 
       <hr className="blog-divider" />
 
-      <h2>The TeleSign Lesson: Design Is Infrastructure</h2>
+      <h2 id="the-telesign-lesson-design-is-infrastructure">The TeleSign Lesson: Design Is Infrastructure</h2>
       <p>
         At TeleSign, the product processed 21 billion annual transactions. That
         number changes the stakes of design decisions in a way that is difficult
@@ -176,7 +176,7 @@ export function OutputVsOutcomePost() {
 
       <hr className="blog-divider" />
 
-      <h2>What Changes When You Measure Outcome</h2>
+      <h2 id="what-changes-when-you-measure-outcome">What Changes When You Measure Outcome</h2>
       <p>
         I want to be specific about what actually changes when a design
         organization shifts from measuring output to measuring outcome.
@@ -217,7 +217,7 @@ export function OutputVsOutcomePost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Honest Caveat</h2>
+      <h2 id="the-honest-caveat">The Honest Caveat</h2>
       <p>
         Not every design decision can be measured. Some things matter and
         are not measurable. Brand coherence. Accessibility for users who

@@ -10,7 +10,7 @@ export function ClaudeDesignFourChannelsPost() {
   return (
     <article className="blog-content">
 
-      <h2>The Slot Machine Problem</h2>
+      <h2 id="the-slot-machine-problem">The Slot Machine Problem</h2>
       <p>
         Claude Design shipped in April 2026 with four separate ways to change
         a design on the canvas: chat, inline comments, direct text editing,
@@ -39,7 +39,7 @@ export function ClaudeDesignFourChannelsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Four Channels</h2>
+      <h2 id="the-four-channels">The Four Channels</h2>
       <p>
         Each channel has a scope. Scope is the thing to pay attention to,
         because it determines how much of your design the model considers
@@ -83,7 +83,7 @@ export function ClaudeDesignFourChannelsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Talk, Point, Type, Turn</h2>
+      <h2 id="talk-point-type-turn">Talk, Point, Type, Turn</h2>
       <p>
         Here is how I route changes. Four verbs, one per channel.
       </p>
@@ -115,7 +115,7 @@ export function ClaudeDesignFourChannelsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Slider Is a Design Token You Tune by Hand</h2>
+      <h2 id="the-slider-is-a-design-token-you-tune-by-hand">The Slider Is a Design Token You Tune by Hand</h2>
       <p>
         The sliders deserve more attention than they get, because they are
         doing something design tools have never done. When Claude generates
@@ -141,7 +141,7 @@ export function ClaudeDesignFourChannelsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Where the Chat-Only Session Breaks Down</h2>
+      <h2 id="where-the-chat-only-session-breaks-down">Where the Chat-Only Session Breaks Down</h2>
       <p>
         The failure mode is easy to reproduce, and worth walking through
         once so you recognize it early. Take a design with one stat block
@@ -172,7 +172,7 @@ export function ClaudeDesignFourChannelsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>The Channel Rule</h2>
+      <h2 id="the-channel-rule">The Channel Rule</h2>
       <p>
         Match the scope of the channel to the scope of the change.
       </p>
@@ -193,7 +193,7 @@ export function ClaudeDesignFourChannelsPost() {
 
       <hr className="blog-divider" />
 
-      <h2>Where the Output Goes Next</h2>
+      <h2 id="where-the-output-goes-next">Where the Output Goes Next</h2>
       <p>
         The refinement loop matters because of what sits on the far end of
         it. Claude Design exports to Canva, PDF, PPTX, and standalone HTML,

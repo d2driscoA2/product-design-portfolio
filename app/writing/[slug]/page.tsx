@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getBlogPost, blogPosts, TAG_COLORS } from '@/lib/blog-posts'
+import { getBlogPost, blogPosts, TAG_COLORS, slugifyHeading } from '@/lib/blog-posts'
 import { WritingHero } from '@/components/blog/WritingHero'
 import { PostHero } from '@/components/blog/PostHero'
 import { TerminalHero } from '@/components/blog/TerminalHero'
@@ -220,17 +220,18 @@ export default async function WritingPostPage(
                 <ol className="flex flex-col gap-0.5" role="list">
                   {post.tocEntries.map((item, i) => (
                     <li key={i} role="listitem">
-                      <span
-                        className="flex items-center gap-2 py-1.5 text-small cursor-default"
+                      <a
+                        href={`#${slugifyHeading(item)}`}
+                        className="toc-link flex items-center gap-2 py-1.5 text-small"
                         style={{ color: 'var(--color-text-secondary)' }}
                       >
                         <span
-                          className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                          className="toc-dot w-1.5 h-1.5 rounded-full flex-shrink-0"
                           style={{ background: 'var(--color-border)' }}
                           aria-hidden="true"
                         />
                         {item}
-                      </span>
+                      </a>
                     </li>
                   ))}
                 </ol>

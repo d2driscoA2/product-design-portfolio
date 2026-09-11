@@ -35,7 +35,7 @@ export function MentalModelsCognitiveLoadPost() {
         choose faster. That is the goal.
       </p>
 
-      <h2>The Netflix household</h2>
+      <h2 id="the-netflix-household">The Netflix household</h2>
 
       <p>
         In 2011, I was on the International Expansion team at Netflix during
@@ -118,7 +118,7 @@ export function MentalModelsCognitiveLoadPost() {
         room got there faster.
       </p>
 
-      <h2>The method</h2>
+      <h2 id="the-method">The method</h2>
 
       <p>The method is not complicated. It is just deliberate.</p>
 
@@ -151,7 +151,7 @@ export function MentalModelsCognitiveLoadPost() {
         the gap.
       </p>
 
-      <h2>The Self-Service Portal</h2>
+      <h2 id="the-self-service-portal">The Self-Service Portal</h2>
 
       <p>
         The same pattern showed up at TeleSign with the Self-Service Portal.
@@ -195,7 +195,7 @@ export function MentalModelsCognitiveLoadPost() {
         caption="Mental model: enterprise customers want to provision themselves. Test confirmed: 67-day onboarding became same-day for standard products."
       />
 
-      <h2>What eighteen years of testing has taught me</h2>
+      <h2 id="what-eighteen-years-of-testing-has-taught-me">What eighteen years of testing has taught me</h2>
 
       <p>The mental model leads. The data confirms.</p>
 
