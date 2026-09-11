@@ -52,7 +52,7 @@ export function Logo({ variant = 'full', size = 40, className = '' }: LogoProps)
           </span>
           <span
             className="text-[0.6rem] font-semibold tracking-[0.12em] uppercase mt-0.5"
-            style={{ fontFamily: 'var(--font-sans)', color: isFooter ? 'rgba(255,255,255,0.7)' : 'var(--color-text-muted)' }}
+            style={{ fontFamily: 'var(--font-sans)', color: isFooter ? '#FFFFFF' : 'var(--color-text-muted)' }}
           >
             Strategic Product Design
           </span>

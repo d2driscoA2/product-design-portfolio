@@ -23,17 +23,17 @@ export function Footer() {
           {/* Column 1 — Brand */}
           <div className="flex flex-col gap-3">
             <Logo variant="footer" size={36} />
-            <p className="text-sm mt-2" style={{ color: 'rgba(255,255,255,0.8)' }}>
+            <p className="text-sm mt-2" style={{ color: '#FFFFFF' }}>
               18+ years designing products where mistakes have consequences.
             </p>
-            <p className="text-xs mt-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            <p className="text-xs mt-4" style={{ color: '#FFFFFF' }}>
               © 2026 Danny Driscoll
             </p>
           </div>
 
           {/* Column 2 — Navigation */}
           <div className="flex flex-col gap-2">
-            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: '#FFFFFF' }}>
               Navigation
             </p>
             {NAV_LINKS.map(({ href, label }) => (
@@ -41,7 +41,7 @@ export function Footer() {
                 key={href}
                 href={href}
                 className="text-sm w-fit transition-colors duration-150 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                style={{ color: 'rgba(255,255,255,0.8)' }}
+                style={{ color: '#FFFFFF' }}
               >
                 {label}
               </Link>
@@ -50,26 +50,26 @@ export function Footer() {
 
           {/* Column 3 — Contact */}
           <div className="flex flex-col gap-2">
-            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: '#FFFFFF' }}>
               Contact
             </p>
             <a
               href="mailto:d2drisco@icloud.com"
               className="inline-flex items-center gap-1 text-sm w-fit transition-colors duration-150 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'underline', textUnderlineOffset: '3px', textDecorationThickness: '1px' }}
+              style={{ color: '#FFFFFF', textDecoration: 'underline', textUnderlineOffset: '3px', textDecorationThickness: '1px' }}
             >
               d2drisco@icloud.com
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
             <a
               href="https://linkedin.com/in/dandriscoll"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-sm w-fit transition-colors duration-150 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'underline', textUnderlineOffset: '3px', textDecorationThickness: '1px' }}
+              style={{ color: '#FFFFFF', textDecoration: 'underline', textUnderlineOffset: '3px', textDecorationThickness: '1px' }}
             >
               LinkedIn
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               <span className="sr-only">(opens in new tab)</span>
             </a>
           </div>
