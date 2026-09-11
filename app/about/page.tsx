@@ -49,7 +49,7 @@ function FloatingRings({ className }: { className?: string }) {
 
 export default function AboutPage() {
   return (
-    <main className="about-main min-h-screen transition-colors duration-300">
+    <div className="about-main min-h-screen transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6 py-24">
 
         <div className="mb-16">
@@ -142,6 +142,6 @@ export default function AboutPage() {
         </div>
 
       </div>
-    </main>
+    </div>
   );
 }

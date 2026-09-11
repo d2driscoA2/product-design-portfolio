@@ -157,7 +157,7 @@ export default async function WritingPostPage(
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-12 lg:gap-16 items-start">
 
           {/* Article body */}
-          <main id="main-article" aria-label="Article content">
+          <article id="main-article" aria-label="Article content">
             <PostContent />
 
             {/* ── Post navigation ──────────────────────────────── */}
@@ -199,7 +199,7 @@ export default async function WritingPostPage(
                 )}
               </div>
             </nav>
-          </main>
+          </article>
 
           {/* Sidebar — sticky TOC + author */}
           <aside

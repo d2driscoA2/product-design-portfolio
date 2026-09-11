@@ -326,7 +326,7 @@ export default function ContactPage() {
       <input type="text" name="phoneType" />
       <input type="text" name="phoneCarrier" />
     </form>
-    <main style={{ background: 'var(--color-bg)', minHeight: '100vh', paddingTop: '96px', paddingBottom: '96px', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ background: 'var(--color-bg)', minHeight: '100vh', paddingTop: '96px', paddingBottom: '96px', position: 'relative', overflow: 'hidden' }}>
       {/* Floating bull's-eyes — full page */}
       <svg aria-hidden="true" width="320" height="320" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float pointer-events-none" style={{ position: 'absolute', top: '-60px', right: '-60px', zIndex: 0, animation: 'float-a 9s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#E500A2" /><circle cx="24" cy="24" r="5.5" fill="#FFCB05" /></svg>
       <svg aria-hidden="true" width="200" height="200" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="bullseye-float-alt pointer-events-none" style={{ position: 'absolute', top: '30%', left: '-60px', zIndex: 0, animation: 'float-b 11s ease-in-out infinite' }}><circle cx="24" cy="24" r="24" fill="#4063FB" /><circle cx="24" cy="24" r="17" fill="#FF6F6E" /><circle cx="24" cy="24" r="11" fill="#E500A2" /><circle cx="24" cy="24" r="5.5" fill="#FFCB05" /></svg>
@@ -451,7 +451,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
     </>
   )
 }

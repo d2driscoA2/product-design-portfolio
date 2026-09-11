@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main style={{ background: 'var(--color-bg)', minHeight: '100vh', paddingTop: '96px', paddingBottom: '96px' }}>
+    <div style={{ background: 'var(--color-bg)', minHeight: '100vh', paddingTop: '96px', paddingBottom: '96px' }}>
       <div style={{ maxWidth: '720px', margin: '0 auto', padding: '0 32px' }}>
 
         {/* Eyebrow */}
@@ -102,6 +102,6 @@ export default function PrivacyPage() {
         </div>
 
       </div>
-    </main>
+    </div>
   )
 }

@@ -88,6 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col antialiased">
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Nav />
         <main id="main-content" className="flex-1 pt-16">
           {children}
