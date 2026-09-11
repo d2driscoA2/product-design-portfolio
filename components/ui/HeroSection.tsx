@@ -87,10 +87,12 @@ export function HeroSection() {
                   href="/work"
                   className={[
                     'inline-flex items-center justify-center h-12 px-8 rounded-lg',
-                    'bg-[#FF6F6E] text-white text-small font-bold tracking-wide',
-                    'hover:bg-[#e05a4a] transition-colors duration-150 motion-reduce:transition-none',
-                    'shadow-[0_4px_14px_0_rgb(244_112_96_/_0.30)]',
-                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
+                    'bg-[#FF6F6E] text-[#1A1A1A] text-small font-bold tracking-wide',
+                    'border border-transparent',
+                    'hover:bg-[#1A1A1A] hover:text-[#FF6F6E] hover:border-[#FF6F6E]',
+                    'transition-colors duration-150 motion-reduce:transition-none',
+                    'shadow-[0_4px_14px_0_rgb(255_111_110_/_0.30)]',
+                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent-text)]',
                   ].join(' ')}
                 >
                   View work
@@ -99,9 +101,10 @@ export function HeroSection() {
                   href="/about"
                   className={[
                     'inline-flex items-center justify-center h-12 px-8 rounded-lg',
-                    'border border-[#333333] text-[#9CA3AF] text-small font-bold tracking-wide',
-                    'hover:border-[#555555] hover:text-[#F5F5F5] transition-colors duration-150 motion-reduce:transition-none',
-                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F6E]',
+                    'border border-[#6B6B6B] text-[var(--color-text-primary)] text-small font-bold tracking-wide',
+                    'hover:border-[var(--color-accent-text)] hover:text-[var(--color-accent-text)]',
+                    'transition-colors duration-150 motion-reduce:transition-none',
+                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent-text)]',
                   ].join(' ')}
                 >
                   Read my story
