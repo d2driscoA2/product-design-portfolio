@@ -33,7 +33,7 @@ const stats = [
   { value: '18+',   label: 'Years in product design',       employer: 'TeleSign + Appily.com' },
   { value: '21B+',  label: 'Annual transactions protected', employer: 'AT TeleSign' },
   { value: '47%',   label: 'Application completion rate',   employer: 'AT APPILY.COM' },
-  { value: '67→35', label: 'Days to onboard, enterprise', employer: 'AT TeleSign' },
+  { value: '67→35', label: 'Days to onboard, complex configs', employer: 'AT TeleSign' },
 ];
 
 function FloatingRings({ className }: { className?: string }) {
@@ -71,7 +71,7 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-2 space-y-6 text-lg leading-relaxed">
             <p className="about-body">I grew up in Ann Arbor surrounded by engineers. My father has taught aerospace engineering at the University of Michigan for over 40 years. My grandfathers were engineers. The technical world was never abstract to me. But I watched non-technical family members struggle with the same interfaces those engineers built. That gap is where I work.</p>
-            <p className="about-body">I came to design through Human-Computer Interaction at Western Michigan University after witnessing a student have an epileptic seizure triggered by a flashing pop-up ad. That moment made clear that design has consequences. It is not decoration. From there: four years at Appily.com (formerly Cappex) building the college application platform that reached 47% completion against a 35% industry standard, then five years at TeleSign as Principal Product Designer protecting 21 billion annual transactions and cutting enterprise onboarding from 67 days to 35.</p>
+            <p className="about-body">I came to design through Human-Computer Interaction at Western Michigan University after witnessing a student have an epileptic seizure triggered by a flashing pop-up ad. That moment made clear that design has consequences. It is not decoration. From there: four years at Appily.com (formerly Cappex) building the college application platform that reached 47% completion against a 20–35% industry standard, then five years at TeleSign as Principal Product Designer protecting 21 billion annual transactions and rebuilding enterprise onboarding: same-day access for simpler products, and 67 days down to 35 for complex configurations requiring government approval.</p>
             <p className="about-body">My philosophy is communication before aesthetics. I run A/B tests by statistical significance, not gut feel. I design for the user who is confused, not the user who already knows what to do. I have presented directly to C-suite at Fortune 500 companies and filed bugs on my own shipped work. I am looking for Senior, Principal, or Director roles in enterprise B2B SaaS: security products, developer tools, authentication platforms, or communication systems.</p>
             <p className="about-muted text-base">Spouse and two kids in Ann Arbor. Grew up on computers from age 4. Still plays guitar.</p>
           </div>

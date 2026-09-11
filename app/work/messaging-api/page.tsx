@@ -106,7 +106,7 @@ I would advocate earlier for a developer sandbox environment next time. We shipp
   },
   nextCase: {
     slug: 'universal-college-app',
-    client: 'CAPPEX',
+    client: 'APPILY.COM',
     title: 'Universal College Application',
     accentColor: '#E500A2',
   },

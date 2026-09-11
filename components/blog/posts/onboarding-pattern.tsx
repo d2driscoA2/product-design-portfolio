@@ -40,7 +40,7 @@ export function OnboardingPatternPost() {
         <ul className="blog-callout-list">
           <li><strong>Netflix (2011&ndash;2012):</strong> International expansion onboarding across 7 markets, millions of users, DVD-to-streaming transition</li>
           <li><strong>Appily.com, formerly Cappex (2015&ndash;2018):</strong> College application onboarding, 250K to 1.5M users, 47% completion vs. 20&ndash;35% industry</li>
-          <li><strong>TeleSign (2018&ndash;2023):</strong> Enterprise B2B onboarding, 67-day process reduced to 35 days, 85% self-service rate</li>
+          <li><strong>TeleSign (2018&ndash;2023):</strong> Enterprise B2B onboarding, same-day access for simpler products and 67 days down to 35 for complex configurations, 85% self-service rate</li>
         </ul>
       </div>
 
@@ -176,7 +176,8 @@ export function OnboardingPatternPost() {
         European engineers.
       </p>
       <p>
-        The outcome: 67 days to 35 days. 85% of customers completing onboarding
+        The outcome: same-day access for simpler products, and 67 days down to 35 for the
+        complex configurations that needed government approval. 85% of customers completing onboarding
         without any CS intervention. Daily transaction revenue growing from $500K
         to $2M+ over the same period. The CS team freed to focus on complex
         cases and customer success instead of first-week logistics.
