@@ -103,7 +103,7 @@
   --color-brand-amber:      #FFCB05;
 
   /* Typography scale */
-  --text-display: 4.5rem;                     /* 72px — hero headline      */
+  --text-display: clamp(2.5rem, 12vw, 4.5rem); /* 40px floor, 72px above ~600px */
   --text-display--line-height: 1.05;
   --text-display--letter-spacing: -0.03em;
   --text-display--font-weight: 700;
