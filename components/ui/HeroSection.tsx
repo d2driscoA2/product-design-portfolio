@@ -7,8 +7,8 @@ import Link from 'next/link'
 const HERO_STATS = [
   { company: 'At TeleSign', value: '85%',  label: 'Customers live without CS support', color: '#FF6F6E' },
   { company: 'At TeleSign', value: '48%',  label: 'Faster enterprise onboarding',      color: '#4063FB' },
-  { company: 'At Appily.com', value: '47%',  label: 'Completion vs 20–35% standard',     color: '#F5C200' },
-  { company: 'At Appily.com', value: '600%', label: 'User growth in two years',           color: '#FF00AA' },
+  { company: 'At Appily.com', value: '47%',  label: 'Completion vs 20–35% standard',     color: '#FFCB05' },
+  { company: 'At Appily.com', value: '600%', label: 'User growth in two years',           color: '#E500A2' },
 ] as const
 
 export function HeroSection() {
@@ -40,8 +40,8 @@ export function HeroSection() {
         >
           <circle cx="24" cy="24" r="24" fill="#4063FB" />
           <circle cx="24" cy="24" r="17" fill="#FF6F6E" />
-          <circle cx="24" cy="24" r="11" fill="#FF00AA" />
-          <circle cx="24" cy="24" r="5.5" fill="#F5C200" />
+          <circle cx="24" cy="24" r="11" fill="#E500A2" />
+          <circle cx="24" cy="24" r="5.5" fill="#FFCB05" />
         </svg>
       </div>
 

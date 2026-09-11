@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 
 const STATS = [
   { display: '21B+', numeric: 21,  suffix: 'B+', unit: 'transactions', label: 'Transactions protected annually', color: '#FF6F6E' },
-  { display: '120+', numeric: 120, suffix: '+',  unit: 'countries',    label: 'Countries navigated globally',   color: '#5B9FE8' },
-  { display: '47%',  numeric: 47,  suffix: '%',  unit: 'completion',   label: 'Above industry standard',        color: '#F5C200' },
-  { display: '85%',  numeric: 85,  suffix: '%',  unit: 'self-service', label: 'Customers live without CS',      color: '#FF00AA' },
+  { display: '120+', numeric: 120, suffix: '+',  unit: 'countries',    label: 'Countries navigated globally',   color: '#6DA3F8' },
+  { display: '47%',  numeric: 47,  suffix: '%',  unit: 'completion',   label: 'Above industry standard',        color: '#FFCB05' },
+  { display: '85%',  numeric: 85,  suffix: '%',  unit: 'self-service', label: 'Customers live without CS',      color: '#E500A2' },
 ] as const
 
 function useCountUp(target: number, duration: number, active: boolean) {

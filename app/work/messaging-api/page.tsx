@@ -13,7 +13,7 @@ const data: CaseStudyData = {
   headline: 'Six Channels. One Interface. Implementation Time Cut in Half.',
   role: 'Principal Product Designer',
   timeline: '2021\u20132022',
-  accentColor: '#F5C200',
+  accentColor: '#FFCB05',
   heroImage: '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-channels.png',
   heroImageAlt: 'TeleSign messaging platform showing six unified channels: SMS, WhatsApp, MMS, Viber, RCS, Email',
   overview:
@@ -102,13 +102,13 @@ I would advocate earlier for a developer sandbox environment next time. We shipp
     slug: 'fraud-prevention',
     client: 'TELESIGN',
     title: 'Fraud Prevention Suite',
-    accentColor: '#5B9FE8',
+    accentColor: '#6DA3F8',
   },
   nextCase: {
     slug: 'universal-college-app',
     client: 'CAPPEX',
     title: 'Universal College Application',
-    accentColor: '#FF00AA',
+    accentColor: '#E500A2',
   },
 };
 

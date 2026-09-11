@@ -21,16 +21,16 @@ interface WritingHeroProps {
 const TAG_BG: Record<BlogPost['tagColor'], string> = {
   blue:      'rgba(255,255,255,0.12)',
   coral:     'rgba(255, 111, 110,0.28)',
-  amber:     'rgba(245,194,0,0.22)',
-  magenta:   'rgba(255,0,170,0.22)',
+  amber:     'rgba(255, 203, 5,0.22)',
+  magenta:   'rgba(229, 0, 162,0.22)',
   lightBlue: 'rgba(109,163,248,0.22)',
 }
 
 const TAG_BORDER: Record<BlogPost['tagColor'], string> = {
   blue:      'rgba(255,255,255,0.22)',
   coral:     'rgba(255, 111, 110,0.50)',
-  amber:     'rgba(245,194,0,0.40)',
-  magenta:   'rgba(255,0,170,0.40)',
+  amber:     'rgba(255, 203, 5,0.40)',
+  magenta:   'rgba(229, 0, 162,0.40)',
   lightBlue: 'rgba(109,163,248,0.40)',
 }
 
@@ -71,8 +71,8 @@ export function WritingHero({ post }: WritingHeroProps) {
       >
         <circle cx="26" cy="26" r="24" fill="#4063FB" />
         <circle cx="26" cy="26" r="17" fill="#FF6F6E" />
-        <circle cx="26" cy="26" r="11" fill="#FF00AA" />
-        <circle cx="26" cy="26" r="5.5" fill="#F5C200" />
+        <circle cx="26" cy="26" r="11" fill="#E500A2" />
+        <circle cx="26" cy="26" r="5.5" fill="#FFCB05" />
       </svg>
 
       {/* ── heroImage — right portion, same gradient composition ── */}

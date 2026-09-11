@@ -29,15 +29,15 @@ export function Logo({ variant = 'full', size = 40, className = '' }: LogoProps)
           <>
             <circle cx="26" cy="26" r="24" fill="#4063FB" stroke="white" strokeWidth="2" />
             <circle cx="26" cy="26" r="17" fill="#FF6F6E" />
-            <circle cx="26" cy="26" r="11" fill="#FF00AA" />
-            <circle cx="26" cy="26" r="5.5" fill="#F5C200" />
+            <circle cx="26" cy="26" r="11" fill="#E500A2" />
+            <circle cx="26" cy="26" r="5.5" fill="#FFCB05" />
           </>
         ) : (
           <>
             <circle cx="26" cy="26" r="24" fill="#4063FB" stroke="white" strokeWidth="2" />
             <circle cx="26" cy="26" r="17" fill="#FF6F6E" />
-            <circle cx="26" cy="26" r="11" fill="#FF00AA" />
-            <circle cx="26" cy="26" r="5.5" fill="#F5C200" />
+            <circle cx="26" cy="26" r="11" fill="#E500A2" />
+            <circle cx="26" cy="26" r="5.5" fill="#FFCB05" />
           </>
         )}
       </svg>
@@ -48,7 +48,7 @@ export function Logo({ variant = 'full', size = 40, className = '' }: LogoProps)
             className="text-[1.05rem] font-bold tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: isFooter ? '#FFFFFF' : 'var(--color-text-primary)' }}
           >
-            Displayed<span style={{ color: isFooter ? '#F5C200' : '#FF6F6E' }}>UX</span>
+            Displayed<span style={{ color: isFooter ? '#FFCB05' : '#FF6F6E' }}>UX</span>
           </span>
           <span
             className="text-[0.6rem] font-semibold tracking-[0.12em] uppercase mt-0.5"

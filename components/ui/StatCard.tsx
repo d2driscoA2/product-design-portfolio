@@ -29,9 +29,9 @@ const LABEL_MUTED: Record<NonNullable<StatCardData['variant']>, string> = {
 
 const ACCENT_HEX: Record<NonNullable<StatCardData['accent']>, string> = {
   coral:         '#FF6F6E',
-  amber:         '#F5C200',
-  magenta:       '#FF00AA',
-  'blue-light':  '#5B9FE8',
+  amber:         '#FFCB05',
+  magenta:       '#E500A2',
+  'blue-light':  '#6DA3F8',
   none:          'transparent',
 }
 

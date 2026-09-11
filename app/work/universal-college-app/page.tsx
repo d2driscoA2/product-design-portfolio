@@ -13,7 +13,7 @@ const data: CaseStudyData = {
   headline: 'One Essay, Every College. A 47% Completion Rate in an Industry That Averages 35%.',
   role: 'Lead Product Designer',
   timeline: '4 years · 2015–2018',
-  accentColor: '#FF00AA',
+  accentColor: '#E500A2',
   heroImage: '/images/4-universal-college-application/hero/Prototype-Sample.png',
   heroImageAlt: 'Appily.com Universal College Application — design prototype flow showing the complete user journey across mobile screens',
   heroImagePosition: 'center center',
@@ -131,7 +131,7 @@ Institutional buy-in is a design problem. Getting 200 universities to accept a u
     slug: 'messaging-api',
     client: 'TELESIGN',
     title: 'Messaging API Platform',
-    accentColor: '#F5C200',
+    accentColor: '#FFCB05',
   },
   nextCase: {
     slug: 'self-service-portal',

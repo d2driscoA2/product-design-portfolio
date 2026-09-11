@@ -164,7 +164,7 @@ export const caseStudies: CaseStudy[] = [
     outcomeSummary:
       'Unified SMS, RCS, WhatsApp, Viber, MMS, and Email into a single interface, reducing customer implementation time 50% and achieving 22.2% CTR on RCS versus 3% for traditional SMS.',
     impactLabel: '22.2% higher CTR',
-    accentHex: '#F5C200', /* amber */
+    accentHex: '#FFCB05', /* amber */
     thumbnailImage: '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-template-builder.png',
 
     bento: [
@@ -227,7 +227,7 @@ export const caseStudies: CaseStudy[] = [
     outcomeSummary:
       'Designed the world\'s only user-friendly multi-college application platform at Appily.com (formerly Cappex), achieving 47% completion against a 20–35% industry standard and scaling from 250K to 1.5M users.',
     impactLabel: '47% completion rate',
-    accentHex: '#FF00AA', /* magenta */
+    accentHex: '#E500A2', /* magenta */
     thumbnailImage: '/images/4-universal-college-application/hero/Prototype-Sample.png',
 
     bento: [

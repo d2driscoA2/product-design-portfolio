@@ -11,7 +11,7 @@
 
   --color-text-primary:   #1A1A1A;
   --color-text-secondary: #606060;
-  --color-text-muted:     #9CA3AF;
+  --color-text-muted:     #6B6B6B;
 
   --color-border: #E5E7EB;
   --color-card-number: #D1D5DB;
@@ -92,15 +92,15 @@
   --font-sans:    var(--font-inter);
 
   /* Brand colors */
-  --color-brand-charcoal:   #606060;
-  --color-brand-blue-light: #5B9FE8;
+  --color-brand-charcoal:   #6B6B6B;
+  --color-brand-blue-light: #6DA3F8;
   --color-brand-blue-royal: #4063FB;
-  --color-brand-tan:        #D4BC8A;
-  --color-brand-magenta:    #FF00AA;
-  --color-brand-offwhite:   #F2F2F2;
+  --color-brand-tan:        #E6D492;
+  --color-brand-magenta:    #E500A2;
+  --color-brand-offwhite:   #F5F5F5;
   --color-brand-coral:      #FF6F6E;
-  --color-brand-pink:       #E0006E;
-  --color-brand-amber:      #F5C200;
+  --color-brand-pink:       #FF3094;
+  --color-brand-amber:      #FFCB05;
 
   /* Typography scale */
   --text-display: 4.5rem;                     /* 72px — hero headline      */

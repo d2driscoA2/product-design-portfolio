@@ -122,7 +122,7 @@ Constraint as design tool. A limited story-point budget forced every feature dec
     slug: 'fraud-prevention',
     client: 'TELESIGN',
     title: 'Fraud Prevention Suite',
-    accentColor: '#5B9FE8',
+    accentColor: '#6DA3F8',
   },
 };
 

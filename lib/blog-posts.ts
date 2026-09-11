@@ -197,7 +197,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Netflix. Appily.com. TeleSign. Three different products, three different user groups, the same root cause every time.',
     stats: [
-      { value: '3',      label: 'Companies, same problem',  accentHex: '#F5C200' },
+      { value: '3',      label: 'Companies, same problem',  accentHex: '#FFCB05' },
       { value: '67→35',  label: 'Days — TeleSign onboarding' },
       { value: '47%',    label: 'Completion — Appily.com',   accentHex: '#FF6F6E' },
       { value: '7',      label: 'Markets — Netflix XP' },
@@ -294,8 +294,8 @@ export function getBlogPostOrThrow(slug: string): BlogPost {
 export const TAG_COLORS: Record<BlogPost['tagColor'], { bg: string; text: string; border: string }> = {
   blue:    { bg: 'rgba(64, 99, 251,0.10)',  text: '#4063FB', border: 'rgba(64, 99, 251,0.25)' },
   coral:   { bg: 'rgba(255, 111, 110,0.10)', text: '#C8402E', border: 'rgba(255, 111, 110,0.28)' },
-  amber:   { bg: 'rgba(245,194,0,0.12)',  text: '#8A6A00', border: 'rgba(245,194,0,0.28)' },
-  magenta:   { bg: 'rgba(255,0,170,0.10)',  text: '#CC0088', border: 'rgba(255,0,170,0.25)' },
+  amber:   { bg: 'rgba(255, 203, 5,0.12)',  text: '#8A6A00', border: 'rgba(255, 203, 5,0.28)' },
+  magenta:   { bg: 'rgba(229, 0, 162,0.10)',  text: '#CC0088', border: 'rgba(229, 0, 162,0.25)' },
   lightBlue: { bg: 'rgba(109,163,248,0.10)', text: '#2D6AC6', border: 'rgba(109,163,248,0.25)' },
 }
 
@@ -303,7 +303,7 @@ export const TAG_COLORS: Record<BlogPost['tagColor'], { bg: string; text: string
 export const TAG_COLORS_DARK: Record<BlogPost['tagColor'], { bg: string; text: string; border: string }> = {
   blue:    { bg: 'rgba(64, 99, 251,0.22)',  text: '#7B9BFF', border: 'rgba(64, 99, 251,0.40)' },
   coral:   { bg: 'rgba(255, 111, 110,0.18)', text: '#FF6F6E', border: 'rgba(255, 111, 110,0.35)' },
-  amber:   { bg: 'rgba(245,194,0,0.15)',  text: '#F5C200', border: 'rgba(245,194,0,0.30)' },
-  magenta:   { bg: 'rgba(255,0,170,0.18)',  text: '#FF44CC', border: 'rgba(255,0,170,0.35)' },
+  amber:   { bg: 'rgba(255, 203, 5,0.15)',  text: '#FFCB05', border: 'rgba(255, 203, 5,0.30)' },
+  magenta:   { bg: 'rgba(229, 0, 162,0.18)',  text: '#FF44CC', border: 'rgba(229, 0, 162,0.35)' },
   lightBlue: { bg: 'rgba(109,163,248,0.20)', text: '#8EB6F0', border: 'rgba(109,163,248,0.38)' },
 }

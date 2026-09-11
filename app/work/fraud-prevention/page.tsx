@@ -13,7 +13,7 @@ const data: CaseStudyData = {
   headline: 'Designing for the Adversary: Making ML-Powered Fraud Prevention Usable for Analysts Making Split-Second Decisions',
   role: 'Principal Product Designer',
   timeline: '2019\u20132021',
-  accentColor: '#5B9FE8',
+  accentColor: '#6DA3F8',
   heroImage: '/images/2-fraud-prevention-suite/hero/fraud-hero-dashboard.png',
   heroImageAlt: 'TeleSign fraud prevention dashboard',
   heroImagePosition: '0% 60%',
@@ -96,7 +96,7 @@ If I were doing this again, I would instrument analyst override rates from day o
     slug: 'messaging-api',
     client: 'TELESIGN',
     title: 'Messaging API Platform',
-    accentColor: '#F5C200',
+    accentColor: '#FFCB05',
   },
 };
 
