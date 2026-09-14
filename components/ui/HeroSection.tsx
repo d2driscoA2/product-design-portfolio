@@ -148,7 +148,7 @@ export function HeroSection() {
             >
               <Image
                 src="/images/headshots/headshot-dark.png"
-                alt=""
+                alt="Danny Driscoll, Principal Product Designer"
                 fill
                 className="object-cover"
                 style={{ objectFit: 'cover', objectPosition: 'center top', transform: 'scale(1.35)', transformOrigin: 'center center', filter: 'saturate(0.85)' }}

@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
     tag:            'Case Study',
     tagColor:       'coral',
     thumbnailImage: '/blog/images/superstrike/attract-screen.png',
-    thumbnailAlt:   'The live Superstrike Challenge kiosk attract screen: the SUPERSTRIKE CHALLENGE title, a CLICK TO PLAY prompt, and the click meter measured against the pro benchmark.',
+    thumbnailAlt:   'Superstrike Challenge kiosk attract screen, royal blue with the coral case study pill',
     heroImage:      '/blog/images/superstrike/attract-screen.png',
     heroImageAlt:   'The live Superstrike Challenge kiosk attract screen: the SUPERSTRIKE CHALLENGE title, a CLICK TO PLAY prompt, and the click meter measured against the pro benchmark.',
     excerpt:
@@ -99,7 +99,7 @@ export const blogPosts: BlogPost[] = [
     tag:            'Technical',
     tagColor:       'lightBlue',
     thumbnailImage: '/blog/terminal-hero-thumb.png',
-    thumbnailAlt:   'Claude Code terminal showing MCP server connections and live word count — the actual build environment used to create displayedux.com',
+    thumbnailAlt:   'Terminal window showing the git commit history of displayedux.com',
     heroImage:      '/blog/blog-hero-homepage-live.png',
     heroImageAlt:   'displayedux.com homepage — the finished portfolio site built entirely with Claude Code',
     excerpt:
@@ -136,7 +136,7 @@ export const blogPosts: BlogPost[] = [
     tag:            'Process',
     tagColor:       'blue',
     thumbnailImage: '/blog/images/hero-claude-design-channels.png',
-    thumbnailAlt:   'Four mixing board faders labeled talk, point, type, and turn, representing the four Claude Design input channels',
+    thumbnailAlt:   'Four input channel icons: chat, comment pin, text cursor, slider',
     heroImage:      '/blog/images/hero-claude-design-channels.png',
     heroImageAlt:   'Four mixing board faders labeled talk, point, type, and turn, representing the four Claude Design input channels',
     excerpt:
@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
     tag:            'Process',
     tagColor:       'blue',
     thumbnailImage: '/images/writing/mental-models-cognitive-load/hero-mental-models.svg',
-    thumbnailAlt:   'Three-stage diagram: mental model, A/B test confirmation, simplified UI.',
+    thumbnailAlt:   'Netflix household feed diagram, shuffled rows for four viewers',
     heroImage:      '/images/writing/mental-models-cognitive-load/hero-mental-models.svg',
     heroImageAlt:   'Three-stage diagram: mental model, A/B test confirmation, simplified UI.',
     excerpt:
@@ -222,7 +222,7 @@ export const blogPosts: BlogPost[] = [
     tag:            'Pattern',
     tagColor:       'amber',
     thumbnailImage: '/blog/legacy-portal-before.png',
-    thumbnailAlt:   'The legacy TeleSign customer portal in 2018 — the before state that drove the self-service portal redesign',
+    thumbnailAlt:   'Three onboarding flows side by side: Netflix, Appily.com, TeleSign',
     heroImage:      '/blog/legacy-portal-before.png',
     heroImageAlt:   'The legacy TeleSign customer portal in 2018, the before state that drove the self-service portal redesign',
     excerpt:
@@ -253,7 +253,7 @@ export const blogPosts: BlogPost[] = [
     tag:            'Case Study',
     tagColor:       'coral',
     thumbnailImage: '/blog/fraud-prevention-case-study.png',
-    thumbnailAlt:   'TeleSign Fraud Prevention Suite case study page on displayedux.com',
+    thumbnailAlt:   'Fraud analyst risk score breakdown, 0 to 1,000 scale',
     heroImage:      '/blog/fraud-prevention-case-study.png',
     heroImageAlt:   'TeleSign Fraud Prevention Suite case study page on displayedux.com',
     excerpt:
@@ -284,7 +284,7 @@ export const blogPosts: BlogPost[] = [
     tag:            'Reflection',
     tagColor:       'magenta',
     thumbnailImage: '/blog/images/post5-cappex-in-progress.png',
-    thumbnailAlt:   'Cappex college application dashboard showing mixed completion states — warnings, missing info, ready to submit, and already submitted',
+    thumbnailAlt:   'Appily.com application dashboard at full completion',
     heroImage:      '/blog/images/post5-cappex-in-progress.png',
     heroImageAlt:   'Appily.com (formerly Cappex) college application dashboard showing mixed completion states, warnings, missing info, ready to submit, and already submitted',
     excerpt:

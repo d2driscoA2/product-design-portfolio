@@ -86,7 +86,7 @@ export function WritingCardThumb({ post, variant = 'card' }: WritingCardThumbPro
         }}>
           <Image
             src={post.thumbnailImage}
-            alt=""
+            alt={post.thumbnailAlt ?? ''}
             fill
             style={{ objectFit: 'cover', objectPosition: 'top left' }}
             sizes="(max-width: 768px) 70vw, 40vw"
