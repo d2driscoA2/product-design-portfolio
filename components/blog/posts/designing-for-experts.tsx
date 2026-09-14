@@ -76,9 +76,8 @@ export function DesigningForExpertsPost() {
 
       <h2 id="the-design-problem-stated-precisely">The Design Problem, Stated Precisely</h2>
       <p>
-        I needed to build an interface that let an expert fraud analyst process
-        a case, understand the machine&rsquo;s reasoning, make a confident decision,
-        and move to the next case. The speed constraint was real: analysts were
+        The interface had one job: let an expert open a case, read the reasoning,
+        decide, and move on. The speed constraint was real: analysts were
         processing hundreds of cases per day. Two to three minutes per case was
         the pre-interface benchmark. The target was 30 seconds.
       </p>

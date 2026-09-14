@@ -64,7 +64,7 @@ Compliance was embedded into template creation, not bolted on afterward. Regulat
     {
       type: 'iteration',
       heading: 'Real-time preview was technically the hardest part. It was also the most important.',
-      body: `The initial template builder required JSON knowledge. Marketing teams could not use it. I built a drag-and-drop visual builder that auto-generated the JSON in the background.
+      body: `The initial template builder required JSON knowledge. Marketing teams could not use it. I designed a drag-and-drop builder. Engineering generated the JSON behind it.
 
 Compliance warnings appeared after template creation in the first version, forcing teams to rebuild from scratch. I moved compliance validation inline, flagging issues during creation, not after. A financial services client gave the most useful feedback: "We need to know exactly why a message failed. Was it a carrier issue, a compliance block, or a user opt-out?" I redesigned the delivery status interface with detailed failure categorization covering ten distinct failure types.
 

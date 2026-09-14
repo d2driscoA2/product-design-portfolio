@@ -24,7 +24,7 @@ export function ClaudeCodePortfolioPost() {
         <ul className="blog-callout-list">
           <li><strong>47</strong> git commits across 10 focused build sessions</li>
           <li><strong>9 pages</strong> built: homepage, 4 case studies, work index, about, contact, photography, privacy policy</li>
-          <li><strong>12</strong> custom React components authored from scratch</li>
+          <li><strong>12</strong> custom React components, all written by Claude Code</li>
           <li><strong>624</strong> source files in the final build</li>
           <li><strong>~100,000</strong> lines of TypeScript, TSX, and CSS</li>
           <li><strong>771</strong> media assets organized into the public directory</li>
@@ -392,8 +392,8 @@ export function ClaudeCodePortfolioPost() {
           Project initialized from scratch. Next.js App Router, TypeScript,
           Tailwind CSS v4, Netlify config. Design system established: color
           palette, typography scale, CSS custom properties for light and dark
-          mode. Nav, Footer, and ThemeToggle components built. Homepage hero
-          section complete with bull&rsquo;s-eye animation.
+          mode. Claude Code wrote the Nav, Footer, and ThemeToggle components.
+          Homepage hero complete with the bull&rsquo;s-eye animation.
         </p>
       </div>
 

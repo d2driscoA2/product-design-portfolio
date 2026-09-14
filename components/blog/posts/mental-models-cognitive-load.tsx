@@ -39,9 +39,9 @@ export function MentalModelsCognitiveLoadPost() {
 
       <p>
         In 2011, I was on the International Expansion team at Netflix during
-        the DVD-to-streaming transition. We were building Netflix XP, the
-        experimentation platform that would become foundational to the
-        company&rsquo;s design culture.
+        the DVD-to-streaming transition. We were rolling out Netflix XP, the
+        experimentation platform that shaped the company&rsquo;s design
+        culture.
       </p>
 
       <p>

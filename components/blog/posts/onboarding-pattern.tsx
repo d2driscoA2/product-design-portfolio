@@ -57,9 +57,8 @@ export function OnboardingPatternPost() {
       <p>
         My role was in the experimentation platform, Netflix XP, during the
         expansion into 7 international markets. The foundational work was not
-        redesigning the onboarding flow. It was building the infrastructure to
-        test which version of the onboarding flow worked for which user in which
-        market.
+        redesigning the onboarding flow. It was rolling out the platform that
+        let us test which flow worked for which user in which market.
       </p>
       <p>
         The lesson I took from Netflix: the right onboarding flow is not a

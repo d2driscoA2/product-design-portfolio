@@ -27,9 +27,9 @@ export default function WorkPage() {
             Four case studies.
           </h1>
           <p className="text-lead text-brand-charcoal/70 leading-relaxed">
-            Each starts with the business problem, because that&rsquo;s where
-            design actually begins. Eighteen years of building products where
-            mistakes have consequences.
+            Each starts with the business problem, because that is where design
+            begins. Eighteen years designing products where mistakes have
+            consequences.
           </p>
         </header>
 
