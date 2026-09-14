@@ -65,10 +65,10 @@ export const blogPosts: BlogPost[] = [
     readTime:       9,
     tag:            'Case Study',
     tagColor:       'coral',
-    thumbnailImage: '/blog/images/superstrike/hero-superstrike.png',
-    thumbnailAlt:   'Hero card for the Superstrike Challenge case study: a royal blue panel with a CASE STUDY pill and the stat 5 working days inside a 15 day window, beside the kiosk attract screen reading SUPERSTRIKE CHALLENGE, CLICK TO PLAY.',
-    heroImage:      '/blog/images/superstrike/hero-superstrike.png',
-    heroImageAlt:   'The Superstrike Challenge kiosk attract screen framed in the DisplayedUX writing card system.',
+    thumbnailImage: '/blog/images/superstrike/attract-screen.png',
+    thumbnailAlt:   'The live Superstrike Challenge kiosk attract screen: the SUPERSTRIKE CHALLENGE title, a CLICK TO PLAY prompt, and the click meter measured against the pro benchmark.',
+    heroImage:      '/blog/images/superstrike/attract-screen.png',
+    heroImageAlt:   'The live Superstrike Challenge kiosk attract screen: the SUPERSTRIKE CHALLENGE title, a CLICK TO PLAY prompt, and the click meter measured against the pro benchmark.',
     excerpt:
       'A gamified click speed kiosk for Logitech G, designed and shipped in five working days, inside a fifteen day window, for Kamp Grizzly. The client killed the first direction in one sentence, a playtest bug became the celebration screen, and the whole thing ships as one HTML file.',
     stats: [
