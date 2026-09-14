@@ -242,14 +242,13 @@ export function ClaudeCodePortfolioPost() {
       <p>The four case studies published:</p>
       <ol className="blog-ordered-list">
         <li>
-          <strong>TeleSign Self-Service Customer Portal</strong> — B2B SaaS
-          redesign that cut onboarding from 67 to 35 days (48% reduction),
-          scaling to 21B+ annual transactions
+          <strong>TeleSign Self-Service Customer Portal</strong>. Onboarding
+          went same-day for simpler products and from 67 to 35 days for
+          regulated ones.
         </li>
         <li>
-          <strong>Fraud Prevention Suite (TeleSign)</strong> — Fraud tooling
-          for 5B+ phone number verifications per month and $500K to $2M+ daily
-          revenue flows
+          <strong>Fraud Prevention Suite (TeleSign)</strong>. Analyst tooling
+          for 5B+ phone numbers a month and 21B+ annual transactions.
         </li>
         <li>
           <strong>Messaging API Platform (TeleSign)</strong> — Unified 6
@@ -257,9 +256,9 @@ export function ClaudeCodePortfolioPost() {
           into one interface
         </li>
         <li>
-          <strong>Universal College Application (Appily.com)</strong> —
-          47% completion rate vs. 20 to 35% industry average, scaled from
-          250K to 1.5M users
+          <strong>Universal College Application (Appily.com)</strong>. 47%
+          completion against a 20 to 35% industry standard. 250K to 1.5M
+          users.
         </li>
       </ol>
       <p>

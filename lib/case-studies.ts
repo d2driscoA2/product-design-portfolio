@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
     role:          'Principal Product Designer',
     headline:      'Enterprise Onboarding Redesign: 67 Days to 35',
     outcomeSummary:
-      'Designed a self-service portal that cut enterprise onboarding from 67 to 35 days, enabled 85% of customers to go live without CS intervention, and opened TeleSign to the SMB market.',
+      'Designed a self-service portal. Simpler products went live same-day. Regulated configurations dropped from 67 days to 35. 85% of customers onboarded without CS, and TeleSign opened to the SMB market.',
     impactLabel: '48% faster onboarding',
     accentHex: '#FF6F6E', /* coral */
     thumbnailImage: '/images/1-self-service-customer-portal/hero/portal-hero-home.png',

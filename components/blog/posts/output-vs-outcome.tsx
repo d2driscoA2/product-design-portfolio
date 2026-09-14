@@ -157,9 +157,9 @@ export function OutputVsOutcomePost() {
         This taught me that outcome at scale is almost never visible to the
         user. The outcome of the fraud prevention interface is that millions of
         legitimate users were approved instantly without knowing they were being
-        evaluated. The outcome of the self-service portal is that Fortune 500
-        engineering teams went live in 35 days instead of 67, without knowing
-        that 67 days was ever the baseline.
+        evaluated. The outcome of the self-service portal: Fortune 500 teams went
+        live in 35 days instead of 67, and same-day for simpler products.
+        They never knew 67 was the baseline.
       </p>
       <p>
         Good infrastructure is invisible. Good design at scale is the same way.

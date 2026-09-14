@@ -3,7 +3,7 @@ import CaseStudyTemplate, { CaseStudyData } from '@/components/ui/CaseStudyTempl
 
 export const metadata: Metadata = {
   title: 'Self-Service Portal | Danny Driscoll',
-  description: 'How I cut enterprise onboarding from 67 days to same-day access by replacing a CS-dependent process with a self-service portal.',
+  description: 'A self-service portal took TeleSign onboarding from 67 days to 35 for regulated flows, and to same-day for the rest.',
 };
 
 const data: CaseStudyData = {
