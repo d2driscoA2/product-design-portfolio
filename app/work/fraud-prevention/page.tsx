@@ -34,7 +34,7 @@ const data: CaseStudyData = {
       quote: '"I need to understand why the system flagged this user, not only that it did."',
       body: `TeleSign's Intelligence product analyzed over 1,000 configurable data points to return real-time risk scores on a 0\u20131000 scale. The product was technically sophisticated. The problem was that the interface for configuring and acting on it was built for engineers, not for the fraud analysts who needed to use it under pressure, in real time, during active attack events.
 
-I interviewed fraud analysts across financial services, gaming, and e-commerce clients. Their core frustration was consistent: the system would flag a user, but the analyst could not understand why. They had to block a real customer or allow a fraudster, with too little information to act confidently.
+I interviewed fraud analysts across financial services, gaming, and e-commerce clients. Their core frustration was consistent: the system would flag a user, but the analyst had no way to see why. They had to block a real customer or allow a fraudster, with too little information to act confidently.
 
 The risk model was not wrong. Analysts could not see its reasoning. The design problem was transparency.`,
       image: '/images/2-fraud-prevention-suite/images-for-case-study/before-redesign/telemaster-monthly-risk-report.png',

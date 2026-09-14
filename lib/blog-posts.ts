@@ -113,18 +113,16 @@ export const blogPosts: BlogPost[] = [
     tocEntries: [
       'The Numbers First',
       'How These Numbers Compare',
-      'Where My Numbers Actually Land',
-      'Two Things I Did That Were Actually Advanced',
-      'What I Actually Built',
-      'The Tools: What Claude Code Is and How It Actually Works',
+      'Where My Numbers Land',
+      'Two Things I Did That Were Advanced',
+      'What I Built',
+      'The Tools: What Claude Code Is and How It Works',
       'Claude Code vs. Claude Desktop',
       'Session Log',
       'What Broke (The Full Honest List)',
       'The Security Layer',
       'Raw Stats Summary',
-      "What This Means If You're a Designer",
       'The Playbook',
-      "What's Next",
     ],
   },
 
@@ -289,7 +287,7 @@ export const blogPosts: BlogPost[] = [
     thumbnailImage: '/blog/images/post5-cappex-in-progress.png',
     thumbnailAlt:   'Cappex college application dashboard showing mixed completion states — warnings, missing info, ready to submit, and already submitted',
     heroImage:      '/blog/images/post5-cappex-in-progress.png',
-    heroImageAlt:   'Cappex college application dashboard showing mixed completion states, warnings, missing info, ready to submit, and already submitted',
+    heroImageAlt:   'Appily.com (formerly Cappex) college application dashboard showing mixed completion states, warnings, missing info, ready to submit, and already submitted',
     excerpt:
       'Early in my career I measured my effectiveness by what I shipped. It took years to understand why that was the wrong metric.',
     stats: [

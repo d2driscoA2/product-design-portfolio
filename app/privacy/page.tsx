@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           },
           {
             heading: 'Why we collect it',
-            body: 'We collect this information solely to respond to project and employment inquiries. We do not use it for marketing, and we do not sell it to third parties.',
+            body: 'We collect this information only to respond to project and employment requests. We do not use it for marketing, and we do not sell it to third parties.',
           },
           {
             heading: 'Third-party services',

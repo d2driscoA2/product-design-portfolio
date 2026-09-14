@@ -139,9 +139,8 @@ export function DesigningForExpertsPost() {
         made the decision without going deeper.
       </p>
       <p>
-        This is progressive disclosure in expert context: not hiding complexity
-        from someone who cannot handle it, but surfacing complexity on demand
-        for someone who knows exactly what they are looking for.
+        This is progressive disclosure for experts. The complexity stays one
+        click away for someone who knows what they are looking for.
       </p>
 
       <BlogImage
@@ -252,16 +251,10 @@ export function DesigningForExpertsPost() {
       <div className="blog-author-bio">
         <p>
           <em>
-            Danny Driscoll is a product designer with 18+ years of experience
-            across enterprise SaaS, consumer mobile, and developer tools.
-            Currently open to Senior / Principal / Director Product Design roles
-            in enterprise B2B. Based in Ann Arbor, Michigan.{' '}
-            <a
-              href="https://displayedux.com"
-              style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
-            >
-              displayedux.com
-            </a>
+            Danny Driscoll is a Principal Product Designer with 18 years in
+            enterprise SaaS, fraud prevention, and identity verification.
+            TeleSign, Netflix, Appily.com. Open to Senior, Principal, and
+            Director roles. Ann Arbor, Michigan.
           </em>
         </p>
       </div>

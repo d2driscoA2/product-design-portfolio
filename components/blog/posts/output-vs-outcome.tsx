@@ -18,13 +18,12 @@ export function OutputVsOutcomePost() {
         They felt like the right ones.
       </p>
       <p>
-        I was wrong. Not entirely wrong. Craft matters. Execution matters.
-        But I was measuring the work, not the impact of the work. And those
-        are different things in ways that took me years to fully understand.
+        I was wrong. Execution matters, but I was measuring the work, not what
+        it changed. And those are different things in ways that took me years
+        to fully understand.
       </p>
       <p>
-        Here is what I mean, and why I think this confusion is more common
-        than the design industry acknowledges.
+        Here is what I mean.
       </p>
 
       <BlogHeroImage
@@ -56,7 +55,7 @@ export function OutputVsOutcomePost() {
         explicit job to track.
       </p>
       <p>
-        This is how you end up with beautiful work that does not move the needle.
+        This is how you end up with beautiful work that changed nothing.
       </p>
 
       <hr className="blog-divider" />
@@ -128,11 +127,9 @@ export function OutputVsOutcomePost() {
         variant="inset"
       />
       <p>
-        When you design without measurement, you are navigating without a map.
-        You can build something that looks right and works reasonably well.
-        You cannot know whether it is as good as it could be, because you
-        have no feedback loop telling you what &ldquo;good&rdquo; means in practice for
-        your specific users.
+        Design without measurement and you ship something that looks right and
+        works well enough. You never learn whether it is as good as it should
+        be.
       </p>
 
       <hr className="blog-divider" />
@@ -243,16 +240,10 @@ export function OutputVsOutcomePost() {
       <div className="blog-author-bio">
         <p>
           <em>
-            Danny Driscoll is a product designer with 18+ years of experience
-            across enterprise SaaS, consumer mobile, and developer tools.
-            Currently open to Senior / Principal / Director Product Design roles
-            in enterprise B2B. Based in Ann Arbor, Michigan.{' '}
-            <a
-              href="https://displayedux.com"
-              style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
-            >
-              displayedux.com
-            </a>
+            Danny Driscoll is a Principal Product Designer with 18 years in
+            enterprise SaaS, fraud prevention, and identity verification.
+            TeleSign, Netflix, Appily.com. Open to Senior, Principal, and
+            Director roles. Ann Arbor, Michigan.
           </em>
         </p>
       </div>

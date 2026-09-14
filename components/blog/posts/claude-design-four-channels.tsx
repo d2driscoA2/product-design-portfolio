@@ -223,16 +223,10 @@ export function ClaudeDesignFourChannelsPost() {
       <div className="blog-author-bio">
         <p>
           <em>
-            Danny Driscoll is a product designer with 18+ years of experience
-            across enterprise SaaS, consumer mobile, and developer tools.
-            Currently open to Senior / Principal / Director Product Design roles
-            in enterprise B2B. Based in Ann Arbor, Michigan.{' '}
-            <a
-              href="https://displayedux.com"
-              style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
-            >
-              displayedux.com
-            </a>
+            Danny Driscoll is a Principal Product Designer with 18 years in
+            enterprise SaaS, fraud prevention, and identity verification.
+            TeleSign, Netflix, Appily.com. Open to Senior, Principal, and
+            Director roles. Ann Arbor, Michigan.
           </em>
         </p>
       </div>

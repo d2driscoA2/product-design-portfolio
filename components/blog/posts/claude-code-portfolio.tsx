@@ -1,5 +1,4 @@
 import { BlogImage } from '@/components/blog/BlogImage'
-import { Avatar } from '@/components/blog/Avatar'
 
 /* ─────────────────────────────────────────────────────────────────
    Blog post: "I Used Claude Code to Build My Entire UX Portfolio. Here Are the Actual Numbers."
@@ -54,7 +53,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <p>
-        Those are the raw numbers. Here is what they actually mean when you put
+        Those are the raw numbers. Here is what they mean when you put
         them next to the people who use this tool professionally, full-time,
         at the highest level.
       </p>
@@ -111,7 +110,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: Where I Sit ─────────────────────────────────── */}
-      <h2 id="where-my-numbers-actually-land">Where My Numbers Actually Land</h2>
+      <h2 id="where-my-numbers-land">Where My Numbers Land</h2>
       <p>
         Against those benchmarks, here is an honest read of my output.
       </p>
@@ -174,17 +173,17 @@ export function ClaudeCodePortfolioPost() {
           <li>Lines of code: strong, comparable to a production SaaS build at this scope</li>
           <li>Token consumption: conservative, reflects hands-on oversight not passivity</li>
           <li>Leverage ratio: 7 to 12x, top quartile, below the 20 to 30x ceiling</li>
-          <li>Workflow patterns (parallel worktrees, HANDOFF.md, MCP stack): genuinely advanced</li>
+          <li>Workflow patterns (parallel worktrees, HANDOFF.md, MCP stack): advanced</li>
         </ul>
       </div>
 
       <hr className="blog-divider" />
 
-      {/* ── Section: Two Things I Did That Were Actually Advanced ── */}
-      <h2 id="two-things-i-did-that-were-actually-advanced">Two Things I Did That Were Actually Advanced</h2>
+      {/* ── Section: Two Things I Did That Were Advanced ── */}
+      <h2 id="two-things-i-did-that-were-advanced">Two Things I Did That Were Advanced</h2>
       <p>
         Most analysis of my numbers focuses on what I did less of than power
-        users. Two patterns in my workflow stand out as genuinely sophisticated,
+        users. Two patterns in my workflow stand out as sophisticated,
         independent of volume.
       </p>
 
@@ -231,7 +230,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: What I Actually Built ──────────────────────── */}
-      <h2 id="what-i-actually-built">What I Actually Built</h2>
+      <h2 id="what-i-built">What I Built</h2>
       <p>
         displayedux.com is a production portfolio site for 18 years of UX
         design work across enterprise SaaS, consumer mobile, and developer
@@ -270,7 +269,7 @@ export function ClaudeCodePortfolioPost() {
       <hr className="blog-divider" />
 
       {/* ── Section: The Tools ──────────────────────────────────── */}
-      <h2 id="the-tools-what-claude-code-is-and-how-it-actually-works">The Tools: What Claude Code Is and How It Actually Works</h2>
+      <h2 id="the-tools-what-claude-code-is-and-how-it-works">The Tools: What Claude Code Is and How It Works</h2>
       <p>
         Most coverage of AI-built websites refers to chat-based tools where
         you describe what you want and paste code manually. That is not what
@@ -373,8 +372,8 @@ export function ClaudeCodePortfolioPost() {
         85 to 90% Claude Code for everything else.
       </p>
       <div className="blog-pullquote">
-        Claude Desktop is the whiteboard. Claude Code is the person who builds
-        what&rsquo;s on it.
+        Claude Desktop is where the brief gets written. Claude Code is where
+        it gets built.
       </div>
 
       <hr className="blog-divider" />
@@ -382,7 +381,7 @@ export function ClaudeCodePortfolioPost() {
       {/* ── Section: Session Log ───────────────────────────────── */}
       <h2 id="session-log">Session Log</h2>
       <p>
-        What actually happened across 10 sessions, from first commit to
+        What happened across 10 sessions, from first commit to
         production deployment.
       </p>
 
@@ -650,34 +649,9 @@ export function ClaudeCodePortfolioPost() {
 
       <hr className="blog-divider" />
 
-      {/* ── Section: What This Means ─────────────────────────────── */}
-      <h2 id="what-this-means-if-youre-a-designer">What This Means If You&rsquo;re a Designer</h2>
       <p>
         There is a framing that treats AI coding tools as a threat to designers.
         The benchmarks do not support that framing.
-      </p>
-      <p>
-        What Claude Code cannot do: decide whether the design is right. The
-        information architecture came from 18 years of knowing what good looks
-        like. What goes on the homepage. How case studies are structured. What
-        the top of the page says to a recruiter versus a client. Claude executed
-        the architecture. It did not produce it.
-      </p>
-      <p>
-        What the benchmarks show clearly: the designers and engineers who will
-        be most effective over the next five years are not the ones who type
-        the most code. They are the ones who give the clearest briefs, ask the
-        most precise QA questions, and make the sharpest architectural decisions
-        before a session starts. Those are core UX competencies. They transfer
-        directly.
-      </p>
-      <p>
-        The gap between my 7 to 12x leverage and the ceiling of 20 to 30x is
-        not a gap in design skill. It is a gap in session management: longer
-        runs, more autonomy, more aggressive iteration. That is a learnable
-        workflow adjustment. The fundamentals are the same skills I have used
-        for 18 years: knowing what to build, knowing when it is wrong, and
-        describing the problem precisely.
       </p>
 
       <hr className="blog-divider" />
@@ -721,55 +695,13 @@ export function ClaudeCodePortfolioPost() {
 
       <hr className="blog-divider" />
 
-      {/* ── Section: What's Next ─────────────────────────────────── */}
-      <h2 id="whats-next">What&rsquo;s Next</h2>
-      <p>displayedux.com is version one. On the roadmap:</p>
-      <ul className="blog-unordered-list">
-        <li>Blog section on the site (this post is the first entry)</li>
-        <li>Case study filtering by industry, deliverable type, and platform</li>
-        <li>A client engagement model for designers and small teams who want a portfolio built this way</li>
-        <li>A second client site using this same playbook, to prove repeatability</li>
-      </ul>
-      <p>
-        If you are a designer with 10+ years of work and a portfolio that does
-        not show it, reach out:{' '}
-        <a
-          href="mailto:d2drisco@icloud.com"
-          style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
-        >
-          d2drisco@icloud.com
-        </a>.
-      </p>
-
-      <BlogImage
-        src="/blog/contact-page-finished.png"
-        alt="displayedux.com contact page showing the glassmorphism form card, TeleSign phone verification, and royal blue footer"
-        caption="displayedux.com/contact — where the brief ends and the conversation starts."
-        variant="bordered"
-      />
-
-      <hr className="blog-divider" />
-
       <div className="blog-author-bio">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1rem' }}>
-          <Avatar size={72} />
-          <div>
-            <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.9375rem', color: 'var(--color-text-primary)', margin: 0 }}>Danny Driscoll</p>
-            <p style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', margin: '2px 0 0' }}>Principal Product Designer &nbsp;&middot;&nbsp; displayedux.com</p>
-          </div>
-        </div>
         <p>
           <em>
-            Danny Driscoll is a product designer with 18+ years of experience
-            across enterprise SaaS, consumer mobile, and developer tools.
-            Currently open to Senior / Principal / Director Product Design roles
-            in enterprise B2B. Based in Ann Arbor, Michigan.{' '}
-            <a
-              href="https://displayedux.com"
-              style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
-            >
-              displayedux.com
-            </a>
+            Danny Driscoll is a Principal Product Designer with 18 years in
+            enterprise SaaS, fraud prevention, and identity verification.
+            TeleSign, Netflix, Appily.com. Open to Senior, Principal, and
+            Director roles. Ann Arbor, Michigan.
           </em>
         </p>
       </div>

@@ -120,7 +120,7 @@ export function MentalModelsCognitiveLoadPost() {
 
       <h2 id="the-method">The method</h2>
 
-      <p>The method is not complicated. It is just deliberate.</p>
+      <p>The method is not complicated. It is deliberate.</p>
 
       <p>
         I visualize the full journey before I open Figma. I name what the user

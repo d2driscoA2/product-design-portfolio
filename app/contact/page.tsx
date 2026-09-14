@@ -436,7 +436,7 @@ export default function ContactPage() {
                 Response time
               </p>
               <p style={{ fontSize: '13px', color: 'var(--color-text-secondary)', lineHeight: '1.65' }}>
-                I reply to all messages within 24 hours. For urgent inquiries, email directly.
+                I reply to every message within 24 hours. If it is urgent, email me directly.
               </p>
             </div>
           </div>

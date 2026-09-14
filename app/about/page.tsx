@@ -22,10 +22,10 @@ interface FunFact {
 
 const funFacts: FunFact[] = [
   { title: 'National Poetry Society Poet', body: 'In seventh grade I submitted a poem to the National Poetry Archive. It was accepted and published in one of their printed books. The first time I understood that making something and putting it into the world are two different acts.' },
-  { title: 'Recorded with Grammy-Winning Producer', body: 'Miguel Millions is a longtime collaborator of Pharrell Williams and won multiple Grammys including for Happy. Getting in a room with people at that level permanently changes how you think about craft and standards.' },
+  { title: 'Recorded with Grammy-Winning Producer', body: 'Miguel Millions is a longtime collaborator of Pharrell Williams and won multiple Grammys including for Happy. Getting in a room with people at that level raises your standard for finished work.' },
   { title: 'Extra in Fortnite Commercial', body: 'A friend who acts in Hollywood brought me in for a brief extra role. Being on a professional set, watching how quickly decisions get made and unmade, felt familiar in all the right ways.' },
-  { title: 'Hip-Hop and Pop Punk Junkie', body: 'Blink-182 and The Roots. Two genres that look nothing alike and share everything: precision, restraint, and the ability to say something true in under four minutes.' },
-  { title: 'Trained at Second City Hollywood', tag: 'Hollywood · 6560 Hollywood Blvd', body: 'Improv comedy training at the LA outpost of one of the most respected comedy institutions in North America. Learning to think fast, listen harder, and never block your scene partner.' },
+  { title: 'Hip-Hop and Pop Punk Junkie', body: 'Blink-182 and The Roots. Two genres that share one rule: say something true in under four minutes.' },
+  { title: 'Trained at Second City Hollywood', tag: 'Hollywood · 6560 Hollywood Blvd', body: "Improv training at Second City's LA outpost. Listen harder. Never block your scene partner." },
   { title: 'Stand-Up Comedy Open Mics', body: 'I regularly attend open mics to support other comedians and to practice fighting through nerves and anxiety. Getting on stage in front of strangers with a microphone and no safety net is the same exposure exercise as presenting to a skeptical C-suite.' },
 ];
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <p className="about-body">I grew up in Ann Arbor surrounded by engineers. My father has taught aerospace engineering at the University of Michigan for over 40 years. My grandfathers were engineers. The technical world was never abstract to me. But I watched non-technical family members struggle with the same interfaces those engineers built. That gap is where I work.</p>
             <p className="about-body">I came to design through Human-Computer Interaction at Western Michigan University after witnessing a student have an epileptic seizure triggered by a flashing pop-up ad. That moment made clear that design has consequences. It is not decoration. From there: four years at Appily.com (formerly Cappex) designing the college application platform that reached 47% completion against a 20–35% industry standard, then five years at TeleSign as Principal Product Designer protecting 21 billion annual transactions and rebuilding enterprise onboarding: same-day access for simpler products, and 67 days down to 35 for complex configurations requiring government approval.</p>
             <p className="about-body">My philosophy is communication before aesthetics. I run A/B tests by statistical significance, not gut feel. I design for the user who is confused, not the user who already knows what to do. I have presented directly to C-suite at Fortune 500 companies and filed bugs on my own shipped work. I am looking for Senior, Principal, or Director roles in enterprise B2B SaaS: security products, developer tools, authentication platforms, or communication systems.</p>
-            <p className="about-muted text-base">Spouse and two kids in Ann Arbor. Grew up on computers from age 4. Still plays guitar.</p>
+            <p className="about-muted text-base">Spouse and two kids in Ann Arbor. Still play guitar.</p>
           </div>
         </div>
 

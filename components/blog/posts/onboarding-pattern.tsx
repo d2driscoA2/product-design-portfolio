@@ -15,8 +15,7 @@ export function OnboardingPatternPost() {
         I have worked at four companies with meaningful product design
         responsibilities. Three of them handed me an onboarding problem as one
         of my first significant assignments. At the time, I treated each one as a
-        unique challenge. Looking back, they were all the same problem wearing
-        different clothes.
+        unique challenge. It was the same problem three times.
       </p>
       <p>
         The pattern: an organization builds a product, designs the onboarding
@@ -31,7 +30,7 @@ export function OnboardingPatternPost() {
 
       <BlogHeroImage
         src="/blog/images/post3-hero-cappex-empty.png"
-        alt="Cappex Universal College Application empty dashboard, a new user who hasn&rsquo;t yet added any schools"
+        alt="Appily.com (formerly Cappex) Universal College Application empty dashboard, a new user who hasn&rsquo;t yet added any schools"
         caption="The Appily.com (formerly Cappex) application dashboard on first login: no schools added, no progress made. This empty state was the starting line for a user facing 30+ hours of application work across 10 colleges."
       />
 
@@ -258,16 +257,10 @@ export function OnboardingPatternPost() {
       <div className="blog-author-bio">
         <p>
           <em>
-            Danny Driscoll is a product designer with 18+ years of experience
-            across enterprise SaaS, consumer mobile, and developer tools.
-            Currently open to Senior / Principal / Director Product Design roles
-            in enterprise B2B. Based in Ann Arbor, Michigan.{' '}
-            <a
-              href="https://displayedux.com"
-              style={{ color: '#4063FB', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '3px' }}
-            >
-              displayedux.com
-            </a>
+            Danny Driscoll is a Principal Product Designer with 18 years in
+            enterprise SaaS, fraud prevention, and identity verification.
+            TeleSign, Netflix, Appily.com. Open to Senior, Principal, and
+            Director roles. Ann Arbor, Michigan.
           </em>
         </p>
       </div>
