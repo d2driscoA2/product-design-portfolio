@@ -82,7 +82,7 @@ export function OnboardingPatternPost() {
 
       <hr className="blog-divider" />
 
-      <h2 id="appily-com-the-form-that-was-eating-students-alive">Appily.com: The Form That Was Eating Students Alive</h2>
+      <h2 id="appily-com-30-hours-of-forms-per-student">Appily.com: 30 Hours of Forms Per Student</h2>
       <p>
         At Appily.com, the onboarding problem had a specific
         shape. Students were starting the Universal College Application and
@@ -243,14 +243,6 @@ export function OnboardingPatternPost() {
           look for it explicitly.
         </li>
       </ol>
-
-      <p>
-        The pattern will show up again in the next company I join. It always
-        does. But recognizing it three times has made me faster at naming it
-        and more credible when I explain to product and engineering why the
-        first-session experience is not an afterthought. It is the moment the
-        user decides whether to trust you.
-      </p>
 
       <hr className="blog-divider" />
 

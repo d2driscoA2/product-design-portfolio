@@ -203,19 +203,10 @@ export function ClaudeDesignFourChannelsPost() {
         the decisions already encoded.
       </p>
       <p>
-        The tool is in research preview and the rough edges are real. But
-        here is the encouraging part: the four channels reward skills
-        designers already have. Knowing whether a change is structure or
-        taste. Knowing where a comment belongs. Knowing when a value needs
-        tuning by hand instead of a description. That is design judgment,
-        and the channels finally give it a direct line into the tool.
-      </p>
-      <p>
-        So bring the habits you built long before AI showed up. Point at
-        the element the way you would in a critique. Tune the value the way
-        you would in the inspector. The mixing board is set up, and
-        designers are exactly the people who know what a good mix sounds
-        like.
+        The tool is in research preview and the rough edges are real. The four
+        channels reward skills designers already have: knowing structure from
+        taste, knowing where a comment belongs, and knowing when to tune a
+        value by hand.
       </p>
 
       <hr className="blog-divider" />

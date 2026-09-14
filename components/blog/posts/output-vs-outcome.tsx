@@ -222,17 +222,8 @@ export function OutputVsOutcomePost() {
         always produce a number.
       </p>
       <p>
-        The principle is not &ldquo;only do work you can measure.&rdquo; The principle
-        is: build the habit of asking what would change if the work is
-        successful. If you cannot answer that question, you do not have
-        a clear enough problem definition to start designing. Go back and
-        sharpen the problem.
-      </p>
-      <p>
-        Design is not decoration. It is intervention. Every intervention
-        has a hypothesis embedded in it, even when that hypothesis is
-        implicit. Making it explicit is the difference between a designer
-        who ships and a designer who builds things that matter.
+        If you cannot say what changes when the work succeeds, you do not
+        have a problem yet. Go back and sharpen it.
       </p>
 
       <hr className="blog-divider" />

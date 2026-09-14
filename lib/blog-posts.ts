@@ -236,7 +236,7 @@ export const blogPosts: BlogPost[] = [
     tocEntries: [
       'Three Companies. Three Onboarding Problems. One Pattern.',
       'Netflix: Testing Your Way to the Right First Step',
-      'Appily.com: The Form That Was Eating Students Alive',
+      'Appily.com: 30 Hours of Forms Per Student',
       'TeleSign: When Onboarding Is a Revenue Problem',
       'The Pattern, Stated Plainly',
       'What I Look For Now',
@@ -271,7 +271,6 @@ export const blogPosts: BlogPost[] = [
       'Making Machine Learning Transparent',
       'Designing for the False Positive Problem',
       'Speed as a Design Requirement',
-      'What Designing for Experts Taught Me',
     ],
   },
 

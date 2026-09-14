@@ -215,35 +215,9 @@ export function DesigningForExpertsPost() {
         variant="bordered"
       />
 
-      <hr className="blog-divider" />
-
-      <h2 id="what-designing-for-experts-taught-me">What Designing for Experts Taught Me</h2>
       <p>
-        Working in this domain for five years changed how I think about
-        complexity in product design.
-      </p>
-      <p>
-        The standard UX principle is: reduce cognitive load. That is correct
-        for almost every context. But there is a category of user for whom
-        cognitive load is the job. Fraud analysts think through complexity
-        to reach accurate decisions. A simplified interface that removed the
-        signals they needed to think through would not feel easier to them.
-        It would feel unreliable.
-      </p>
-      <p>
-        The right principle for expert users is different: <strong>surface the
-        right complexity at the right moment.</strong> Not less complexity.
-        The right complexity, organized so the expert can move through it
-        quickly and confidently.
-      </p>
-      <p>
-        Designing for experts also requires a specific kind of research
-        humility. I never knew as much about fraud patterns as the analysts
-        who used the system daily. My job was to understand what decisions
-        they were making and what information they needed to make those
-        decisions well. The domain knowledge stayed with the experts.
-        The interface knowledge stayed with me. That division of labor
-        is what made the collaboration work.
+        The right principle for expert users is different. Surface the right
+        complexity at the right moment, so the expert moves through it fast.
       </p>
 
       <hr className="blog-divider" />

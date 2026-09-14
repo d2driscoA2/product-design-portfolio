@@ -197,31 +197,10 @@ export function MentalModelsCognitiveLoadPost() {
 
       <h2 id="what-eighteen-years-of-testing-has-taught-me">What eighteen years of testing has taught me</h2>
 
-      <p>The mental model leads. The data confirms.</p>
-
       <p>
-        When the model is right, the user finds what they need with less
-        effort. The page does less work to be understood. The path narrows.
-        Choices feel inevitable rather than arrayed.
-      </p>
-
-      <p>
-        When the model is wrong, the data shows me what the user was actually
-        carrying that I did not see. That is the more valuable result. A failed
-        test is the gap in my understanding, surfaced.
-      </p>
-
-      <p>
-        This is the part of the work I find most satisfying. Forming the model,
-        putting it in front of users, watching the data either confirm it or
-        show me the trap I missed. Both outcomes move the design forward. Both
-        outcomes lower cognitive load for the people who eventually use the
-        thing.
-      </p>
-
-      <p>
-        Statistical significance is not an obstacle to design intuition. It is
-        the proof the intuition was worth having.
+        When the model is wrong, the data shows me what the user was carrying
+        that I did not see. That is the more valuable result. A failed test
+        is the gap in my understanding, surfaced.
       </p>
 
     </article>
