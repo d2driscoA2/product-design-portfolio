@@ -57,6 +57,39 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
 
   {
+    slug:           'superstrike-challenge',
+    title:          'How I Designed a Trade Show Game for Logitech G That Players Line Up For, in Five Working Days',
+    shortTitle:     'Superstrike Challenge',
+    date:           'September 2026',
+    dateISO:        '2026-09-14',
+    readTime:       9,
+    tag:            'Case Study',
+    tagColor:       'coral',
+    thumbnailImage: '/blog/images/superstrike/hero-superstrike.png',
+    thumbnailAlt:   'Hero card for the Superstrike Challenge case study: a royal blue panel with a CASE STUDY pill and the stat 5 working days inside a 15 day window, beside the kiosk attract screen reading SUPERSTRIKE CHALLENGE, CLICK TO PLAY.',
+    heroImage:      '/blog/images/superstrike/hero-superstrike.png',
+    heroImageAlt:   'The Superstrike Challenge kiosk attract screen framed in the DisplayedUX writing card system.',
+    excerpt:
+      'A gamified click speed kiosk for Logitech G, designed and shipped in five working days, inside a fifteen day window, for Kamp Grizzly. The client killed the first direction in one sentence, a playtest bug became the celebration screen, and the whole thing ships as one HTML file.',
+    stats: [
+      { value: '5',    label: 'Working days inside a 15 day window', accentHex: '#FF6F6E' },
+      { value: '1',    label: 'Self-contained HTML file, zero dependencies' },
+      { value: '95',   label: 'Clicks, the pro benchmark', accentHex: '#FF6F6E' },
+      { value: '1.6s', label: 'The lockout players never feel' },
+    ],
+    tocEntries: [
+      'The brief was a list of prohibitions',
+      'The direction Kamp Grizzly killed',
+      'The wrong fix shipped first',
+      'Engagement without the slot machine',
+      'The second thread: art direction from an Illustrator file',
+      'What broke',
+      'Where the AI sat, and where it did not',
+      'The playbook',
+    ],
+  },
+
+  {
     slug:           'claude-code-portfolio',
     title:          'I Used Claude Code to Build My Entire UX Portfolio. Here Are the Actual Numbers.',
     shortTitle:     'Building displayedux.com with Claude Code',

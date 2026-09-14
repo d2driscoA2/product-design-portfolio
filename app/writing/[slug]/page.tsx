@@ -5,6 +5,7 @@ import { getBlogPost, blogPosts, TAG_COLORS, slugifyHeading } from '@/lib/blog-p
 import { WritingHero } from '@/components/blog/WritingHero'
 import { PostHero } from '@/components/blog/PostHero'
 import { TerminalHero } from '@/components/blog/TerminalHero'
+import { KioskHero } from '@/components/blog/KioskHero'
 import { Avatar } from '@/components/blog/Avatar'
 
 /* ── Content component registry ────────────────────────────────── */
@@ -15,6 +16,7 @@ import { MentalModelsCognitiveLoadPost } from '@/components/blog/posts/mental-mo
 import { OnboardingPatternPost }   from '@/components/blog/posts/onboarding-pattern'
 import { DesigningForExpertsPost } from '@/components/blog/posts/designing-for-experts'
 import { OutputVsOutcomePost }     from '@/components/blog/posts/output-vs-outcome'
+import { SuperstrikeChallengePost } from '@/components/blog/posts/superstrike-challenge'
 
 const POST_CONTENT: Record<string, React.ComponentType> = {
   'claude-code-portfolio': ClaudeCodePortfolioPost,
@@ -24,6 +26,7 @@ const POST_CONTENT: Record<string, React.ComponentType> = {
   'onboarding-pattern':    OnboardingPatternPost,
   'designing-for-experts': DesigningForExpertsPost,
   'output-vs-outcome':     OutputVsOutcomePost,
+  'superstrike-challenge': SuperstrikeChallengePost,
 }
 
 /* ── Static params ──────────────────────────────────────────────── */
@@ -73,7 +76,7 @@ export default async function WritingPostPage(
     <div style={{ background: 'var(--color-bg)', color: 'var(--color-text-primary)', minHeight: '100vh' }}>
 
       {/* ── Breadcrumb + article header (non-PostHero posts only) ── */}
-      {post.slug !== 'claude-code-portfolio' && (
+      {post.slug !== 'claude-code-portfolio' && post.slug !== 'superstrike-challenge' && (
         <>
           <div className="mx-auto max-w-6xl px-6 lg:px-8 pt-8 pb-0">
             <nav aria-label="Breadcrumb">
@@ -146,6 +149,10 @@ export default async function WritingPostPage(
         {post.slug === 'claude-code-portfolio' ? (
           <PostHero post={post}>
             <TerminalHero />
+          </PostHero>
+        ) : post.slug === 'superstrike-challenge' ? (
+          <PostHero post={post}>
+            <KioskHero />
           </PostHero>
         ) : (
           <WritingHero post={post} />
