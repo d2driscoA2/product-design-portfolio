@@ -31,7 +31,7 @@ export function OnboardingPatternPost() {
 
       <BlogHeroImage
         src="/blog/images/post3-hero-cappex-empty.png"
-        alt="Cappex Universal College Application empty dashboard — a new user who hasn&rsquo;t yet added any schools"
+        alt="Cappex Universal College Application empty dashboard, a new user who hasn&rsquo;t yet added any schools"
         caption="The Appily.com (formerly Cappex) application dashboard on first login: no schools added, no progress made. This empty state was the starting line for a user facing 30+ hours of application work across 10 colleges."
       />
 
@@ -122,7 +122,7 @@ export function OnboardingPatternPost() {
 
       <BlogImage
         src="/blog/images/post3-cappex-wireframe.png"
-        alt="Early Cappex application wireframe showing desktop and mobile simultaneously: three steps — Select Schools, Fill Out Your Custom Cappex Application, Send it to Schools"
+        alt="Early Cappex application wireframe showing desktop and mobile simultaneously: three steps, Select Schools, Fill Out Your Custom Cappex Application, Send it to Schools"
         caption="The earliest wireframe for the Universal College Application onboarding flow. Desktop and mobile shown simultaneously. Three steps, one essay, one click to every college. The structural solution to a cognitive overload problem."
         variant="bordered"
       />

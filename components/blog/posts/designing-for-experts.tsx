@@ -146,7 +146,7 @@ export function DesigningForExpertsPost() {
 
       <BlogImage
         src="/blog/images/post4-messaging-channels.png"
-        alt="TeleSign Messaging API six-channel grid: SMS, WhatsApp, MMS, Viber, RCS, Email — each with description"
+        alt="TeleSign Messaging API six-channel grid: SMS, WhatsApp, MMS, Viber, RCS, Email, each with description"
         caption="The six channels unified under one API: SMS, WhatsApp, MMS, Viber, RCS, Email. The design challenge was not adding channels. It was making the right channel visible at the right moment so analysts were not choosing between six options on every decision."
         variant="bordered"
       />
@@ -212,7 +212,7 @@ export function DesigningForExpertsPost() {
       <BlogImage
         src="/blog/images/post4-template-builder.png"
         alt="TeleSign Messaging API WYSIWYG template builder with a live phone preview on the right showing the message as it will appear on a mobile device"
-        caption="The WYSIWYG message template builder with live phone preview. The analyst sees the exact rendered output as they type. Accuracy at speed — no test-and-check loop, no deploy-and-verify cycle."
+        caption="The WYSIWYG message template builder with live phone preview. The analyst sees the exact rendered output as they type. Accuracy at speed, no test-and-check loop, no deploy-and-verify cycle."
         variant="bordered"
       />
 

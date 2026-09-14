@@ -15,11 +15,11 @@ const data: CaseStudyData = {
   timeline: '4 years · 2015–2018',
   accentColor: '#E500A2',
   heroImage: '/images/4-universal-college-application/hero/Prototype-Sample.png',
-  heroImageAlt: 'Appily.com Universal College Application — design prototype flow showing the complete user journey across mobile screens',
+  heroImageAlt: 'Appily.com Universal College Application, design prototype flow showing the complete user journey across mobile screens',
   heroImagePosition: 'center center',
   heroVideo: {
     videoId: '0LJopyMAoIo',
-    title: 'Appily.com Universal College Application — Product Demo',
+    title: 'Appily.com Universal College Application, Product Demo',
   },
   overview:
     "The college application process overwhelmed students applying to multiple schools. Each required a separate application, separate essays, and separate submission processes. At Appily.com (formerly Cappex), I designed the Universal College Application: one essay, one profile, submitted to 200+ partner colleges simultaneously. The platform scaled from 250,000 to 1.5 million users during my four years, and now serves 4 million+ as Appily.",
@@ -72,7 +72,7 @@ The dashboard design went through three major iterations. The empty state needed
         '/images/4-universal-college-application/images-for-case-study/Screens/Home@2x.png',
         '/images/4-universal-college-application/images-for-case-study/Screens/Create-Account@2x.png',
       ],
-      imageCaption: 'Left to right: empty dashboard state — inviting, not intimidating. Populated dashboard with four schools in different completion states, college search active. Essay section — one prompt, visible to the student once, going to every college simultaneously. Launch screen and account creation entry points. Screens shown display the original Appily.com interface (formerly Cappex).',
+      imageCaption: 'Left to right: empty dashboard state, inviting, not intimidating. Populated dashboard with four schools in different completion states, college search active. Essay section, one prompt, visible to the student once, going to every college simultaneously. Launch screen and account creation entry points. Screens shown display the original Appily.com interface (formerly Cappex).',
     },
     {
       type: 'iteration',
@@ -93,7 +93,7 @@ Error states were a key focus. When students made mistakes, the interface needed
         '/images/4-universal-college-application/images-for-case-study/Screens/Dash-School-Complete@2x.png',
         '/images/4-universal-college-application/images-for-case-study/Screens/WAMC-Missing-Scores@2x.png',
       ],
-      imageCaption: 'Account creation and error state design (desktop). All application sections collapsed with status indicators, then expanded to show sub-section completion. School cards in missing-info and complete states — the intelligent completion tracking system. "What Are My Chances?" prompting for test scores and GPA. Screens shown display the original Appily.com interface (formerly Cappex).',
+      imageCaption: 'Account creation and error state design (desktop). All application sections collapsed with status indicators, then expanded to show sub-section completion. School cards in missing-info and complete states, the intelligent completion tracking system. "What Are My Chances?" prompting for test scores and GPA. Screens shown display the original Appily.com interface (formerly Cappex).',
     },
     {
       type: 'outcome',
@@ -110,7 +110,7 @@ Session time increased 25%. Bounce rate decreased 10 percentage points. The appl
         '/images/4-universal-college-application/images-for-case-study/Screens/Dash-App-Status@2x.png',
         '/images/4-universal-college-application/images-for-case-study/Screens/App-Sent@2x.png',
       ],
-      imageCaption: 'Desktop and mobile complete states: every application submitted simultaneously. College search active with Michigan results, dashboard completion status warning, and the "Application Complete!" success modal — the moment the research pointed toward from the start. Screens shown display the original Appily.com interface (formerly Cappex).',
+      imageCaption: 'Desktop and mobile complete states: every application submitted simultaneously. College search active with Michigan results, dashboard completion status warning, and the "Application Complete!" success modal, the moment the research pointed toward from the start. Screens shown display the original Appily.com interface (formerly Cappex).',
     },
     {
       type: 'reflection',

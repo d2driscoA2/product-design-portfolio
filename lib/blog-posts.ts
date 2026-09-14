@@ -226,7 +226,7 @@ export const blogPosts: BlogPost[] = [
     thumbnailImage: '/blog/legacy-portal-before.png',
     thumbnailAlt:   'The legacy TeleSign customer portal in 2018 — the before state that drove the self-service portal redesign',
     heroImage:      '/blog/legacy-portal-before.png',
-    heroImageAlt:   'The legacy TeleSign customer portal in 2018 — the before state that drove the self-service portal redesign',
+    heroImageAlt:   'The legacy TeleSign customer portal in 2018, the before state that drove the self-service portal redesign',
     excerpt:
       'Netflix. Appily.com. TeleSign. Three different products, three different user groups, the same root cause every time.',
     stats: [
@@ -289,7 +289,7 @@ export const blogPosts: BlogPost[] = [
     thumbnailImage: '/blog/images/post5-cappex-in-progress.png',
     thumbnailAlt:   'Cappex college application dashboard showing mixed completion states — warnings, missing info, ready to submit, and already submitted',
     heroImage:      '/blog/images/post5-cappex-in-progress.png',
-    heroImageAlt:   'Cappex college application dashboard showing mixed completion states — warnings, missing info, ready to submit, and already submitted',
+    heroImageAlt:   'Cappex college application dashboard showing mixed completion states, warnings, missing info, ready to submit, and already submitted',
     excerpt:
       'Early in my career I measured my effectiveness by what I shipped. It took years to understand why that was the wrong metric.',
     stats: [

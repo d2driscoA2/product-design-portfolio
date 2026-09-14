@@ -4,7 +4,7 @@ import PhotoGallery from '@/components/ui/PhotoGallery';
 
 export const metadata: Metadata = {
   title: 'Photography | Danny Driscoll',
-  description: 'Photography by Danny Driscoll. Empathique — a natural passion for observing emotion.',
+  description: 'Photography by Danny Driscoll. Empathique: a natural passion for observing emotion.',
 };
 
 export default function PhotographyPage() {
