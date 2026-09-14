@@ -30,7 +30,7 @@ export function OutputVsOutcomePost() {
       <BlogHeroImage
         src="/blog/images/post5-hero-cappex-submitted.png"
         alt="Cappex Universal College Application dashboard showing all four schools with Application Submitted status"
-        caption="The Cappex application dashboard at full completion. Every school submitted. This screen is an outcome. The wireframes, iterations, and usability tests that produced it are output. Most portfolios show the latter. The number that mattered was the 47% completion rate that this state represents."
+        caption="The Appily.com (formerly Cappex) application dashboard at full completion. Every school submitted. This screen is an outcome. The wireframes, iterations, and usability tests that produced it are output. Most portfolios show the latter. The number that mattered was the 47% completion rate that this state represents."
       />
 
       <hr className="blog-divider" />
@@ -99,9 +99,7 @@ export function OutputVsOutcomePost() {
 
       <h2 id="the-appily-com-lesson-the-number-tells-you-when-youre-right">The Appily.com Lesson: The Number Tells You When You&rsquo;re Right</h2>
       <p>
-        At Cappex (now Appily.com), I was working in an organization that
-        used A/B testing and multivariate experiments as a routine tool, not
-        an exceptional one. We had a lead statistician. Decisions about design
+        At Appily.com, A/B and multivariate tests were routine. We had a lead statistician. Decisions about design
         changes went through hypothesis formation, test design, statistical
         analysis, and a decision about whether the result was significant
         enough to ship.
@@ -195,8 +193,8 @@ export function OutputVsOutcomePost() {
           <strong>You stop defending the wrong work.</strong> When you measure
           outcome, you find out faster that a direction is not working. This
           is uncomfortable in the short term and valuable in every other way.
-          The design directions I abandoned at Cappex after testing failure
-          freed up time for the iterations that eventually worked.
+          The directions I abandoned at Appily.com after failed tests freed up
+          time for the ones that worked.
         </li>
         <li>
           <strong>The conversation with engineering changes.</strong> When you

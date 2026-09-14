@@ -32,7 +32,7 @@ export function OnboardingPatternPost() {
       <BlogHeroImage
         src="/blog/images/post3-hero-cappex-empty.png"
         alt="Cappex Universal College Application empty dashboard — a new user who hasn&rsquo;t yet added any schools"
-        caption="The Cappex application dashboard on first login: no schools added, no progress made. This empty state was the starting line for a user facing 30+ hours of application work across 10 colleges."
+        caption="The Appily.com (formerly Cappex) application dashboard on first login: no schools added, no progress made. This empty state was the starting line for a user facing 30+ hours of application work across 10 colleges."
       />
 
       <div className="blog-callout">
@@ -86,7 +86,7 @@ export function OnboardingPatternPost() {
 
       <h2 id="appily-com-the-form-that-was-eating-students-alive">Appily.com: The Form That Was Eating Students Alive</h2>
       <p>
-        At Cappex (now Appily.com), the onboarding problem had a specific
+        At Appily.com, the onboarding problem had a specific
         shape. Students were starting the Universal College Application and
         abandoning it. The industry-standard completion rate for college
         applications ranged from 20% to 35%. We were inside that range and
@@ -200,7 +200,7 @@ export function OnboardingPatternPost() {
         measurement infrastructure.
       </p>
       <p>
-        At Cappex, the context gap was process complexity. Seventeen-year-olds
+        At Appily.com, the context gap was process complexity. Seventeen-year-olds
         were being asked to manage the operational complexity of applying to
         eight institutions simultaneously. The fix was removing work from their
         plate.
