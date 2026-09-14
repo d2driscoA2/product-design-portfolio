@@ -1,0 +1,130 @@
+/* KioskHero — Superstrike Challenge animated article hero.
+   Loop: attract screen → cursor click on CLICK TO PLAY → 3-2-1 countdown → restart.
+   8.4s cycle. Hover pauses. prefers-reduced-motion shows the static attract screen. */
+
+.outer {
+  width: 100%;
+  aspect-ratio: 1200 / 628;
+  overflow: hidden;
+  background: #0A0A0A;
+  position: relative;
+}
+
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1200px;
+  height: 628px;
+  transform: translate(-50%, -50%) scale(var(--kiosk-scale, 1));
+  background: #0A0A0A;
+  overflow: hidden;
+  font-family: var(--font-jakarta, 'Plus Jakarta Sans'), sans-serif;
+}
+
+/* Hover pauses every animation in the loop, same behavior as TerminalHero */
+.stage:hover * { animation-play-state: paused !important; }
+
+.topbar {
+  position: absolute; top: 36px; right: 44px;
+  font-weight: 700; font-size: 15px; letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.85); z-index: 5;
+}
+.topbarLeft { position: absolute; top: 0; left: 0; width: 6px; height: 44px; background: #4063FB; z-index: 5; }
+
+/* ── Attract scene ─────────────────────────────────── */
+.attract { position: absolute; inset: 0; opacity: 0; animation: attractCycle 8.4s linear infinite; }
+@keyframes attractCycle {
+  0% { opacity: 0; } 3% { opacity: 1; } 33% { opacity: 1; } 37% { opacity: 0; } 100% { opacity: 0; }
+}
+.attractTitle { position: absolute; left: 96px; top: 168px; }
+.line1 { font-weight: 800; font-size: 88px; letter-spacing: 2px; color: #FFFFFF; line-height: 1.04; }
+.line2 { font-weight: 800; font-size: 88px; letter-spacing: 2px; color: #54A9F2; line-height: 1.04; }
+
+.cta {
+  position: absolute; left: 104px; top: 404px;
+  font-weight: 700; font-size: 26px; letter-spacing: 6px; color: #FFFFFF;
+  transform-origin: left center;
+  animation: ctaPress 8.4s linear infinite;
+}
+@keyframes ctaPress { 0%, 26.5% { transform: scale(1); } 28% { transform: scale(0.965); } 30% { transform: scale(1); } 100% { transform: scale(1); } }
+
+.sq {
+  display: inline-block; width: 17px; height: 17px; background: #54A9F2; margin-right: 16px;
+  animation: blinkHold 8.4s steps(1) infinite, sqFlash 8.4s linear infinite;
+}
+/* Blinks three times, then holds solid before the cursor arrives */
+@keyframes blinkHold {
+  0% { opacity: 1; } 5% { opacity: 0.15; } 8% { opacity: 1; }
+  12% { opacity: 0.15; } 15% { opacity: 1; }
+  19% { opacity: 0.15; } 21.5% { opacity: 1; } 100% { opacity: 1; }
+}
+@keyframes sqFlash { 0%, 26.5% { background: #54A9F2; } 28% { background: #9FD1FA; } 31% { background: #54A9F2; } 100% { background: #54A9F2; } }
+
+.meter { position: absolute; left: 96px; right: 96px; bottom: 56px; }
+.meterLabels { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; letter-spacing: 3px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+.meterTrack { position: relative; height: 10px; background: rgba(255,255,255,0.14); }
+.meterFill { position: absolute; left: 0; top: 0; height: 10px; width: 46%; background: #54A9F2; }
+.meterTick { position: absolute; left: 78%; top: -5px; width: 3px; height: 20px; background: #FFFFFF; }
+
+/* ── Cursor + click ripple ─────────────────────────── */
+.cursor { position: absolute; z-index: 8; width: 26px; height: 26px; opacity: 0; animation: cursorMove 8.4s cubic-bezier(0.3, 0, 0.2, 1) infinite; }
+.cursor svg { display: block; }
+@keyframes cursorMove {
+  0% { opacity: 0; transform: translate(950px, 540px); }
+  12% { opacity: 0; transform: translate(950px, 540px); }
+  14% { opacity: 1; transform: translate(950px, 540px); }
+  26% { opacity: 1; transform: translate(106px, 414px); }
+  27.5% { opacity: 1; transform: translate(106px, 414px) scale(0.86); }
+  29.5% { opacity: 1; transform: translate(106px, 414px) scale(1); }
+  34% { opacity: 0; transform: translate(106px, 414px); }
+  100% { opacity: 0; transform: translate(106px, 414px); }
+}
+.ripple {
+  position: absolute; z-index: 7; left: 90px; top: 391px; width: 44px; height: 44px;
+  border: 3px solid #54A9F2; border-radius: 50%; opacity: 0;
+  animation: rippleGo 8.4s linear infinite;
+}
+@keyframes rippleGo {
+  0% { opacity: 0; transform: scale(0.3); }
+  27% { opacity: 0; transform: scale(0.3); }
+  28.5% { opacity: 0.9; transform: scale(0.5); }
+  33.5% { opacity: 0; transform: scale(1.7); }
+  100% { opacity: 0; transform: scale(1.7); }
+}
+
+/* ── Countdown scenes ──────────────────────────────── */
+.count { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; }
+.count span { font-weight: 800; font-size: 360px; color: #FFFFFF; line-height: 1; transform: scale(0.8); }
+.c3 { animation: count3 8.4s linear infinite; }
+.c2 { animation: count2 8.4s linear infinite; }
+.c1 { animation: count1 8.4s linear infinite; }
+.c3 span { animation: pop3 8.4s cubic-bezier(0.2, 0.9, 0.3, 1.2) infinite; }
+.c2 span { animation: pop2 8.4s cubic-bezier(0.2, 0.9, 0.3, 1.2) infinite; }
+.c1 span { animation: pop1 8.4s cubic-bezier(0.2, 0.9, 0.3, 1.2) infinite; }
+@keyframes count3 { 0%, 38.5% { opacity: 0; } 39.5%, 52.5% { opacity: 1; } 53.5%, 100% { opacity: 0; } }
+@keyframes count2 { 0%, 53.5% { opacity: 0; } 54.5%, 67% { opacity: 1; } 68%, 100% { opacity: 0; } }
+@keyframes count1 { 0%, 68% { opacity: 0; } 69%, 82.5% { opacity: 1; } 84%, 100% { opacity: 0; } }
+@keyframes pop3 { 0%, 38.5% { transform: scale(0.7); } 44% { transform: scale(1); } 100% { transform: scale(1); } }
+@keyframes pop2 { 0%, 53.5% { transform: scale(0.7); } 59% { transform: scale(1); } 100% { transform: scale(1); } }
+@keyframes pop1 { 0%, 68% { transform: scale(0.7); } 73.5% { transform: scale(1); } 100% { transform: scale(1); } }
+
+.pulse {
+  position: absolute; left: 50%; top: 50%; width: 480px; height: 480px; margin: -240px 0 0 -240px;
+  border-radius: 50%; border: 2px solid rgba(84, 169, 242, 0.35); opacity: 0;
+  animation: pulseGo 8.4s linear infinite;
+}
+@keyframes pulseGo {
+  0%, 38.5% { opacity: 0; transform: scale(0.72); }
+  46% { opacity: 0.8; transform: scale(0.9); }
+  82.5% { opacity: 0.5; transform: scale(1.06); }
+  86%, 100% { opacity: 0; transform: scale(1.12); }
+}
+
+/* ── Reduced motion: static attract screen ─────────── */
+@media (prefers-reduced-motion: reduce) {
+  .attract { animation: none; opacity: 1; }
+  .sq, .cursor, .ripple, .c3, .c2, .c1, .c3 span, .c2 span, .c1 span, .pulse, .cta { animation: none; }
+  .cursor, .ripple, .c3, .c2, .c1, .pulse { opacity: 0; }
+  .sq { opacity: 1; }
+}
