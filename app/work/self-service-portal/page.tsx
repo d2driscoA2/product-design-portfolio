@@ -19,7 +19,7 @@ const data: CaseStudyData = {
   heroImagePosition: 'top center',
   heroVideo: { videoId: 'J2WvMidm5hI', startSeconds: 0, title: 'TeleSign Portal Screen Recording' },
   overview:
-    "TeleSign's enterprise onboarding took 67 days on average. Every new customer required manual CS intervention \u2014 products provisioned by hand, API keys requiring CS involvement, government approval documentation handled email by email across 120-plus countries. I was brought in as Principal Product Designer to redesign this from the ground up, during a global pandemic, with a distributed international team and a constrained development budget.",
+    "TeleSign's enterprise onboarding took 67 days on average. Every new customer required manual CS intervention: products provisioned by hand, API keys issued by CS, government approvals handled email by email across 120-plus countries. I was brought in as Principal Product Designer to redesign this from the ground up, during a global pandemic, with a distributed international team and a constrained development budget.",
   bentoStats: [
     { value: 'Same-day', label: 'Access for simpler products', sublabel: 'First time in TeleSign history' },
     { value: '67 \u2192 35', label: 'Days to onboard (complex configs)', sublabel: '48% reduction in CS-controlled time' },
@@ -46,8 +46,8 @@ The design question shifted. Not "How do we make the portal easier?" but "How do
     },
     {
       type: 'decision',
-      heading: 'What was built, what was not, and why the hardest problem was not the interface.',
-      body: `I designed a self-service portal giving enterprise customers direct control over every step: account creation, business verification, product purchasing, phone number acquisition across 120-plus countries, API key generation, and billing \u2014 all without CS involvement.
+      heading: 'What shipped, what did not, and why the hardest problem was not the interface.',
+      body: `I designed a self-service portal giving enterprise customers direct control over every step: account creation, business verification, product purchasing, phone number acquisition across 120-plus countries, API key generation, and billing. No CS involvement.
 
 The first direction I prototyped was a guidance layer on top of TelePortal, the existing internal tool. Four customer tests killed it. TelePortal's information architecture was built for CS workflows, not customer workflows. Guidance on top of expert assumptions does not make a product accessible. The recommendation: build from scratch.
 
@@ -89,7 +89,7 @@ Across all three rounds, one pattern held. When users knew exactly what came nex
         {
           label: 'Simpler products',
           value: 'Same-day access',
-          context: 'First time in TeleSign history. Account creation, product purchase, API key generation, and first call \u2014 no CS involvement required.',
+          context: 'First time in TeleSign history. Account creation, product purchase, API key generation, and first call. No CS involvement.',
           isPrimary: true,
         },
         {
@@ -105,12 +105,12 @@ Across all three rounds, one pattern held. When users knew exactly what came nex
 
 The SMB market became economically viable for the first time. The CS overhead that made small accounts unprofitable was gone.
 
-The phone number purchasing UI won TeleSign's 2019 Innovation of the Year award. The design system built for this project became the company standard \u2014 colors, navigation patterns, and typography adopted across all TeleSign products.`,
+The phone number purchasing UI won TeleSign's 2019 Innovation of the Year award. The design system from this project became the company standard. Every TeleSign product adopted its colors, navigation, and typography.`,
     },
     {
       type: 'reflection',
       heading: 'Three things this project taught me.',
-      body: `Where design creates leverage. The onboarding flow itself was not complex to design. The complexity was in the regulatory rules for more than 120 countries. Getting those rules surfaced correctly, at the right moment, with the right context: that is where the design work had the most impact. The interface was the last 20 percent of the problem.
+      body: `Where design creates leverage. The onboarding flow itself was not complex to design. The complexity was in the regulatory rules for more than 120 countries. Surfacing those rules at the right moment is where the design work had the most impact. The interface was the last 20 percent of the problem.
 
 What I would do differently. I would invest more time in error state design from day one. When a customer hit a regulatory requirement they were not expecting, the experience dropped sharply. We fixed those cases iteratively. Designing for failure paths with the same rigor as the success path from the start would have shortened that cycle.
 

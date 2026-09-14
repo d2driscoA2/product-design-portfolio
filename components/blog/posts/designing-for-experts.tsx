@@ -38,7 +38,7 @@ export function DesigningForExpertsPost() {
       <BlogHeroImage
         src="/blog/images/post4-hero-phoneid.png"
         alt="TeleSign PhoneID transaction summary dashboard showing stacked bar charts across a two-week date range, with the full product navigation visible in the left sidebar"
-        caption="The TeleSign PhoneID dashboard. A fraud analyst landing here is making risk decisions about individual phone numbers, reading stacked transaction data, and cross-referencing signals across multiple product categories — all in real time."
+        caption="The TeleSign PhoneID dashboard. A fraud analyst landing here is making risk decisions about individual phone numbers, reading stacked transaction data, and cross-referencing signals across product categories, in real time."
       />
 
       <hr className="blog-divider" />

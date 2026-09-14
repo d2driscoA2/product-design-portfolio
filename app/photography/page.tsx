@@ -36,7 +36,7 @@ export default function PhotographyPage() {
 
         <div className="about-carl-quote text-center py-12 border-t">
           <p className="text-2xl font-light italic mb-3">&ldquo;May today feel like a win your future self will cheer for!&rdquo;</p>
-          <p className="text-sm text-gray-400">— Papa Carl</p>
+          <p className="text-sm text-gray-400">Papa Carl</p>
         </div>
 
       </div>

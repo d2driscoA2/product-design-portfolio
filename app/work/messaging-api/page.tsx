@@ -54,7 +54,7 @@ The rejected direction: separate template editors per channel with a sync functi
 
 The chosen direction: one visual template builder that previewed all six outputs simultaneously. The system auto-generated channel-appropriate versions. Marketers designed for the richest channel and watched the degradation in real time. Non-technical users never touched JSON.
 
-Compliance was embedded into template creation, not bolted on afterward. Regulatory requirements for the destination country appeared in real time as templates were built, stopping violations before they were committed rather than flagging them after. Making constraints visible early is not just a usability principle \u2014 in high-compliance environments, it is a risk management decision.`,
+Compliance was embedded into template creation, not bolted on afterward. Regulatory requirements for the destination country appeared in real time as templates were built, stopping violations before they were committed rather than flagging them after. In high-compliance environments, visible constraints are risk management, not only usability.`,
       images: [
         '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-template-builder.png',
         '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-workflow.png',

@@ -313,7 +313,7 @@ export function ClaudeCodePortfolioPost() {
       <BlogImage
         src="/blog/site-build-session-march19.png"
         alt="displayedux.com Fraud Prevention case study page captured by Playwright MCP during a QA session in March 2026"
-        caption="This screenshot was taken by Playwright MCP during a QA session — Claude navigated to the page, resized the viewport, captured this, and returned a visual assessment. No browser interaction by hand."
+        caption="This screenshot was taken by Playwright MCP during a QA session. Claude navigated to the page, resized the viewport, captured this, and returned a visual assessment. No browser interaction by hand."
         variant="bordered"
       />
 
@@ -341,7 +341,7 @@ export function ClaudeCodePortfolioPost() {
       <BlogImage
         src="/blog/messaging-api-workflow.png"
         alt="TeleSign Messaging API intelligent cascade diagram: message from carrier to Messaging API, falling back through Viber, WhatsApp, RCS, MMS, SMS, to Email"
-        caption="The Messaging API intelligent cascade diagram — one of eight assets Claude embedded and captioned across the four case studies. The entire codebase was searchable via Context Mode MCP."
+        caption="The Messaging API intelligent cascade diagram, one of eight assets Claude embedded and captioned across the four case studies. The entire codebase was searchable via Context Mode MCP."
         variant="bordered"
       />
 
@@ -387,7 +387,7 @@ export function ClaudeCodePortfolioPost() {
       </p>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 1 — Foundation (~4 hours)</div>
+        <div className="blog-session-header">Session 1. Foundation (~4 hours)</div>
         <p>
           Project initialized from scratch. Next.js App Router, TypeScript,
           Tailwind CSS v4, Netlify config. Design system established: color
@@ -398,7 +398,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 2 — Homepage Build (~5 hours)</div>
+        <div className="blog-session-header">Session 2. Homepage Build (~5 hours)</div>
         <p>
           Stats strip, case study card grid, origin story section, philosophy
           section with glassmorphism cards and floating bull&rsquo;s-eyes. All
@@ -407,7 +407,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 3 — Case Study Infrastructure (~4 hours)</div>
+        <div className="blog-session-header">Session 3. Case Study Infrastructure (~4 hours)</div>
         <p>
           Work index page, BentoGrid component, CaseStudyCard component, and
           the <code>lib/case-studies.ts</code> data file. All four case study
@@ -417,7 +417,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Sessions 4 and 5 — Case Study Body Pages (~6 hours)</div>
+        <div className="blog-session-header">Sessions 4 and 5. Case Study Body Pages (~6 hours)</div>
         <p>
           <code>CaseStudyTemplate</code> component built. All four case study
           narrative sections authored: hero image with overlay, bento grid,
@@ -427,7 +427,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 6 — About Page (~3 hours)</div>
+        <div className="blog-session-header">Session 6. About Page (~3 hours)</div>
         <p>
           About page built: headshot, bio, stats attribution (AT TELESIGN /
           AT APPILY.COM), interests grid, photography section featuring
@@ -436,7 +436,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 7 — Contact and Photography (~4 hours)</div>
+        <div className="blog-session-header">Session 7. Contact and Photography (~4 hours)</div>
         <p>
           Contact page with TeleSign Phone Number Intelligence integration:
           validation on blur, color-coded score badges, never blocks submission.
@@ -447,7 +447,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 8 — Video Integration (~3 hours)</div>
+        <div className="blog-session-header">Session 8. Video Integration (~3 hours)</div>
         <p>
           Parallel worktree session. <code>claude/elegant-satoshi</code> branch:
           custom <code>YouTubeEmbed</code> component with responsive iframe and
@@ -458,7 +458,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 9 — Full QA Pass (~2 hours)</div>
+        <div className="blog-session-header">Session 9. Full QA Pass (~2 hours)</div>
         <p>
           All 9 pages QA&rsquo;d at 1440px desktop, 390px mobile, and dark mode
           via Playwright. About page headshot fixed (Next.js{' '}
@@ -471,7 +471,7 @@ export function ClaudeCodePortfolioPost() {
       </div>
 
       <div className="blog-session">
-        <div className="blog-session-header">Session 10 — Security Hardening (~2 hours)</div>
+        <div className="blog-session-header">Session 10. Security Hardening (~2 hours)</div>
         <p>
           Production security layer added across the full stack. Details below.
         </p>
@@ -658,10 +658,9 @@ export function ClaudeCodePortfolioPost() {
       </p>
       <p>
         What Claude Code cannot do: decide whether the design is right. The
-        information architecture of this site — what goes on the homepage, how
-        case studies are structured, what the above-the-fold content
-        communicates to a recruiting manager versus a potential client — came
-        entirely from 18 years of knowing what good looks like. Claude executed
+        information architecture came from 18 years of knowing what good looks
+        like. What goes on the homepage. How case studies are structured. What
+        the top of the page says to a recruiter versus a client. Claude executed
         the architecture. It did not produce it.
       </p>
       <p>
@@ -676,9 +675,9 @@ export function ClaudeCodePortfolioPost() {
         The gap between my 7 to 12x leverage and the ceiling of 20 to 30x is
         not a gap in design skill. It is a gap in session management: longer
         runs, more autonomy, more aggressive iteration. That is a learnable
-        workflow adjustment. The fundamentals — knowing what to build, knowing
-        when it is wrong, knowing how to describe the problem precisely — are
-        the same skills I have been developing for 18 years.
+        workflow adjustment. The fundamentals are the same skills I have used
+        for 18 years: knowing what to build, knowing when it is wrong, and
+        describing the problem precisely.
       </p>
 
       <hr className="blog-divider" />

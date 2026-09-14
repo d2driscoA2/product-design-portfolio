@@ -176,7 +176,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "The mental model is the hypothesis. The data is the proof. Eighteen years of A/B and multivariate testing have taught me what to do when the two agree, and what to do when they don't.",
     stats: [
-      { value: '23%',    label: 'Discovery rise — Netflix XP', accentHex: '#4063FB' },
+      { value: '23%',    label: 'Content discovery, at Netflix', accentHex: '#4063FB' },
       { value: '67→0',   label: 'Days — Self-Service onboarding' },
       { value: '4',      label: 'Variants tested',             accentHex: '#FF6F6E' },
       { value: '18 yrs', label: 'A/B testing' },

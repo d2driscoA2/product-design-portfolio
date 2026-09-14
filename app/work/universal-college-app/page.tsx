@@ -79,7 +79,7 @@ The dashboard design went through three major iterations. The empty state needed
       heading: 'Continuous testing with real high school students. Not assumptions about them.',
       body: `I tested throughout the design process with students at local high schools. Early testing revealed confusion about the college selection interface. Students did not understand how to add schools to their list. I redesigned the flow with clearer calls-to-action and visual confirmation feedback.
 
-The essay section required the most iteration. Students needed to understand that one essay would go to every college they selected. The first version buried this context. The final version made it the first thing students saw when they reached that section — framed as the feature it was, not a constraint.
+The essay section required the most iteration. Students needed to understand that one essay would go to every college they selected. The first version buried this context. The final version made it the first thing students saw in that section, framed as the feature it was.
 
 The single most impactful change after launch: making the essay word count visible in real time with a confidence indicator rather than a hard limit. Students who hit a hard word limit stopped. Students who saw a confidence indicator kept writing and then edited.
 
@@ -102,7 +102,7 @@ Error states were a key focus. When students made mistakes, the interface needed
 
 The platform scaled from 250,000 users in 2015 to 1,500,000 users by the end of my tenure. It now serves 4,000,000+ users as Appily following EAB's 2020 acquisition. Partner colleges grew to 200+ institutions including the University of Michigan and Michigan State.
 
-Session time increased 25%. Bounce rate decreased 10 percentage points. The application complete state — the moment a student submits to every college at once — was the culmination of every friction-reduction decision made across four years.`,
+Session time increased 25%. Bounce rate decreased 10 percentage points. The application-complete state, when a student submits to every college at once, is where four years of friction removal lands.`,
       images: [
         '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Desktop-Dashboard_Applications-Complete.png',
         '/images/4-universal-college-application/Designs/Dashboard/PNGs/Cappex-Application-Mobile-Dashboard_Applications-Complete.png',
@@ -124,7 +124,7 @@ If I were doing this today, I would push harder on measuring first-generation co
 Institutional buy-in is a design problem. Getting 200 universities to accept a universal essay prompt required understanding their constraints as deeply as I understood students'. The best product decisions in that project came from those admissions office conversations, not the wireframes.`,
       image: '/images/4-universal-college-application/images-for-case-study/Screens/Artboard-4@2x.png',
       imageAlt: 'Multi-screen overview of all Appily.com Universal College Application screens (formerly Cappex)',
-      imageCaption: 'Full product overview: all application screens in context — from search through submission. Screens shown display the original Appily.com interface (formerly Cappex).',
+      imageCaption: 'Full product overview: every application screen, from search through submission. Screens shown display the original Appily.com interface (formerly Cappex).',
     },
   ],
   prevCase: {
