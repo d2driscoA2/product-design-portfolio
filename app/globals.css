@@ -21,6 +21,15 @@
   --color-footer-bg: #606060;
 
   --color-accent-text: #4063FB;
+
+  --color-cta-primary-bg: #4063FB;
+  --color-cta-primary-text: #FFFFFF;
+  --color-cta-primary-hover-bg: #FF6F6E;
+  --color-cta-primary-hover-text: #FFFFFF;
+  --color-cta-secondary-border: #E500A2;
+  --color-cta-secondary-text: #E500A2;
+  --color-cta-secondary-hover-bg: #E500A2;
+  --color-cta-secondary-hover-text: #FFFFFF;
 }
 
 /* ── Dark mode ────────────────────────────────────────────────── */
@@ -44,6 +53,42 @@
   --color-footer-bg: #000000;
 
   --color-accent-text: #6DA3F8;
+
+  --color-cta-primary-bg: #4063FB;
+  --color-cta-primary-text: #FFFFFF;
+  --color-cta-primary-hover-bg: #FF6F6E;
+  --color-cta-primary-hover-text: #FFFFFF;
+  --color-cta-secondary-border: #FFCB05;
+  --color-cta-secondary-text: #FFCB05;
+  --color-cta-secondary-hover-bg: #FFCB05;
+  --color-cta-secondary-hover-text: #0A0A0A;
+}
+
+/* Hero CTA utility classes — token-driven, no hex in components */
+.cta-primary {
+  background-color: var(--color-cta-primary-bg);
+  color: var(--color-cta-primary-text);
+  border: 2px solid var(--color-cta-primary-bg);
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+.cta-primary:hover, .cta-primary:focus-visible {
+  background-color: var(--color-cta-primary-hover-bg);
+  border-color: var(--color-cta-primary-hover-bg);
+  color: var(--color-cta-primary-hover-text);
+}
+.cta-secondary {
+  background-color: transparent;
+  color: var(--color-cta-secondary-text);
+  border: 2px solid var(--color-cta-secondary-border);
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+.cta-secondary:hover, .cta-secondary:focus-visible {
+  background-color: var(--color-cta-secondary-hover-bg);
+  border-color: var(--color-cta-secondary-hover-bg);
+  color: var(--color-cta-secondary-hover-text);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-primary, .cta-secondary { transition: none; }
 }
 
 /* Bull's-eye opacity — philosophy section decorative elements */

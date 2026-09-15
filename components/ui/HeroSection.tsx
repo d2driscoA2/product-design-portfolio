@@ -86,12 +86,10 @@ export function HeroSection() {
                 <Link
                   href="/work"
                   className={[
+                    'cta-primary',
                     'inline-flex items-center justify-center h-12 px-8 rounded-lg',
-                    'bg-[#FF6F6E] text-[#1A1A1A] text-small font-bold tracking-wide',
-                    'border border-transparent',
-                    'hover:bg-[#1A1A1A] hover:text-[#FF6F6E] hover:border-[#FF6F6E]',
-                    'transition-colors duration-150 motion-reduce:transition-none',
-                    'shadow-[0_4px_14px_0_rgb(255_111_110_/_0.30)]',
+                    'text-small font-bold tracking-wide',
+                    'motion-reduce:transition-none',
                     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent-text)]',
                   ].join(' ')}
                 >
@@ -100,10 +98,10 @@ export function HeroSection() {
                 <Link
                   href="/about"
                   className={[
+                    'cta-secondary',
                     'inline-flex items-center justify-center h-12 px-8 rounded-lg',
-                    'border border-[#6B6B6B] text-[var(--color-text-primary)] text-small font-bold tracking-wide',
-                    'hover:border-[var(--color-accent-text)] hover:text-[var(--color-accent-text)]',
-                    'transition-colors duration-150 motion-reduce:transition-none',
+                    'text-small font-bold tracking-wide',
+                    'motion-reduce:transition-none',
                     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent-text)]',
                   ].join(' ')}
                 >
