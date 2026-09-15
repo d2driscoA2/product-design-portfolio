@@ -1,4 +1,5 @@
 import { BlogImage } from '@/components/blog/BlogImage'
+import PlayDemoModal from '@/components/blog/PlayDemoModal'
 
 /**
  * Post body: How I Designed a Trade Show Game for Logitech G
@@ -118,6 +119,8 @@ export function SuperstrikeChallengePost() {
         caption="Three playtest findings, traced from insight to shipped response to measured proof."
         variant="bordered"
       />
+
+      <PlayDemoModal variant="secondary" label="Play the game you just read about" align="center" />
 
       <div className="blog-divider" />
 

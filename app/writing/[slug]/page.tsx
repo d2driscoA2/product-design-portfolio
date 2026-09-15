@@ -6,6 +6,7 @@ import { WritingHero } from '@/components/blog/WritingHero'
 import { PostHero } from '@/components/blog/PostHero'
 import { TerminalHero } from '@/components/blog/TerminalHero'
 import { KioskHero } from '@/components/blog/KioskHero'
+import PlayDemoModal from '@/components/blog/PlayDemoModal'
 import { Avatar } from '@/components/blog/Avatar'
 
 /* ── Content component registry ────────────────────────────────── */
@@ -153,6 +154,7 @@ export default async function WritingPostPage(
         ) : post.slug === 'superstrike-challenge' ? (
           <PostHero post={post}>
             <KioskHero />
+            <PlayDemoModal />
           </PostHero>
         ) : (
           <WritingHero post={post} />
