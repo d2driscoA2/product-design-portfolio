@@ -343,9 +343,9 @@ function bySlug(slug: string): CaseStudy {
 }
 
 export const homepageCaseStudies: CaseStudy[] = [
+  superstrikeFeature,
   bySlug('self-service-portal'),
   bySlug('fraud-prevention'),
-  superstrikeFeature,
   bySlug('universal-college-app'),
 ]
 
