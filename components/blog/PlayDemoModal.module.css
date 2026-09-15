@@ -1,0 +1,290 @@
+/* PlayDemoModal
+   Brand tokens with fallbacks. If globals.css already defines names for
+   these, swap the fallbacks for the real token names and nothing else. */
+
+.ctaWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+}
+
+.ctaWrapCenter {
+  align-items: center;
+  text-align: center;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.cta:focus-visible {
+  outline: 3px solid var(--color-accent-text, #4063fb);
+  outline-offset: 3px;
+}
+
+/* Primary: royal blue fill, white text; coral fill on hover.
+   Matches the homepage "View work" decision from September 15, 2026. */
+.ctaPrimary {
+  background: var(--color-cta-primary-bg, #4063fb);
+  border-color: var(--color-cta-primary-bg, #4063fb);
+  color: #ffffff;
+}
+
+.ctaPrimary:hover {
+  background: var(--color-cta-primary-hover-bg, #ff6f6e);
+  border-color: var(--color-cta-primary-hover-bg, #ff6f6e);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 111, 110, 0.32);
+}
+
+/* Secondary: outlined, fills on hover. */
+.ctaSecondary {
+  background: transparent;
+  border-color: var(--color-cta-primary-bg, #4063fb);
+  color: var(--color-accent-text, #4063fb);
+}
+
+.ctaSecondary:hover {
+  background: var(--color-cta-primary-bg, #4063fb);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.ctaIcon {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.ctaHint {
+  margin: 0;
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary, #606060);
+}
+
+/* Overlay: the glassmorphism motif, 16px blur. */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: fadeIn 180ms ease-out;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(1200px, 100%);
+  max-height: calc(100vh - 3rem);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color-bg-card, #ffffff);
+  color: var(--color-text-primary, #1a1a1a);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  animation: rise 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+}
+
+.barText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+/* Eyebrow: uppercase, tracked, coral rule, secondary text color. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary, #606060);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: var(--color-brand-coral, #ff6f6e);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.desc {
+  margin: 0;
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary, #606060);
+}
+
+.close {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+  background: transparent;
+  color: var(--color-text-primary, #1a1a1a);
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.close:hover {
+  background: var(--color-brand-coral, #ff6f6e);
+  border-color: var(--color-brand-coral, #ff6f6e);
+  color: #ffffff;
+}
+
+.close:focus-visible {
+  outline: 3px solid var(--color-accent-text, #4063fb);
+  outline-offset: 2px;
+}
+
+/* Stage keeps the kiosk's 16:9 canvas. The kiosk scales itself to fit. */
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: calc(100vh - 3rem - 92px);
+  background: #0a0a0a;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #f2f2f2;
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
+  font-size: 0.875rem;
+  pointer-events: none;
+}
+
+.loadingRing {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  border-top-color: var(--color-brand-coral, #ff6f6e);
+  animation: spin 900ms linear infinite;
+}
+
+/* Phones: the modal takes the full viewport. */
+@media (max-width: 767px) {
+  .overlay {
+    padding: 0;
+  }
+  .dialog {
+    width: 100%;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+  }
+  .bar {
+    padding: 0.9rem 0.75rem 0.75rem 1rem;
+  }
+  .title {
+    font-size: 1.05rem;
+  }
+  .desc {
+    display: none;
+  }
+  .stage {
+    flex: 1;
+    aspect-ratio: auto;
+    max-height: none;
+  }
+  .cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .dialog,
+  .loadingRing {
+    animation: none;
+  }
+  .cta,
+  .close {
+    transition: none;
+  }
+  .cta:hover,
+  .ctaSecondary:hover {
+    transform: none;
+  }
+}
