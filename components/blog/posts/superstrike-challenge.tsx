@@ -15,8 +15,8 @@ export function SuperstrikeChallengePost() {
   return (
     <article className="blog-content">
       <p>The fastest players never saw their scores.</p>
-      <PlayDemoModal align="center" />
       <p>That was the first playtest finding on the Superstrike Challenge, a click speed test I designed for Logitech G&rsquo;s trade show booths. A player finishes the ten second test at eight clicks per second. The test ends. Their finger does not. The next click lands on the results screen, the game restarts, and the score they came for is gone.</p>
+      <PlayDemoModal align="center" />
       <p>The commissioning client was Kamp Grizzly, a Portland creative agency, promoting the Logitech G PRO X3 SUPERSTRIKE mouse. The deliverable was a gamified kiosk for the booth floor. The stakes were attention: a kiosk earns roughly three seconds from a passing visitor, and a visitor who never sees their score has no story to tell at the booth.</p>
       <p>Fifteen calendar days, brief to billed. Five of them were working days; the rest idled while client rounds and font files came back. This is what happened inside the five, out of order, the way the project happened to me.</p>
 
