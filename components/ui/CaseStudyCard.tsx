@@ -9,8 +9,8 @@ interface CaseStudyCardProps {
 export function CaseStudyCard({ study }: CaseStudyCardProps) {
   return (
     <Link
-      href={`/work/${study.slug}`}
-      aria-label={`${study.title}. ${study.impactLabel}. View case study.`}
+      href={study.href ?? `/work/${study.slug}`}
+      aria-label={`${study.title}. ${study.impactLabel}. ${study.ctaLabel ?? 'View case study'}.`}
       style={{ '--accent': study.accentHex } as React.CSSProperties}
       className={[
         'group block rounded-xl overflow-hidden bg-[var(--color-bg-card)]',
@@ -69,7 +69,7 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
           style={{ color: study.accentHex }}
           aria-hidden="true"
         >
-          <span>View case study</span>
+          <span>{study.ctaLabel ?? 'View case study'}</span>
           <svg
             width="14" height="14" viewBox="0 0 14 14" fill="none"
             xmlns="http://www.w3.org/2000/svg"

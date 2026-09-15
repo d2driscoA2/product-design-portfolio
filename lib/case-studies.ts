@@ -25,6 +25,10 @@ export interface CaseStudy {
   accentHex: string
   /** Optional thumbnail shown at the top of the case study card */
   thumbnailImage?: string
+  /** Optional link override — used when the full story lives outside /work */
+  href?: string
+  /** Optional CTA label override for the card */
+  ctaLabel?: string
   bento: BentoStat[]
 }
 
@@ -278,6 +282,71 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
 
+]
+
+/* ─── Featured writing case study (homepage only) ─────────────────
+   The Superstrike Challenge is a Writing post, not a /work route.
+   It appears on the homepage grid via `href` and stays out of the
+   main `caseStudies` array so /work and /work/[slug] are unaffected. */
+
+export const superstrikeFeature: CaseStudy = {
+  slug:          'superstrike-challenge',
+  title:         'Logitech G Superstrike Challenge',
+  client:        'Logitech G · Kamp Grizzly',
+  year:          '2026',
+  role:          'Product Designer & Developer',
+  headline:      'A Trade Show Game Players Line Up For, in Five Working Days',
+  outcomeSummary:
+    'Designed and shipped a gamified click speed kiosk for the Logitech G PRO X3 SUPERSTRIKE, commissioned by Kamp Grizzly. Five working days inside a fifteen day window, one self-contained HTML file, live on the show floor.',
+  impactLabel: 'Shipped in 5 working days',
+  accentHex: '#FFCB05', /* amber */
+  thumbnailImage: '/blog/images/superstrike/attract-screen.png',
+  href:      '/writing/superstrike-challenge',
+  ctaLabel:  'Read the case study',
+
+  bento: [
+    {
+      value:           '5 WORKING DAYS',
+      label:          'Brief to billed inside a 15 calendar day window',
+      variant:        'charcoal',
+      accent:         'amber',
+      accentPosition: 'top',
+    },
+    {
+      value:    '1 HTML FILE',
+      label:   'Self-contained build — zero dependencies',
+      variant: 'default',
+      accent:  'none',
+    },
+    {
+      value:    '95 CLICKS',
+      label:   'The pro benchmark players chase',
+      variant: 'default',
+      accent:  'amber',
+      accentPosition: 'left',
+    },
+    {
+      value:    '1.6s LOCKOUT',
+      label:   'The reset players never feel',
+      variant: 'default',
+      accent:  'none',
+    },
+  ],
+}
+
+/* ─── Homepage selection ─────────────────────────────────────────── */
+
+function bySlug(slug: string): CaseStudy {
+  const cs = caseStudies.find(c => c.slug === slug)
+  if (!cs) throw new Error(`Missing case study: "${slug}"`)
+  return cs
+}
+
+export const homepageCaseStudies: CaseStudy[] = [
+  bySlug('self-service-portal'),
+  bySlug('fraud-prevention'),
+  superstrikeFeature,
+  bySlug('universal-college-app'),
 ]
 
 /* ─── Helpers ────────────────────────────────────────────────────── */

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { caseStudies } from '@/lib/case-studies'
+import { homepageCaseStudies } from '@/lib/case-studies'
 import { CaseStudyCard } from '@/components/ui/CaseStudyCard'
 import { HeroSection } from '@/components/ui/HeroSection'
 
@@ -66,7 +66,7 @@ function CaseStudyGrid() {
           aria-label="Case study previews"
           role="list"
         >
-          {caseStudies.map((study) => (
+          {homepageCaseStudies.map((study) => (
             <li key={study.slug} role="listitem">
               <CaseStudyCard study={study} />
             </li>
