@@ -141,8 +141,8 @@ export function OutputVsOutcomePost() {
         to fully internalize until you are inside it.
       </p>
       <p>
-        Ninety percent of the six-digit verification codes you receive on your
-        phone come from TeleSign APIs. When you get a login code from your bank,
+        A large share of the six-digit verification codes on your phone come
+        from TeleSign APIs. When you get a login code from your bank,
         a ride confirmation from Uber, or a package notification from Amazon,
         there is a significant probability that a UI I designed was part of
         the infrastructure that made it happen. Not visible to you. Not
@@ -165,7 +165,7 @@ export function OutputVsOutcomePost() {
       <BlogImage
         src="/blog/images/post5-telesign-product.png"
         alt="TeleSign Messaging API product page inside the self-service portal showing transaction data and WhatsApp integration"
-        caption="The TeleSign Messaging API product page. Ninety percent of six-digit verification codes sent globally route through TeleSign. The users who received those codes never saw this screen. That is what invisible infrastructure looks like."
+        caption="The TeleSign Messaging API product page. A large share of six-digit verification codes sent globally route through TeleSign. The users who received those codes never saw this screen. That is what invisible infrastructure looks like."
         variant="bordered"
       />
 

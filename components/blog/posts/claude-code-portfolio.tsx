@@ -22,7 +22,7 @@ export function ClaudeCodePortfolioPost() {
         <div className="blog-callout-label">Project scope</div>
         <ul className="blog-callout-list">
           <li><strong>47</strong> git commits across 10 focused build sessions</li>
-          <li><strong>9 pages</strong> built: homepage, 4 case studies, work index, about, contact, photography, privacy policy</li>
+          <li><strong>10 pages</strong> built: homepage, 4 case studies, work index, about, contact, photography, privacy policy</li>
           <li><strong>12</strong> custom React components, all written by Claude Code</li>
           <li><strong>624</strong> source files in the final build</li>
           <li><strong>~100,000</strong> lines of TypeScript, TSX, and CSS</li>
@@ -250,9 +250,8 @@ export function ClaudeCodePortfolioPost() {
           for 5B+ phone numbers a month and 21B+ annual transactions.
         </li>
         <li>
-          <strong>Messaging API Platform (TeleSign)</strong> — Unified 6
-          communication channels (SMS, voice, WhatsApp, Viber, Line, RCS)
-          into one interface
+          <strong>Messaging API Platform (TeleSign)</strong>. Six channels,
+          one interface: SMS, RCS, WhatsApp, Viber, MMS, Email.
         </li>
         <li>
           <strong>Universal College Application (Appily.com)</strong>. 47%
@@ -630,7 +629,7 @@ export function ClaudeCodePortfolioPost() {
             </tr>
             <tr>
               <td>Pages built</td>
-              <td>9</td>
+              <td>10</td>
               <td>N/A (SaaS comparison)</td>
             </tr>
             <tr>

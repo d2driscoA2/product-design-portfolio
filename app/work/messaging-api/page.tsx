@@ -38,7 +38,7 @@ Compliance officers said: "Every country has different messaging rules. We fear 
 
 The same product needed to solve three fundamentally different problems for three different users without forcing any of them to understand the others' workflow. That was the actual design challenge.
 
-I also researched RCS closely. It was about to launch on iOS 18, giving early adopters a measurable engagement advantage. RCS delivered 22.2 percent click-through rates versus three percent for standard SMS. The platform needed to be built for where messaging was heading, not where it had been.`,
+I also researched RCS closely. Apple had not adopted it yet, and carriers signaled it was coming. Early adopters had a window. RCS delivered 22.2 percent click-through rates versus three percent for standard SMS. The platform needed to be built for where messaging was heading, not where it had been.`,
       images: [
         '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-channels.png',
         '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-low-fidelity.png',
@@ -81,7 +81,7 @@ Three user groups tested separately. The consistent finding across all three: wh
       heading: 'Enterprise implementation time dropped 50%. RCS adoption drove 22.2% click-through rates.',
       body: `Enterprise clients who previously spent four to six months integrating multiple messaging vendors completed implementation in two to three months.
 
-RCS campaigns delivered 22.2% click-through rates compared to 3% for standard SMS. Early adopters built a measurable engagement advantage before RCS became broadly available on iOS 18.
+RCS campaigns delivered 22.2% click-through rates compared to 3% for standard SMS. Early adopters built a measurable engagement advantage before RCS became broadly available on iPhone.
 
 Message delivery rates improved 15 to 20 percent through intelligent channel cascading. The platform contributed to 42 percent annual revenue growth, supporting TeleSign's growth to a $1.3 billion valuation at acquisition.`,
       image: '/images/3-omnichannel-messaging-api/images-for-case-study/messaging-view-templates.png',

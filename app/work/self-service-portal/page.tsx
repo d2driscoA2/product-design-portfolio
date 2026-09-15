@@ -49,6 +49,8 @@ The design question shifted. Not "How do we make the portal easier?" but "How do
       heading: 'What shipped, what did not, and why the hardest problem was not the interface.',
       body: `I designed a self-service portal giving enterprise customers direct control over every step: account creation, business verification, product purchasing, phone number acquisition across 120-plus countries, API key generation, and billing. No CS involvement.
 
+The project started as a prototype in 2019. I designed the phone number purchasing flow, one step in onboarding, and put it in front of team leads and the C-suite. Once they saw customers handling a step CS had always handled, the full self-service portal got funded. That prototype won TeleSign's 2019 Innovation of the Year, and the portal build ran seven months across 2020 and 2021.
+
 The first direction I prototyped was a guidance layer on top of TelePortal, the existing internal tool. Four customer tests killed it. TelePortal's information architecture was built for CS workflows, not customer workflows. Guidance on top of expert assumptions does not make a product accessible. The recommendation: build from scratch.
 
 With a constrained story-point budget and a pandemic-distributed team across US and European time zones, every feature required a prioritization decision. The MVP covered the primary path only: account creation, product selection, phone number acquisition, and API key generation. Multi-language support, a regulatory documentation browser, and advanced usage analytics were deferred.
