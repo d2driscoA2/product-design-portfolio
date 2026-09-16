@@ -94,7 +94,7 @@ function OriginStory() {
           ].join(' ')}
           style={{ fontFamily: 'var(--font-display)' }}
         >
-          &ldquo;Someone pushed this design to production. Nobody asked who else was in the room.&rdquo;
+          &ldquo;Design like someone&rsquo;s safety depends on it. Sometimes it does.&rdquo;
         </blockquote>
 
         {/* Story */}
@@ -110,19 +110,28 @@ function OriginStory() {
 
           <div className="text-body leading-relaxed space-y-4" style={{ color: 'var(--color-text-muted)' }}>
             <p>
-              I was working the front desk at the Waldo Library computer lab at Western Michigan University. Behind me, a student let out a loud yawn. Seconds later, screaming erupted.
+              Fall of sophomore year. Waldo Library, Western Michigan University. Third floor computer lab, about 75 machines, a wall of windows on the far side. I was in line at the front desk, trading my numbered mouse pad back for my student ID.
             </p>
             <p>
-              I turned. A student was convulsing across the room. My lifeguard training kicked in.
+              Behind me, someone yawned. Loud, both hands to the face, the kind you&rsquo;d fake in an improv skit. I looked, thought nothing of it, and turned back to the desk.
             </p>
             <p>
-              I stabilized their head, rolled them into the recovery position. They cleared their airway and started breathing.
+              Then the gasps. The same student was bouncing in their chair.
             </p>
             <p>
-              I looked up at the screen. A pop-up ad. &ldquo;YOU&rsquo;RE A WINNER&rdquo; in gold text, Vegas-style lights flashing.
+              I lifeguarded every summer, so I knew what I was looking at. By the time I got across the room they were on the floor, and I could hear their head hitting the concrete through the thin carpet. I flipped their padded office chair on its back and got the backrest under their head. Fifteen more seconds of shaking, at most. A bracelet on their wrist I didn&rsquo;t need to read.
             </p>
             <p>
-              I looked at their wrist. An epilepsy bracelet.
+              The shaking stopped and they started choking on their own spit. I rolled them into the recovery position. They gargled, then breathed.
+            </p>
+            <p>
+              Then I looked up at their screen. A pop-up, maybe 300 by 200 pixels, in its own window on an old Mac. Bold text flashing YOU&rsquo;RE A WINNER, ringed with lights chasing in a circle like an old Vegas sign.
+            </p>
+            <p>
+              EMS took them out on a stretcher. I never learned their name.
+            </p>
+            <p>
+              Years later someone recognized me. &ldquo;Aren&rsquo;t you the guy who saved that person?&rdquo; I didn&rsquo;t save anyone. I helped them ride out something they&rsquo;d ridden out before. What stayed with me was the screen. Somebody designed that ad, shipped it, and never found out what it did.
             </p>
             <p className="font-semibold text-[var(--color-text-primary)] border-t border-[var(--color-border)] pt-4">
               Design decisions reach real people. Every one of them.
