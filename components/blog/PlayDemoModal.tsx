@@ -111,7 +111,7 @@ export default function PlayDemoModal({
       {variant === "strip" ? (
         <aside className={styles.strip} aria-label="Live demo">
           <div className={styles.stripArt} aria-hidden="true">
-            <img src={imageSrc} alt="" className={styles.stripImg} loading="lazy" />
+            <img src={imageSrc} alt="" className={styles.stripImg} loading="eager" decoding="async" />
           </div>
           <div className={styles.stripText}>
             <p className={styles.stripTitle}>{title}</p>
