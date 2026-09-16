@@ -82,7 +82,8 @@
   color: var(--color-text-secondary, #606060);
 }
 
-/* Strip: the in-post bar. Gray card, text column width, easy to skip.
+/* Strip: the in-post bar. Text rules are written as .strip .stripX so they
+   outrank the global .blog-content p rule. Gray card, text column width, easy to skip.
    The mouse image bleeds past the top and bottom edges; overflow is
    clipped so the card never grows to fit it. */
 .strip {
@@ -127,7 +128,7 @@
   gap: 0;
 }
 
-.stripTitle {
+.strip .stripTitle {
   margin: 0;
   font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif);
   font-size: 1.25rem;
@@ -137,12 +138,11 @@
   color: var(--color-text-primary, #1a1a1a);
 }
 
-.stripCopy {
-  margin: 0;
+.strip .stripCopy {
+  margin: 0.15rem 0 0;
   font-family: var(--font-sans, Inter, system-ui, sans-serif);
   font-size: 0.9rem;
   line-height: 1.15;
-  margin-top: 0.15rem;
   color: var(--color-text-secondary, #606060);
 }
 
