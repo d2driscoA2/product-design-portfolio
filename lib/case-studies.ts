@@ -107,8 +107,8 @@ export const caseStudies: CaseStudy[] = [
     outcomeSummary:
       'Designed the UI for an ML-powered fraud prevention suite protecting 21B+ annual transactions, giving non-technical fraud analysts intuitive control over 1,000+ configurable risk parameters.',
     impactLabel: '21B+ transactions protected',
-    accentHex: '#4063FB', /* royal blue */
-    thumbnailImage: '/images/2-fraud-prevention-suite/hero/fraud-hero-dashboard.png',
+    accentHex: '#E500A2', /* magenta */
+    thumbnailImage: '/images/2-fraud-prevention-suite/hero/fraud-card-transaction-summary.png',
 
     bento: [
       /* S1 — Hero */
@@ -231,7 +231,7 @@ export const caseStudies: CaseStudy[] = [
     outcomeSummary:
       'Designed the world\'s only user-friendly multi-college application platform at Appily.com (formerly Cappex), achieving 47% completion against a 20–35% industry standard and scaling from 250K to 1.5M users.',
     impactLabel: '47% completion rate',
-    accentHex: '#E500A2', /* magenta */
+    accentHex: '#FFCB05', /* amber */
     thumbnailImage: '/images/4-universal-college-application/hero/Prototype-Sample.png',
 
     bento: [
@@ -299,7 +299,7 @@ export const superstrikeFeature: CaseStudy = {
   outcomeSummary:
     'Designed and shipped a gamified click speed kiosk for the Logitech G PRO X3 SUPERSTRIKE, commissioned by Kamp Grizzly. Five working days inside a fifteen day window, one self-contained HTML file, live on the show floor.',
   impactLabel: 'Shipped in 5 working days',
-  accentHex: '#FFCB05', /* amber */
+  accentHex: '#4063FB', /* royal blue */
   thumbnailImage: '/blog/images/superstrike/attract-screen.png',
   href:      '/writing/superstrike-challenge',
   ctaLabel:  'Read the case study',
@@ -348,6 +348,10 @@ export const homepageCaseStudies: CaseStudy[] = [
   bySlug('fraud-prevention'),
   bySlug('universal-college-app'),
 ]
+
+/* /work shows the same four as the homepage. The messaging-api body
+   page stays reachable at /work/messaging-api via `caseStudies`. */
+export const workCaseStudies: CaseStudy[] = homepageCaseStudies
 
 /* ─── Helpers ────────────────────────────────────────────────────── */
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { caseStudies } from '@/lib/case-studies'
+import { workCaseStudies } from '@/lib/case-studies'
 import { CaseStudyCard } from '@/components/ui/CaseStudyCard'
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function WorkPage() {
           aria-label="Case studies"
           role="list"
         >
-          {caseStudies.map((study) => (
+          {workCaseStudies.map((study) => (
             <li key={study.slug} role="listitem">
               <CaseStudyCard study={study} />
             </li>
