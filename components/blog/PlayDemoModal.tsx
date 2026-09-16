@@ -17,8 +17,13 @@ import styles from "./PlayDemoModal.module.css";
  * through the CSS module.
  *
  * Props:
- *   variant  "primary" (royal blue fill, coral on hover) or "secondary"
- *            (outlined). Default "primary".
+ *   variant  "strip" (default): in-post bar the width of the text column,
+ *            mouse image left, game name, invitation, filled button. "primary" (royal
+ *            blue fill, coral on hover) or "secondary" (outlined) render a
+ *            standalone button with a hint line.
+ *   title    Strip only. Headline. Default "Superstrike Challenge".
+ *   text     Strip only. Gray invitation under the headline.
+ *   imageSrc Strip only. Cropped mouse PNG with transparent background.
  *   label    Button text. Default "Play the game".
  *   align    "left" or "center" for the wrapper. Default "left".
  */
@@ -26,15 +31,25 @@ import styles from "./PlayDemoModal.module.css";
 const DEMO_SRC = "https://logitech-kiosk.displayedux.com/";
 
 type Props = {
-  variant?: "primary" | "secondary";
+  /** "strip" renders the in-post bar: mouse image, game name, invitation, filled button. */
+  variant?: "strip" | "primary" | "secondary";
   label?: string;
   align?: "left" | "center";
+  /** Strip only. Headline, the game name. */
+  title?: string;
+  /** Strip only. The gray invitation under the headline. */
+  text?: string;
+  /** Strip only. Cropped mouse image, transparent background. Bleeds off top and bottom. */
+  imageSrc?: string;
 };
 
 export default function PlayDemoModal({
-  variant = "primary",
+  variant = "strip",
   label = "Play the game",
   align = "left",
+  title = "Superstrike Challenge",
+  text = "Try it yourself.",
+  imageSrc = "/blog/images/superstrike/mouse-cutout.png",
 }: Props) {
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -93,6 +108,34 @@ export default function PlayDemoModal({
 
   return (
     <>
+      {variant === "strip" ? (
+        <aside className={styles.strip} aria-label="Live demo">
+          <div className={styles.stripArt} aria-hidden="true">
+            <img src={imageSrc} alt="" className={styles.stripImg} loading="lazy" />
+          </div>
+          <div className={styles.stripText}>
+            <p className={styles.stripTitle}>{title}</p>
+            <p className={styles.stripCopy}>{text}</p>
+          </div>
+          <button
+            ref={triggerRef}
+            type="button"
+            className={`${styles.cta} ${styles.ctaPrimary} ${styles.stripBtn}`}
+            onClick={() => setOpen(true)}
+            aria-haspopup="dialog"
+            aria-expanded={open}
+          >
+            <span className={styles.ctaIcon} aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" focusable="false">
+                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2" />
+                <circle cx="12" cy="12" r="5.5" fill="none" stroke="currentColor" strokeWidth="2" />
+                <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+              </svg>
+            </span>
+            <span>{label}</span>
+          </button>
+        </aside>
+      ) : (
       <div
         className={`${styles.ctaWrap} ${
           align === "center" ? styles.ctaWrapCenter : ""
@@ -121,6 +164,7 @@ export default function PlayDemoModal({
           Live build. Best with a mouse. Enter a name and your score goes on the board.
         </p>
       </div>
+      )}
 
       {open && (
         <div

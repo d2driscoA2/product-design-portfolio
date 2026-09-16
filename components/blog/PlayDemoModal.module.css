@@ -82,6 +82,103 @@
   color: var(--color-text-secondary, #606060);
 }
 
+/* Strip: the in-post bar. Gray card, text column width, easy to skip.
+   The mouse image bleeds past the top and bottom edges; overflow is
+   clipped so the card never grows to fit it. */
+.strip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 2rem 0;
+  padding: 1rem 1.5rem 1rem 0;
+  border-radius: 14px;
+  background: var(--color-bg-secondary, #f2f2f2);
+  overflow: hidden;
+  min-height: 104px;
+}
+
+.stripArt {
+  flex: none;
+  width: 132px;
+  align-self: stretch;
+  position: relative;
+}
+
+.stripImg {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  height: 150%;
+  width: auto;
+  max-width: none;
+  transform: translateY(-50%) rotate(-12deg);
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.stripText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.stripTitle {
+  margin: 0;
+  font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary, #1a1a1a);
+}
+
+.stripCopy {
+  margin: 0;
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.15;
+  margin-top: 0.15rem;
+  color: var(--color-text-secondary, #606060);
+}
+
+.stripBtn {
+  flex: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 640px) {
+  .strip {
+    flex-wrap: wrap;
+    padding: 1rem 1rem 1rem 0;
+    gap: 0.75rem 1rem;
+  }
+  .stripArt {
+    width: 96px;
+    min-height: 84px;
+  }
+  .stripImg {
+    left: 2px;
+    height: 100%;
+    transform: translateY(-50%) rotate(-8deg);
+  }
+  .stripText {
+    flex: 1 1 0;
+  }
+  .stripBtn {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 100%;
+    margin-left: 1rem;
+    justify-content: center;
+  }
+}
+
 /* Overlay: the glassmorphism motif, 16px blur. */
 .overlay {
   position: fixed;
